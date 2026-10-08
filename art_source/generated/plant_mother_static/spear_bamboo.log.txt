@@ -1,0 +1,53 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Hand-painted dark fantasy botanical storybook game art, visible painterly brushwork, muted ink green foliage, golden life veins, warm upper-left light, 3/4 overhead view. One complete isolated rooted plant centered, root contact at 85 percent canvas height, body inside 12 percent margins. Clear silhouette at small game size. No text, no UI, no scenery, no shadow, no watermark, no neon, no realistic photography. True transparent RGBA background. Spear bamboo: three upright segmented bamboo stems with long sharp lance leaves.",
+  "out": "D:\\mm\\data\\xiangrikui\\assets\\plants\\generated\\plant_expansion\\spear_bamboo.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\assets\\plants\\generated\\plant_expansion\\spear_bamboo.png.raw.png",
+  "raw_bytes": 838350,
+  "elapsed_seconds": 48.5,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\mm\\data\\xiangrikui\\assets\\plants\\generated\\plant_expansion\\spear_bamboo.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 75.29,
+    "partial_alpha_pct": 24.7,
+    "opaque_pct": 0.01,
+    "cleaned_transparent_rgb_pixels": 182,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "1024x1024",
+    "background": "transparent",
+    "usage": {
+      "input_tokens": 110,
+      "output_tokens": 1650,
+      "total_tokens": 1760,
+      "input_tokens_details": {
+        "text_tokens": 110,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1650,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit",
+  "report": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_mother_static\\spear_bamboo.report.json"
+}
+[gen] openai: running on OPENAI_API_KEY — this is a per-call API charge, not a subscription (model=gpt-image-2, quality=medium, size=1024x1024).

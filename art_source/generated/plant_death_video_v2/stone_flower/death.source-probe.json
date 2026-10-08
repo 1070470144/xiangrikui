@@ -1,0 +1,11 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "width": 960,
+      "height": 960,
+      "r_frame_rate": "24/1"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "1. Game resource purpose: transparent ornamental outer frame for the three-option mother evolution choice modal, each card is independently selectable. It encloses botanical portrait, title, branch/rank and exact effect text drawn by Godot. 2. Runtime and safe areas: 768x1024 source, scaled with preserved aspect to fit a 252x350 native card. Outer ornament limited to 24px of runtime edge; center entirely alpha. Preserve title y136-172 and effect y180-300 safe areas with no overlap. 3. Project visual anchor: res://assets/ui/generated/battle_ui_v5/primary_action_normal.png and tactical_bezel.png establish midnight blue-grey glass #172331, restrained aged copper #b98b55, fine worn hand-painted edges; mother portrait res://assets/core/ART_CORE_MotherFlower_Healthy.png establishes upper-left soft warm light. 4. Composition and states: front-view rounded rectangle botanical metal edging with sparse copper leaves at four corners, no perspective. Top and bottom continuous quiet edges, no holes through silhouette; empty transparent center. Native hover/pressed border handled separately, one shared normal master. 5. Comfort: low saturation, no glow, no blinking or motion streaks, light sparse texture, legible edge at small display. 6. Exclusions: no text, no watermark, no logo, no unintended objects, no baked UI, no plant portrait, no paper center, no neon, no brand imitation, no glossy sci-fi metal. 7. Transparency: true transparent RGBA alpha everywhere outside frame and inside center; clean antialiased alpha edges, no white/black/matte/color backdrop, no checkerboard, no environmental background.",
+  "out": "D:\\mm\\data\\xiangrikui\\assets\\ui\\generated\\mother_buff_ui\\mother_buff_card_frame.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\assets\\ui\\generated\\mother_buff_ui\\mother_buff_card_frame.png.raw.png",
+  "raw_bytes": 451173,
+  "elapsed_seconds": 36.843,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\mm\\data\\xiangrikui\\assets\\ui\\generated\\mother_buff_ui\\mother_buff_card_frame.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1086x1448",
+    "alpha_zero_pct": 85.76,
+    "partial_alpha_pct": 14.2,
+    "opaque_pct": 0.04,
+    "cleaned_transparent_rgb_pixels": 369,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "768x1024",
+    "background": "transparent",
+    "usage": {
+      "input_tokens": 348,
+      "output_tokens": 1613,
+      "total_tokens": 1961,
+      "input_tokens_details": {
+        "text_tokens": 348,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1613,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

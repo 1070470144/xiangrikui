@@ -1,0 +1,286 @@
+[
+  {
+    "id": "mother_buff_card_frame",
+    "status": "existing"
+  },
+  {
+    "id": "lantern_flower",
+    "status": "generated"
+  },
+  {
+    "id": "frost_bell",
+    "status": "generated"
+  },
+  {
+    "id": "honeydew_flower",
+    "status": "generated"
+  },
+  {
+    "id": "storm_flower",
+    "status": "generated"
+  },
+  {
+    "id": "gale_flower",
+    "status": "generated"
+  },
+  {
+    "id": "sunwell_flower",
+    "status": "generated"
+  },
+  {
+    "id": "ember_flower",
+    "status": "generated"
+  },
+  {
+    "id": "slumber_flower",
+    "status": "generated"
+  },
+  {
+    "id": "spear_bamboo",
+    "status": "generated"
+  },
+  {
+    "id": "burst_flower",
+    "status": "generated"
+  },
+  {
+    "id": "stone_flower",
+    "status": "failed"
+  },
+  {
+    "id": "cleanse_flower",
+    "status": "generated"
+  },
+  {
+    "id": "drum_flower",
+    "status": "generated"
+  },
+  {
+    "id": "sun_arrow",
+    "status": "generated"
+  },
+  {
+    "id": "root_heart",
+    "status": "generated"
+  },
+  {
+    "id": "dawn_pulse",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunseed_01",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunseed_02",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunseed_03",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunseed_04",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunseed_05",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunseed_06",
+    "status": "generated"
+  },
+  {
+    "id": "mother_corona_01",
+    "status": "generated"
+  },
+  {
+    "id": "mother_corona_02",
+    "status": "generated"
+  },
+  {
+    "id": "mother_corona_03",
+    "status": "generated"
+  },
+  {
+    "id": "mother_corona_04",
+    "status": "generated"
+  },
+  {
+    "id": "mother_corona_05",
+    "status": "generated"
+  },
+  {
+    "id": "mother_corona_06",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunburst_01",
+    "status": "failed"
+  },
+  {
+    "id": "mother_sunburst_02",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunburst_03",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunburst_04",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunburst_05",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sunburst_06",
+    "status": "generated"
+  },
+  {
+    "id": "mother_receptacle_01",
+    "status": "generated"
+  },
+  {
+    "id": "mother_receptacle_02",
+    "status": "generated"
+  },
+  {
+    "id": "mother_receptacle_03",
+    "status": "generated"
+  },
+  {
+    "id": "mother_receptacle_04",
+    "status": "generated"
+  },
+  {
+    "id": "mother_receptacle_05",
+    "status": "generated"
+  },
+  {
+    "id": "mother_receptacle_06",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sap_01",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sap_02",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sap_03",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sap_04",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sap_05",
+    "status": "generated"
+  },
+  {
+    "id": "mother_sap_06",
+    "status": "generated"
+  },
+  {
+    "id": "mother_counterroot_01",
+    "status": "generated"
+  },
+  {
+    "id": "mother_counterroot_02",
+    "status": "generated"
+  },
+  {
+    "id": "mother_counterroot_03",
+    "status": "generated"
+  },
+  {
+    "id": "mother_counterroot_04",
+    "status": "generated"
+  },
+  {
+    "id": "mother_counterroot_05",
+    "status": "generated"
+  },
+  {
+    "id": "mother_counterroot_06",
+    "status": "generated"
+  },
+  {
+    "id": "mother_charge_01",
+    "status": "generated"
+  },
+  {
+    "id": "mother_charge_02",
+    "status": "generated"
+  },
+  {
+    "id": "mother_charge_03",
+    "status": "generated"
+  },
+  {
+    "id": "mother_charge_04",
+    "status": "generated"
+  },
+  {
+    "id": "mother_charge_05",
+    "status": "generated"
+  },
+  {
+    "id": "mother_charge_06",
+    "status": "generated"
+  },
+  {
+    "id": "mother_quelling_01",
+    "status": "generated"
+  },
+  {
+    "id": "mother_quelling_02",
+    "status": "generated"
+  },
+  {
+    "id": "mother_quelling_03",
+    "status": "generated"
+  },
+  {
+    "id": "mother_quelling_04",
+    "status": "generated"
+  },
+  {
+    "id": "mother_quelling_05",
+    "status": "generated"
+  },
+  {
+    "id": "mother_quelling_06",
+    "status": "generated"
+  },
+  {
+    "id": "mother_morningstar_01",
+    "status": "generated"
+  },
+  {
+    "id": "mother_morningstar_02",
+    "status": "generated"
+  },
+  {
+    "id": "mother_morningstar_03",
+    "status": "generated"
+  },
+  {
+    "id": "mother_morningstar_04",
+    "status": "generated"
+  },
+  {
+    "id": "mother_morningstar_05",
+    "status": "generated"
+  },
+  {
+    "id": "mother_morningstar_06",
+    "status": "generated"
+  }
+]

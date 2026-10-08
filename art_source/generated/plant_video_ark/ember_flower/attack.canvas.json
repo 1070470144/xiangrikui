@@ -1,0 +1,43 @@
+{
+  "kind": "sprite-gen-video-canvas-report",
+  "still": [
+    768,
+    768
+  ],
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_video_ark\\ember_flower\\attack.input-magenta.png",
+  "state": "attack",
+  "fit": "state",
+  "shape": "tall",
+  "ratio": 0.75,
+  "canvas": [
+    960,
+    1280
+  ],
+  "offset": [
+    96,
+    512
+  ],
+  "headroom": 0.4,
+  "lead": 0.0,
+  "trail": 0.0,
+  "facing": "right",
+  "key_rgb": [
+    255,
+    0,
+    255
+  ],
+  "corner_rgb": [
+    255,
+    0,
+    255
+  ],
+  "key": "magenta",
+  "key_painted": [
+    255,
+    0,
+    255
+  ],
+  "normalized_px": 516298,
+  "normalized_pct": 87.53,
+  "why": "airborne frames need head-room; hair clipped at 1:1"
+}

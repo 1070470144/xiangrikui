@@ -1,0 +1,982 @@
+[
+  {
+    "id": "burst_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      31,
+      3,
+      129,
+      139
+    ],
+    "sha256": "742c0d25be4783c7745e6933d551fe41244c13792941fd97c8a09984878ff7dc"
+  },
+  {
+    "id": "cleanse_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      24,
+      3,
+      135,
+      139
+    ],
+    "sha256": "45969fb5287cca21bc4fc030d46a92b144c92d7d0788090cf747ff33dfe6ca4c"
+  },
+  {
+    "id": "drum_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      34,
+      3,
+      126,
+      139
+    ],
+    "sha256": "5273f9ad0a42711a0e8c2cedcf293759368d71af7d4d4406f7305b0365933e3a"
+  },
+  {
+    "id": "ember_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      34,
+      3,
+      125,
+      139
+    ],
+    "sha256": "edc39faa8797118e53c8d265d415cb927181af5398c1fcd397120235759bc39a"
+  },
+  {
+    "id": "frost_bell",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      30,
+      3,
+      129,
+      139
+    ],
+    "sha256": "d5494d90919da414184aa0ac3780bf3877e204f61c833c4f3e1f5072bf7a2846"
+  },
+  {
+    "id": "gale_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      30,
+      3,
+      129,
+      139
+    ],
+    "sha256": "f0c84eb0b86db65deae3b2816089103e0d53024dbeaf9ca168a0a5cf41c1a829"
+  },
+  {
+    "id": "honeydew_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      30,
+      3,
+      130,
+      139
+    ],
+    "sha256": "5acdb643bd9e0b3b761234ebd89c35a7e402b7ae94e76137079b721aa99f12a9"
+  },
+  {
+    "id": "lantern_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      31,
+      3,
+      129,
+      139
+    ],
+    "sha256": "5a60d311a31b0450b2cf95a6f980b9de40045b09db1fa75e798b132d61227d77"
+  },
+  {
+    "id": "slumber_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      44,
+      3,
+      116,
+      139
+    ],
+    "sha256": "2390cb4908286f5dcde2813df877b464b43a04fea88cc7edc63eb774991101cf"
+  },
+  {
+    "id": "spear_bamboo",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      33,
+      3,
+      126,
+      139
+    ],
+    "sha256": "200570f448c2f3c52ae83488e47b5c69bab1086c493fb343141f126bf4d9cb9b"
+  },
+  {
+    "id": "stone_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      16,
+      3,
+      143,
+      139
+    ],
+    "sha256": "66de63c9b254041d2ed01c22ffebb19b2e1ba99bd367126fc6d59955174b66d6"
+  },
+  {
+    "id": "storm_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      31,
+      3,
+      129,
+      139
+    ],
+    "sha256": "ddea631becf8f8a49beb078226ca81b9e89bf54c93e2a1f8aeb2c18fc066859f"
+  },
+  {
+    "id": "sunwell_flower",
+    "canvas": [
+      160,
+      160
+    ],
+    "bbox": [
+      31,
+      3,
+      129,
+      139
+    ],
+    "sha256": "7b281827f9249ed126d9f7c8f7bc2fc026f80e7445368a44c5a6bb422ec88265"
+  },
+  {
+    "id": "dawn_pulse",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      51,
+      4,
+      205,
+      222
+    ],
+    "sha256": "1457b9766a3b43ed97976c003751e789f77aa1538599a9b873bdea39380ed4b2"
+  },
+  {
+    "id": "mother_charge_01",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      40,
+      4,
+      216,
+      222
+    ],
+    "sha256": "41a5e725aa22300794e6e2fec636306035b758f517d979da35413fc511ad0010"
+  },
+  {
+    "id": "mother_charge_02",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      40,
+      4,
+      216,
+      222
+    ],
+    "sha256": "a99fd83d655ec33b9763fc9000e6742814031de88f6e4c84244adc7653d7901e"
+  },
+  {
+    "id": "mother_charge_03",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      45,
+      4,
+      210,
+      222
+    ],
+    "sha256": "155654037f023181820c7f83e5ede1c03ddebde729488a696842277c4d92e981"
+  },
+  {
+    "id": "mother_charge_04",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      33,
+      4,
+      223,
+      222
+    ],
+    "sha256": "1b9f56566ea5c4007d991f6c55756114aeeb773a1b459a3eb5ebfcd0afdf408f"
+  },
+  {
+    "id": "mother_charge_05",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      48,
+      4,
+      208,
+      222
+    ],
+    "sha256": "fcd30218e089acb4755f6b02b13de6269f1e8cceb324bc094c999571056ce0fc"
+  },
+  {
+    "id": "mother_charge_06",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      42,
+      4,
+      214,
+      222
+    ],
+    "sha256": "06e4aad1f4c80fb4bf8b6a89798542bb975b1e1ab40b412bfffd5a26eb484174"
+  },
+  {
+    "id": "mother_corona_01",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      49,
+      4,
+      206,
+      222
+    ],
+    "sha256": "67fdd98ce0a07960cebe136c83ba816b01ad91af30de449ca0ba9b8557fde8a4"
+  },
+  {
+    "id": "mother_corona_02",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      40,
+      4,
+      215,
+      222
+    ],
+    "sha256": "081260823ce7e6369acfa29b9e14de079b40d371dabe9c4fdd7571bcd329a7b8"
+  },
+  {
+    "id": "mother_corona_03",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      41,
+      4,
+      214,
+      222
+    ],
+    "sha256": "639b07af61ae6f0b3e473bcfce202299f24e4d6bb9e87debca44063d52437e72"
+  },
+  {
+    "id": "mother_corona_04",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      49,
+      4,
+      206,
+      222
+    ],
+    "sha256": "035a9e7da3759a371e7efdf5b53c348a3246ae145ab4c05d73a1ff078d306e58"
+  },
+  {
+    "id": "mother_corona_05",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      42,
+      4,
+      213,
+      222
+    ],
+    "sha256": "a613a6c7dd477d6c7dd7e90675c55e997df3e6ee65b70c9a7e7393d21d8e4b08"
+  },
+  {
+    "id": "mother_corona_06",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      44,
+      4,
+      211,
+      222
+    ],
+    "sha256": "28d9046708e6425f6a6c277b86accd3c553ecef6dc421b85d602040ed4928082"
+  },
+  {
+    "id": "mother_counterroot_01",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      45,
+      4,
+      211,
+      222
+    ],
+    "sha256": "9f0bd5ccaa96672ddd3a93579d369d9c80a927e74491a1be02f304eab9b84b8a"
+  },
+  {
+    "id": "mother_counterroot_02",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      28,
+      4,
+      227,
+      222
+    ],
+    "sha256": "5bd28bd2a30544f0cc9b9dbfad881aeefb6ed2853c7edc36837fe14814157067"
+  },
+  {
+    "id": "mother_counterroot_03",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      26,
+      4,
+      229,
+      222
+    ],
+    "sha256": "234a7d0eb841e9c2cd29fdc0fa3f6d129d72a7f7f4b7b38b6cd6b01df48595c4"
+  },
+  {
+    "id": "mother_counterroot_04",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      46,
+      4,
+      209,
+      222
+    ],
+    "sha256": "4116c654847dc3ac311274d5e5f25c096ab97b0ec224f62670c17839397ed78e"
+  },
+  {
+    "id": "mother_counterroot_05",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      34,
+      4,
+      222,
+      222
+    ],
+    "sha256": "d7011183226f6ea709987501b51a0f05af49e21893affeaa2f6efe42d1e6ac28"
+  },
+  {
+    "id": "mother_counterroot_06",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      40,
+      4,
+      215,
+      222
+    ],
+    "sha256": "0f04429bb6e8c2a2f861d8f6ac9b71f3b8492dc0e050a2439eae8f33d9e0a92d"
+  },
+  {
+    "id": "mother_morningstar_01",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      53,
+      4,
+      203,
+      222
+    ],
+    "sha256": "4dbd8a2e0de6a3ea74234a0c07c9a28928ce418038c32aece4926424c16f8ba0"
+  },
+  {
+    "id": "mother_morningstar_02",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      51,
+      4,
+      204,
+      222
+    ],
+    "sha256": "d7c3e4b3d2c1e39a6777e1c4ee9e992f0f322193bfcd2b669f625d0c9e0160a6"
+  },
+  {
+    "id": "mother_morningstar_03",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      35,
+      4,
+      220,
+      222
+    ],
+    "sha256": "70a97df34fffa6a109349a853e2bce870f31099d266911654514691f85263562"
+  },
+  {
+    "id": "mother_morningstar_04",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      38,
+      4,
+      218,
+      222
+    ],
+    "sha256": "ebc1a1d4deb15b5e9c4e824fdc7fccb8d7db46961cc6feb9e13d1216b83e39c5"
+  },
+  {
+    "id": "mother_morningstar_05",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      51,
+      4,
+      205,
+      222
+    ],
+    "sha256": "4603321a486eb6d071282f301bed2323bf45fa29acd10b423f114a95a4951dbc"
+  },
+  {
+    "id": "mother_morningstar_06",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      46,
+      4,
+      209,
+      222
+    ],
+    "sha256": "d821730b349d2824b94f51dc6db56ce5f483d585bcada231a92d07de0f0adc4d"
+  },
+  {
+    "id": "mother_quelling_01",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      23,
+      4,
+      233,
+      222
+    ],
+    "sha256": "f6e20bba070a455f7413fb4d069083d76ee1d7847f73cf088671a7ace86e2ef8"
+  },
+  {
+    "id": "mother_quelling_02",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      31,
+      4,
+      224,
+      222
+    ],
+    "sha256": "86b0eac820557feaa087754f8d42550b85bcb5f642e375f87724c6815b3cd9e0"
+  },
+  {
+    "id": "mother_quelling_03",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      48,
+      4,
+      207,
+      222
+    ],
+    "sha256": "e3d9d98e62eb5d3cf5c9c6dfd83bb31218e7234ef2902e41face0716e842ace9"
+  },
+  {
+    "id": "mother_quelling_04",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      46,
+      4,
+      210,
+      222
+    ],
+    "sha256": "5238c24a729b967af395a4dffd6245b6ef68d80c526ebfbb6d25752e9e9a504d"
+  },
+  {
+    "id": "mother_quelling_05",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      41,
+      4,
+      215,
+      222
+    ],
+    "sha256": "9bc3b084f415e6196e8f86e3197d4b71fda09dcaa6a8cb026b64c063b7a1937e"
+  },
+  {
+    "id": "mother_quelling_06",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      41,
+      4,
+      214,
+      222
+    ],
+    "sha256": "10f3991e27ff7e7a75df6ba4616df14649ffaebcf8bd4ab27ed47b4ac9cc96fe"
+  },
+  {
+    "id": "mother_receptacle_01",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      55,
+      4,
+      201,
+      222
+    ],
+    "sha256": "b41835853daa2dc2cfb4f2bd6b96ce7851019de68eb1bc54978dc58f9e1d65f8"
+  },
+  {
+    "id": "mother_receptacle_02",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      55,
+      4,
+      201,
+      222
+    ],
+    "sha256": "9a121058ea5bcf7623019b26c14d4262173cdc3b3c7d93b1cd551107a0ddca23"
+  },
+  {
+    "id": "mother_receptacle_03",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      63,
+      4,
+      192,
+      222
+    ],
+    "sha256": "60079476af6c8021d5b2b4bc97e69843b9c91f39772855f51726796b633facef"
+  },
+  {
+    "id": "mother_receptacle_04",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      55,
+      4,
+      200,
+      222
+    ],
+    "sha256": "0d9bf764c6032d5e8dae410b180db3702a18898f2c12f33a5d54fdd67eb54d9a"
+  },
+  {
+    "id": "mother_receptacle_05",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      48,
+      4,
+      207,
+      222
+    ],
+    "sha256": "395ab8ad25a397d1b36f4e5a78b097104e3bd4006be1e4e78db288563e1c4bdc"
+  },
+  {
+    "id": "mother_receptacle_06",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      40,
+      4,
+      216,
+      222
+    ],
+    "sha256": "1779e680e18d5b78366a165750b45306b21b47bb6a24ce15a6857b62b4c28b91"
+  },
+  {
+    "id": "mother_sap_01",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      37,
+      4,
+      219,
+      222
+    ],
+    "sha256": "f85482caf47a0d858803d28bd3e57106963a9f8c52277918e478b4826b5fb3a9"
+  },
+  {
+    "id": "mother_sap_02",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      52,
+      4,
+      204,
+      222
+    ],
+    "sha256": "dfcf66547ea1e2c8ae82bd7d6fab23a48d0aa87b8615f8d9cd81ec98e97c2093"
+  },
+  {
+    "id": "mother_sap_03",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      44,
+      4,
+      212,
+      222
+    ],
+    "sha256": "d26fe90eeab7e83403c9bd838eff63f582c15d2a5d11b953fcbc0339470e593b"
+  },
+  {
+    "id": "mother_sap_04",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      48,
+      4,
+      208,
+      222
+    ],
+    "sha256": "c48063724a53f0672e01bbc52fb785c259122400982b9fa9ad00e011639412fa"
+  },
+  {
+    "id": "mother_sap_05",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      56,
+      4,
+      200,
+      222
+    ],
+    "sha256": "e6f5f526be519a6de1ed6b844362abdd577ad92dc21c73ce09e68075d94d7476"
+  },
+  {
+    "id": "mother_sap_06",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      41,
+      4,
+      215,
+      222
+    ],
+    "sha256": "fbc529c9548a2a8f7ab5cc3ff8a3e20fc6432c7bf24893b7f681e4007e518e71"
+  },
+  {
+    "id": "mother_sunburst_01",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      52,
+      4,
+      204,
+      222
+    ],
+    "sha256": "5874c19185de61347c3787c8851f638c436bc4b357ebc6bdaaa452bf2e567b4b"
+  },
+  {
+    "id": "mother_sunburst_02",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      44,
+      4,
+      212,
+      222
+    ],
+    "sha256": "6de329a8cf5beed7b76103c411b8f9434e43e329710209819faeeb1596affd10"
+  },
+  {
+    "id": "mother_sunburst_03",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      33,
+      4,
+      222,
+      222
+    ],
+    "sha256": "550a02a6dfa7babef99034a0e3800bd523d5512131633b57c15f18e135e31fcc"
+  },
+  {
+    "id": "mother_sunburst_04",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      44,
+      4,
+      212,
+      222
+    ],
+    "sha256": "b0c12a0a07b92043d6656a832645de364583814aaf957db8b39912b00e96e4a2"
+  },
+  {
+    "id": "mother_sunburst_05",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      47,
+      4,
+      208,
+      222
+    ],
+    "sha256": "e357d957a40be83672fa873a5496b89e7e4c9fd145f5298c62e697837bb30925"
+  },
+  {
+    "id": "mother_sunburst_06",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      54,
+      4,
+      202,
+      222
+    ],
+    "sha256": "76e0692fce7ac65808091661a2b424838723d7595a93de34d6d601ba50862a24"
+  },
+  {
+    "id": "mother_sunseed_01",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      36,
+      4,
+      220,
+      222
+    ],
+    "sha256": "110c03ca53026df0977a5e65114c5d10f2420d86b84c22af2dd8ec3128d5243c"
+  },
+  {
+    "id": "mother_sunseed_02",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      51,
+      4,
+      205,
+      222
+    ],
+    "sha256": "17486017995141e37ba751c318b864915c6f3e775ea290deb3405ced6c4dfbf7"
+  },
+  {
+    "id": "mother_sunseed_03",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      52,
+      4,
+      204,
+      222
+    ],
+    "sha256": "a1f9f69bddaee39807ae75c3efdcf44840ffcf01f293198c5f842f6d373ad329"
+  },
+  {
+    "id": "mother_sunseed_04",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      42,
+      4,
+      213,
+      222
+    ],
+    "sha256": "647b75ea57fb39e84f40e7810dd4779a4bb7160d17beeb40caf6318bd85e2a82"
+  },
+  {
+    "id": "mother_sunseed_05",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      39,
+      4,
+      216,
+      222
+    ],
+    "sha256": "308e79d1d4ee4e8a6d6b3f6a58b04ede2c160f2ac02c28c3ee3c4a8676d6a0cd"
+  },
+  {
+    "id": "mother_sunseed_06",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      54,
+      4,
+      201,
+      222
+    ],
+    "sha256": "0efd10001c57a703bed95300a80725b8d7fa3f1dc2c3c2c00306453383ac1fcb"
+  },
+  {
+    "id": "root_heart",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      49,
+      4,
+      207,
+      222
+    ],
+    "sha256": "1ffce2142ec0c95b2d8be17a1138fa9e52fc639865742aa272e1f4ac8c616fde"
+  },
+  {
+    "id": "sun_arrow",
+    "canvas": [
+      256,
+      256
+    ],
+    "bbox": [
+      55,
+      4,
+      201,
+      222
+    ],
+    "sha256": "efa062e4bce2ce0d9fe60ca6b04fb06cd88e3370dc4ff9a63dddae53a7ec6527"
+  }
+]
