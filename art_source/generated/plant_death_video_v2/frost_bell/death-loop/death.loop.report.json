@@ -1,0 +1,87 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_death_video_v2\\frost_bell\\death-frames\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_death_video_v2\\frost_bell\\death-loop",
+  "state": "death",
+  "fps": 12.0,
+  "frames_total": 49,
+  "window": [
+    5,
+    22
+  ],
+  "profile": "generic in-place action",
+  "cycle_mode": "fixed",
+  "seam_max": 1000.0,
+  "anchor": "none",
+  "seam_measurement": "source-frames",
+  "cycle": {
+    "kind": "fixed",
+    "start": 0,
+    "length": 32,
+    "seam": 0.060139868408441544,
+    "inner_mean_adjacent": 0.007447879295796156,
+    "ratio": 8.074764106661421,
+    "period_global": null,
+    "periodicity": null
+  },
+  "periodic_attempt": null,
+  "cycle_seconds": 2.6667,
+  "n_out": 32,
+  "gif_fps": 12.0,
+  "delay_ms": 83,
+  "status": "passed",
+  "resampled_seam": 0.060139868408441544,
+  "resampled_inner_mean_adjacent": 0.007447879295796156,
+  "resampled_seam_ratio": 8.0748,
+  "scrubbed_rgb_pixels": 0,
+  "specks_dropped": 1300,
+  "strip": {
+    "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_death_video_v2\\frost_bell\\death-loop\\death.strip.png",
+    "frames": 32,
+    "w": 119,
+    "h": 138,
+    "kind": "fixed",
+    "loop": true,
+    "body_h": 129,
+    "body_src_h": 302,
+    "body_ref": "first-frame",
+    "scale": 0.4272,
+    "delay_ms": 83.33,
+    "cycle_frames": 32,
+    "cycle_seconds": 2.6667,
+    "subsampled": false,
+    "cell_cap": 64,
+    "top_margin_px": 86,
+    "body_height_target": 129,
+    "foot_anchor": "none",
+    "drift_px": 0,
+    "foot_sway_px": 0,
+    "foot_x": null
+  },
+  "gif": {
+    "file": "death.gif",
+    "format": "GIF",
+    "n_frames": 32,
+    "loop": 0,
+    "size": [
+      119,
+      138
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 224260
+  },
+  "webp": {
+    "file": "death.webp",
+    "format": "WEBP",
+    "n_frames": 32,
+    "loop": 0,
+    "size": [
+      119,
+      138
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 597188
+  }
+}

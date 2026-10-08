@@ -1,0 +1,89 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_attack_video_v6\\cleanse_flower\\attack-frames\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_attack_video_v6\\cleanse_flower\\attack-loop",
+  "state": "attack",
+  "fps": 24.0,
+  "frames_total": 97,
+  "window": [
+    11,
+    60
+  ],
+  "profile": "swing and return to ready; retain at least half a second of repeat context",
+  "cycle_mode": "pinned",
+  "seam_max": 2.0,
+  "anchor": "none",
+  "seam_measurement": "source-frames",
+  "cycle": {
+    "kind": "pinned",
+    "start": 0,
+    "length": 96,
+    "seam": 0.001046215882524848,
+    "inner_mean_adjacent": 0.005002947989851236,
+    "ratio": 0.2091198798482727,
+    "pin_error": 0.0010723740560933948,
+    "pin_tolerance": 0.010005895979702473,
+    "period_global": null,
+    "periodicity": null
+  },
+  "periodic_attempt": null,
+  "cycle_seconds": 4.0,
+  "n_out": 64,
+  "gif_fps": 24.0,
+  "delay_ms": 62,
+  "status": "passed",
+  "resampled_seam": 0.001130161341279745,
+  "resampled_inner_mean_adjacent": 0.007014731410890818,
+  "resampled_seam_ratio": 0.1611,
+  "scrubbed_rgb_pixels": 0,
+  "specks_dropped": 3911,
+  "strip": {
+    "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_attack_video_v6\\cleanse_flower\\attack-loop\\attack.strip.png",
+    "frames": 64,
+    "w": 166,
+    "h": 137,
+    "kind": "pinned",
+    "loop": true,
+    "body_h": 130,
+    "body_src_h": 251,
+    "body_ref": "first-frame",
+    "scale": 0.5179,
+    "delay_ms": 62.5,
+    "cycle_frames": 96,
+    "cycle_seconds": 4.0,
+    "subsampled": true,
+    "cell_cap": 64,
+    "top_margin_px": 137,
+    "body_height_target": 130,
+    "foot_anchor": "none",
+    "drift_px": 0,
+    "foot_sway_px": 0,
+    "foot_x": null
+  },
+  "gif": {
+    "file": "attack.gif",
+    "format": "GIF",
+    "n_frames": 64,
+    "loop": 0,
+    "size": [
+      166,
+      137
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 443583
+  },
+  "webp": {
+    "file": "attack.webp",
+    "format": "WEBP",
+    "n_frames": 64,
+    "loop": 0,
+    "size": [
+      166,
+      137
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 1235324
+  }
+}
