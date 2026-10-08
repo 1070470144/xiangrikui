@@ -1,0 +1,22 @@
+{
+  "frames": 46,
+  "w": 228,
+  "h": 177,
+  "kind": "one-shot",
+  "loop": false,
+  "body_h": 123,
+  "body_src_h": 492,
+  "body_ref": "first-frame",
+  "scale": 0.25,
+  "delay_ms": 41.67,
+  "cycle_frames": 46,
+  "cycle_seconds": 1.9167,
+  "subsampled": false,
+  "cell_cap": 64,
+  "top_margin_px": 12,
+  "body_height_target": 123,
+  "foot_anchor": "none",
+  "drift_px": 0,
+  "foot_sway_px": 0,
+  "foot_x": null
+}

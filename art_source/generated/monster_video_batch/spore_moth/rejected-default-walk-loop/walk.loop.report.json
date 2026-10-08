@@ -1,0 +1,21 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_video_batch\\spore_moth\\walk-frames\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_video_batch\\spore_moth\\walk-loop",
+  "state": "walk",
+  "fps": 24.0,
+  "frames_total": 121,
+  "window": [
+    12,
+    38
+  ],
+  "profile": "full gait = two steps; the floor admits a legless body's fast bounce (~13 frames at 24 fps) — the 15% depth rule rejects the one-step half period when the near/far leg shows, and the gait floor (min_seconds) catches it when it does not",
+  "cycle_mode": "auto",
+  "seam_max": 2.0,
+  "anchor": "motion-auto",
+  "seam_measurement": "rendered-cells",
+  "status": "failed",
+  "error": "automatic motion anchor needs two separated regions trackable throughout the clip",
+  "cycle": null,
+  "periodic_attempt": null
+}

@@ -1,0 +1,2024 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_video_batch\\spore_moth\\walk-frames\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_video_batch\\spore_moth\\flight-loop",
+  "state": "flight",
+  "fps": 24.0,
+  "frames_total": 121,
+  "window": [
+    6,
+    36
+  ],
+  "profile": "generic in-place action",
+  "cycle_mode": "periodic",
+  "seam_max": 2.0,
+  "anchor": "body",
+  "seam_measurement": "source-frames",
+  "status": "failed",
+  "error": "video-loop: no periodic cycle found — the period profile is flat (periodicity -0.17 < 0.150) in window [6,36]; the motion does not repeat, widen the window, regenerate the clip, or pass --cycle one-shot for a single performed action",
+  "cycle": {
+    "start": 49,
+    "length": 26,
+    "seam": 0.06199600175023079,
+    "inner_mean_adjacent": 0.01824638992547989,
+    "ratio": 3.397713301284734,
+    "next_frame_distance": 0.06354276835918427,
+    "candidates": [
+      {
+        "start": 0,
+        "length": 26,
+        "seam": 0.07187023758888245,
+        "inner_mean_adjacent": 0.014802140183746815,
+        "ratio": 4.85539501022954
+      },
+      {
+        "start": 1,
+        "length": 26,
+        "seam": 0.07339035719633102,
+        "inner_mean_adjacent": 0.015119815245270729,
+        "ratio": 4.853918914074464
+      },
+      {
+        "start": 2,
+        "length": 26,
+        "seam": 0.07590608298778534,
+        "inner_mean_adjacent": 0.01535193994641304,
+        "ratio": 4.944396815825266
+      },
+      {
+        "start": 3,
+        "length": 26,
+        "seam": 0.08421828597784042,
+        "inner_mean_adjacent": 0.015959016978740692,
+        "ratio": 5.277159996134423
+      },
+      {
+        "start": 4,
+        "length": 26,
+        "seam": 0.08796054124832153,
+        "inner_mean_adjacent": 0.016248203814029694,
+        "ratio": 5.413554769196766
+      },
+      {
+        "start": 5,
+        "length": 26,
+        "seam": 0.0930914431810379,
+        "inner_mean_adjacent": 0.016623642295598984,
+        "ratio": 5.599942631446259
+      },
+      {
+        "start": 6,
+        "length": 26,
+        "seam": 0.09614861011505127,
+        "inner_mean_adjacent": 0.01689140498638153,
+        "ratio": 5.692161794271691
+      },
+      {
+        "start": 7,
+        "length": 26,
+        "seam": 0.09776148200035095,
+        "inner_mean_adjacent": 0.017235685139894485,
+        "ratio": 5.672039214389446
+      },
+      {
+        "start": 8,
+        "length": 26,
+        "seam": 0.09879957884550095,
+        "inner_mean_adjacent": 0.017267955467104912,
+        "ratio": 5.721556268413597
+      },
+      {
+        "start": 9,
+        "length": 26,
+        "seam": 0.09861686825752258,
+        "inner_mean_adjacent": 0.017324229702353477,
+        "ratio": 5.6924244224333735
+      },
+      {
+        "start": 10,
+        "length": 26,
+        "seam": 0.09837343543767929,
+        "inner_mean_adjacent": 0.01746833138167858,
+        "ratio": 5.631530183865009
+      },
+      {
+        "start": 11,
+        "length": 26,
+        "seam": 0.09872418642044067,
+        "inner_mean_adjacent": 0.017432797700166702,
+        "ratio": 5.663129241699203
+      },
+      {
+        "start": 12,
+        "length": 26,
+        "seam": 0.0992312952876091,
+        "inner_mean_adjacent": 0.017410997301340103,
+        "ratio": 5.69934585424187
+      },
+      {
+        "start": 13,
+        "length": 26,
+        "seam": 0.09834788739681244,
+        "inner_mean_adjacent": 0.017363328486680984,
+        "ratio": 5.664114888585612
+      },
+      {
+        "start": 14,
+        "length": 26,
+        "seam": 0.098750539124012,
+        "inner_mean_adjacent": 0.01736602932214737,
+        "ratio": 5.686420153516195
+      },
+      {
+        "start": 15,
+        "length": 26,
+        "seam": 0.09830034524202347,
+        "inner_mean_adjacent": 0.017156142741441727,
+        "ratio": 5.729746291080505
+      },
+      {
+        "start": 16,
+        "length": 26,
+        "seam": 0.09651776403188705,
+        "inner_mean_adjacent": 0.016734588891267776,
+        "ratio": 5.767561107058369
+      },
+      {
+        "start": 17,
+        "length": 26,
+        "seam": 0.09390431642532349,
+        "inner_mean_adjacent": 0.016517996788024902,
+        "ratio": 5.6849700136400045
+      },
+      {
+        "start": 18,
+        "length": 26,
+        "seam": 0.08955556154251099,
+        "inner_mean_adjacent": 0.016516538336873055,
+        "ratio": 5.422175017302435
+      },
+      {
+        "start": 19,
+        "length": 26,
+        "seam": 0.08626895397901535,
+        "inner_mean_adjacent": 0.016163231804966927,
+        "ratio": 5.337357962811935
+      },
+      {
+        "start": 20,
+        "length": 26,
+        "seam": 0.08195260912179947,
+        "inner_mean_adjacent": 0.015608327463269234,
+        "ratio": 5.250569563885491
+      },
+      {
+        "start": 21,
+        "length": 26,
+        "seam": 0.07680913805961609,
+        "inner_mean_adjacent": 0.015500827692449093,
+        "ratio": 4.955163658585281
+      },
+      {
+        "start": 22,
+        "length": 26,
+        "seam": 0.06887796521186829,
+        "inner_mean_adjacent": 0.015732450410723686,
+        "ratio": 4.378082461008051
+      },
+      {
+        "start": 23,
+        "length": 26,
+        "seam": 0.06621049344539642,
+        "inner_mean_adjacent": 0.015568026341497898,
+        "ratio": 4.252979279005118
+      },
+      {
+        "start": 24,
+        "length": 26,
+        "seam": 0.065015509724617,
+        "inner_mean_adjacent": 0.015173221938312054,
+        "ratio": 4.284884910333663
+      },
+      {
+        "start": 25,
+        "length": 26,
+        "seam": 0.07110770791769028,
+        "inner_mean_adjacent": 0.015219669789075851,
+        "ratio": 4.672092686841926
+      },
+      {
+        "start": 26,
+        "length": 26,
+        "seam": 0.07847204804420471,
+        "inner_mean_adjacent": 0.015540958382189274,
+        "ratio": 5.049369936807608
+      },
+      {
+        "start": 27,
+        "length": 26,
+        "seam": 0.08064252138137817,
+        "inner_mean_adjacent": 0.015437653288245201,
+        "ratio": 5.223755183229978
+      },
+      {
+        "start": 28,
+        "length": 26,
+        "seam": 0.09188870340585709,
+        "inner_mean_adjacent": 0.015178770758211613,
+        "ratio": 6.053764489205815
+      },
+      {
+        "start": 29,
+        "length": 26,
+        "seam": 0.09809964150190353,
+        "inner_mean_adjacent": 0.015152390114963055,
+        "ratio": 6.474202469551631
+      },
+      {
+        "start": 30,
+        "length": 26,
+        "seam": 0.10505329817533493,
+        "inner_mean_adjacent": 0.015309294685721397,
+        "ratio": 6.862059966310241
+      },
+      {
+        "start": 31,
+        "length": 26,
+        "seam": 0.10888836532831192,
+        "inner_mean_adjacent": 0.015096914954483509,
+        "ratio": 7.212623615924527
+      },
+      {
+        "start": 32,
+        "length": 26,
+        "seam": 0.10853864252567291,
+        "inner_mean_adjacent": 0.015073188580572605,
+        "ratio": 7.200775200647673
+      },
+      {
+        "start": 33,
+        "length": 26,
+        "seam": 0.10706974565982819,
+        "inner_mean_adjacent": 0.015219968743622303,
+        "ratio": 7.034820337899455
+      },
+      {
+        "start": 34,
+        "length": 26,
+        "seam": 0.10752704739570618,
+        "inner_mean_adjacent": 0.015488725155591965,
+        "ratio": 6.942278742475148
+      },
+      {
+        "start": 35,
+        "length": 26,
+        "seam": 0.10767073929309845,
+        "inner_mean_adjacent": 0.015311415307223797,
+        "ratio": 7.032056614799044
+      },
+      {
+        "start": 36,
+        "length": 26,
+        "seam": 0.10885006934404373,
+        "inner_mean_adjacent": 0.015458367764949799,
+        "ratio": 7.041498235722511
+      },
+      {
+        "start": 37,
+        "length": 26,
+        "seam": 0.10972493886947632,
+        "inner_mean_adjacent": 0.01572742499411106,
+        "ratio": 6.976662671134115
+      },
+      {
+        "start": 38,
+        "length": 26,
+        "seam": 0.10972428321838379,
+        "inner_mean_adjacent": 0.015712326392531395,
+        "ratio": 6.983325096310339
+      },
+      {
+        "start": 39,
+        "length": 26,
+        "seam": 0.10994902998209,
+        "inner_mean_adjacent": 0.015538619831204414,
+        "ratio": 7.075855589264889
+      },
+      {
+        "start": 40,
+        "length": 26,
+        "seam": 0.10865535587072372,
+        "inner_mean_adjacent": 0.015761246904730797,
+        "ratio": 6.893829944260972
+      },
+      {
+        "start": 41,
+        "length": 26,
+        "seam": 0.10287687182426453,
+        "inner_mean_adjacent": 0.016527928411960602,
+        "ratio": 6.224426271704846
+      },
+      {
+        "start": 42,
+        "length": 26,
+        "seam": 0.09834566712379456,
+        "inner_mean_adjacent": 0.016753429546952248,
+        "ratio": 5.870181197716942
+      },
+      {
+        "start": 43,
+        "length": 26,
+        "seam": 0.09255465865135193,
+        "inner_mean_adjacent": 0.016578083857893944,
+        "ratio": 5.582952737163313
+      },
+      {
+        "start": 44,
+        "length": 26,
+        "seam": 0.08817313611507416,
+        "inner_mean_adjacent": 0.016937607899308205,
+        "ratio": 5.205760851192894
+      },
+      {
+        "start": 45,
+        "length": 26,
+        "seam": 0.081546850502491,
+        "inner_mean_adjacent": 0.017718961462378502,
+        "ratio": 4.602236461523663
+      },
+      {
+        "start": 46,
+        "length": 26,
+        "seam": 0.07707700878381729,
+        "inner_mean_adjacent": 0.017846684902906418,
+        "ratio": 4.318841801889208
+      },
+      {
+        "start": 47,
+        "length": 26,
+        "seam": 0.06889599561691284,
+        "inner_mean_adjacent": 0.0174747034907341,
+        "ratio": 3.942613140957997
+      },
+      {
+        "start": 48,
+        "length": 26,
+        "seam": 0.06502632796764374,
+        "inner_mean_adjacent": 0.017743337899446487,
+        "ratio": 3.6648306162096067
+      },
+      {
+        "start": 49,
+        "length": 26,
+        "seam": 0.06199600175023079,
+        "inner_mean_adjacent": 0.01824638992547989,
+        "ratio": 3.397713301284734
+      },
+      {
+        "start": 50,
+        "length": 26,
+        "seam": 0.06852906942367554,
+        "inner_mean_adjacent": 0.01811474747955799,
+        "ratio": 3.78305408347584
+      },
+      {
+        "start": 51,
+        "length": 26,
+        "seam": 0.07430391013622284,
+        "inner_mean_adjacent": 0.017625007778406143,
+        "ratio": 4.215822828019328
+      },
+      {
+        "start": 52,
+        "length": 26,
+        "seam": 0.07574523985385895,
+        "inner_mean_adjacent": 0.017688274383544922,
+        "ratio": 4.282228905512873
+      },
+      {
+        "start": 53,
+        "length": 26,
+        "seam": 0.09031888097524643,
+        "inner_mean_adjacent": 0.018070630729198456,
+        "ratio": 4.998103404841842
+      },
+      {
+        "start": 54,
+        "length": 26,
+        "seam": 0.09713390469551086,
+        "inner_mean_adjacent": 0.01789974793791771,
+        "ratio": 5.4265515376196145
+      },
+      {
+        "start": 55,
+        "length": 26,
+        "seam": 0.10400700569152832,
+        "inner_mean_adjacent": 0.01745619811117649,
+        "ratio": 5.9581705609159465
+      },
+      {
+        "start": 56,
+        "length": 26,
+        "seam": 0.10716939717531204,
+        "inner_mean_adjacent": 0.01757744699716568,
+        "ratio": 6.096983093881201
+      },
+      {
+        "start": 57,
+        "length": 26,
+        "seam": 0.10900499671697617,
+        "inner_mean_adjacent": 0.01781267300248146,
+        "ratio": 6.11951932771633
+      },
+      {
+        "start": 58,
+        "length": 26,
+        "seam": 0.1075531616806984,
+        "inner_mean_adjacent": 0.017498649656772614,
+        "ratio": 6.146369222214322
+      },
+      {
+        "start": 59,
+        "length": 26,
+        "seam": 0.10862567275762558,
+        "inner_mean_adjacent": 0.017059940844774246,
+        "ratio": 6.367294807525637
+      },
+      {
+        "start": 60,
+        "length": 26,
+        "seam": 0.10850094258785248,
+        "inner_mean_adjacent": 0.017098499462008476,
+        "ratio": 6.345641196698755
+      },
+      {
+        "start": 61,
+        "length": 26,
+        "seam": 0.10756539553403854,
+        "inner_mean_adjacent": 0.017186930403113365,
+        "ratio": 6.2585576953609685
+      },
+      {
+        "start": 62,
+        "length": 26,
+        "seam": 0.10844289511442184,
+        "inner_mean_adjacent": 0.016790153458714485,
+        "ratio": 6.458719712185681
+      },
+      {
+        "start": 63,
+        "length": 26,
+        "seam": 0.10826277732849121,
+        "inner_mean_adjacent": 0.0166118573397398,
+        "ratio": 6.517198836610463
+      },
+      {
+        "start": 64,
+        "length": 26,
+        "seam": 0.10776577144861221,
+        "inner_mean_adjacent": 0.01648125797510147,
+        "ratio": 6.538686040314148
+      },
+      {
+        "start": 65,
+        "length": 26,
+        "seam": 0.10672849416732788,
+        "inner_mean_adjacent": 0.01630314625799656,
+        "ratio": 6.546496760708285
+      },
+      {
+        "start": 66,
+        "length": 26,
+        "seam": 0.10268757492303848,
+        "inner_mean_adjacent": 0.015284941531717777,
+        "ratio": 6.7182183660926365
+      },
+      {
+        "start": 67,
+        "length": 26,
+        "seam": 0.10101456940174103,
+        "inner_mean_adjacent": 0.014747807756066322,
+        "ratio": 6.849463396360722
+      },
+      {
+        "start": 68,
+        "length": 26,
+        "seam": 0.10049527883529663,
+        "inner_mean_adjacent": 0.014560392126441002,
+        "ratio": 6.90196238965308
+      },
+      {
+        "start": 69,
+        "length": 26,
+        "seam": 0.0964110717177391,
+        "inner_mean_adjacent": 0.014113153330981731,
+        "ratio": 6.831292019345801
+      },
+      {
+        "start": 70,
+        "length": 26,
+        "seam": 0.09149602800607681,
+        "inner_mean_adjacent": 0.013009810820221901,
+        "ratio": 7.032848461090552
+      },
+      {
+        "start": 71,
+        "length": 26,
+        "seam": 0.08922548592090607,
+        "inner_mean_adjacent": 0.012449854984879494,
+        "ratio": 7.166789173791305
+      },
+      {
+        "start": 72,
+        "length": 26,
+        "seam": 0.08415760099887848,
+        "inner_mean_adjacent": 0.012443134561181068,
+        "ratio": 6.763376268663486
+      },
+      {
+        "start": 73,
+        "length": 26,
+        "seam": 0.07714962959289551,
+        "inner_mean_adjacent": 0.01201653853058815,
+        "ratio": 6.420287289597649
+      },
+      {
+        "start": 74,
+        "length": 26,
+        "seam": 0.06748618185520172,
+        "inner_mean_adjacent": 0.011116628535091877,
+        "ratio": 6.070741829878366
+      },
+      {
+        "start": 75,
+        "length": 26,
+        "seam": 0.06309232860803604,
+        "inner_mean_adjacent": 0.010745275765657425,
+        "ratio": 5.871634193855041
+      },
+      {
+        "start": 76,
+        "length": 26,
+        "seam": 0.05980300158262253,
+        "inner_mean_adjacent": 0.010971144773066044,
+        "ratio": 5.450935414637658
+      },
+      {
+        "start": 77,
+        "length": 26,
+        "seam": 0.058104537427425385,
+        "inner_mean_adjacent": 0.010888814926147461,
+        "ratio": 5.336167234131068
+      },
+      {
+        "start": 78,
+        "length": 26,
+        "seam": 0.06631529331207275,
+        "inner_mean_adjacent": 0.010271991603076458,
+        "ratio": 6.45593336468571
+      },
+      {
+        "start": 79,
+        "length": 26,
+        "seam": 0.07303069531917572,
+        "inner_mean_adjacent": 0.010105732828378677,
+        "ratio": 7.226660011641379
+      },
+      {
+        "start": 80,
+        "length": 26,
+        "seam": 0.08045074343681335,
+        "inner_mean_adjacent": 0.010649766772985458,
+        "ratio": 7.554225848484053
+      },
+      {
+        "start": 81,
+        "length": 26,
+        "seam": 0.08460084348917007,
+        "inner_mean_adjacent": 0.010675000958144665,
+        "ratio": 7.925136852060185
+      },
+      {
+        "start": 82,
+        "length": 26,
+        "seam": 0.08945940434932709,
+        "inner_mean_adjacent": 0.01028632652014494,
+        "ratio": 8.696924424295503
+      },
+      {
+        "start": 83,
+        "length": 26,
+        "seam": 0.09033972024917603,
+        "inner_mean_adjacent": 0.01040127594023943,
+        "ratio": 8.685445974919157
+      },
+      {
+        "start": 84,
+        "length": 26,
+        "seam": 0.09220921248197556,
+        "inner_mean_adjacent": 0.01115600485354662,
+        "ratio": 8.265433162899818
+      },
+      {
+        "start": 85,
+        "length": 26,
+        "seam": 0.09301542490720749,
+        "inner_mean_adjacent": 0.011496998369693756,
+        "ratio": 8.090409506571508
+      },
+      {
+        "start": 86,
+        "length": 26,
+        "seam": 0.09373901784420013,
+        "inner_mean_adjacent": 0.011607187800109386,
+        "ratio": 8.075945651824185
+      },
+      {
+        "start": 87,
+        "length": 26,
+        "seam": 0.09531822055578232,
+        "inner_mean_adjacent": 0.011849116533994675,
+        "ratio": 8.044331430306883
+      },
+      {
+        "start": 88,
+        "length": 26,
+        "seam": 0.09751033782958984,
+        "inner_mean_adjacent": 0.012698924168944359,
+        "ratio": 7.678629821891103
+      },
+      {
+        "start": 89,
+        "length": 26,
+        "seam": 0.09832010418176651,
+        "inner_mean_adjacent": 0.013100910931825638,
+        "ratio": 7.5048296025675985
+      },
+      {
+        "start": 90,
+        "length": 26,
+        "seam": 0.09877671301364899,
+        "inner_mean_adjacent": 0.013218799605965614,
+        "ratio": 7.4724419734051555
+      },
+      {
+        "start": 91,
+        "length": 26,
+        "seam": 0.09988636523485184,
+        "inner_mean_adjacent": 0.013319394551217556,
+        "ratio": 7.4993172437947635
+      },
+      {
+        "start": 92,
+        "length": 26,
+        "seam": 0.10123610496520996,
+        "inner_mean_adjacent": 0.013763517141342163,
+        "ratio": 7.355394985568189
+      },
+      {
+        "start": 93,
+        "length": 26,
+        "seam": 0.10173484683036804,
+        "inner_mean_adjacent": 0.013619507662951946,
+        "ratio": 7.469788875489911
+      },
+      {
+        "start": 94,
+        "length": 26,
+        "seam": 0.10167211294174194,
+        "inner_mean_adjacent": 0.013542707078158855,
+        "ratio": 7.507517688669108
+      },
+      {
+        "start": 0,
+        "length": 27,
+        "seam": 0.07323908805847168,
+        "inner_mean_adjacent": 0.014986773952841759,
+        "ratio": 4.886914841641703
+      },
+      {
+        "start": 1,
+        "length": 27,
+        "seam": 0.07572226226329803,
+        "inner_mean_adjacent": 0.01519916020333767,
+        "ratio": 4.982003035053855
+      },
+      {
+        "start": 2,
+        "length": 27,
+        "seam": 0.08453474193811417,
+        "inner_mean_adjacent": 0.01572711579501629,
+        "ratio": 5.3750950294968955
+      },
+      {
+        "start": 3,
+        "length": 27,
+        "seam": 0.08735495805740356,
+        "inner_mean_adjacent": 0.016124116256833076,
+        "ratio": 5.417658658990646
+      },
+      {
+        "start": 4,
+        "length": 27,
+        "seam": 0.09187100827693939,
+        "inner_mean_adjacent": 0.016398873180150986,
+        "ratio": 5.602275672705308
+      },
+      {
+        "start": 5,
+        "length": 27,
+        "seam": 0.09496153146028519,
+        "inner_mean_adjacent": 0.016643108800053596,
+        "ratio": 5.70575681509571
+      },
+      {
+        "start": 6,
+        "length": 27,
+        "seam": 0.09693664312362671,
+        "inner_mean_adjacent": 0.016925258561968803,
+        "ratio": 5.727336026726596
+      },
+      {
+        "start": 7,
+        "length": 27,
+        "seam": 0.09664922207593918,
+        "inner_mean_adjacent": 0.017038272693753242,
+        "ratio": 5.672477710218464
+      },
+      {
+        "start": 8,
+        "length": 27,
+        "seam": 0.09777922928333282,
+        "inner_mean_adjacent": 0.016971226781606674,
+        "ratio": 5.761470902581152
+      },
+      {
+        "start": 9,
+        "length": 27,
+        "seam": 0.09746214747428894,
+        "inner_mean_adjacent": 0.017063410952687263,
+        "ratio": 5.711762305000334
+      },
+      {
+        "start": 10,
+        "length": 27,
+        "seam": 0.09852166473865509,
+        "inner_mean_adjacent": 0.016986606642603874,
+        "ratio": 5.799961511533107
+      },
+      {
+        "start": 11,
+        "length": 27,
+        "seam": 0.09807301312685013,
+        "inner_mean_adjacent": 0.017045555636286736,
+        "ratio": 5.753582647553676
+      },
+      {
+        "start": 12,
+        "length": 27,
+        "seam": 0.09900450706481934,
+        "inner_mean_adjacent": 0.017040537670254707,
+        "ratio": 5.809940330558801
+      },
+      {
+        "start": 13,
+        "length": 27,
+        "seam": 0.0993073582649231,
+        "inner_mean_adjacent": 0.01715651899576187,
+        "ratio": 5.788316283125658
+      },
+      {
+        "start": 14,
+        "length": 27,
+        "seam": 0.0994877964258194,
+        "inner_mean_adjacent": 0.01696242019534111,
+        "ratio": 5.865188769061661
+      },
+      {
+        "start": 15,
+        "length": 27,
+        "seam": 0.09755730628967285,
+        "inner_mean_adjacent": 0.016922779381275177,
+        "ratio": 5.764851274821834
+      },
+      {
+        "start": 16,
+        "length": 27,
+        "seam": 0.09583549201488495,
+        "inner_mean_adjacent": 0.016564998775720596,
+        "ratio": 5.785421014057153
+      },
+      {
+        "start": 17,
+        "length": 27,
+        "seam": 0.09170101583003998,
+        "inner_mean_adjacent": 0.016687404364347458,
+        "ratio": 5.495223452843192
+      },
+      {
+        "start": 18,
+        "length": 27,
+        "seam": 0.08822983503341675,
+        "inner_mean_adjacent": 0.016279414296150208,
+        "ratio": 5.419718021076565
+      },
+      {
+        "start": 19,
+        "length": 27,
+        "seam": 0.08298244327306747,
+        "inner_mean_adjacent": 0.01614690013229847,
+        "ratio": 5.139218214837323
+      },
+      {
+        "start": 20,
+        "length": 27,
+        "seam": 0.0785612165927887,
+        "inner_mean_adjacent": 0.015677740797400475,
+        "ratio": 5.0110036648784835
+      },
+      {
+        "start": 21,
+        "length": 27,
+        "seam": 0.0708329826593399,
+        "inner_mean_adjacent": 0.01593693718314171,
+        "ratio": 4.444579397242522
+      },
+      {
+        "start": 22,
+        "length": 27,
+        "seam": 0.06744801253080368,
+        "inner_mean_adjacent": 0.01570146158337593,
+        "ratio": 4.29565185206802
+      },
+      {
+        "start": 23,
+        "length": 27,
+        "seam": 0.06336659938097,
+        "inner_mean_adjacent": 0.01576726883649826,
+        "ratio": 4.018869725509357
+      },
+      {
+        "start": 24,
+        "length": 27,
+        "seam": 0.06728545576334,
+        "inner_mean_adjacent": 0.015427423641085625,
+        "ratio": 4.361418816823593
+      },
+      {
+        "start": 25,
+        "length": 27,
+        "seam": 0.0789194256067276,
+        "inner_mean_adjacent": 0.01569717563688755,
+        "ratio": 5.027619454118296
+      },
+      {
+        "start": 26,
+        "length": 27,
+        "seam": 0.08011379092931747,
+        "inner_mean_adjacent": 0.015504773706197739,
+        "ratio": 5.167040322381069
+      },
+      {
+        "start": 27,
+        "length": 27,
+        "seam": 0.08340422064065933,
+        "inner_mean_adjacent": 0.015560608357191086,
+        "ratio": 5.359958860613275
+      },
+      {
+        "start": 28,
+        "length": 27,
+        "seam": 0.09472440183162689,
+        "inner_mean_adjacent": 0.01534851361066103,
+        "ratio": 6.1715684159690625
+      },
+      {
+        "start": 29,
+        "length": 27,
+        "seam": 0.10086613893508911,
+        "inner_mean_adjacent": 0.015496074222028255,
+        "ratio": 6.509141443818337
+      },
+      {
+        "start": 30,
+        "length": 27,
+        "seam": 0.10656145215034485,
+        "inner_mean_adjacent": 0.015175104141235352,
+        "ratio": 7.022123285519019
+      },
+      {
+        "start": 31,
+        "length": 27,
+        "seam": 0.10785931348800659,
+        "inner_mean_adjacent": 0.015176973305642605,
+        "ratio": 7.106773617892961
+      },
+      {
+        "start": 32,
+        "length": 27,
+        "seam": 0.108163021504879,
+        "inner_mean_adjacent": 0.015100083313882351,
+        "ratio": 7.163074484856563
+      },
+      {
+        "start": 33,
+        "length": 27,
+        "seam": 0.10871903598308563,
+        "inner_mean_adjacent": 0.015260427258908749,
+        "ratio": 7.124245877166874
+      },
+      {
+        "start": 34,
+        "length": 27,
+        "seam": 0.10864616930484772,
+        "inner_mean_adjacent": 0.01512801181524992,
+        "ratio": 7.181787708238437
+      },
+      {
+        "start": 35,
+        "length": 27,
+        "seam": 0.10853689908981323,
+        "inner_mean_adjacent": 0.015053949318826199,
+        "ratio": 7.209862129273874
+      },
+      {
+        "start": 36,
+        "length": 27,
+        "seam": 0.10980205982923508,
+        "inner_mean_adjacent": 0.015405775047838688,
+        "ratio": 7.127331113707224
+      },
+      {
+        "start": 37,
+        "length": 27,
+        "seam": 0.10948158800601959,
+        "inner_mean_adjacent": 0.01540719997137785,
+        "ratio": 7.105871813788679
+      },
+      {
+        "start": 38,
+        "length": 27,
+        "seam": 0.10920946300029755,
+        "inner_mean_adjacent": 0.015401991084218025,
+        "ratio": 7.090606818504221
+      },
+      {
+        "start": 39,
+        "length": 27,
+        "seam": 0.10836055129766464,
+        "inner_mean_adjacent": 0.015419360250234604,
+        "ratio": 7.027564667996907
+      },
+      {
+        "start": 40,
+        "length": 27,
+        "seam": 0.10496940463781357,
+        "inner_mean_adjacent": 0.016318727284669876,
+        "ratio": 6.432450448291015
+      },
+      {
+        "start": 41,
+        "length": 27,
+        "seam": 0.10078484565019608,
+        "inner_mean_adjacent": 0.016583112999796867,
+        "ratio": 6.077558878808257
+      },
+      {
+        "start": 42,
+        "length": 27,
+        "seam": 0.09697702527046204,
+        "inner_mean_adjacent": 0.016745178028941154,
+        "ratio": 5.7913403549878035
+      },
+      {
+        "start": 43,
+        "length": 27,
+        "seam": 0.08956629037857056,
+        "inner_mean_adjacent": 0.016684290021657944,
+        "ratio": 5.368300974288039
+      },
+      {
+        "start": 44,
+        "length": 27,
+        "seam": 0.08527535200119019,
+        "inner_mean_adjacent": 0.01764279417693615,
+        "ratio": 4.833438011347878
+      },
+      {
+        "start": 45,
+        "length": 27,
+        "seam": 0.08036327362060547,
+        "inner_mean_adjacent": 0.017830008640885353,
+        "ratio": 4.5071920737226865
+      },
+      {
+        "start": 46,
+        "length": 27,
+        "seam": 0.07546431571245193,
+        "inner_mean_adjacent": 0.017834894359111786,
+        "ratio": 4.231273490773298
+      },
+      {
+        "start": 47,
+        "length": 27,
+        "seam": 0.06623673439025879,
+        "inner_mean_adjacent": 0.017635006457567215,
+        "ratio": 3.7559801608032006
+      },
+      {
+        "start": 48,
+        "length": 27,
+        "seam": 0.06359154731035233,
+        "inner_mean_adjacent": 0.018342619761824608,
+        "ratio": 3.466873769182175
+      },
+      {
+        "start": 49,
+        "length": 27,
+        "seam": 0.06354276835918427,
+        "inner_mean_adjacent": 0.01825581304728985,
+        "ratio": 3.480686847229598
+      },
+      {
+        "start": 50,
+        "length": 27,
+        "seam": 0.07191301882266998,
+        "inner_mean_adjacent": 0.018010001629590988,
+        "ratio": 3.9929490458520935
+      },
+      {
+        "start": 51,
+        "length": 27,
+        "seam": 0.07423877716064453,
+        "inner_mean_adjacent": 0.01756950095295906,
+        "ratio": 4.225434595974749
+      },
+      {
+        "start": 52,
+        "length": 27,
+        "seam": 0.08800109475851059,
+        "inner_mean_adjacent": 0.018092317506670952,
+        "ratio": 4.86400344931284
+      },
+      {
+        "start": 53,
+        "length": 27,
+        "seam": 0.09524166584014893,
+        "inner_mean_adjacent": 0.017964838072657585,
+        "ratio": 5.3015599391962445
+      },
+      {
+        "start": 54,
+        "length": 27,
+        "seam": 0.10133260488510132,
+        "inner_mean_adjacent": 0.017711276188492775,
+        "ratio": 5.721361002260148
+      },
+      {
+        "start": 55,
+        "length": 27,
+        "seam": 0.10586069524288177,
+        "inner_mean_adjacent": 0.01735602132976055,
+        "ratio": 6.099364205168459
+      },
+      {
+        "start": 56,
+        "length": 27,
+        "seam": 0.11029257625341415,
+        "inner_mean_adjacent": 0.017788277938961983,
+        "ratio": 6.200295308622223
+      },
+      {
+        "start": 57,
+        "length": 27,
+        "seam": 0.10794739425182343,
+        "inner_mean_adjacent": 0.017432259395718575,
+        "ratio": 6.192392609665715
+      },
+      {
+        "start": 58,
+        "length": 27,
+        "seam": 0.10696566849946976,
+        "inner_mean_adjacent": 0.01702963002026081,
+        "ratio": 6.28115046376278
+      },
+      {
+        "start": 59,
+        "length": 27,
+        "seam": 0.1071426048874855,
+        "inner_mean_adjacent": 0.01667587272822857,
+        "ratio": 6.425007352455787
+      },
+      {
+        "start": 60,
+        "length": 27,
+        "seam": 0.10653883963823318,
+        "inner_mean_adjacent": 0.0168573297560215,
+        "ratio": 6.320030584925654
+      },
+      {
+        "start": 61,
+        "length": 27,
+        "seam": 0.107394278049469,
+        "inner_mean_adjacent": 0.01668633706867695,
+        "ratio": 6.436060688901344
+      },
+      {
+        "start": 62,
+        "length": 27,
+        "seam": 0.10858627408742905,
+        "inner_mean_adjacent": 0.016257615759968758,
+        "ratio": 6.6791020092135405
+      },
+      {
+        "start": 63,
+        "length": 27,
+        "seam": 0.10824138671159744,
+        "inner_mean_adjacent": 0.01614135131239891,
+        "ratio": 6.705844177274816
+      },
+      {
+        "start": 64,
+        "length": 27,
+        "seam": 0.10857168585062027,
+        "inner_mean_adjacent": 0.01615448109805584,
+        "ratio": 6.720840192365365
+      },
+      {
+        "start": 65,
+        "length": 27,
+        "seam": 0.10765106230974197,
+        "inner_mean_adjacent": 0.015860741958022118,
+        "ratio": 6.787265223446481
+      },
+      {
+        "start": 66,
+        "length": 27,
+        "seam": 0.10352402925491333,
+        "inner_mean_adjacent": 0.01487145945429802,
+        "ratio": 6.961255522570363
+      },
+      {
+        "start": 67,
+        "length": 27,
+        "seam": 0.10224245488643646,
+        "inner_mean_adjacent": 0.014636488631367683,
+        "ratio": 6.985449684107914
+      },
+      {
+        "start": 68,
+        "length": 27,
+        "seam": 0.10067486763000488,
+        "inner_mean_adjacent": 0.014314165338873863,
+        "ratio": 7.033233531025098
+      },
+      {
+        "start": 69,
+        "length": 27,
+        "seam": 0.09636164456605911,
+        "inner_mean_adjacent": 0.013866063207387924,
+        "ratio": 6.949459491481117
+      },
+      {
+        "start": 70,
+        "length": 27,
+        "seam": 0.09152191877365112,
+        "inner_mean_adjacent": 0.012763560749590397,
+        "ratio": 7.170563181327609
+      },
+      {
+        "start": 71,
+        "length": 27,
+        "seam": 0.08619117736816406,
+        "inner_mean_adjacent": 0.01263917051255703,
+        "ratio": 6.8193697745064075
+      },
+      {
+        "start": 72,
+        "length": 27,
+        "seam": 0.08209288865327835,
+        "inner_mean_adjacent": 0.012386772781610489,
+        "ratio": 6.627463835871291
+      },
+      {
+        "start": 73,
+        "length": 27,
+        "seam": 0.07564065605401993,
+        "inner_mean_adjacent": 0.011970783583819866,
+        "ratio": 6.318772328008545
+      },
+      {
+        "start": 74,
+        "length": 27,
+        "seam": 0.06670468300580978,
+        "inner_mean_adjacent": 0.011043205857276917,
+        "ratio": 6.040336825004014
+      },
+      {
+        "start": 75,
+        "length": 27,
+        "seam": 0.06073438376188278,
+        "inner_mean_adjacent": 0.011141150258481503,
+        "ratio": 5.451356668998076
+      },
+      {
+        "start": 76,
+        "length": 27,
+        "seam": 0.059878021478652954,
+        "inner_mean_adjacent": 0.011092392727732658,
+        "ratio": 5.3981158933319096
+      },
+      {
+        "start": 77,
+        "length": 27,
+        "seam": 0.05976346507668495,
+        "inner_mean_adjacent": 0.010961274616420269,
+        "ratio": 5.452236821724889
+      },
+      {
+        "start": 78,
+        "length": 27,
+        "seam": 0.06998038291931152,
+        "inner_mean_adjacent": 0.0103062829002738,
+        "ratio": 6.7900700569215315
+      },
+      {
+        "start": 79,
+        "length": 27,
+        "seam": 0.0776616632938385,
+        "inner_mean_adjacent": 0.01074014138430357,
+        "ratio": 7.230972155295735
+      },
+      {
+        "start": 80,
+        "length": 27,
+        "seam": 0.08323974162340164,
+        "inner_mean_adjacent": 0.010835638269782066,
+        "ratio": 7.682034002144279
+      },
+      {
+        "start": 81,
+        "length": 27,
+        "seam": 0.08657678216695786,
+        "inner_mean_adjacent": 0.010777583345770836,
+        "ratio": 8.033042231209551
+      },
+      {
+        "start": 82,
+        "length": 27,
+        "seam": 0.09104499965906143,
+        "inner_mean_adjacent": 0.010305916890501976,
+        "ratio": 8.83424547533168
+      },
+      {
+        "start": 83,
+        "length": 27,
+        "seam": 0.09261459112167358,
+        "inner_mean_adjacent": 0.010930931195616722,
+        "ratio": 8.472708268332328
+      },
+      {
+        "start": 84,
+        "length": 27,
+        "seam": 0.0938493087887764,
+        "inner_mean_adjacent": 0.01132689043879509,
+        "ratio": 8.285531611336017
+      },
+      {
+        "start": 85,
+        "length": 27,
+        "seam": 0.09376119077205658,
+        "inner_mean_adjacent": 0.011577220633625984,
+        "ratio": 8.098765130183978
+      },
+      {
+        "start": 86,
+        "length": 27,
+        "seam": 0.09481900930404663,
+        "inner_mean_adjacent": 0.011553824879229069,
+        "ratio": 8.206720310821732
+      },
+      {
+        "start": 87,
+        "length": 27,
+        "seam": 0.09691924601793289,
+        "inner_mean_adjacent": 0.012323741801083088,
+        "ratio": 7.864433350057287
+      },
+      {
+        "start": 88,
+        "length": 27,
+        "seam": 0.09796053916215897,
+        "inner_mean_adjacent": 0.01276544202119112,
+        "ratio": 7.673885400876894
+      },
+      {
+        "start": 89,
+        "length": 27,
+        "seam": 0.09801120311021805,
+        "inner_mean_adjacent": 0.013017501682043076,
+        "ratio": 7.529186898083454
+      },
+      {
+        "start": 90,
+        "length": 27,
+        "seam": 0.09927342087030411,
+        "inner_mean_adjacent": 0.012991750612854958,
+        "ratio": 7.641265894688277
+      },
+      {
+        "start": 91,
+        "length": 27,
+        "seam": 0.10076282918453217,
+        "inner_mean_adjacent": 0.013408551923930645,
+        "ratio": 7.514818136677214
+      },
+      {
+        "start": 92,
+        "length": 27,
+        "seam": 0.10212027281522751,
+        "inner_mean_adjacent": 0.013551583513617516,
+        "ratio": 7.535670847071886
+      },
+      {
+        "start": 93,
+        "length": 27,
+        "seam": 0.10219457745552063,
+        "inner_mean_adjacent": 0.013335621915757656,
+        "ratio": 7.663277955920851
+      },
+      {
+        "start": 0,
+        "length": 28,
+        "seam": 0.07535954564809799,
+        "inner_mean_adjacent": 0.015068108215928078,
+        "ratio": 5.001261244489704
+      },
+      {
+        "start": 1,
+        "length": 28,
+        "seam": 0.08429200947284698,
+        "inner_mean_adjacent": 0.015566099435091019,
+        "ratio": 5.415101568914918
+      },
+      {
+        "start": 2,
+        "length": 28,
+        "seam": 0.08763807266950607,
+        "inner_mean_adjacent": 0.015894690528512,
+        "ratio": 5.51366964410539
+      },
+      {
+        "start": 3,
+        "length": 28,
+        "seam": 0.09124339371919632,
+        "inner_mean_adjacent": 0.016273800283670425,
+        "ratio": 5.606766221086812
+      },
+      {
+        "start": 4,
+        "length": 28,
+        "seam": 0.09386865049600601,
+        "inner_mean_adjacent": 0.01642594300210476,
+        "ratio": 5.714658238128431
+      },
+      {
+        "start": 5,
+        "length": 28,
+        "seam": 0.09588302671909332,
+        "inner_mean_adjacent": 0.01668490469455719,
+        "ratio": 5.746693102201026
+      },
+      {
+        "start": 6,
+        "length": 28,
+        "seam": 0.09588952362537384,
+        "inner_mean_adjacent": 0.016746655106544495,
+        "ratio": 5.725891111706288
+      },
+      {
+        "start": 7,
+        "length": 28,
+        "seam": 0.0957212746143341,
+        "inner_mean_adjacent": 0.016761040315032005,
+        "ratio": 5.710938749338085
+      },
+      {
+        "start": 8,
+        "length": 28,
+        "seam": 0.0966460108757019,
+        "inner_mean_adjacent": 0.016733141615986824,
+        "ratio": 5.7757241941564885
+      },
+      {
+        "start": 9,
+        "length": 28,
+        "seam": 0.09763627499341965,
+        "inner_mean_adjacent": 0.016614524647593498,
+        "ratio": 5.876561446346381
+      },
+      {
+        "start": 10,
+        "length": 28,
+        "seam": 0.09788119792938232,
+        "inner_mean_adjacent": 0.016630232334136963,
+        "ratio": 5.885738452881449
+      },
+      {
+        "start": 11,
+        "length": 28,
+        "seam": 0.09792779386043549,
+        "inner_mean_adjacent": 0.016702352091670036,
+        "ratio": 5.863113968796946
+      },
+      {
+        "start": 12,
+        "length": 28,
+        "seam": 0.09997723251581192,
+        "inner_mean_adjacent": 0.016853343695402145,
+        "ratio": 5.932189737700968
+      },
+      {
+        "start": 13,
+        "length": 28,
+        "seam": 0.10001799464225769,
+        "inner_mean_adjacent": 0.016775619238615036,
+        "ratio": 5.96210448148649
+      },
+      {
+        "start": 14,
+        "length": 28,
+        "seam": 0.09870447963476181,
+        "inner_mean_adjacent": 0.01674487441778183,
+        "ratio": 5.894608533459342
+      },
+      {
+        "start": 15,
+        "length": 28,
+        "seam": 0.09672248363494873,
+        "inner_mean_adjacent": 0.01675250008702278,
+        "ratio": 5.773614871363241
+      },
+      {
+        "start": 16,
+        "length": 28,
+        "seam": 0.09345261752605438,
+        "inner_mean_adjacent": 0.016726389527320862,
+        "ratio": 5.587136265923319
+      },
+      {
+        "start": 17,
+        "length": 28,
+        "seam": 0.09030311554670334,
+        "inner_mean_adjacent": 0.016452733427286148,
+        "ratio": 5.48863907300288
+      },
+      {
+        "start": 18,
+        "length": 28,
+        "seam": 0.08480681478977203,
+        "inner_mean_adjacent": 0.016259385272860527,
+        "ratio": 5.215868457913225
+      },
+      {
+        "start": 19,
+        "length": 28,
+        "seam": 0.07979965955018997,
+        "inner_mean_adjacent": 0.016193794086575508,
+        "ratio": 4.927792654615948
+      },
+      {
+        "start": 20,
+        "length": 28,
+        "seam": 0.07244325429201126,
+        "inner_mean_adjacent": 0.01609114557504654,
+        "ratio": 4.502056982465758
+      },
+      {
+        "start": 21,
+        "length": 28,
+        "seam": 0.06894082576036453,
+        "inner_mean_adjacent": 0.015899522230029106,
+        "ratio": 4.336031282132327
+      },
+      {
+        "start": 22,
+        "length": 28,
+        "seam": 0.06407351046800613,
+        "inner_mean_adjacent": 0.015888383612036705,
+        "ratio": 4.032726804221003
+      },
+      {
+        "start": 23,
+        "length": 28,
+        "seam": 0.061470404267311096,
+        "inner_mean_adjacent": 0.015990054234862328,
+        "ratio": 3.844289916996667
+      },
+      {
+        "start": 24,
+        "length": 28,
+        "seam": 0.07742543518543243,
+        "inner_mean_adjacent": 0.015879549086093903,
+        "ratio": 4.875795576162532
+      },
+      {
+        "start": 25,
+        "length": 28,
+        "seam": 0.08050751686096191,
+        "inner_mean_adjacent": 0.015656545758247375,
+        "ratio": 5.142099547631896
+      },
+      {
+        "start": 26,
+        "length": 28,
+        "seam": 0.08203977346420288,
+        "inner_mean_adjacent": 0.01562068983912468,
+        "ratio": 5.251994265881926
+      },
+      {
+        "start": 27,
+        "length": 28,
+        "seam": 0.08658390492200851,
+        "inner_mean_adjacent": 0.015709921717643738,
+        "ratio": 5.51141542766356
+      },
+      {
+        "start": 28,
+        "length": 28,
+        "seam": 0.0978630781173706,
+        "inner_mean_adjacent": 0.01567220501601696,
+        "ratio": 6.24437199598619
+      },
+      {
+        "start": 29,
+        "length": 28,
+        "seam": 0.1024232804775238,
+        "inner_mean_adjacent": 0.015359936282038689,
+        "ratio": 6.668209984522761
+      },
+      {
+        "start": 30,
+        "length": 28,
+        "seam": 0.10575539618730545,
+        "inner_mean_adjacent": 0.015249301679432392,
+        "ratio": 6.935097646467564
+      },
+      {
+        "start": 31,
+        "length": 28,
+        "seam": 0.10757501423358917,
+        "inner_mean_adjacent": 0.015199028886854649,
+        "ratio": 7.077755758897778
+      },
+      {
+        "start": 32,
+        "length": 28,
+        "seam": 0.10982990264892578,
+        "inner_mean_adjacent": 0.015143483877182007,
+        "ratio": 7.252617927266788
+      },
+      {
+        "start": 33,
+        "length": 28,
+        "seam": 0.10983625054359436,
+        "inner_mean_adjacent": 0.014921529218554497,
+        "ratio": 7.36092453627448
+      },
+      {
+        "start": 34,
+        "length": 28,
+        "seam": 0.10956121236085892,
+        "inner_mean_adjacent": 0.014886874705553055,
+        "ratio": 7.359584501640948
+      },
+      {
+        "start": 35,
+        "length": 28,
+        "seam": 0.10948698222637177,
+        "inner_mean_adjacent": 0.015018283389508724,
+        "ratio": 7.290246121128314
+      },
+      {
+        "start": 36,
+        "length": 28,
+        "seam": 0.10948622971773148,
+        "inner_mean_adjacent": 0.015109322965145111,
+        "ratio": 7.246269734937787
+      },
+      {
+        "start": 37,
+        "length": 28,
+        "seam": 0.10898829996585846,
+        "inner_mean_adjacent": 0.015119660645723343,
+        "ratio": 7.208382682628941
+      },
+      {
+        "start": 38,
+        "length": 28,
+        "seam": 0.1074054166674614,
+        "inner_mean_adjacent": 0.015292209573090076,
+        "ratio": 7.023538106387469
+      },
+      {
+        "start": 39,
+        "length": 28,
+        "seam": 0.1045694351196289,
+        "inner_mean_adjacent": 0.01596885733306408,
+        "ratio": 6.548335484412791
+      },
+      {
+        "start": 40,
+        "length": 28,
+        "seam": 0.10292132198810577,
+        "inner_mean_adjacent": 0.016379617154598236,
+        "ratio": 6.283499853304737
+      },
+      {
+        "start": 41,
+        "length": 28,
+        "seam": 0.09955326467752457,
+        "inner_mean_adjacent": 0.016581477597355843,
+        "ratio": 6.003883797026616
+      },
+      {
+        "start": 42,
+        "length": 28,
+        "seam": 0.09367869049310684,
+        "inner_mean_adjacent": 0.016841264441609383,
+        "ratio": 5.562449946552513
+      },
+      {
+        "start": 43,
+        "length": 28,
+        "seam": 0.08642592281103134,
+        "inner_mean_adjacent": 0.01737274043262005,
+        "ratio": 4.974800788985087
+      },
+      {
+        "start": 44,
+        "length": 28,
+        "seam": 0.08367723226547241,
+        "inner_mean_adjacent": 0.017752548679709435,
+        "ratio": 4.7135334635703705
+      },
+      {
+        "start": 45,
+        "length": 28,
+        "seam": 0.0787009745836258,
+        "inner_mean_adjacent": 0.017819270491600037,
+        "ratio": 4.416621579470678
+      },
+      {
+        "start": 46,
+        "length": 28,
+        "seam": 0.07162366062402725,
+        "inner_mean_adjacent": 0.01797591894865036,
+        "ratio": 3.98442276184188
+      },
+      {
+        "start": 47,
+        "length": 28,
+        "seam": 0.0634576678276062,
+        "inner_mean_adjacent": 0.018216107040643692,
+        "ratio": 3.48360204987925
+      },
+      {
+        "start": 48,
+        "length": 28,
+        "seam": 0.06342843174934387,
+        "inner_mean_adjacent": 0.018348131328821182,
+        "ratio": 3.4569423235875094
+      },
+      {
+        "start": 49,
+        "length": 28,
+        "seam": 0.06603347510099411,
+        "inner_mean_adjacent": 0.01814972050487995,
+        "ratio": 3.6382640208282853
+      },
+      {
+        "start": 50,
+        "length": 28,
+        "seam": 0.07212620228528976,
+        "inner_mean_adjacent": 0.017942290753126144,
+        "ratio": 4.019899313733001
+      },
+      {
+        "start": 51,
+        "length": 28,
+        "seam": 0.08567716926336288,
+        "inner_mean_adjacent": 0.017962977290153503,
+        "ratio": 4.769653041332255
+      },
+      {
+        "start": 52,
+        "length": 28,
+        "seam": 0.09310541301965714,
+        "inner_mean_adjacent": 0.017989639192819595,
+        "ratio": 5.175501966533011
+      },
+      {
+        "start": 53,
+        "length": 28,
+        "seam": 0.09952305257320404,
+        "inner_mean_adjacent": 0.017780935391783714,
+        "ratio": 5.597177560140737
+      },
+      {
+        "start": 54,
+        "length": 28,
+        "seam": 0.1034163236618042,
+        "inner_mean_adjacent": 0.017605360597372055,
+        "ratio": 5.874138339276113
+      },
+      {
+        "start": 55,
+        "length": 28,
+        "seam": 0.10899920761585236,
+        "inner_mean_adjacent": 0.017567243427038193,
+        "ratio": 6.204684762783494
+      },
+      {
+        "start": 56,
+        "length": 28,
+        "seam": 0.10920963436365128,
+        "inner_mean_adjacent": 0.017422856763005257,
+        "ratio": 6.268181840049391
+      },
+      {
+        "start": 57,
+        "length": 28,
+        "seam": 0.10734878480434418,
+        "inner_mean_adjacent": 0.016983069479465485,
+        "ratio": 6.320929495939553
+      },
+      {
+        "start": 58,
+        "length": 28,
+        "seam": 0.10543020069599152,
+        "inner_mean_adjacent": 0.016660910099744797,
+        "ratio": 6.327997694292009
+      },
+      {
+        "start": 59,
+        "length": 28,
+        "seam": 0.10514281690120697,
+        "inner_mean_adjacent": 0.016459288075566292,
+        "ratio": 6.38805374925607
+      },
+      {
+        "start": 60,
+        "length": 28,
+        "seam": 0.10640931129455566,
+        "inner_mean_adjacent": 0.016387484967708588,
+        "ratio": 6.4933277744714575
+      },
+      {
+        "start": 61,
+        "length": 28,
+        "seam": 0.10755209624767303,
+        "inner_mean_adjacent": 0.01617736928164959,
+        "ratio": 6.648305690200951
+      },
+      {
+        "start": 62,
+        "length": 28,
+        "seam": 0.10861347615718842,
+        "inner_mean_adjacent": 0.015817655250430107,
+        "ratio": 6.8665977629165384
+      },
+      {
+        "start": 63,
+        "length": 28,
+        "seam": 0.10902322083711624,
+        "inner_mean_adjacent": 0.015839265659451485,
+        "ratio": 6.8830981928799675
+      },
+      {
+        "start": 64,
+        "length": 28,
+        "seam": 0.10948421061038971,
+        "inner_mean_adjacent": 0.01573397032916546,
+        "ratio": 6.958460472462123
+      },
+      {
+        "start": 65,
+        "length": 28,
+        "seam": 0.10859955847263336,
+        "inner_mean_adjacent": 0.015441249124705791,
+        "ratio": 7.033081170802142
+      },
+      {
+        "start": 66,
+        "length": 28,
+        "seam": 0.10485456138849258,
+        "inner_mean_adjacent": 0.014759683981537819,
+        "ratio": 7.104119676251208
+      },
+      {
+        "start": 67,
+        "length": 28,
+        "seam": 0.10244996100664139,
+        "inner_mean_adjacent": 0.014396564103662968,
+        "ratio": 7.116278597375515
+      },
+      {
+        "start": 68,
+        "length": 28,
+        "seam": 0.10068684071302414,
+        "inner_mean_adjacent": 0.014068782329559326,
+        "ratio": 7.156755883661321
+      },
+      {
+        "start": 69,
+        "length": 28,
+        "seam": 0.09628566354513168,
+        "inner_mean_adjacent": 0.013597221113741398,
+        "ratio": 7.081275117886041
+      },
+      {
+        "start": 70,
+        "length": 28,
+        "seam": 0.0883905291557312,
+        "inner_mean_adjacent": 0.012934246100485325,
+        "ratio": 6.833836968079227
+      },
+      {
+        "start": 71,
+        "length": 28,
+        "seam": 0.08414877206087112,
+        "inner_mean_adjacent": 0.012577635236084461,
+        "ratio": 6.690349217590082
+      },
+      {
+        "start": 72,
+        "length": 28,
+        "seam": 0.08044401556253433,
+        "inner_mean_adjacent": 0.012329000048339367,
+        "ratio": 6.524780213085456
+      },
+      {
+        "start": 73,
+        "length": 28,
+        "seam": 0.07449252158403397,
+        "inner_mean_adjacent": 0.011868445202708244,
+        "ratio": 6.27651898051782
+      },
+      {
+        "start": 74,
+        "length": 28,
+        "seam": 0.06341150403022766,
+        "inner_mean_adjacent": 0.011413383297622204,
+        "ratio": 5.555890166541452
+      },
+      {
+        "start": 75,
+        "length": 28,
+        "seam": 0.06028814613819122,
+        "inner_mean_adjacent": 0.011251610703766346,
+        "ratio": 5.358179173228102
+      },
+      {
+        "start": 76,
+        "length": 28,
+        "seam": 0.06030299887061119,
+        "inner_mean_adjacent": 0.011154628358781338,
+        "ratio": 5.40609663818503
+      },
+      {
+        "start": 77,
+        "length": 28,
+        "seam": 0.061844367533922195,
+        "inner_mean_adjacent": 0.01096876710653305,
+        "ratio": 5.638224144360526
+      },
+      {
+        "start": 78,
+        "length": 28,
+        "seam": 0.07443612813949585,
+        "inner_mean_adjacent": 0.010909766890108585,
+        "ratio": 6.8228889663063175
+      },
+      {
+        "start": 79,
+        "length": 28,
+        "seam": 0.08043238520622253,
+        "inner_mean_adjacent": 0.010915780439972878,
+        "ratio": 7.368450258644299
+      },
+      {
+        "start": 80,
+        "length": 28,
+        "seam": 0.0853099599480629,
+        "inner_mean_adjacent": 0.010928471572697163,
+        "ratio": 7.806211452404252
+      },
+      {
+        "start": 81,
+        "length": 28,
+        "seam": 0.0881446972489357,
+        "inner_mean_adjacent": 0.010778253898024559,
+        "ratio": 8.178012698800023
+      },
+      {
+        "start": 82,
+        "length": 28,
+        "seam": 0.09341996163129807,
+        "inner_mean_adjacent": 0.010819487273693085,
+        "ratio": 8.634416702762147
+      },
+      {
+        "start": 83,
+        "length": 28,
+        "seam": 0.09426230937242508,
+        "inner_mean_adjacent": 0.011103824712336063,
+        "ratio": 8.489174839702043
+      },
+      {
+        "start": 84,
+        "length": 28,
+        "seam": 0.09465095400810242,
+        "inner_mean_adjacent": 0.011410443112254143,
+        "ratio": 8.295116418962984
+      },
+      {
+        "start": 85,
+        "length": 28,
+        "seam": 0.09491104632616043,
+        "inner_mean_adjacent": 0.011526944115757942,
+        "ratio": 8.23384284447185
+      },
+      {
+        "start": 86,
+        "length": 28,
+        "seam": 0.09636911004781723,
+        "inner_mean_adjacent": 0.012021808885037899,
+        "ratio": 8.016190489249608
+      },
+      {
+        "start": 87,
+        "length": 28,
+        "seam": 0.09740138053894043,
+        "inner_mean_adjacent": 0.012401691637933254,
+        "ratio": 7.853878598385502
+      },
+      {
+        "start": 88,
+        "length": 28,
+        "seam": 0.09762325882911682,
+        "inner_mean_adjacent": 0.012697546742856503,
+        "ratio": 7.688355932537801
+      },
+      {
+        "start": 89,
+        "length": 28,
+        "seam": 0.09849993139505386,
+        "inner_mean_adjacent": 0.012806317768990993,
+        "ratio": 7.691510797394078
+      },
+      {
+        "start": 90,
+        "length": 28,
+        "seam": 0.10014213621616364,
+        "inner_mean_adjacent": 0.0130897406488657,
+        "ratio": 7.6504293631548395
+      },
+      {
+        "start": 91,
+        "length": 28,
+        "seam": 0.10162068903446198,
+        "inner_mean_adjacent": 0.013217614963650703,
+        "ratio": 7.688277296163147
+      },
+      {
+        "start": 92,
+        "length": 28,
+        "seam": 0.1025485023856163,
+        "inner_mean_adjacent": 0.01328072790056467,
+        "ratio": 7.721602547195936
+      }
+    ],
+    "repeat_pairs": 94,
+    "profile_sample_pairs": 47,
+    "period_global": 27,
+    "half_period_guard": {
+      "applied": false
+    },
+    "review_recommended": false,
+    "periodicity": -0.1723,
+    "profile_minima": [
+      [
+        29,
+        0.09192
+      ],
+      [
+        27,
+        0.09204
+      ]
+    ],
+    "kind": "periodic",
+    "periodicity_min": 0.15
+  },
+  "periodic_attempt": null
+}
