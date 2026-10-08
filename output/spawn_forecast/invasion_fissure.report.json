@@ -1,0 +1,33 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "One production game sprite: an impending monster invasion ground fissure marker for a realistic dark botanical survival game. Strict top-down overhead view, isolated compact circular irregular patch of cracked charcoal earth, three sharp claw gouges, twisted black thorn roots emerging along its broken perimeter, subtle ember-red light only inside fissures, matte natural material, realistic hand-painted high-detail texture matching ruined gray greenhouse battlefield. Clear readable silhouette at 96 pixels. Flat ground decal, not upright object, not a portal, no tall rocks, no smoke cloud, no broad glow, no red circle graphic, no UI, no words or numbers. Centered single asset with generous transparent margin, true transparent background, square canvas.",
+  "out": "D:\\MyData\\GodotGame\\data\\xiangrikui\\assets\\effects\\spawn_forecast\\invasion_fissure.png",
+  "raw": "D:\\MyData\\GodotGame\\data\\xiangrikui\\assets\\effects\\spawn_forecast\\invasion_fissure.png.raw.png",
+  "raw_bytes": 1670525,
+  "elapsed_seconds": 33.891,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\MyData\\GodotGame\\data\\xiangrikui\\assets\\effects\\spawn_forecast\\invasion_fissure.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 56.51,
+    "partial_alpha_pct": 43.49,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 55,
+    "stale_transparent_rgb_pixels": 0,
+    "white_check": "output\\spawn_forecast\\invasion_fissure-white.png"
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

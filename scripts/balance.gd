@@ -49,13 +49,13 @@ const ENEMIES := [
 ]
 
 const NIGHT_CONFIGS := [
-	 {"counts":{0:240}, "duration":45.0, "health":0.85, "damage":0.80, "budget":60},
-	 {"counts":{0:260,1:100,4:50}, "duration":55.0, "health":0.90, "damage":0.85, "budget":100},
-	 {"counts":{0:320,1:200,5:70}, "duration":65.0, "health":0.95, "damage":0.90, "budget":130},
-	 {"counts":{0:400,1:240,6:80,7:50}, "duration":75.0, "health":1.0, "damage":0.95, "budget":160},
-	 {"counts":{0:500,1:280,8:90,9:80,2:10}, "duration":90.0, "health":1.0, "damage":1.0, "budget":200},
+	 {"counts":{0:192}, "duration":45.0, "health":0.85, "damage":0.80, "budget":60},
+	 {"counts":{0:208,1:80,4:40}, "duration":55.0, "health":0.90, "damage":0.85, "budget":100},
+	 {"counts":{0:256,1:160,5:56}, "duration":65.0, "health":0.95, "damage":0.90, "budget":130},
+	 {"counts":{0:320,1:192,6:64,7:40}, "duration":75.0, "health":1.0, "damage":0.95, "budget":160},
+	 {"counts":{0:400,1:224,8:72,9:64,2:8}, "duration":90.0, "health":1.0, "damage":1.0, "budget":200},
  {"counts":{}, "duration":0.0, "health":1.0, "damage":1.0, "budget":0},
-	 {"counts":{0:720,4:240,5:210,8:130,3:10}, "duration":110.0, "health":1.05, "damage":1.0, "budget":250},
+	 {"counts":{0:576,4:192,5:168,8:104,3:8}, "duration":110.0, "health":1.05, "damage":1.0, "budget":250},
 ]
 static var WAVES: Array = _build_wave_templates()
 

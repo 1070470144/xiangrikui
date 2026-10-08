@@ -27,6 +27,7 @@ var entrance_decor_layer: Node2D
 var terrain_map: Node2D
 
 func _init() -> void:
+	z_index = -1
 	terrain_map = TerrainMapScript.new()
 	terrain_map.name = "TerrainMap"
 	add_child(terrain_map)

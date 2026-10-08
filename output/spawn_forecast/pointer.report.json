@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "Single directional pointer game HUD sprite, one broad sharp triangular black iron arrowhead pointing exactly RIGHT, weathered antique brass outline and crimson enamel inset. Compact readable at 16 pixels, front-facing flat icon, realistic painted metal, no tail, no circle, no text, no other objects, true transparent alpha, generous margin, square canvas.",
+  "out": "D:\\MyData\\GodotGame\\data\\xiangrikui\\assets\\ui\\spawn_forecast\\pointer.png",
+  "raw": "D:\\MyData\\GodotGame\\data\\xiangrikui\\assets\\ui\\spawn_forecast\\pointer.png.raw.png",
+  "raw_bytes": 369508,
+  "elapsed_seconds": 29.312,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\MyData\\GodotGame\\data\\xiangrikui\\assets\\ui\\spawn_forecast\\pointer.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 91.92,
+    "partial_alpha_pct": 8.08,
+    "opaque_pct": 0.01,
+    "cleaned_transparent_rgb_pixels": 68,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

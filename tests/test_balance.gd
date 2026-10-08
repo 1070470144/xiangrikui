@@ -40,7 +40,7 @@ func test_combat_units() -> void:
 func test_seven_night_schedule() -> void:
 	var balance := _load_script("res://scripts/balance.gd")
 	if balance == null: return
-	var totals := [240, 410, 590, 770, 960, 0, 1310]
+	var totals := [192, 328, 472, 616, 768, 0, 1048]
 	expect(balance.WAVES.size() == 7, "campaign must contain seven nights")
 	for index in 7:
 		var wave: Array = balance.WAVES[index]

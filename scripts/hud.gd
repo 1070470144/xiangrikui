@@ -492,7 +492,7 @@ func update_battle_state(state: Dictionary) -> void:
 	else: phase_label.text = "第%d夜  夜战" % night; var batch_current := int(state.get("batch_current", 0)); var batch_total := int(state.get("batch_total", 0)); wave_label.text = "守夜 %d / %d" % [night, night_total] + ("  ·  第%d波" % (batch_current + 1) if batch_total > 0 else ""); timer_label.visible = false; enemy_count_label.text = "剩余敌人 %d" % int(state.get("remaining_enemies", 0))
 	var cost := int(state.get("sunburst_cost", Balance.SUNBURST_COST)); var lacks_energy := energy < cost; sunburst_cost_label.text = "☀ %d" % cost; sunburst_cost_label.add_theme_color_override("font_color", Color("7c2f35") if lacks_energy else Color("f6e4ad")); sunburst_button.disabled = lacks_energy; light_sprout_button.text = ""; if threat_compass != null: threat_compass.set_boss_active(bool(state.get("boss_active", false)))
 	(light_sprout_button.get_node("CostValue") as Label).text = str(state.get("light_sprout_cost", Balance.DAY_LIGHT_SPROUT_COST))
-	
+
 
 func update_status(health: float, energy: int, wave: int, phase_text: String, time_left: float, seeds: int) -> void:
 	update_battle_state({"phase":"day" if phase_text.begins_with("白昼") else "night", "health":health, "max_health":Balance.MOTHER_MAX_HEALTH, "energy":energy, "night":wave, "night_total":7, "time_left":time_left, "seeds":seeds, "sunburst_cost":Balance.SUNBURST_COST})
@@ -512,6 +512,10 @@ func update_threat_compass(threats: PackedFloat32Array, boss_direction := -1) ->
 func _set_tactical_emphasis(active: bool) -> void:
 	if tactical_instrument_frame != null:
 		tactical_instrument_frame.modulate.a = 1.0 if active else 0.38
+
+func update_enemy_radar(positions: PackedVector2Array, bosses: PackedVector2Array) -> void:
+	if threat_compass != null: threat_compass.update_enemies(positions, bosses)
+	_set_tactical_emphasis(not positions.is_empty())
 
 func update_radar(nodes: Array, lines: Array, threats: PackedFloat32Array) -> void:
 	update_network_radar(nodes, lines); update_threat_compass(threats)

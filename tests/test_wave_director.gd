@@ -29,13 +29,13 @@ func run() -> void:
 				var point: Vector2 = entry.spawn_position
 				assert(director.valid(point))
 				var radius := point.distance_to(Spec.CENTER)
-				assert((radius >= 419.99 and radius <= 650.01) or (radius >= 1079.99 and radius <= 1220.01) or (radius >= 1279.99 and radius <= 1400.01))
+				assert((radius >= 209.99 and radius <= 325.01) or (radius >= 329.99 and radius <= 1000.01) or (radius >= 1009.99 and radius <= 1400.01))
 				assert(entry.direction == Director.sector(point))
 				for fixed in Spec.get_spawn_positions(): assert(point.distance_to(fixed) > 0.01)
 				if not batches.has(entry.batch): batches[entry.batch] = []
 				for other in batches[entry.batch]: assert(point.distance_to(other) >= 24.0)
 				batches[entry.batch].append(point)
-				if radius < 650.0: assert(entry.kind in [0, 1], "elite and boss spawns must stay outside the inner ring")
+				if radius < 325.0: assert(entry.kind in [0, 1], "elite and boss spawns must stay outside the inner ring")
 				if entry.kind in [2, 3]: assert(entry.time >= Balance.NIGHT_CONFIGS[night - 1].duration * 0.68)
 				if entry.kind not in [0, 1]: assert(entry.health_multiplier == 1.0 and entry.damage_multiplier == 1.0)
 			assert(counts == Balance.NIGHT_CONFIGS[night - 1].counts)
@@ -43,6 +43,20 @@ func run() -> void:
 				assert(batches[batch].size() <= 5)
 				if batches[batch].size() > 1: assert(batches[batch].size() >= 2)
 			assert(is_equal_approx(reward, float(Balance.NIGHT_CONFIGS[night - 1].budget)))
+			if night in [1, 2]:
+				var reference := (Vector2(queue[0].spawn_position) - Spec.CENTER).angle()
+				var opposite_count := 0
+				for entry in queue:
+					var angle := (Vector2(entry.spawn_position) - Spec.CENTER).angle()
+					var difference := absf(wrapf(angle - reference, -PI, PI))
+					if night == 1:
+						assert(difference <= PI / 4.0, "first night stays on one side")
+					else:
+						assert(minf(difference, PI - difference) <= PI / 3.0, "second night stays on opposite fronts")
+						if difference > PI / 2.0: opposite_count += 1
+						if entry.kind in [0, 1]:
+							assert((difference > PI / 2.0) == (int(entry.batch) % 2 == 1), "second night alternates fronts by batch")
+				if night == 2: assert(opposite_count > queue.size() / 3 and opposite_count < queue.size() * 2 / 3)
 	assert(director.build(1, 1) != director.build(1, 2))
 	# An impassable strip excludes disconnected outer cells from the perimeter pool.
 	for y in Spec.GRID_SIZE.y: terrain.current_cells[Vector2i(60, y)] = "void"
@@ -57,9 +71,18 @@ func run() -> void:
 	var game := Game.new()
 	game.set_run_seed(777)
 	game.reset_model()
+	var preview := game.forecast_queue.duplicate(true)
+	var forecast := preload("res://scripts/spawn_forecast.gd").new()
+	forecast.update_queue(game.forecast_queue)
+	var forecast_count := 0
+	for marker in forecast.markers:
+		forecast_count += int(marker.count)
+	assert(forecast_count == 192 and forecast.markers.size() <= 8)
+	forecast.free()
 	game.choose_mother_card("sun_arrow")
 	game.begin_night()
-	assert(game.spawn_queue.size() == 240)
+	assert(game.spawn_queue == preview, "night must use the exact daytime forecast")
+	assert(game.spawn_queue.size() == 192)
 	game.light_energy = 0
 	for entry in game.spawn_queue: game._on_enemy_died(entry.reward, Spec.CENTER)
 	assert(game.light_energy == 60)

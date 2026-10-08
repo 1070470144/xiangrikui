@@ -9,9 +9,9 @@ var ring_fallback: Dictionary = {}
 var terrain: Node
 
 const RINGS := [
-	{"min":420.0, "max":650.0},
-	{"min":1080.0, "max":1220.0},
-	{"min":1280.0, "max":1400.0},
+	{"min":210.0, "max":325.0},
+	{"min":330.0, "max":1000.0},
+	{"min":1010.0, "max":1400.0},
 ]
 
 func prepare(map: Node, target: Vector2) -> void:
@@ -62,11 +62,11 @@ func sample_ring(angle: float, used: Array[Vector2], preferred_ring: int) -> Vec
 		var ring_points: Array = ring_fallback.get(ring_index, []) as Array
 		var candidates: Array[Vector2] = []
 		for point in ring_points:
-			if separated(point, used): candidates.append(point)
+			if _near_angle(point, angle) and separated(point, used): candidates.append(point)
 		if not candidates.is_empty(): return candidates[rng.randi_range(0, candidates.size() - 1)]
 	var candidates: Array[Vector2] = []
 	for point in fallback:
-		if separated(point, used): candidates.append(point)
+		if _near_angle(point, angle) and separated(point, used): candidates.append(point)
 	if not candidates.is_empty(): return candidates[rng.randi_range(0, candidates.size() - 1)]
 	push_error("No reachable perimeter spawn available")
 	return Vector2.INF
@@ -83,7 +83,7 @@ func sample_outer_ring(angle: float, used: Array[Vector2], preferred_ring: int) 
 		var ring_points: Array = ring_fallback.get(ring_index, []) as Array
 		var candidates: Array[Vector2] = []
 		for point in ring_points:
-			if separated(point, used): candidates.append(point)
+			if _near_angle(point, angle) and separated(point, used): candidates.append(point)
 		if not candidates.is_empty(): return candidates[rng.randi_range(0, candidates.size() - 1)]
 	push_error("No reachable outer-ring spawn available")
 	return Vector2.INF
@@ -92,6 +92,9 @@ func separated(point: Vector2, used: Array[Vector2]) -> bool:
 	for other in used:
 		if point.distance_to(other) < 24.0: return false
 	return true
+
+func _near_angle(point: Vector2, angle: float) -> bool:
+	return absf(wrapf((point - Spec.CENTER).angle() - angle, -PI, PI)) <= PI / 15.0
 
 static func sector(point: Vector2) -> int:
 	return posmod(roundi((point - Spec.CENTER).angle() / (PI / 4.0)) + 2, 8)
@@ -116,12 +119,13 @@ func build(night: int, seed_value: int) -> Array[Dictionary]:
 	var cursor := 0
 	var total_batches := maxi(5, ceili(float(normals.size()) / 4.0))
 	var batch_index := 0
+	var first_wave_angle := rng.randf_range(0.0, TAU)
 	while cursor < normals.size():
 		var size := mini(rng.randi_range(2, 5), normals.size() - cursor)
 		if normals.size() - cursor - size == 1 and size > 2: size -= 1
 		var progress := float(batch_index) / maxf(float(total_batches - 1), 1.0)
 		var time := float(config.duration) * (0.06 + progress * 0.78)
-		var angle := rng.randf_range(0.0, TAU)
+		var angle := _wave_angle(night, batch_index, first_wave_angle)
 		var used: Array[Vector2] = []
 		var preferred_ring := 2 if progress < 0.34 else (1 if progress < 0.68 else (0 if rng.randf() < 0.28 else 1))
 		for member in size:
@@ -135,7 +139,7 @@ func build(night: int, seed_value: int) -> Array[Dictionary]:
 	for i in elites.size():
 		var progress := 0.52 + 0.40 * float(i + 1) / maxf(float(elites.size()), 1.0)
 		var time := float(config.duration) * progress
-		queue.append(_entry(elites[i], time, sample_outer_ring(rng.randf_range(0.0, TAU), [], 1), batch, config, weight))
+		queue.append(_entry(elites[i], time, sample_outer_ring(_wave_angle(night, i, first_wave_angle), [], 1), batch, config, weight))
 		batch += 1
 	for i in bosses.size():
 		var progress := 0.68 + 0.22 * float(i + 1) / maxf(float(bosses.size()), 1.0)
@@ -143,6 +147,14 @@ func build(night: int, seed_value: int) -> Array[Dictionary]:
 		batch += 1
 	queue.sort_custom(func(a: Dictionary, b: Dictionary): return a.time < b.time)
 	return queue
+
+func _wave_angle(night: int, batch_index: int, first_wave_angle: float) -> float:
+	if night == 1:
+		return first_wave_angle + rng.randf_range(-PI / 18.0, PI / 18.0)
+	if night == 2:
+		var side := 0 if batch_index % 2 == 0 else 1
+		return first_wave_angle + float(side) * PI + rng.randf_range(-PI / 12.0, PI / 12.0)
+	return rng.randf_range(0.0, TAU)
 
 func _shuffle(items: Array[int]) -> void:
 	for i in range(items.size() - 1, 0, -1):

@@ -9,7 +9,7 @@ const STARTER_CARD_IDS := [
 
 const FLOWERS := [
 	{"id":"light_sprout", "name":"光脉芽", "health":120.0, "seed_cost":0, "capacity":5, "supply_radius":210.0},
-	{"id":"thorn_flower", "name":"荆棘花", "health":115.0, "seed_cost":1, "capacity":1, "range":115.0, "damage":14.0, "interval":0.64, "max_targets":6},
+	{"id":"thorn_flower", "name":"荆棘花", "health":115.0, "seed_cost":1, "capacity":1, "range":115.0, "damage":20.0, "interval":0.64, "max_targets":10},
 	{"id":"prism_flower", "name":"棱镜花", "health":115.0, "seed_cost":2, "capacity":1, "range":235.0, "damage":30.0, "interval":1.05},
 	{"id":"lantern_flower", "name":"守灯花", "health":105.0, "seed_cost":2, "capacity":1, "range":150.0, "stored_duration":11.0},
 	{"id":"frost_bell", "name":"霜铃花", "health":100.0, "seed_cost":2, "capacity":1, "range":180.0, "damage":9.0, "interval":1.20, "slow":0.32, "slow_duration":3.0},

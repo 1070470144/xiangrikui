@@ -45,8 +45,7 @@ var _animation_id := ""
 const DANGER_LOW_HEALTH_RATIO := 0.34
 
 func _ready() -> void:
-	# The core must remain visible above enemies, terrain overlays and combat FX.
-	z_index = 1000
+	z_index = 0
 	_setup_art()
 	reset_state()
 	set_process(true)

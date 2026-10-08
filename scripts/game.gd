@@ -114,8 +114,28 @@ var acid_rain_fx: Node2D
 var thunderstorm_fx: Node2D
 
 var waves: Array = Balance.WAVES.duplicate(true)
+var forecast_queue: Array[Dictionary] = []
+var forecast_night := -1
+var spawn_forecast: Control
+
+func _prepare_spawn_forecast() -> void:
+	forecast_night = wave_index + 1
+	forecast_queue.clear()
+	if forecast_night <= waves.size():
+		wave_director.prepare(battlefield.terrain_map if battlefield != null else null, BattlefieldSpec.CENTER)
+		forecast_queue = wave_director.build(forecast_night, run_seed + forecast_night * 104729)
+		for entry in forecast_queue:
+			if not Vector2(entry.spawn_position).is_finite():
+				forecast_queue.clear()
+				forecast_night = -1
+				push_error("Cannot prepare reachable spawn forecast")
+				break
+	if is_instance_valid(spawn_forecast):
+		spawn_forecast.update_queue(forecast_queue)
+		spawn_forecast.visible = phase == Phase.DAY
 
 func _ready() -> void:
+	y_sort_enabled = true
 	_build_world()
 	reset_model()
 
@@ -193,6 +213,7 @@ func reset_model() -> void:
 	aiming_sunburst = false
 	spawn_queue.clear()
 	active_enemies.clear()
+	if hud != null: hud.update_enemy_radar(PackedVector2Array(), PackedVector2Array())
 	enemy_index.clear(); spawn_cursor = 0; _queue_batches.clear(); _card_ui_state.clear()
 	performance_samples.clear()
 	_performance_cursor = 0
@@ -230,6 +251,7 @@ func reset_model() -> void:
 	if is_inside_tree():
 		mother_choices_available.emit(get_mother_choices())
 		_refresh_card_ui()
+	_prepare_spawn_forecast()
 
 func get_carried_plant_ids() -> Array[String]: return carried_plant_ids.duplicate()
 
@@ -308,6 +330,7 @@ func begin_day() -> void:
 	if is_instance_valid(thunderstorm_fx): thunderstorm_fx.reset()
 	_clear_phase_selection()
 	if is_instance_valid(terrain_events): terrain_events.stop_and_restore()
+	_prepare_spawn_forecast()
 	if is_instance_valid(mother_flower): mother_flower.on_day_started()
 	day_choice_index += 1
 	mother_choice_pending = not get_mother_choices().is_empty()
@@ -448,6 +471,9 @@ func begin_night() -> void:
 	if mother_choice_pending:
 		if is_instance_valid(hud): hud.show_message("请先从中央三张卡牌中选择今日的母花强化")
 		return
+	if forecast_night != wave_index + 1: _prepare_spawn_forecast()
+	if forecast_night < 0: return
+	if is_instance_valid(spawn_forecast): spawn_forecast.visible = false
 	phase = Phase.NIGHT
 	_clear_phase_selection()
 	combat_deck.begin_next_night()
@@ -471,8 +497,7 @@ func begin_night() -> void:
 	if is_instance_valid(mother_flower): mother_flower.on_night_started()
 	spawn_clock = 0.0
 	spawn_queue.clear()
-	wave_director.prepare(battlefield.terrain_map if battlefield != null else null, BattlefieldSpec.CENTER)
-	spawn_queue = wave_director.build(wave_index, run_seed + wave_index * 104729)
+	spawn_queue = forecast_queue.duplicate(true)
 	spawn_cursor = 0
 	_kill_energy_buffer = 0.0
 	_update_threats_from_queue()
@@ -487,6 +512,8 @@ func begin_night() -> void:
 func _build_world() -> void:
 	battlefield = BattlefieldScript.new()
 	add_child(battlefield)
+	spawn_forecast = preload("res://scripts/spawn_forecast.gd").new()
+	spawn_forecast.name = "SpawnForecast"
 	drag_world_preview = DragWorldPreviewScript.new()
 	drag_world_preview.name = "DragWorldPreview"
 	add_child(drag_world_preview)
@@ -522,6 +549,8 @@ func _build_world() -> void:
 	add_child(world_lighting)
 	world_camera = WorldCameraScript.new(); add_child(world_camera)
 	hud = HudScript.new(); add_child(hud)
+	spawn_forecast.hud = hud
+	hud.add_child(spawn_forecast)
 	hud.thorn_requested.connect(func(): _select_plant(Selection.THORN))
 	hud.prism_requested.connect(func(): _select_plant(Selection.PRISM))
 	hud.light_sprout_requested.connect(func(): _select_plant(Selection.LIGHT_SPROUT))
@@ -553,6 +582,7 @@ func _build_world() -> void:
 	hud.add_child(menu_button)
 
 func _process(delta: float) -> void:
+	if is_instance_valid(spawn_forecast): spawn_forecast.visible = phase == Phase.DAY
 	_hud_refresh_clock += delta
 	_radar_refresh_clock += delta
 	_network_refresh_clock += delta
@@ -587,7 +617,7 @@ func _process(delta: float) -> void:
 			_cached_radar_nodes = _radar_nodes()
 			_cached_network_lines = _network_lines()
 			hud.update_radar(_cached_radar_nodes, _cached_network_lines, threat_levels)
-			hud.update_threat_compass(threat_levels, int(hud_state.get("boss_direction", -1)))
+			_refresh_enemy_radar()
 		_refresh_card_ui()
 		_ui_usec = Time.get_ticks_usec() - ui_started
 	var sample := {"frame_usec": int(delta * 1000000.0), "alive": _get_active_enemy_count(), "spawned": _spawned_this_frame, "spawn_usec": _spawn_usec, "query_usec": enemy_index.query_usec, "query_candidates": enemy_index.query_candidates, "ui_usec": _ui_usec, "shadow_usec": battlefield.terrain_map.contact_shadows.update_usec if is_instance_valid(battlefield) else 0}
@@ -887,6 +917,17 @@ func _network_lines() -> Array[Dictionary]:
 	for object in _temporary_supply_nodes():
 		lines.append({"from":object.parent_source.global_position if is_instance_valid(object.parent_source) else BattlefieldScript.CENTER, "to": object.global_position, "connected": object.is_connected_to_light, "overloaded": object.load >= object.capacity})
 	return lines
+
+func _refresh_enemy_radar() -> void:
+	var positions := PackedVector2Array()
+	var bosses := PackedVector2Array()
+	for enemy in enemy_index.hostiles():
+		if not is_instance_valid(enemy) or enemy.is_queued_for_deletion() or enemy.health <= 0.0:
+			continue
+		positions.append(enemy.global_position)
+		if str(ContentData.get_enemy(enemy.enemy_id).get("rank", "")) == "boss":
+			bosses.append(enemy.global_position)
+	if hud != null: hud.update_enemy_radar(positions, bosses)
 
 func _radar_nodes() -> Array:
 	var result: Array = []

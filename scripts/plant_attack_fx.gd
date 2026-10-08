@@ -12,8 +12,8 @@ var _duration := 0.72
 var _frame_count := 0
 
 func _ready() -> void:
-	z_as_relative = false
-	z_index = 17
+	z_as_relative = true
+	z_index = 0
 	_sprite = Sprite2D.new()
 	_sprite.centered = false
 	add_child(_sprite)

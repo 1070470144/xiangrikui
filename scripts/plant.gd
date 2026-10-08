@@ -94,7 +94,7 @@ func _setup_art() -> void:
 	add_child(animation_sprite)
 	attack_fx = AttackFx.new()
 	attack_fx.name = "BotanicalAttackFx"
-	attack_fx.z_index = 8
+	attack_fx.z_index = 0
 	add_child(attack_fx)
 
 func configure(new_kind: Kind, new_branch_index: int) -> void:
@@ -369,11 +369,12 @@ func select_target(candidates: Array) -> Node2D:
 
 func _attack_thorn() -> void:
 	var hits := 0
+	var max_targets := int(ContentData.get_flower("thorn_flower").get("max_targets", 10))
 	for candidate in _nearby_enemies(global_position, attack_range):
 		if is_instance_valid(candidate) and candidate.health > 0.0 and candidate.friendly_time <= 0.0 and global_position.distance_to(candidate.global_position) <= attack_range:
 			candidate.take_damage(attack_damage)
 			hits += 1
-			if hits >= 5: break
+			if hits >= max_targets: break
 
 func _find_healing_target() -> Node:
 	var best: Node = null; var ratio := 1.0

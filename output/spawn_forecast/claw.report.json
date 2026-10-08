@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "Single compact monster warning emblem for a dark botanical survival game HUD, centered three luminous crimson claw scratches cut into a small weathered black iron medallion with antique brass broken rim. Strong bold readable silhouette at 40 pixels, front-facing flat icon, premium realistic painted metal texture, restrained red illumination, no text, no arrows, no background, true transparent alpha, generous margin, square canvas.",
+  "out": "D:\\MyData\\GodotGame\\data\\xiangrikui\\assets\\ui\\spawn_forecast\\claw.png",
+  "raw": "D:\\MyData\\GodotGame\\data\\xiangrikui\\assets\\ui\\spawn_forecast\\claw.png.raw.png",
+  "raw_bytes": 1403920,
+  "elapsed_seconds": 30.547,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\MyData\\GodotGame\\data\\xiangrikui\\assets\\ui\\spawn_forecast\\claw.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 63.27,
+    "partial_alpha_pct": 36.73,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 74,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}
