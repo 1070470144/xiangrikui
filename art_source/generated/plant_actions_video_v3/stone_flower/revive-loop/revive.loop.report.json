@@ -1,0 +1,87 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_actions_video_v3\\stone_flower\\revive-frames\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_actions_video_v3\\stone_flower\\revive-loop",
+  "state": "revive",
+  "fps": 24.0,
+  "frames_total": 97,
+  "window": [
+    10,
+    44
+  ],
+  "profile": "generic in-place action",
+  "cycle_mode": "fixed",
+  "seam_max": 1000.0,
+  "anchor": "none",
+  "seam_measurement": "source-frames",
+  "cycle": {
+    "kind": "fixed",
+    "start": 0,
+    "length": 97,
+    "seam": 0.1011812686920166,
+    "inner_mean_adjacent": 0.004930412862449884,
+    "ratio": 20.521865311243,
+    "period_global": null,
+    "periodicity": null
+  },
+  "periodic_attempt": null,
+  "cycle_seconds": 4.0417,
+  "n_out": 64,
+  "gif_fps": 24.0,
+  "delay_ms": 63,
+  "status": "passed",
+  "resampled_seam": 0.10111295431852341,
+  "resampled_inner_mean_adjacent": 0.006983471103012562,
+  "resampled_seam_ratio": 14.4789,
+  "scrubbed_rgb_pixels": 0,
+  "specks_dropped": 1730,
+  "strip": {
+    "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_actions_video_v3\\stone_flower\\revive-loop\\revive.strip.png",
+    "frames": 64,
+    "w": 146,
+    "h": 126,
+    "kind": "fixed",
+    "loop": true,
+    "body_h": 73,
+    "body_src_h": 185,
+    "body_ref": "first-frame",
+    "scale": 0.3946,
+    "delay_ms": 63.15,
+    "cycle_frames": 97,
+    "cycle_seconds": 4.0417,
+    "subsampled": true,
+    "cell_cap": 64,
+    "top_margin_px": 81,
+    "body_height_target": 73,
+    "foot_anchor": "none",
+    "drift_px": 0,
+    "foot_sway_px": 0,
+    "foot_x": null
+  },
+  "gif": {
+    "file": "revive.gif",
+    "format": "GIF",
+    "n_frames": 64,
+    "loop": 0,
+    "size": [
+      146,
+      126
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 514172
+  },
+  "webp": {
+    "file": "revive.webp",
+    "format": "WEBP",
+    "n_frames": 64,
+    "loop": 0,
+    "size": [
+      146,
+      126
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 1137596
+  }
+}

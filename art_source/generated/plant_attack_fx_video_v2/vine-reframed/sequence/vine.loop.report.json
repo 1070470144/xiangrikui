@@ -1,0 +1,89 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_attack_fx_video_v2\\vine-reframed\\frames\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_attack_fx_video_v2\\vine-reframed\\sequence",
+  "state": "attack",
+  "fps": 24.0,
+  "frames_total": 97,
+  "window": [
+    11,
+    60
+  ],
+  "profile": "swing and return to ready; retain at least half a second of repeat context",
+  "cycle_mode": "pinned",
+  "seam_max": 2.0,
+  "anchor": "none",
+  "seam_measurement": "source-frames",
+  "cycle": {
+    "kind": "pinned",
+    "start": 0,
+    "length": 96,
+    "seam": 0.0003861058212351054,
+    "inner_mean_adjacent": 0.006359664257615805,
+    "ratio": 0.06071166740802979,
+    "pin_error": 0.0004068109847139567,
+    "pin_tolerance": 0.01271932851523161,
+    "period_global": null,
+    "periodicity": null
+  },
+  "periodic_attempt": null,
+  "cycle_seconds": 4.0,
+  "n_out": 47,
+  "gif_fps": 24.0,
+  "delay_ms": 85,
+  "status": "passed",
+  "resampled_seam": 0.00041030632564798,
+  "resampled_inner_mean_adjacent": 0.009517248719930649,
+  "resampled_seam_ratio": 0.0431,
+  "scrubbed_rgb_pixels": 0,
+  "specks_dropped": 6530,
+  "strip": {
+    "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_attack_fx_video_v2\\vine-reframed\\sequence\\vine.strip.png",
+    "frames": 47,
+    "w": 677,
+    "h": 192,
+    "kind": "pinned",
+    "loop": true,
+    "body_h": 170,
+    "body_src_h": 307,
+    "body_ref": "tallest-grounded",
+    "scale": 0.5533,
+    "delay_ms": 85.11,
+    "cycle_frames": 96,
+    "cycle_seconds": 4.0,
+    "subsampled": true,
+    "cell_cap": 47,
+    "top_margin_px": 140,
+    "body_height_target": null,
+    "foot_anchor": "none",
+    "drift_px": 0,
+    "foot_sway_px": 0,
+    "foot_x": null
+  },
+  "gif": {
+    "file": "vine.gif",
+    "format": "GIF",
+    "n_frames": 47,
+    "loop": 0,
+    "size": [
+      677,
+      192
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 643973
+  },
+  "webp": {
+    "file": "vine.webp",
+    "format": "WEBP",
+    "n_frames": 47,
+    "loop": 0,
+    "size": [
+      677,
+      192
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 1775492
+  }
+}
