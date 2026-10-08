@@ -1,0 +1,22 @@
+{
+  "id": "cgt-20261004095907-x66f9",
+  "model": "doubao-seedance-2-0-mini-260615",
+  "status": "succeeded",
+  "usage": {
+    "completion_tokens": 87300,
+    "total_tokens": 87300
+  },
+  "created_at": 1791079147,
+  "updated_at": 1791079320,
+  "seed": 72865,
+  "resolution": "720p",
+  "ratio": "1:1",
+  "duration": 4,
+  "framespersecond": 24,
+  "service_tier": "default",
+  "execution_expires_after": 172800,
+  "generate_audio": false,
+  "draft": false,
+  "priority": 0,
+  "output_format": "mp4"
+}

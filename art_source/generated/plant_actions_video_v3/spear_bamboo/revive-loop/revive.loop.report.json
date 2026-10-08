@@ -1,0 +1,87 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_actions_video_v3\\spear_bamboo\\revive-frames\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_actions_video_v3\\spear_bamboo\\revive-loop",
+  "state": "revive",
+  "fps": 24.0,
+  "frames_total": 97,
+  "window": [
+    10,
+    44
+  ],
+  "profile": "generic in-place action",
+  "cycle_mode": "fixed",
+  "seam_max": 1000.0,
+  "anchor": "none",
+  "seam_measurement": "source-frames",
+  "cycle": {
+    "kind": "fixed",
+    "start": 0,
+    "length": 97,
+    "seam": 0.031424351036548615,
+    "inner_mean_adjacent": 0.0027045735623687506,
+    "ratio": 11.618967024519081,
+    "period_global": null,
+    "periodicity": null
+  },
+  "periodic_attempt": null,
+  "cycle_seconds": 4.0417,
+  "n_out": 64,
+  "gif_fps": 24.0,
+  "delay_ms": 63,
+  "status": "passed",
+  "resampled_seam": 0.031389545649290085,
+  "resampled_inner_mean_adjacent": 0.00386429438367486,
+  "resampled_seam_ratio": 8.123,
+  "scrubbed_rgb_pixels": 0,
+  "specks_dropped": 4807,
+  "strip": {
+    "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_actions_video_v3\\spear_bamboo\\revive-loop\\revive.strip.png",
+    "frames": 64,
+    "w": 92,
+    "h": 135,
+    "kind": "fixed",
+    "loop": true,
+    "body_h": 115,
+    "body_src_h": 316,
+    "body_ref": "first-frame",
+    "scale": 0.3639,
+    "delay_ms": 63.15,
+    "cycle_frames": 97,
+    "cycle_seconds": 4.0417,
+    "subsampled": true,
+    "cell_cap": 64,
+    "top_margin_px": 33,
+    "body_height_target": 115,
+    "foot_anchor": "none",
+    "drift_px": 0,
+    "foot_sway_px": 0,
+    "foot_x": null
+  },
+  "gif": {
+    "file": "revive.gif",
+    "format": "GIF",
+    "n_frames": 64,
+    "loop": 0,
+    "size": [
+      92,
+      135
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 314684
+  },
+  "webp": {
+    "file": "revive.webp",
+    "format": "WEBP",
+    "n_frames": 64,
+    "loop": 0,
+    "size": [
+      92,
+      135
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 951270
+  }
+}
