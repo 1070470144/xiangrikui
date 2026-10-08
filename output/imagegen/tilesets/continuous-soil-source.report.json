@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Original production texture for a top-down survival tower-defense game. A single calm, continuous expanse of weathered compacted garden soil, muted warm grey-brown and earthy taupe. Strict orthographic overhead camera, perfectly flat surface, even diffuse ambient light. Fine subtle mineral grain and soft broad tonal variation. 95 percent clean open soil. Very few tiny embedded pebbles, hairline cracks only. No scattered debris, no rubble piles, no large stones, no grass, no roots, no leaves, no bricks, no objects, no grid, no paving, no borders, no circular patches, no dramatic shadows, no vignette. Quiet low contrast background so colorful plants and enemies remain the focus. Texture fills the entire square, consistent material at all four edges, designed for seamless tiling. Natural realistic hand-painted game environment material, not a photograph with perspective, no text, no watermark.",
+  "out": "D:\\mm\\data\\xiangrikui\\output\\imagegen\\tilesets\\continuous-soil-source.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\output\\imagegen\\tilesets\\continuous-soil-source.png.raw.png",
+  "raw_bytes": 3002638,
+  "elapsed_seconds": 34.625,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "high",
+    "size": "1024x1024",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 182,
+      "output_tokens": 6500,
+      "total_tokens": 6682,
+      "input_tokens_details": {
+        "text_tokens": 182,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 6500,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

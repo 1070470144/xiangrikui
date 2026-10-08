@@ -1,0 +1,51 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "为 Godot 游戏生成一个可直接使用的panel图片资源。\n资源功能：Shared battle mother-health, phase and resource instrument readout。\n用途：Shared battle mother-health, phase and resource instrument readout。\n游戏内实际显示尺寸：304x88 像素。\n内容安全区：左 18px、上 12px、右 18px、下 12px。\n项目风格：Project botanical greenhouse storybook UI, now midnight blue-grey glass #172331/#263449, muted warm ivory paper #cfc1a3, dark paper ink #282c33 and aged copper #b98b55. Visible restrained hand-painted brushwork, fine worn metal edges, sparse flattened botanical corner relief. Warm upper-left soft light. No olive green glass. Preserve the project's plants and brass instrument language; layout reference is only vertical collectible cards, never any other game's art or brand.。\n视觉锚点：Project botanical greenhouse storybook UI, now midnight blue-grey glass #172331/#263449, muted warm ivory paper #cfc1a3, dark paper ink #282c33 and aged copper #b98b55. Visible restrained hand-painted brushwork, fine worn metal edges, sparse flattened botanical corner relief. Warm upper-left soft light. No olive green glass. Preserve the project's plants and brass instrument language; layout reference is only vertical collectible cards, never any other game's art or brand.。\n1. Game asset use: Shared battle mother-health, phase and resource instrument readout.\n2. Runtime contract: source [768, 256], runtime [304, 88]; safe margins [18, 12, 18, 12]. Fill canvas with one frame and 8px transparent exterior margin. Preserve corners, only straight rails and quiet centers may stretch.\n3. Project visual anchor: Project botanical greenhouse storybook UI, now midnight blue-grey glass #172331/#263449, muted warm ivory paper #cfc1a3, dark paper ink #282c33 and aged copper #b98b55. Visible restrained hand-painted brushwork, fine worn metal edges, sparse flattened botanical corner relief. Warm upper-left soft light. No olive green glass. Preserve the project's plants and brass instrument language; layout reference is only vertical collectible cards, never any other game's art or brand.\n4. Composition and state contract: One horizontal 3:1 rounded instrument frame. Midnight navy-blue painted glass, fine old copper edge and corner leaf embossing only in outer 8 percent. Central 84 percent quiet uninterrupted navy for warm native text. No portrait, badge, paper, dial, icon or blue glow. One neutral master; exact same silhouette for runtime state tinting.\n5. Comfort: restrained copper luminance, low-frequency painted texture, paper luminance below the mother flower's gold. No bright bloom.\n6. Exclusions: text, pseudo-writing, logo, watermark, baked controls, plants, portrait, cost gem, alternatives, contact sheet, game-brand imitation, olive/pale-green panel fill, neon, chrome, plastic.\n7. Transparency: real clean RGBA exterior, no environment, no solid background and no checkerboard; card paper and glass centers are intentional artwork.。\n布局：One horizontal 3:1 rounded instrument frame. Midnight navy-blue painted glass, fine old copper edge and corner leaf embossing only in outer 8 percent. Central 84 percent quiet uninterrupted navy for warm native text. No portrait, badge, paper, dial, icon or blue glow.。\n状态一致性：Neutral master, deterministic state tints preserve exact alpha geometry。\n舒适度约束：Quiet readout centers；Paper below mother-flower brightness；No continuous hand tray or central obstruction。\n不得生成：olive green、neon、brand imitation、dense ornament、text、watermark、logo、cost gem、plant、portrait、baked UI。\n禁止任何可读或伪造的文字、字母、数字、签名和水印；文字由 Godot 字体系统绘制。\n输出为真实透明 PNG；禁止棋盘格、白底、纯色背景和背景底板。",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\battle_ui_v5\\navy_status_frame.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\battle_ui_v5\\navy_status_frame.png.raw.png",
+  "raw_bytes": 1455091,
+  "elapsed_seconds": 36.735,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\battle_ui_v5\\navy_status_frame.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "2048x768",
+    "alpha_zero_pct": 48.61,
+    "partial_alpha_pct": 51.39,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 754183,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "auto",
+    "size": "1536x512",
+    "background": "transparent",
+    "usage": {
+      "input_tokens": 847,
+      "output_tokens": 1584,
+      "total_tokens": 2431,
+      "input_tokens_details": {
+        "text_tokens": 847,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1584,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

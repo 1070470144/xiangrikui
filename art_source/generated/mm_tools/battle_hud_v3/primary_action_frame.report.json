@@ -1,0 +1,51 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "为 Godot 游戏生成一个可直接使用的button图片资源。\n资源功能：Identify the phase's one decisive action: start night or sunburst。\n用途：Identify the phase's one decisive action: start night or sunburst。\n游戏内实际显示尺寸：160x114 像素。\n内容安全区：左 28px、上 25px、右 28px、下 32px。\n项目风格：Project greenhouse botanical storybook UI, as specified by ordered per-resource contracts.。\n视觉锚点：res://Design/Sunflower-Defense-Art-Style-Guide.md; res://tmp/battle-ui-v3-baseline/hud-day-runtime.png; res://assets/ui/generated/battle_hud/runtime_primary_action_normal_v2.png. Deep ink-green glass, thin oxidized aged brass, sparse leaf engraving, warm upper-left highlights, botanical storybook brushwork.。\n1. Game asset use: Identify the phase's one decisive action: start night or sunburst.\n2. Runtime size and safe area: output [512, 384] pixels, Godot display [160, 114] pixels. Full artwork must fill canvas with 8px outer transparent margin; no cropping; content safe margins left/top/right/bottom [28, 25, 28, 32].\n3. Project visual anchor: res://Design/Sunflower-Defense-Art-Style-Guide.md; res://tmp/battle-ui-v3-baseline/hud-day-runtime.png; res://assets/ui/generated/battle_hud/runtime_primary_action_normal_v2.png. Deep ink-green glass, thin oxidized aged brass, sparse leaf engraving, warm upper-left highlights, botanical storybook brushwork.\n4. Composition and state contract: One horizontal rounded rectangular greenhouse action frame, aspect 4:3. Stable narrow brass edge, sparse leaf relief only in corners; empty ink-green glass center, no icons. Orthographic UI view; upper-left soft light. Identical silhouette for all states; only tint and rim luminance change at runtime.\n5. Comfort: Low contrast centers; restrained warm highlights without bloom; Sparse edge engraving; no flashing or motion implied; Clear silhouettes at 160 and 176 pixels; quiet runtime text areas.\n6. Project and AI exclusions: pixel art; photography; candy saturation; neon; chrome; plastic; dense decoration; baked UI; text; watermark; logo; no text, no watermark, no logo, no unintended objects, no baked UI, no alternatives or contact sheet.\n7. Transparent output: real RGBA transparent exterior, clean unpremultiplied alpha edges, no solid backdrop, checkerboard or environment.。\n布局：One horizontal rounded rectangular greenhouse action frame, aspect 4:3. Stable narrow brass edge, sparse leaf relief only in corners; empty ink-green glass center, no icons. Orthographic UI view; upper-left soft light. Identical silhouette for all states; only tint and rim luminance change at runtime.。\n状态一致性：One generated master; button hover/pressed/disabled derive from its exact alpha; bezel remains neutral。\n舒适度约束：Low contrast centers; restrained warm highlights without bloom；Sparse edge engraving; no flashing or motion implied；Clear silhouettes at 160 and 176 pixels; quiet runtime text areas。\n不得生成：pixel art、photography、candy saturation、neon、chrome、plastic、dense decoration、baked UI、text、watermark、logo。\n禁止任何可读或伪造的文字、字母、数字、签名和水印；文字由 Godot 字体系统绘制。\n输出为真实透明 PNG；禁止棋盘格、白底、纯色背景和背景底板。",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\battle_hud_v3\\primary_action_frame.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\battle_hud_v3\\primary_action_frame.png.raw.png",
+  "raw_bytes": 746992,
+  "elapsed_seconds": 39.891,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\battle_hud_v3\\primary_action_frame.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 68.57,
+    "partial_alpha_pct": 31.43,
+    "opaque_pct": 0.01,
+    "cleaned_transparent_rgb_pixels": 114,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "auto",
+    "size": "1024x1024",
+    "background": "transparent",
+    "usage": {
+      "input_tokens": 761,
+      "output_tokens": 1650,
+      "total_tokens": 2411,
+      "input_tokens_details": {
+        "text_tokens": 761,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1650,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

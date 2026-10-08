@@ -1,0 +1,51 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "为 Godot 游戏生成一个可直接使用的panel图片资源。\n资源功能：Low-weight shared day/night action tray beneath interactive cards。\n用途：Low-weight shared day/night action tray beneath interactive cards。\n游戏内实际显示尺寸：620x126 像素。\n内容安全区：左 20px、上 16px、右 20px、下 16px。\n项目风格：Project greenhouse botanical storybook UI, as specified by ordered per-resource contracts.。\n视觉锚点：Approved botanical greenhouse: hand-painted ink-green glass with blue-grey shaded edges; narrow worn brass double rim; sparse flattened leaf embossing at corners; soft upper-left light; warm pale text; clean quiet readout centers. References res://Design/Sunflower-Defense-Art-Style-Guide.md, res://assets/ui/generated/battle_hud_v3/primary_action_normal.png and res://assets/ui/generated/battle_hud_v3/tactical_bezel.png.。\n1. Game asset use: Low-weight shared day/night action tray beneath interactive cards.\n2. Runtime display size and safe area: source [1024, 256], runtime [620, 126]; nine-slice only straight edges and quiet center, corners uniformly scale; transparent outer margin 8px; 20px runtime text and input safe margins.\n3. Project visual anchor: Approved botanical greenhouse: hand-painted ink-green glass with blue-grey shaded edges; narrow worn brass double rim; sparse flattened leaf embossing at corners; soft upper-left light; warm pale text; clean quiet readout centers. References res://Design/Sunflower-Defense-Art-Style-Guide.md, res://assets/ui/generated/battle_hud_v3/primary_action_normal.png and res://assets/ui/generated/battle_hud_v3/tactical_bezel.png.\n4. Composition and state contract: One 4:1 shallow tray frame. Transparent dark ink-green glass inset, fine worn brass rail and lightly brushed greenhouse wood edge. Corner leaf impressions only at tiny extreme ends. Calm empty center; no cards, flowers, plaques or buttons. Orthographic view, upper-left soft light. Single neutral master; card states preserve exact alpha geometry through deterministic tint.\n5. Comfort constraints: low contrast center, sparse edge texture, no bloom, motion or flashing; subtle material readable at declared runtime size.\n6. Project and AI exclusions: no neon, plastic, photography, pixel art, dense ornament, bright glow, text, watermark, logo, unintended objects, baked UI, alternatives or contact sheet.\n7. Transparent output: real RGBA exterior and clean alpha; no solid backdrop, checkerboard or environment; glass inset may be translucent.。\n布局：One 4:1 shallow tray frame. Transparent dark ink-green glass inset, fine worn brass rail and lightly brushed greenhouse wood edge. Corner leaf impressions only at tiny extreme ends. Calm empty center; no cards, flowers, plaques or buttons.。\n状态一致性：Neutral master; all card states share exact alpha。\n舒适度约束：Low contrast centers; restrained warm highlights without bloom；Sparse edge engraving; no flashing or motion implied；Clear silhouettes at 160 and 176 pixels; quiet runtime text areas。\n不得生成：pixel art、photography、candy saturation、neon、chrome、plastic、dense decoration、baked UI、text、watermark、logo、flowers、portraits、busy center。\n禁止任何可读或伪造的文字、字母、数字、签名和水印；文字由 Godot 字体系统绘制。\n输出为真实透明 PNG；禁止棋盘格、白底、纯色背景和背景底板。",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\battle_hud_v4\\action_tray_frame.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\battle_hud_v4\\action_tray_frame.png.raw.png",
+  "raw_bytes": 658881,
+  "elapsed_seconds": 43.312,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\battle_hud_v4\\action_tray_frame.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1983x793",
+    "alpha_zero_pct": 69.29,
+    "partial_alpha_pct": 30.71,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 116,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "auto",
+    "size": "1024x1024",
+    "background": "transparent",
+    "usage": {
+      "input_tokens": 750,
+      "output_tokens": 1599,
+      "total_tokens": 2349,
+      "input_tokens_details": {
+        "text_tokens": 750,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1599,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

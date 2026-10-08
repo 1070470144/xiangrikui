@@ -1,0 +1,53 @@
+{
+  "manifest": "res://art_source/manifests/battle_hud_v3.json",
+  "derivatives": [
+    {
+      "asset_id": "primary_action_frame",
+      "source": "art_source\\generated\\mm_tools\\battle_hud_v3\\primary_action_frame.png.raw.png",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "alpha_bbox": [
+        66,
+        393,
+        1189,
+        848
+      ],
+      "fitted_size": [
+        152,
+        106
+      ],
+      "runtime_size": [
+        160,
+        114
+      ],
+      "scale_method": "alpha bbox; button corners uniformly scale to <=18% edge span with quiet-center nine-slice expansion, bezel uniform contain; source immutable",
+      "states_alpha_sha256": "d2d320e4541fd9ce39703e0747c03de26d8a3e3454adf710ee43e6d48a58cff0"
+    },
+    {
+      "asset_id": "tactical_bezel",
+      "source": "art_source\\generated\\mm_tools\\battle_hud_v3\\tactical_bezel.png.raw.png",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "alpha_bbox": [
+        119,
+        95,
+        1133,
+        1119
+      ],
+      "fitted_size": [
+        499,
+        504
+      ],
+      "runtime_size": [
+        512,
+        512
+      ],
+      "scale_method": "alpha bbox; button corners uniformly scale to <=18% edge span with quiet-center nine-slice expansion, bezel uniform contain; source immutable",
+      "center_alpha": 0
+    }
+  ]
+}

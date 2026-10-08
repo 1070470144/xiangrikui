@@ -1,0 +1,80 @@
+{
+  "manifest": "res://art_source/manifests/battle_hud_v4.json",
+  "derivatives": [
+    {
+      "asset_id": "status_frame",
+      "source": "art_source\\generated\\mm_tools\\battle_hud_v4\\status_frame.png.raw.png",
+      "source_size": [
+        2083,
+        755
+      ],
+      "alpha_bbox": [
+        63,
+        172,
+        2021,
+        575
+      ],
+      "fitted_size": [
+        296,
+        80
+      ],
+      "runtime_size": [
+        304,
+        88
+      ],
+      "brightness": 0.68,
+      "scale_method": "alpha bbox; corners uniform <=18% span, quiet-center nine-slice; specimen window/footer separately reframe to caption safe area; source immutable",
+      "center_alpha": 253
+    },
+    {
+      "asset_id": "specimen_card_frame",
+      "source": "art_source\\generated\\mm_tools\\battle_hud_v4\\specimen_card_frame.png.raw.png",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "alpha_bbox": [
+        124,
+        93,
+        1130,
+        1153
+      ],
+      "fitted_size": [
+        134,
+        102
+      ],
+      "runtime_size": [
+        142,
+        110
+      ],
+      "brightness": 0.68,
+      "scale_method": "alpha bbox; corners uniform <=18% span, quiet-center nine-slice; specimen window/footer separately reframe to caption safe area; source immutable",
+      "states_alpha_sha256": "17be2457ad24682d7a8a86c56b70060415a447632ab36eccbf77ad646a4f88b8"
+    },
+    {
+      "asset_id": "action_tray_frame",
+      "source": "art_source\\generated\\mm_tools\\battle_hud_v4\\action_tray_frame.png.raw.png",
+      "source_size": [
+        1983,
+        793
+      ],
+      "alpha_bbox": [
+        80,
+        261,
+        1903,
+        520
+      ],
+      "fitted_size": [
+        612,
+        118
+      ],
+      "runtime_size": [
+        620,
+        126
+      ],
+      "brightness": 0.62,
+      "scale_method": "alpha bbox; corners uniform <=18% span, quiet-center nine-slice; specimen window/footer separately reframe to caption safe area; source immutable",
+      "center_alpha": 253
+    }
+  ]
+}

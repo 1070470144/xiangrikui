@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "Hand-painted antique botanical game UI in muted gold and deep midnight green. Single isolated graphic. No text, lettering, portrait, sunflower, potted plant, archway, greenhouse building, book, human, badge, alternative designs, or scene. ONLY translucent dark blue-black edge vignette, empty unobstructed center. No objects, figures, structures or ornaments. Return a real transparent PNG background, isolated only.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\corrections\\menu_overlay_dim.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\corrections\\menu_overlay_dim.png.raw.png",
+  "raw_bytes": 1157222,
+  "elapsed_seconds": 33.985,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\corrections\\menu_overlay_dim.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 36.45,
+    "partial_alpha_pct": 63.55,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 0,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

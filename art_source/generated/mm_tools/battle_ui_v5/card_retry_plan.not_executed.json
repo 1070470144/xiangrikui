@@ -1,0 +1,111 @@
+{
+  "status": "awaiting-new-paid-confirmation",
+  "planned_calls": 1,
+  "jobs": [
+    {
+      "asset_id": "vertical_botanical_card",
+      "state": null,
+      "prompt": "为 Godot 游戏生成一个可直接使用的button图片资源。\n资源功能：Vertical collectible botanical card framing existing plant art and native effect description。\n用途：Vertical collectible botanical card framing existing plant art and native effect description。\n游戏内实际显示尺寸：142x218 像素。\n内容安全区：左 12px、上 10px、右 12px、下 8px。\n项目风格：Project botanical greenhouse storybook UI, now midnight blue-grey glass #172331/#263449, muted warm ivory paper #cfc1a3, dark paper ink #282c33 and aged copper #b98b55. Visible restrained hand-painted brushwork, fine worn metal edges, sparse flattened botanical corner relief. Warm upper-left soft light. No olive green glass. Preserve the project's plants and brass instrument language; layout reference is only vertical collectible cards, never any other game's art or brand.。\n视觉锚点：Project botanical greenhouse storybook UI, now midnight blue-grey glass #172331/#263449, muted warm ivory paper #cfc1a3, dark paper ink #282c33 and aged copper #b98b55. Visible restrained hand-painted brushwork, fine worn metal edges, sparse flattened botanical corner relief. Warm upper-left soft light. No olive green glass. Preserve the project's plants and brass instrument language; layout reference is only vertical collectible cards, never any other game's art or brand.。\n1. Game asset use: Vertical collectible botanical card framing existing plant art and native effect description.\n2. Runtime contract: source [768, 1024], runtime [142, 218]; safe margins [12, 10, 12, 8]. Fill canvas with one frame and 8px transparent exterior margin. Preserve corners, only straight rails and quiet centers may stretch.\n3. Project visual anchor: Project botanical greenhouse storybook UI, now midnight blue-grey glass #172331/#263449, muted warm ivory paper #cfc1a3, dark paper ink #282c33 and aged copper #b98b55. Visible restrained hand-painted brushwork, fine worn metal edges, sparse flattened botanical corner relief. Warm upper-left soft light. No olive green glass. Preserve the project's plants and brass instrument language; layout reference is only vertical collectible cards, never any other game's art or brand.\n4. Composition and state contract: One vertical card with aspect 142:218, old copper fine border, small leaf corner clasps, upper exactly 55.5 percent midnight-navy illustration and title zone, lower exactly 44.5 percent muted warm ivory parchment record area. The single paper upper boundary is exactly 121/218 of the card silhouette height, not 60 percent. Illustration window is quiet and empty. At runtime cost gem left top 33px, art x12 y28 w118 h68, title y98-121; paper y121 height85, description x12 y126-199. Place the sole thin separator at y121/218, never across these text slots. No pre-drawn gem, circle, mana mark, cost, plant, icon, text or ornamental centerpiece. Straight-on 2D card, no perspective or tilted view. One neutral master; exact same silhouette for runtime state tinting.\n5. Comfort: restrained copper luminance, low-frequency painted texture, paper luminance below the mother flower's gold. No bright bloom.\n6. Exclusions: text, pseudo-writing, logo, watermark, baked controls, plants, portrait, cost gem, alternatives, contact sheet, game-brand imitation, olive/pale-green panel fill, neon, chrome, plastic.\n7. Transparency: actual PNG alpha channel with exterior pixels alpha=0; never simulate transparency with painted gray-white checkerboard squares. real clean RGBA exterior, no environment, no solid background and no checkerboard; card paper and glass centers are intentional artwork.。\n布局：One vertical card with aspect 142:218, old copper fine border, small leaf corner clasps, upper exactly 55.5 percent midnight-navy illustration and title zone, lower exactly 44.5 percent muted warm ivory parchment record area. The single paper upper boundary is exactly 121/218 of the card silhouette height, not 60 percent. Illustration window is quiet and empty. At runtime cost gem left top 33px, art x12 y28 w118 h68, title y98-121; paper y121 height85, description x12 y126-199. Place the sole thin separator at y121/218, never across these text slots. No pre-drawn gem, circle, mana mark, cost, plant, icon, text or ornamental centerpiece. Straight-on 2D card, no perspective or tilted view.。\n状态一致性：Neutral master, deterministic state tints preserve exact alpha geometry。\n舒适度约束：Quiet readout centers；Paper below mother-flower brightness；No continuous hand tray or central obstruction。\n不得生成：olive green、neon、brand imitation、dense ornament、text、watermark、logo、cost gem、plant、portrait、baked UI。\n禁止任何可读或伪造的文字、字母、数字、签名和水印；文字由 Godot 字体系统绘制。\n输出为真实透明 PNG；禁止棋盘格、白底、纯色背景和背景底板。",
+      "output": "res://art_source/generated/mm_tools/battle_ui_v5/vertical_botanical_card.png",
+      "output_path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\battle_ui_v5\\vertical_botanical_card.png",
+      "size": [
+        768,
+        1024
+      ],
+      "transparent": true,
+      "sprite_gen_contract": "sprite-gen/docs/gen.md",
+      "style_evidence": [
+        {
+          "kind": "art_guide",
+          "source": "res://Design/Sunflower-Defense-Art-Style-Guide.md",
+          "reason": "Section 8 blue-grey instruments and worn gardening records"
+        },
+        {
+          "kind": "accepted_manifest",
+          "source": "res://docs/mm-tools-battle-ui-v5-stage12.md",
+          "reason": "V5 palette, card slots, interaction and explicit two-master scope"
+        },
+        {
+          "kind": "runtime_screenshot",
+          "source": "res://output/imagegen/previews/battle-hud-v4-1280x720-hud-night-runtime.png",
+          "reason": "Actual V4 night baseline and preserved battlefield boundaries"
+        },
+        {
+          "kind": "runtime_screenshot",
+          "source": "res://tmp/battle-ui-v5-layout/1280x720-hud-night-runtime.png",
+          "reason": "Actual V5 navy/ivory vertical-card fallback and bound recolored instrument before generation"
+        },
+        {
+          "kind": "runtime_asset",
+          "source": "res://assets/ui/generated/battle_hud_v3/primary_action_normal.png",
+          "reason": "Preserved botanical copper painting; deterministic navy derivation"
+        },
+        {
+          "kind": "runtime_asset",
+          "source": "res://assets/ui/generated/battle_hud_v3/tactical_bezel.png",
+          "reason": "Preserved instrument silhouette and transparent opening"
+        },
+        {
+          "kind": "runtime_asset",
+          "source": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+          "reason": "Warm focal-point portrait and existing sun-card illustration"
+        },
+        {
+          "kind": "runtime_asset",
+          "source": "res://assets/nodes/ART_NODE_LightBud_Healthy.png",
+          "reason": "Existing root/light specimen silhouette on deployment and healing cards"
+        },
+        {
+          "kind": "runtime_asset",
+          "source": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+          "reason": "Existing root-action botanical illustration"
+        },
+        {
+          "kind": "runtime_asset",
+          "source": "res://assets/plants/ART_PLANT_PrismFlower_Powered.png",
+          "reason": "Existing piercing-action botanical illustration"
+        },
+        {
+          "kind": "runtime_asset",
+          "source": "res://assets/ui/UI_ICON_Repair.png",
+          "reason": "Repair illustration distinct from deployment; reuse existing asset"
+        },
+        {
+          "kind": "external_reference",
+          "source": "https://playhearthstone.com/en-us/",
+          "reason": "Layout/interaction only: vertical illustration, cost and effect hierarchy, overlapping hand; fetched official page archived tmp/battle-ui-v5-research/Hearthstone.html; no brand/art/style copying"
+        },
+        {
+          "kind": "external_reference",
+          "source": "https://store.steampowered.com/app/646570/Slay_the_Spire/",
+          "reason": "Layout only: readable energy cost and short effect description in collectible combat cards; fetched mature-game page archived tmp/battle-ui-v5-research/Slay_the_Spire.html; no art authority"
+        }
+      ],
+      "ui_spec": {
+        "purpose": "Vertical collectible botanical card framing existing plant art and native effect description",
+        "display_size": [
+          142,
+          218
+        ],
+        "content_safe_area": [
+          12,
+          10,
+          12,
+          8
+        ],
+        "layout": "One vertical card with aspect 142:218, old copper fine border, small leaf corner clasps, upper exactly 55.5 percent midnight-navy illustration and title zone, lower exactly 44.5 percent muted warm ivory parchment record area. The single paper upper boundary is exactly 121/218 of the card silhouette height, not 60 percent. Illustration window is quiet and empty. At runtime cost gem left top 33px, art x12 y28 w118 h68, title y98-121; paper y121 height85, description x12 y126-199. Place the sole thin separator at y121/218, never across these text slots. No pre-drawn gem, circle, mana mark, cost, plant, icon, text or ornamental centerpiece. Straight-on 2D card, no perspective or tilted view.",
+        "state_contract": "Neutral master, deterministic state tints preserve exact alpha geometry",
+        "negative": [
+          "text",
+          "brand imitation",
+          "watermark",
+          "logo",
+          "cost gem",
+          "plant",
+          "portrait",
+          "baked UI"
+        ]
+      }
+    }
+  ]
+}

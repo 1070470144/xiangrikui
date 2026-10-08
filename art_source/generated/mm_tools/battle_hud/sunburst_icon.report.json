@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "为 Godot 游戏生成一个可直接使用的icon图片资源。\n项目风格：The Last Sunflower battle HUD, matching the checked-in day and night runtime compositions: restrained hand-painted botanical storybook style, deep ink-green glass, oxidized antique brass, warm sunflower amber highlights, crisp silhouettes and compact readable tactical hierarchy. Isolated UI artwork only; no letters, words, numbers, costs, countdowns, direction labels, screenshots, watermarks, or multiple alternatives.。\n视觉锚点：Deep ink-green translucent surfaces, thin oxidized antique-brass rims, restrained warm sunflower-gold highlights, hand-painted botanical engraving; compact tactical readability over ornament.。\n资源功能：Sunburst combat skill icon。\nSingle radiant golden sunflower burst skill emblem, bright compact core and crisp short rays, no plate。\n游戏内实际显示尺寸：32x32 像素。\n用途：Small combat skill glyph inside the primary action button。\n布局：One centered radiant sunflower burst with a strong compact silhouette and transparent margin。\n内容安全区：左 8px、上 8px、右 8px、下 8px。\n状态一致性：Single neutral icon; button states provide interaction feedback。\n舒适度约束：Keep the center of every frame calm and low contrast so live tactical text and controls remain easy to read；Use compact silhouettes and restrained highlights that stay legible at the declared in-game display size。\n不得生成：photorealistic rendering、high-frequency clutter、harsh neon bloom、modern chrome or plastic materials、text、letters、numbers、button plate、watermark、multiple alternatives、long fragile rays。\n禁止任何可读或伪造的文字、字母、数字、签名和水印；文字由 Godot 字体系统绘制。\n输出为真实透明 PNG；禁止棋盘格、白底、纯色背景和背景底板。",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\sunburst_icon.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\sunburst_icon.png.raw.png",
+  "raw_bytes": 1021315,
+  "elapsed_seconds": 62.5,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\sunburst_icon.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 68.14,
+    "partial_alpha_pct": 31.86,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 20,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

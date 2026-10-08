@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "A single polished fantasy game UI panel background, flat orthographic front view, full rectangular panel fills image edge to edge. Very dark forest green leather interior, extremely subtle paper grain, antique warm brass double hairline frame, delicate tiny sunflower and leaf filigree only in the four corners. Large uninterrupted empty dark interior for readable text and controls, ornate corners restrained and small. Premium Victorian greenhouse botanical archival aesthetic. No text, no letters, no icons, no buttons, no objects, no scenery, no perspective, no outer background, uniform clean central area. 16:9.",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\01_main_menu\\archive_settings_panel_v1.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\01_main_menu\\archive_settings_panel_v1.png.raw.png",
+  "raw_bytes": 2112825,
+  "elapsed_seconds": 46.359,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "1536x864",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 117,
+      "output_tokens": 1640,
+      "total_tokens": 1757,
+      "input_tokens_details": {
+        "text_tokens": 117,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1640,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

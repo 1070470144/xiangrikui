@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "末日温室植物收藏册风格，深蓝黑与墨绿底色，氧化黄铜细边，暖金光能点缀，克制的高品质桌面卡牌游戏界面, 紧凑竖向卡组清单底板，深蓝黑旧纸和黄铜边，不含文字",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\deck_builder\\deck_panel.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\deck_builder\\deck_panel.png.raw.png",
+  "raw_bytes": 2589270,
+  "elapsed_seconds": 71.094,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\deck_builder\\deck_panel.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1024x1536",
+    "alpha_zero_pct": 23.49,
+    "partial_alpha_pct": 76.51,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 367840,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

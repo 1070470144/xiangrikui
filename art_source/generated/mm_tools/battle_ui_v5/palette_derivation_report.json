@@ -1,0 +1,67 @@
+{
+  "kind": "battle-ui-v5-offline-palette-derivation",
+  "billed_requests": 0,
+  "algorithm": "BattlePalette green predicate and navy luminance ramp; warm copper preserved",
+  "assets": [
+    {
+      "source": "assets\\ui\\generated\\battle_hud_v3\\primary_action_normal.png",
+      "output": "assets\\ui\\generated\\battle_ui_v5\\primary_action_normal.png",
+      "size": [
+        160,
+        114
+      ],
+      "alpha_identical": true,
+      "warm_copper_identical": true,
+      "warm_copper_pixels": 1534,
+      "changed_rgb_pixels": 14260
+    },
+    {
+      "source": "assets\\ui\\generated\\battle_hud_v3\\primary_action_hover.png",
+      "output": "assets\\ui\\generated\\battle_ui_v5\\primary_action_hover.png",
+      "size": [
+        160,
+        114
+      ],
+      "alpha_identical": true,
+      "warm_copper_identical": true,
+      "warm_copper_pixels": 1532,
+      "changed_rgb_pixels": 14262
+    },
+    {
+      "source": "assets\\ui\\generated\\battle_hud_v3\\primary_action_pressed.png",
+      "output": "assets\\ui\\generated\\battle_ui_v5\\primary_action_pressed.png",
+      "size": [
+        160,
+        114
+      ],
+      "alpha_identical": true,
+      "warm_copper_identical": true,
+      "warm_copper_pixels": 1527,
+      "changed_rgb_pixels": 14267
+    },
+    {
+      "source": "assets\\ui\\generated\\battle_hud_v3\\primary_action_disabled.png",
+      "output": "assets\\ui\\generated\\battle_ui_v5\\primary_action_disabled.png",
+      "size": [
+        160,
+        114
+      ],
+      "alpha_identical": true,
+      "warm_copper_identical": true,
+      "warm_copper_pixels": 486,
+      "changed_rgb_pixels": 15307
+    },
+    {
+      "source": "assets\\ui\\generated\\battle_hud_v3\\tactical_bezel.png",
+      "output": "assets\\ui\\generated\\battle_ui_v5\\tactical_bezel.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_identical": true,
+      "warm_copper_identical": true,
+      "warm_copper_pixels": 31812,
+      "changed_rgb_pixels": 36860
+    }
+  ]
+}

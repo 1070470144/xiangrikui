@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "Art for The Last Sunflower, a dark fantasy greenhouse survival game. Sophisticated hand-painted botanical storybook style, visible oil-brush texture, oxidized antique gold, ink-green foliage, cool midnight glass and warm sunflower light. Match the supplied main menu concept: restrained antique horticultural journal, clear silhouette, precisely centered isolated asset. No letters, numbers, words, UI screenshot, watermark, checkerboard, or multiple alternatives. A tiny sunflower specimen hovering above an open botanical encyclopedia, gold-ink compact icon for greenhouse codex, no writing. True transparent PNG alpha surrounding the isolated asset; generous clean margin, no solid background.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\source\\icon_greenhouse_codex.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\source\\icon_greenhouse_codex.png.raw.png",
+  "raw_bytes": 1471260,
+  "elapsed_seconds": 38.266,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\source\\icon_greenhouse_codex.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 59.49,
+    "partial_alpha_pct": 40.51,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 46,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

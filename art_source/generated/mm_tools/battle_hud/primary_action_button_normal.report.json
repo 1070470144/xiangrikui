@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "The Last Sunflower battle HUD, matching the checked-in day and night runtime compositions: restrained hand-painted botanical storybook style, deep ink-green glass, oxidized antique brass, warm sunflower amber highlights, crisp silhouettes and compact readable tactical hierarchy. Isolated UI artwork only; no letters, words, numbers, costs, countdowns, direction labels, screenshots, watermarks, or multiple alternatives., Deep ink-green translucent surfaces, thin oxidized antique-brass rims, restrained warm sunflower-gold highlights, hand-painted botanical engraving; compact tactical readability over ornament., Wide compact primary action button frame, dark green face, engraved antique-brass botanical rim and restrained amber emphasis; state-specific lighting, empty center, Shared primary action button frame for day-to-night and combat skill actions, display size: 162x60, content safe area: [28, 14, 28, 14]; Low wide frame with stable endcaps and a quiet empty center for Godot text and icon, All four states keep identical silhouette, corners, and engraving placement; only luminance, rim highlight, face depth, and saturation change, 不得生成：text、letters、numbers、icons、watermark、multiple alternatives、thick glow、opaque rectangular background, 真实透明 PNG, visual state: normal",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\primary_action_button_normal.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\primary_action_button_normal.png.raw.png",
+  "raw_bytes": 659395,
+  "elapsed_seconds": 123.454,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\primary_action_button_normal.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 78.45,
+    "partial_alpha_pct": 21.54,
+    "opaque_pct": 0.01,
+    "cleaned_transparent_rgb_pixels": 100,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

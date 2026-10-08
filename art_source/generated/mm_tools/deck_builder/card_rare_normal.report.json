@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "末日温室植物收藏册风格，深蓝黑与墨绿底色，氧化黄铜细边，暖金光能点缀，克制的高品质桌面卡牌游戏界面, 植物收藏卡稀有品质边框四态，暗绿底配克制蓝紫叶脉，中央透明，无文字, visual state: normal",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\deck_builder\\card_rare_normal.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\deck_builder\\card_rare_normal.png.raw.png",
+  "raw_bytes": 923256,
+  "elapsed_seconds": 71.0,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\deck_builder\\card_rare_normal.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 68.69,
+    "partial_alpha_pct": 31.31,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 86,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

@@ -1,0 +1,19 @@
+{
+	"duration_seconds": 11.1666666666666,
+	"events": [
+		{
+			"health": 393.1,
+			"kind": "summon"
+		},
+		{
+			"health": 317.1,
+			"kind": "summon"
+		},
+		{
+			"health": 165.1,
+			"kind": "summon"
+		}
+	],
+	"generated_art": false,
+	"result": "boss_defeated"
+}

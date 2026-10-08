@@ -1,0 +1,71 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "A single finished physical trading-card BACK, portrait 3:4, nearly fills canvas with tiny transparent exterior margin. Rounded clipped corners, deep midnight green woven leather and printed cardstock, symmetric antique brass botanical filigree, central embossed sunflower seed seal within concentric leaf mandala, luminous restrained warm amber center, corner root motifs, tactile fine grain, thin bevel edge and real card thickness. Entire inside opaque richly designed; only outside silhouette transparent. Original botanical greenhouse fantasy card back, no text, letters, numbers, watermark, empty panels, illustration windows, floating elements or surrounding backdrop. Outside the single card silhouette use flat pure magenta #FF00FF, no gradient, shadow or checkerboard outside. This is a chroma key production asset.",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\faces_v5\\card_face_back_v5.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\faces_v5\\card_face_back_v5.png.raw.png",
+  "raw_bytes": 3444921,
+  "elapsed_seconds": 49.094,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "chroma",
+    "strategy_source": "explicit",
+    "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\faces_v5\\card_face_back_v5.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1086x1448",
+    "key": "magenta",
+    "keyed_pixels": 1337477,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 379653,
+    "alpha_zero_pct": 99.99,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": {
+    "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\faces_v5\\card_face_back_v5.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1086x1448",
+    "key": "magenta",
+    "keyed_pixels": 1337477,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 379653,
+    "alpha_zero_pct": 99.99,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "high",
+    "size": "768x1024",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 150,
+      "output_tokens": 6354,
+      "total_tokens": 6504,
+      "input_tokens_details": {
+        "text_tokens": 150,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 6354,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit",
+  "accepted_alpha": {
+    "strategy": "native",
+    "reason": "Raw provider output has valid RGBA; chroma result discarded after visual QA",
+    "size": [
+      1086,
+      1448
+    ]
+  }
+}

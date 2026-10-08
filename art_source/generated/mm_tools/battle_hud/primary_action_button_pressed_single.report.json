@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "为 Godot 游戏生成一个可直接使用的button图片资源。\n项目风格：The Last Sunflower battle HUD, restrained hand-painted botanical storybook style, deep ink-green glass, oxidized antique brass, warm sunflower amber highlights. Isolated single UI artwork only; no text, numbers, watermark, collage, grid, contact sheet, multiple alternatives, multiple buttons, or comparison layout.。\n视觉锚点：One low wide dark-green pressed button with matching antique-brass sunflower endcaps and a calm empty center.。\n资源功能：Single pressed-state primary action button frame retry。\nExactly one wide compact pressed button frame centered on transparent canvas, dark green inset face visibly depressed inward, engraved antique-brass botanical rim, one sunflower ornament at each end, subdued amber pressed lighting, empty center. One button only.。\n游戏内实际显示尺寸：162x60 像素。\n用途：Replacement pressed state for the shared primary action button。\n布局：Exactly one low wide frame with stable endcaps and empty center。\n内容安全区：左 28px、上 14px、右 28px、下 14px。\n状态一致性：Match the approved normal-state silhouette while showing a depressed face and subdued highlight。\n舒适度约束：Keep the empty center readable at 162 by 60 runtime size；Keep ornaments inside stable nine-patch endcaps。\n不得生成：collage、multiple buttons、text、watermark、opaque background、numbers、icons、multiple alternatives。\n禁止任何可读或伪造的文字、字母、数字、签名和水印；文字由 Godot 字体系统绘制。\n输出为真实透明 PNG；禁止棋盘格、白底、纯色背景和背景底板。",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\primary_action_button_pressed_single.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\primary_action_button_pressed_single.png.raw.png",
+  "raw_bytes": 932305,
+  "elapsed_seconds": 72.203,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\primary_action_button_pressed_single.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "2022x778",
+    "alpha_zero_pct": 71.69,
+    "partial_alpha_pct": 28.3,
+    "opaque_pct": 0.01,
+    "cleaned_transparent_rgb_pixels": 281,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

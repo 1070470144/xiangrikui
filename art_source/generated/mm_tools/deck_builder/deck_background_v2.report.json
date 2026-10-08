@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Painterly 16:9 game background for The Last Sunflower: post-apocalyptic botanical greenhouse archive, subdued deep petrol blue and forest green, soft warm amber light upper left, sparse botanical silhouettes at extreme outer edges, old greenhouse glass geometry above. Central 90 percent dark quiet low contrast for card collection UI overlay. Atmospheric hand-painted illustration, restrained lighting, no text, letters, numbers, cards, panels, buttons, UI frames, watermark, or glowing borders.",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\deck_background_v2.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\deck_background_v2.png.raw.png",
+  "raw_bytes": 1645473,
+  "elapsed_seconds": 35.313,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "high",
+    "size": "1536x864",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 94,
+      "output_tokens": 6460,
+      "total_tokens": 6554,
+      "input_tokens_details": {
+        "text_tokens": 94,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 6460,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

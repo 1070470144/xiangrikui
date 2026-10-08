@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "feature": "runtime_fixture",
+  "scene": "res://tests/fixtures/art_manifest/runtime.tscn",
+  "root_node": "Fixture",
+  "style": {"reference_images": [], "prompt_prefix": ""},
+  "assets": [
+    {
+      "id": "texture",
+      "kind": "icon",
+      "role": "fixture texture",
+      "generation": {"enabled": true, "prompt": "fixture", "transparent": false},
+      "output": {"path": "res://assets/ui/UI_ICON_Sunburst.png", "size": [128, 128], "mode": "full_image"},
+      "bindings": [{"node": "Image", "property": "texture"}]
+    },
+    {
+      "id": "label",
+      "kind": "text",
+      "role": "fixture label",
+      "generation": {"enabled": false},
+      "runtime": {"text": "Manifest text", "font_size": 19, "color": "#FFCC44"},
+      "bindings": [{"node": "Action", "property": "text"}]
+    },
+    {
+      "id": "panel",
+      "kind": "panel",
+      "role": "fixture nine patch panel",
+      "generation": {"enabled": true, "prompt": "fixture", "transparent": true},
+      "output": {"path": "res://assets/ui/UI_ICON_Sunburst.png", "size": [128, 128], "mode": "nine_patch", "patch_margin": [11, 12, 13, 14]},
+      "bindings": [{"node": "Panel", "property": "theme_override_styles/panel"}]
+    },
+    {
+      "id": "safe_panel",
+      "kind": "panel",
+      "role": "fixture nine patch panel with content safe area",
+      "generation": {"enabled": true, "prompt": "fixture", "transparent": true},
+      "output": {"path": "res://assets/ui/UI_ICON_Sunburst.png", "size": [128, 128], "mode": "nine_patch", "patch_margin": [11, 12, 13, 14], "content_margin": [11, 12, 13, 14]},
+      "bindings": [{"node": "SafePanel", "property": "theme_override_styles/panel"}]
+    },
+    {
+      "id": "missing",
+      "kind": "text",
+      "role": "missing node isolation",
+      "generation": {"enabled": false},
+      "runtime": {"text": "ignored"},
+      "bindings": [{"node": "Missing", "property": "text"}]
+    },
+    {
+      "id": "component_template",
+      "kind": "icon",
+      "role": "dynamic component binding",
+      "generation": {"enabled": true, "prompt": "fixture", "transparent": true},
+      "output": {"path": "res://assets/ui/UI_ICON_Sunburst.png", "size": [128, 128], "mode": "full_image"},
+      "bindings": [{"scope": "component", "node": "DynamicComponent/Icon", "property": "texture"}]
+    }
+  ]
+}

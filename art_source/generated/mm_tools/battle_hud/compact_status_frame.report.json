@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "The Last Sunflower battle HUD, matching the checked-in day and night runtime compositions: restrained hand-painted botanical storybook style, deep ink-green glass, oxidized antique brass, warm sunflower amber highlights, crisp silhouettes and compact readable tactical hierarchy. Isolated UI artwork only; no letters, words, numbers, costs, countdowns, direction labels, screenshots, watermarks, or multiple alternatives., Deep ink-green translucent surfaces, thin oxidized antique-brass rims, restrained warm sunflower-gold highlights, hand-painted botanical engraving; compact tactical readability over ornament., Compact horizontal greenhouse status frame, dark glass inset, aged brass edge and subtle leaf engraving, empty interior, Stretchable compact upper-left mother status container, display size: 300x82, content safe area: [40, 22, 40, 22]; Horizontal dark glass inset with narrow brass edge and quiet center for portrait, health, and labels, Single neutral frame with consistent edge weight at compact runtime size, 不得生成：text、letters、numbers、portrait、health bar、watermark、multiple alternatives、heavy ornament, 真实透明 PNG",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\compact_status_frame.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\compact_status_frame.png.raw.png",
+  "raw_bytes": 1154518,
+  "elapsed_seconds": 61.985,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\compact_status_frame.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "2057x764",
+    "alpha_zero_pct": 57.78,
+    "partial_alpha_pct": 42.22,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 161,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

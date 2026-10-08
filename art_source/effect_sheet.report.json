@@ -1,0 +1,51 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Use case: stylized-concept\nAsset type: 2D game visual effect sheet with transparent background\nPrimary request: Exactly three isolated visual effects for a dark fantasy botanical defense game, arranged left to right: prism projectile, sunburst ring, shadow dissolve.\nEffect 1: a compact horizontal gold-white light projectile pointing right, warm white core, faceted golden flare and short elegant trail.\nEffect 2: a large radial solar shockwave ring seen straight-on, transparent center, warm-white inner edge, painterly gold-orange outer fire, symmetrical and usable as a scaling game effect.\nEffect 3: a cloud of dissolving blue-violet shadow smoke with cold cyan shards and a few subtle warm rim-lit particles, no creature body.\nStyle/medium: painterly 2D game VFX, soft textured brush edges, polished production asset.\nComposition/framing: one horizontal row, generous separation, each effect fully contained and centered in its third.\nConstraints: genuinely transparent background, no floor, no text, no labels, no borders, no grid, no watermark.\nAvoid: lens flare photography, sci-fi laser, cartoon emoji, opaque black rectangle.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\effect_sheet.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\effect_sheet.png.raw.png",
+  "raw_bytes": 1541269,
+  "elapsed_seconds": 67.094,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\effect_sheet.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "2138x736",
+    "alpha_zero_pct": 48.55,
+    "partial_alpha_pct": 51.45,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 29,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "1536x512",
+    "background": "transparent",
+    "usage": {
+      "input_tokens": 234,
+      "output_tokens": 1590,
+      "total_tokens": 1824,
+      "input_tokens_details": {
+        "text_tokens": 234,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1590,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

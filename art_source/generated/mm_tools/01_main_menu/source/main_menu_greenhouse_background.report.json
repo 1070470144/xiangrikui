@@ -1,0 +1,20 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "Art for The Last Sunflower, a dark fantasy greenhouse survival game. Sophisticated hand-painted botanical storybook style, visible oil-brush texture, oxidized antique gold, ink-green foliage, cool midnight glass and warm sunflower light. Match the supplied main menu concept: restrained antique horticultural journal, clear silhouette, precisely centered isolated asset. No letters, numbers, words, UI screenshot, watermark, checkerboard, or multiple alternatives. Wide empty night greenhouse environment, broken glass roof, blue moonlight, cold distant fog. Dramatic vacant left-center clearing for a separate mother-flower character and quiet dark right third for a separate menu panel. No flower heroine, no UI or lettering. Opaque complete environment image, fill entire canvas edge to edge.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\source\\main_menu_greenhouse_background.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\source\\main_menu_greenhouse_background.png.raw.png",
+  "raw_bytes": 2524045,
+  "elapsed_seconds": 75.422,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

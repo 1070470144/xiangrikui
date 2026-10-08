@@ -1,0 +1,30 @@
+{
+  "source": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\main_menu_motion_v1\\main_menu.mp4",
+  "source_probe": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24.0,
+    "nb_frames": 145,
+    "duration": 6.041667
+  },
+  "engine_extraction": "sprite_gen.video.frames.extract",
+  "opaque": true,
+  "runtime_probe": {
+    "width": 864,
+    "height": 486,
+    "fps": 12.0,
+    "nb_frames": 73,
+    "duration": 6.083333
+  },
+  "crossfade_frames": 8,
+  "crossfade_seconds": 0.6666666666666666,
+  "frame_count": 65,
+  "seam_ratio": 0.8684,
+  "seam_gate": 2.0,
+  "fps": 12,
+  "duration_seconds": 5.416666666666667,
+  "pages": 6,
+  "decoded_texture_mib": 108.9,
+  "output": "D:\\mm\\data\\xiangrikui\\assets\\backgrounds\\menu_motion",
+  "status": "passed"
+}

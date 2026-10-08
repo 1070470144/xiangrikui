@@ -1,0 +1,34 @@
+{
+  "manifest": "res://art_source/manifests/battle_ui_v5.json",
+  "complete": false,
+  "missing_verified_masters": [
+    "vertical_botanical_card"
+  ],
+  "derivatives": [
+    {
+      "asset_id": "navy_status_frame",
+      "raw": "art_source\\generated\\mm_tools\\battle_ui_v5\\navy_status_frame.png.raw.png",
+      "raw_sha256": "f6bee1b70edf0ad53c8b3e0f559119260ec2c87fd226ad4ac236d8d9f3207729",
+      "raw_size": [
+        2048,
+        768
+      ],
+      "alpha_bbox": [
+        16,
+        165,
+        2032,
+        577
+      ],
+      "source_paper_split": null,
+      "runtime_size": [
+        304,
+        88
+      ],
+      "state_alpha_sha256": "46365996e3159ed824bcce758b9300bc00544fe37dbbd26d253b6d1066937b2b",
+      "method": "native raw alpha trim; uniformly scaled corners; stretch quiet rails and center; 4px exterior padding",
+      "outputs": [
+        "assets\\ui\\generated\\battle_ui_v5\\navy_status_frame.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Use case: stylized-concept\nAsset type: 2D game battlefield background\nPrimary request: A ruined circular greenhouse garden after the sun has died, designed as a readable tower-defense battlefield for a dark fantasy game called The Last Sunflower.\nScene/backdrop: 3/4 top-down view, elliptical dark soil garden in the center, broken Victorian greenhouse iron ribs and shattered glass around the perimeter, dead botanical beds, roots, stones, distant blue-violet fog and creeping organic shadow at the outer edges.\nStyle/medium: premium hand-painted storybook concept art, thick painterly brushwork, botanical realism, subtle paper texture, polished production game background.\nComposition/framing: exact wide 16:9 composition, center garden remains low-detail and empty for gameplay units, four implied entry directions at top/right/bottom/left, strong depth from dark foreground edges toward the center, no perspective tilt that distorts unit placement.\nLighting/mood: cold ruined night environment with a faint warm residual glow beneath the center soil; melancholic, dangerous, but not horror-gory.\nColor palette: deep navy #111827, muted gray violet #25263A, brown-purple soil #3A3032, desaturated moss green #263D35, restrained cold cyan accents #4C8490. Keep gold highlights extremely limited because gameplay light will be added later.\nConstraints: no characters, no plants acting as towers, no central sunflower, no glowing light network, no user interface, no text, no watermark, no logos; keep the central 70 percent readable and uncluttered.\nAvoid: photorealism, pixel art, flat vector style, anime, bright saturated colors, symmetrical decorative mandala, visible grid, paths painted as game UI.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\background_draft.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\background_draft.png.raw.png",
+  "raw_bytes": 2218395,
+  "elapsed_seconds": 55.672,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "low",
+    "size": "1536x864",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 355,
+      "output_tokens": 423,
+      "total_tokens": 778,
+      "input_tokens_details": {
+        "text_tokens": 355,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 423,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

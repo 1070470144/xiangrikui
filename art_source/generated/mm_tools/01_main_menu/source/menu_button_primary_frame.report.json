@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "Art for The Last Sunflower, a dark fantasy greenhouse survival game. Sophisticated hand-painted botanical storybook style, visible oil-brush texture, oxidized antique gold, ink-green foliage, cool midnight glass and warm sunflower light. Match the supplied main menu concept: restrained antique horticultural journal, clear silhouette, precisely centered isolated asset. No letters, numbers, words, UI screenshot, watermark, checkerboard, or multiple alternatives. Long wide primary menu button frame: dark ink-green center, luminous old-gold narrow double-line botanical border, ornate but restrained square corners, empty middle, no icons. True transparent PNG alpha surrounding the isolated asset; generous clean margin, no solid background.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_primary_frame.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_primary_frame.png.raw.png",
+  "raw_bytes": 1285872,
+  "elapsed_seconds": 36.047,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_primary_frame.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1774x887",
+    "alpha_zero_pct": 57.79,
+    "partial_alpha_pct": 42.21,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 175,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

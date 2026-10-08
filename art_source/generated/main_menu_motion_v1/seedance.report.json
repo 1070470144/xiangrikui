@@ -1,0 +1,20 @@
+{
+  "provider": "volcengine-seedance",
+  "model": "doubao-seedance-2-0-mini-260615",
+  "task_id": "cgt-20261003205747-k6ndr",
+  "status": "succeeded",
+  "prompt": "为暗黑童话植物防守游戏《最后的向日葵》制作精致的主菜单背景循环动画。严格使用首帧图片的原有构图和全部美术设计，首尾帧为同一张图。镜头完全固定，无推拉、无平移、无旋转、无景别切换，不增添物体、文字或UI。破败玻璃温室的午夜，左侧金色向日葵是最后的光源，右侧深绿黑暗空间留给菜单，左上空白留给标题，保持这些区域暗而平静。花瓣和叶片仅被微风轻轻摇动，位移极小、花茎与根部牢牢固定，不变形、不生长、不更换花朵形状。花心温暖金色辉光缓慢轻微呼吸，亮度变化不超过百分之八，不闪烁。两三颗极小的金色花粉在花旁缓慢飘动，不能满屏粒子。地面贴地薄雾极慢流动，冷蓝月光穿过玻璃窗，月亮和温室骨架完全静止，湿润地面的细微反光轻轻流动。植物、道路、屋顶、月亮及所有物体保持原来位置和外观。只做环境微动，保持幽静、希望与守夜的氛围，暗部层次清晰、冷蓝月光与暖金向日葵形成对比。整个六秒是一段缓慢微动的完整呼吸周期，结尾自然回到开头状态，适合无限循环。禁止大风、大幅晃动、强光、闪电、雨滴、镜头运动、模糊和任何文字。无音频。",
+  "first_frame": "D:\\mm\\data\\xiangrikui\\assets\\backgrounds\\ART_BG_MainMenu_Greenhouse.png",
+  "last_frame": "D:\\mm\\data\\xiangrikui\\assets\\backgrounds\\ART_BG_MainMenu_Greenhouse.png",
+  "duration_requested": 6,
+  "ratio": "16:9",
+  "resolution": "720p",
+  "usage": {
+    "completion_tokens": 130500,
+    "total_tokens": 130500
+  },
+  "duration": 6,
+  "framespersecond": 24,
+  "video": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\main_menu_motion_v1\\main_menu.mp4",
+  "bytes": 2874029
+}

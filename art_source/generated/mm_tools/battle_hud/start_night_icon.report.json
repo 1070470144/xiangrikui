@@ -1,0 +1,32 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "The Last Sunflower battle HUD, matching the checked-in day and night runtime compositions: restrained hand-painted botanical storybook style, deep ink-green glass, oxidized antique brass, warm sunflower amber highlights, crisp silhouettes and compact readable tactical hierarchy. Isolated UI artwork only; no letters, words, numbers, costs, countdowns, direction labels, screenshots, watermarks, or multiple alternatives., Deep ink-green translucent surfaces, thin oxidized antique-brass rims, restrained warm sunflower-gold highlights, hand-painted botanical engraving; compact tactical readability over ornament., Single small twilight greenhouse emblem: setting amber sun crossing a dark glass horizon with one delicate leaf silhouette, no plate, Small day-to-night transition glyph inside the primary action button, display size: 32x32, content safe area: [8, 8, 8, 8]; One centered high-contrast twilight greenhouse emblem with generous transparent margin, Single neutral icon; button states provide interaction feedback, 不得生成：text、letters、numbers、button plate、watermark、multiple alternatives、fine unreadable detail, 真实透明 PNG",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\start_night_icon.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\start_night_icon.png.raw.png",
+  "raw_bytes": 1117586,
+  "elapsed_seconds": 44.203,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "explicit",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\mm_tools\\battle_hud\\start_night_icon.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 67.98,
+    "partial_alpha_pct": 32.01,
+    "opaque_pct": 0.01,
+    "cleaned_transparent_rgb_pixels": 61,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

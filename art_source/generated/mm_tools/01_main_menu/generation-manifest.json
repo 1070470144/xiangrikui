@@ -1,0 +1,402 @@
+{
+  "model": "gpt-image-2",
+  "provider": "mm-api",
+  "assets": [
+    {
+      "id": "gardener_avatar",
+      "status": "ok",
+      "group": "C",
+      "size": [
+        80,
+        80
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\gardener_avatar.png"
+    },
+    {
+      "id": "gardener_avatar_background",
+      "status": "ok",
+      "group": "C",
+      "size": [
+        96,
+        96
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\gardener_avatar_background.png"
+    },
+    {
+      "id": "gardener_badge_emblem",
+      "status": "generation failed",
+      "detail": "gen: mm-api request failed: <urlopen error [WinError 10013] ��һ�ַ���Ȩ�޲������ķ�ʽ����һ�������׽��ֵĳ��ԡ�>\n",
+      "group": "C"
+    },
+    {
+      "id": "gardener_badge_frame",
+      "status": "ok",
+      "group": "C",
+      "size": [
+        420,
+        110
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\gardener_badge_frame.png"
+    },
+    {
+      "id": "gardener_badge_status_dot",
+      "status": "ok",
+      "group": "C",
+      "size": [
+        24,
+        24
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\gardener_badge_status_dot.png"
+    },
+    {
+      "id": "icon_continue_night",
+      "status": "ok",
+      "group": "E",
+      "size": [
+        72,
+        72
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\icon_continue_night.png"
+    },
+    {
+      "id": "icon_deck_config",
+      "status": "ok",
+      "group": "E",
+      "size": [
+        72,
+        72
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\icon_deck_config.png"
+    },
+    {
+      "id": "icon_exit_game",
+      "status": "ok",
+      "group": "E",
+      "size": [
+        72,
+        72
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\icon_exit_game.png"
+    },
+    {
+      "id": "icon_greenhouse_codex",
+      "status": "ok",
+      "group": "E",
+      "size": [
+        72,
+        72
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\icon_greenhouse_codex.png"
+    },
+    {
+      "id": "icon_night_records",
+      "status": "ok",
+      "group": "E",
+      "size": [
+        72,
+        72
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\icon_night_records.png"
+    },
+    {
+      "id": "icon_settings",
+      "status": "ok",
+      "group": "E",
+      "size": [
+        72,
+        72
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\icon_settings.png"
+    },
+    {
+      "id": "main_menu_cold_mist",
+      "status": "ok",
+      "group": "A",
+      "size": [
+        1920,
+        1080
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\main_menu_cold_mist.png"
+    },
+    {
+      "id": "main_menu_greenhouse_background",
+      "status": "ok",
+      "group": "A",
+      "size": [
+        1920,
+        1080
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\main_menu_greenhouse_background.png"
+    },
+    {
+      "id": "main_menu_light_particles",
+      "status": "ok",
+      "group": "A",
+      "size": [
+        1024,
+        1024
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\main_menu_light_particles.png"
+    },
+    {
+      "id": "main_menu_light_vines",
+      "status": "ok",
+      "group": "A",
+      "size": [
+        1600,
+        900
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\main_menu_light_vines.png"
+    },
+    {
+      "id": "main_menu_moon",
+      "status": "ok",
+      "group": "A",
+      "size": [
+        512,
+        512
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\main_menu_moon.png"
+    },
+    {
+      "id": "main_menu_mother_flower",
+      "status": "ok",
+      "group": "A",
+      "size": [
+        900,
+        1100
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\main_menu_mother_flower.png"
+    },
+    {
+      "id": "main_menu_mother_flower_glow",
+      "status": "ok",
+      "group": "A",
+      "size": [
+        900,
+        1100
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\main_menu_mother_flower_glow.png"
+    },
+    {
+      "id": "menu_botanical_border",
+      "status": "ok",
+      "group": "B",
+      "size": [
+        720,
+        1200
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_botanical_border.png"
+    },
+    {
+      "id": "menu_button_arrow",
+      "status": "ok",
+      "group": "D",
+      "size": [
+        48,
+        48
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_arrow.png"
+    },
+    {
+      "id": "menu_button_focus_frame",
+      "status": "ok",
+      "group": "D",
+      "size": [
+        680,
+        110
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_focus_frame.png"
+    },
+    {
+      "id": "menu_button_primary_frame",
+      "status": "ok",
+      "group": "D",
+      "size": [
+        650,
+        118
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_primary_frame.png"
+    },
+    {
+      "id": "menu_button_primary_hover",
+      "status": "ok",
+      "group": "D",
+      "size": [
+        650,
+        118
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_primary_hover.png"
+    },
+    {
+      "id": "menu_button_primary_pressed",
+      "status": "ok",
+      "group": "D",
+      "size": [
+        650,
+        118
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_primary_pressed.png"
+    },
+    {
+      "id": "menu_button_secondary_frame",
+      "status": "ok",
+      "group": "D",
+      "size": [
+        650,
+        86
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_secondary_frame.png"
+    },
+    {
+      "id": "menu_button_secondary_hover",
+      "status": "ok",
+      "group": "D",
+      "size": [
+        650,
+        86
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_secondary_hover.png"
+    },
+    {
+      "id": "menu_button_secondary_pressed",
+      "status": "ok",
+      "group": "D",
+      "size": [
+        650,
+        86
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_secondary_pressed.png"
+    },
+    {
+      "id": "menu_button_separator",
+      "status": "ok",
+      "group": "D",
+      "size": [
+        600,
+        8
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_button_separator.png"
+    },
+    {
+      "id": "menu_corner_ornament",
+      "status": "ok",
+      "group": "B",
+      "size": [
+        180,
+        180
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_corner_ornament.png"
+    },
+    {
+      "id": "menu_divider_gold",
+      "status": "ok",
+      "group": "B",
+      "size": [
+        720,
+        32
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_divider_gold.png"
+    },
+    {
+      "id": "menu_overlay_dim",
+      "status": "ok",
+      "group": "B",
+      "size": [
+        1920,
+        1080
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_overlay_dim.png"
+    },
+    {
+      "id": "menu_panel_inner_texture",
+      "status": "ok",
+      "group": "B",
+      "size": [
+        1024,
+        1024
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_panel_inner_texture.png"
+    },
+    {
+      "id": "menu_panel_shadow",
+      "status": "ok",
+      "group": "B",
+      "size": [
+        900,
+        1300
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_panel_shadow.png"
+    },
+    {
+      "id": "menu_record_panel",
+      "status": "ok",
+      "group": "B",
+      "size": [
+        720,
+        1200
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_record_panel.png"
+    },
+    {
+      "id": "menu_record_panel_subpage",
+      "status": "ok",
+      "group": "B",
+      "size": [
+        900,
+        620
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\menu_record_panel_subpage.png"
+    },
+    {
+      "id": "save_summary_flower_icon",
+      "status": "ok",
+      "group": "F",
+      "size": [
+        92,
+        92
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\save_summary_flower_icon.png"
+    },
+    {
+      "id": "save_summary_frame",
+      "status": "ok",
+      "group": "F",
+      "size": [
+        650,
+        150
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\save_summary_frame.png"
+    },
+    {
+      "id": "save_summary_progress_fill",
+      "status": "ok",
+      "group": "F",
+      "size": [
+        470,
+        26
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\save_summary_progress_fill.png"
+    },
+    {
+      "id": "save_summary_progress_track",
+      "status": "ok",
+      "group": "F",
+      "size": [
+        470,
+        26
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\save_summary_progress_track.png"
+    },
+    {
+      "id": "save_summary_warning_mark",
+      "status": "ok",
+      "group": "F",
+      "size": [
+        48,
+        48
+      ],
+      "source": "art_source\\generated\\mm_tools\\01_main_menu\\source\\save_summary_warning_mark.png"
+    }
+  ]
+}

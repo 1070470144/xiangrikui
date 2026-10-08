@@ -1,0 +1,51 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "A single complete vertical collectible strategy card FRAME only, portrait 3:4, 768x1024. Transparent center aperture must be perfectly empty and transparent from x=100 to x=668 and y=150 to y=900, for runtime artwork and text. Frame occupies only the outer 12 percent of the canvas; crisp symmetric silhouette, consistent 3:4 geometry, no interior background. Premium hand-painted game UI asset for The Last Sunflower, post-apocalyptic botanical greenhouse archive, realistic material texture, soft upper-left warm light. No text, letters, numbers, symbols, logos, watermark, illustration, scene, card title, cost badge, or button. Rare quality: dark emerald lacquer frame with cool moonlit silver and muted blue-violet enamel inlays, elegant branching leaf veins and two small pale sapphire gems, visibly more refined than common but still readable and restrained.",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\frames_v4\\card_frame_rare_v4.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\frames_v4\\card_frame_rare_v4.png.raw.png",
+  "raw_bytes": 1087078,
+  "elapsed_seconds": 37.484,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\frames_v4\\card_frame_rare_v4.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1086x1448",
+    "alpha_zero_pct": 69.43,
+    "partial_alpha_pct": 30.55,
+    "opaque_pct": 0.02,
+    "cleaned_transparent_rgb_pixels": 365,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "high",
+    "size": "768x1024",
+    "background": "transparent",
+    "usage": {
+      "input_tokens": 179,
+      "output_tokens": 6354,
+      "total_tokens": 6533,
+      "input_tokens_details": {
+        "text_tokens": 179,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 6354,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}
