@@ -1,0 +1,30 @@
+{
+  "provider": "volcengine-seedance",
+  "model": "doubao-seedance-2-0-mini-260615",
+  "task_id": "cgt-20261003133837-45bg9",
+  "status": "succeeded",
+  "request": {
+    "model": "doubao-seedance-2-0-mini-260615",
+    "content": [
+      {
+        "type": "text",
+        "text": "固定镜头，制作供俯视角2D温室防守游戏使用的酸雨特效动画素材。纯色洋红色背景 #FF00FF，全程严格保持背景单一均匀洋红色，无渐变、无地面材质、无场景、无文字、无水印。画面中央为单颗精致的浅黄绿色发光腐蚀性雨滴，从画面上方垂直快速落下，略向右倾斜，形成清晰细长水滴轨迹。雨滴在画面高度75%的虚拟地面点撞击，绽开小型酸液皇冠水花，几颗小水珠向外飞出，产生一个俯视椭圆形细薄淡黄绿色扩散涟漪，随后水花与涟漪快速消失。每一秒重复相同的完整下落、撞击、溅开、消散动作，整个画面仅有一个雨滴和它自己的落地水花，无其它雨滴。特效保持在画面中央宽度50%的区域内，留足四边空白。手绘精细游戏VFX，浅柠檬黄与灰绿色水滴，边缘锐利，无模糊、无烟雾、无复杂粒子，无绿色背景。视频全程镜头不动不缩放，所有撞击位置一致，无人物无物体，无音频。"
+      }
+    ],
+    "generate_audio": false,
+    "ratio": "1:1",
+    "duration": 5,
+    "watermark": false,
+    "resolution": "720p"
+  },
+  "usage": {
+    "completion_tokens": 108900,
+    "total_tokens": 108900
+  },
+  "resolution": "720p",
+  "duration": 5,
+  "ratio": "1:1",
+  "framespersecond": 24,
+  "video": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\weather\\acid_rain_seedance_v1\\acid_rain.mp4",
+  "bytes": 2539214
+}

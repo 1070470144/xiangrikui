@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Use case: reusable 2D game UI material sheet for a dark fantasy botanical defense game.\nCreate one clean organized 4x2 sheet, front-facing and orthographic, with generous spacing and no overlap.\nRow 1: four identical-size horizontal stretchable frames: dark navy greenhouse top panel, dark brown-purple action panel, primary button normal, primary button hover.\nRow 2: four identical-size horizontal stretchable frames: primary button pressed, primary button disabled, compact card frame, modal/dialog frame.\nEvery frame must have an empty quiet center for Godot text overlays, consistent corners, consistent thin worn gold botanical border, clear interior/exterior separation, and enough margin for nine-patch slicing. Make every item fully visible and isolated on a transparent background. No words, no letters, no numbers, no labels, no icons, no watermark.\nStyle: premium hand-painted storybook UI, old gardener field journal plus softly glowing botanical instrument, subtle paper and oxidized brass texture, restrained golden illumination, readable silhouettes.\nPalette: #111827, #25263A, #3A3032, #E5B94B, #FFF0B0, restrained #8E3D4A and #4C8490.\nAvoid: modern sci-fi HUD, neon cyberpunk, glassmorphism, ornate medieval filigree overload, saturated candy colors, perspective tilt, fake text, grid lines.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\ui_components_frames.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\ui_components_frames.png.raw.png",
+  "raw_bytes": 805586,
+  "elapsed_seconds": 36.89,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "1024x1024",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 285,
+      "output_tokens": 1650,
+      "total_tokens": 1935,
+      "input_tokens_details": {
+        "text_tokens": 285,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1650,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

@@ -1,0 +1,120 @@
+{
+  "$schema": "../schemas/mm_art_manifest.schema.json",
+  "schema_version": 1,
+  "feature": "battle_hud",
+  "scene": "res://scenes/main.tscn",
+  "root_node": "BattleHudRoot",
+  "style": {
+    "reference_images": [
+      "res://output/imagegen/previews/hud-day-runtime.png",
+      "res://output/imagegen/previews/hud-night-runtime.png",
+      "res://docs/superpowers/specs/2026-09-29-battle-hud-redesign.md",
+      "https://store.steampowered.com/app/2239150/Thronefall/",
+      "https://store.steampowered.com/app/644930/They_Are_Billions/"
+    ],
+    "prompt_prefix": "The Last Sunflower battle HUD, matching the checked-in day and night runtime compositions: restrained hand-painted botanical storybook style, deep ink-green glass, oxidized antique brass, warm sunflower amber highlights, crisp silhouettes and compact readable tactical hierarchy. Isolated UI artwork only; no letters, words, numbers, costs, countdowns, direction labels, screenshots, watermarks, or multiple alternatives.",
+    "evidence": [
+      {"source": "res://output/imagegen/previews/hud-day-runtime.png", "kind": "runtime_screenshot", "reason": "Checked-in day HUD composition, palette, hierarchy, and density"},
+      {"source": "res://output/imagegen/previews/hud-night-runtime.png", "kind": "runtime_screenshot", "reason": "Checked-in night HUD composition and warm combat emphasis"},
+      {"source": "res://Design/Sunflower-Defense-Art-Style-Guide.md", "kind": "art_guide", "reason": "Project-approved botanical storybook palette and material language"}
+    ],
+    "sprite_gen_contract": "sprite-gen/docs/gen.md",
+    "visual_anchor": "Deep ink-green translucent surfaces, thin oxidized antique-brass rims, restrained warm sunflower-gold highlights, hand-painted botanical engraving; compact tactical readability over ornament.",
+    "comfort_constraints": [
+      "Keep the center of every frame calm and low contrast so live tactical text and controls remain easy to read",
+      "Use compact silhouettes and restrained highlights that stay legible at the declared in-game display size"
+    ],
+    "avoid": [
+      "photorealistic rendering",
+      "high-frequency clutter",
+      "harsh neon bloom",
+      "modern chrome or plastic materials"
+    ]
+  },
+  "assets": [
+    {
+      "id": "primary_action_button", "kind": "button", "role": "Normal, hover, and disabled interaction states for the shared start-night and sunburst primary action button, without text or icon",
+      "states": ["normal", "hover", "disabled"],
+      "ui_spec": {"purpose": "Shared primary action button frame for day-to-night and combat skill actions", "display_size": [162, 120], "content_safe_area": [28, 14, 28, 14], "layout": "Tall compact action frame with stable endcaps and a quiet empty center for Godot text and icon", "state_contract": "The normal, hover, and disabled states keep identical 162x120 silhouette, corners, and engraving placement; only luminance, rim highlight, face depth, and saturation change", "negative": ["text", "letters", "numbers", "icons", "watermark", "multiple alternatives", "thick glow", "opaque rectangular background"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "Wide compact primary action button frame, dark green face, engraved antique-brass botanical rim and restrained amber emphasis; state-specific lighting, empty center", "transparent": true},
+      "output": {"path_pattern": "res://art_source/generated/mm_tools/battle_hud/primary_action_button_{state}.png", "size": [324, 240], "mode": "nine_patch", "patch_margin": [40, 34, 40, 34]},
+      "runtime": {"path_pattern": "res://assets/ui/generated/battle_hud/runtime_primary_action_{state}_v2.png", "size": [324, 130], "mode": "nine_patch", "patch_margin": [44, 36, 44, 36], "content_margin": [0, 0, 0, 0], "derived_by": "res://art_source/process_battle_hud.py"},
+      "bindings": [
+        {"node": "PrimaryActionButton/StartNightButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "disabled": "theme_override_styles/disabled"}},
+        {"node": "PrimaryActionButton/SunburstButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "disabled": "theme_override_styles/disabled"}}
+      ]
+    },
+    {
+      "id": "primary_action_button_pressed_single", "kind": "button", "role": "Accepted single pressed frame for the shared start-night and sunburst primary action button",
+      "ui_spec": {"purpose": "Pressed-state primary action button frame", "display_size": [162, 120], "content_safe_area": [28, 14, 28, 14], "layout": "One tall compact frame with stable endcaps and a quiet empty center for Godot text and icon", "state_contract": "Matches the primary action button 162x120 silhouette and engraving while showing restrained inset depth", "negative": ["text", "letters", "numbers", "icons", "watermark", "multiple alternatives", "contact sheet", "opaque rectangular background"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "One single wide compact pressed primary action button frame, dark green inset face, engraved antique-brass botanical rim, restrained amber highlight, empty center; exactly one button, no alternatives or contact sheet", "transparent": true},
+      "output": {"path": "res://art_source/generated/mm_tools/battle_hud/primary_action_button_pressed_single.png", "size": [324, 240], "mode": "nine_patch", "patch_margin": [40, 34, 40, 34]},
+      "runtime": {"path": "res://assets/ui/generated/battle_hud/runtime_primary_action_pressed_v2.png", "size": [324, 130], "mode": "nine_patch", "patch_margin": [44, 36, 44, 36], "content_margin": [0, 0, 0, 0], "derived_by": "res://art_source/process_battle_hud.py"},
+      "bindings": [
+        {"node": "PrimaryActionButton/StartNightButton", "property": "theme_override_styles/pressed"},
+        {"node": "PrimaryActionButton/SunburstButton", "property": "theme_override_styles/pressed"}
+      ]
+    },
+    {
+      "id": "phase_action_tray", "kind": "panel", "role": "Bottom-center day and night action tray frame, empty for live cards and controls",
+      "ui_spec": {"purpose": "Stretchable bottom-center container behind live action cards and controls", "display_size": [620, 114], "content_safe_area": [52, 30, 52, 30], "layout": "Wide shallow frame with simple stretchable center and restrained botanical detail only at corners", "state_contract": "Single neutral frame readable in both day and night phases", "negative": ["text", "letters", "numbers", "icons", "cards", "controls", "watermark", "multiple alternatives", "busy center"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "Wide shallow action tray frame, ink-green translucent center, slim old-brass botanical corners, visually quiet middle", "transparent": true},
+      "output": {"path": "res://art_source/generated/mm_tools/battle_hud/phase_action_tray.png", "size": [1240, 228], "mode": "nine_patch", "patch_margin": [52, 38, 52, 38]},
+      "runtime": {"path": "res://assets/ui/generated/battle_hud/runtime_phase_action_tray_v2.png", "size": [1224, 166], "mode": "nine_patch", "patch_margin": [56, 34, 56, 34], "content_margin": [0, 0, 0, 0], "derived_by": "res://art_source/process_battle_hud.py"},
+      "bindings": [{"node": "PhaseActionTray", "property": "theme_override_styles/panel"}]
+    },
+    {
+      "id": "compact_status_frame", "kind": "panel", "role": "Compact upper-left mother status frame, empty for portrait, health, and status text",
+      "ui_spec": {"purpose": "Stretchable compact upper-left mother status container", "display_size": [300, 82], "content_safe_area": [40, 22, 40, 22], "layout": "Horizontal dark glass inset with narrow brass edge and quiet center for portrait, health, and labels", "state_contract": "Single neutral frame with consistent edge weight at compact runtime size", "negative": ["text", "letters", "numbers", "portrait", "health bar", "watermark", "multiple alternatives", "heavy ornament"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "Compact horizontal greenhouse status frame, dark glass inset, aged brass edge and subtle leaf engraving, empty interior", "transparent": true},
+      "output": {"path": "res://art_source/generated/mm_tools/battle_hud/compact_status_frame.png", "size": [600, 164], "mode": "nine_patch", "patch_margin": [42, 30, 42, 30]},
+      "runtime": {"path": "res://assets/ui/generated/battle_hud/runtime_compact_status_frame_v2.png", "size": [588, 157], "mode": "nine_patch", "patch_margin": [40, 28, 40, 28], "content_margin": [0, 0, 0, 0], "derived_by": "res://art_source/process_battle_hud.py"},
+      "bindings": [{"node": "MotherStatusPanel", "property": "theme_override_styles/panel"}]
+    },
+    {
+      "id": "tactical_instrument_frame", "kind": "panel", "role": "Circular upper-right frame shared by network radar and threat compass",
+      "ui_spec": {"purpose": "Circular upper-right tactical bezel shared by radar and threat compass", "display_size": [176, 176], "content_safe_area": [34, 34, 34, 34], "layout": "Perfectly centered circular bezel, crisp compact ticks, transparent dark-glass center", "state_contract": "Single frame must remain legible and circular when displayed at half source resolution", "negative": ["text", "direction letters", "numbers", "needle", "radar contacts", "watermark", "multiple alternatives", "square plate"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "Circular botanical brass tactical instrument bezel, dark transparent glass center, restrained compass ticks without direction letters", "transparent": true},
+      "output": {"path": "res://art_source/generated/mm_tools/battle_hud/tactical_instrument_frame.png", "size": [352, 352], "mode": "full_image"},
+      "bindings": [{"node": "TacticalInstrumentFrame", "property": "theme_override_styles/panel"}]
+    },
+    {
+      "id": "start_night_icon", "kind": "icon", "role": "Start-night transition icon, separate from the sunburst combat skill",
+      "ui_spec": {"purpose": "Day-to-night transition glyph inside the primary action button", "display_size": [44, 44], "content_safe_area": [8, 8, 8, 8], "layout": "One centered high-contrast twilight greenhouse emblem within the button's explicit 44-pixel maximum icon box", "state_contract": "Single neutral icon; the Godot button preserves aspect ratio and caps icon width at 44 pixels while button states provide feedback", "negative": ["text", "letters", "numbers", "button plate", "watermark", "multiple alternatives", "fine unreadable detail"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "Single small twilight greenhouse emblem: setting amber sun crossing a dark glass horizon with one delicate leaf silhouette, no plate", "transparent": true},
+      "output": {"path": "res://art_source/generated/mm_tools/battle_hud/start_night_icon.png", "size": [96, 96], "mode": "full_image"},
+      "bindings": [{"node": "PrimaryActionButton/StartNightButton", "property": "icon"}]
+    },
+    {
+      "id": "sunburst_icon", "kind": "icon", "role": "Sunburst combat skill icon",
+      "ui_spec": {"purpose": "Combat skill glyph inside the primary action button", "display_size": [44, 44], "content_safe_area": [8, 8, 8, 8], "layout": "One centered radiant sunflower burst with a strong compact silhouette inside the button's explicit 44-pixel maximum icon box", "state_contract": "Single neutral icon; the Godot button preserves aspect ratio and caps icon width at 44 pixels while button states provide feedback", "negative": ["text", "letters", "numbers", "button plate", "watermark", "multiple alternatives", "long fragile rays"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "Single radiant golden sunflower burst skill emblem, bright compact core and crisp short rays, no plate", "transparent": true},
+      "output": {"path": "res://art_source/generated/mm_tools/battle_hud/sunburst_icon.png", "size": [96, 96], "mode": "full_image"},
+      "bindings": [{"node": "PrimaryActionButton/SunburstButton", "property": "icon"}]
+    },
+    {
+      "id": "phase_title", "kind": "text", "role": "Dynamic night and phase title rendered by Godot", "generation": {"enabled": false},
+      "runtime": {"font_size": 22, "color": "#F6E4AD"}, "bindings": [{"node": "PhaseBanner/PhaseContent/PhaseLabel", "property": "text"}]
+    },
+    {
+      "id": "resource_text", "kind": "text", "role": "Dynamic energy and seed values rendered by Godot", "generation": {"enabled": false},
+      "runtime": {"font_size": 18, "color": "#F6E4AD"}, "bindings": [{"node": "ResourcePanel/ResourceRow/EnergyValue", "property": "text"}, {"node": "ResourcePanel/ResourceRow/SeedLabel", "property": "text"}]
+    },
+    {
+      "id": "selection_detail_text", "kind": "text", "role": "Dynamic current-selection detail rendered by Godot", "generation": {"enabled": false},
+      "runtime": {"font_size": 18, "color": "#E7D7B0"}, "bindings": [{"node": "SelectionDetailPanel/SelectionContent/SelectionValue", "property": "text"}, {"node": "SelectionDetailPanel/SelectionContent/SelectionTitle", "property": "text"}]
+    },
+    {
+      "id": "countdown_and_enemy_text", "kind": "text", "role": "Dynamic countdown, wave detail, and enemy count rendered by Godot", "generation": {"enabled": false},
+      "runtime": {"font_size": 16, "color": "#D5C295"}, "bindings": [{"node": "PhaseBanner/PhaseContent/PhaseDetailRow/WaveLabel", "property": "text"}, {"node": "PhaseBanner/PhaseContent/PhaseDetailRow/TimerLabel", "property": "text"}, {"node": "PhaseBanner/PhaseContent/PhaseDetailRow/EnemyCountLabel", "property": "text"}]
+    },
+    {
+      "id": "action_cost_text", "kind": "text", "role": "Dynamic action labels, costs, and card values rendered by Godot", "generation": {"enabled": false},
+      "runtime": {"font_size": 14, "color": "#F6E4AD"}, "bindings": [{"node": "PrimaryActionButton/CostOverlay/SunburstCostLabel", "property": "text"}]
+    },
+    {
+      "id": "tactical_direction_letters", "kind": "text", "role": "Any tactical direction letters remain runtime-drawn and are never baked into generated art", "generation": {"enabled": false},
+      "runtime": {"direction_label_text": "N,E,S,W"}, "bindings": [{"node": "TacticalInstrumentFrame/ThreatCompassFrame/ThreatCompass", "property": "direction_label_text"}]
+    }
+  ]
+}

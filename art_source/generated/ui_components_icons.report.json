@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Use case: reusable 2D game UI icon and status material sheet for a dark fantasy botanical defense game.\nCreate one clean organized 4x2 sheet, front-facing and orthographic, with generous spacing and no overlap.\nInclude eight isolated assets: health bar frame, energy bar frame, selected tab, unselected tab, healthy light-core status icon, warning status icon, corrupted status icon, threat/radar marker. Bars are horizontal and empty inside; tabs have empty centers for Godot labels; icons are simple readable botanical instrument symbols.\nAll assets must be fully visible on a transparent background, with consistent scale language, thin worn gold botanical linework, and restrained glow. No words, no letters, no numbers, no labels, no watermark.\nStyle: premium hand-painted storybook UI, old gardener field journal plus softly glowing botanical instrument, subtle paper and oxidized brass texture, readable at small size.\nPalette: #111827, #25263A, #3A3032, #E5B94B, #FFF0B0, restrained #8E3D4A and #4C8490.\nAvoid: modern sci-fi HUD, neon cyberpunk, glassmorphism, ornate medieval filigree overload, saturated candy colors, perspective tilt, fake text, grid lines.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\ui_components_icons.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\generated\\ui_components_icons.png.raw.png",
+  "raw_bytes": 1703913,
+  "elapsed_seconds": 67.156,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "1024x1024",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 262,
+      "output_tokens": 1650,
+      "total_tokens": 1912,
+      "input_tokens_details": {
+        "text_tokens": 262,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1650,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

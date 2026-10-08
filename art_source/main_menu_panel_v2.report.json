@@ -1,0 +1,20 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "Single isolated vertical game menu journal panel on a uniform pure white background. Exact visible panel proportion 0.684:1, front-facing orthographic view, tall rectangle with gently rounded corners. Restrained abandoned greenhouse design: translucent near-black bottle-green glass, one thin muted aged-brass frame, tiny botanical vine corner etching limited to the outermost 6 percent, faint condensation and subtle wear. The central 82 percent must remain dark, low-contrast and nearly featureless for UI controls. It must be a panel surface only, not a greenhouse scene and not a picture frame containing scenery. No text, letters, numbers, buttons, icons, flowers, architecture, landscape, watermark, fake writing, heavy ornament or glow. Leave generous white margin around the object for clean background removal.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\main_menu_panel_v2.generated.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\main_menu_panel_v2.generated.png.raw.png",
+  "raw_bytes": 1355002,
+  "elapsed_seconds": 60.734,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

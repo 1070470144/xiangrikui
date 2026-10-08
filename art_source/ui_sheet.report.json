@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Use case: ui-mockup\nAsset type: 2D game UI material and icon sheet\nPrimary request: A cohesive material sheet for a dark fantasy botanical defense game UI inspired by an old gardener's field journal and softly glowing botanical instruments.\nContents: one wide dark navy-gray top panel with thin worn gold botanical border; one wide dark brown-purple action panel; four rounded rectangular button states (normal, hover, pressed, disabled) with identical dimensions and safe empty centers; four square icons showing thorn flower, prism flower, sunburst, and root repair; two horizontal progress bar materials for mother-flower life and golden light energy.\nStyle/medium: premium hand-painted storybook UI, subtle paper and oxidized metal texture, elegant thin botanical linework, restrained golden illumination.\nComposition/framing: clean organized sheet with generous separation between assets, front-facing UI elements, no perspective tilt.\nColor palette: #111827, #25263A, #3A3032, #E5B94B, #FFF0B0, restrained #8E3D4A and #4C8490.\nConstraints: no words, no letters, no numbers, no labels, no watermark, no game screenshot behind the elements, empty button centers suitable for text overlays.\nAvoid: modern sci-fi HUD, neon cyberpunk, glassmorphism, ornate medieval filigree overload, bright saturated colors.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\ui_sheet.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\ui_sheet.png.raw.png",
+  "raw_bytes": 1689762,
+  "elapsed_seconds": 57.719,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "1536x864",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 283,
+      "output_tokens": 1640,
+      "total_tokens": 1923,
+      "input_tokens_details": {
+        "text_tokens": 283,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1640,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

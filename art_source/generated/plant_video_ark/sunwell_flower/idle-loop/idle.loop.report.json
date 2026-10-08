@@ -1,0 +1,89 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_video_ark\\sunwell_flower\\idle-frames\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_video_ark\\sunwell_flower\\idle-loop",
+  "state": "idle",
+  "fps": 12.0,
+  "frames_total": 49,
+  "window": [
+    29,
+    47
+  ],
+  "profile": "breathing is slow and not strictly periodic; the lowest seam is a long window",
+  "cycle_mode": "pinned",
+  "seam_max": 2.0,
+  "anchor": "none",
+  "seam_measurement": "source-frames",
+  "cycle": {
+    "kind": "pinned",
+    "start": 0,
+    "length": 48,
+    "seam": 0.003494352102279663,
+    "inner_mean_adjacent": 0.004966110456734896,
+    "ratio": 0.703639625562642,
+    "pin_error": 0.0016443774802610278,
+    "pin_tolerance": 0.009932220913469791,
+    "period_global": null,
+    "periodicity": null
+  },
+  "periodic_attempt": null,
+  "cycle_seconds": 4.0,
+  "n_out": 48,
+  "gif_fps": 12.0,
+  "delay_ms": 83,
+  "status": "passed",
+  "resampled_seam": 0.003494352102279663,
+  "resampled_inner_mean_adjacent": 0.004966110456734896,
+  "resampled_seam_ratio": 0.7036,
+  "scrubbed_rgb_pixels": 0,
+  "specks_dropped": 1516,
+  "strip": {
+    "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_video_ark\\sunwell_flower\\idle-loop\\idle.strip.png",
+    "frames": 48,
+    "w": 109,
+    "h": 134,
+    "kind": "pinned",
+    "loop": true,
+    "body_h": 129,
+    "body_src_h": 308,
+    "body_ref": "first-frame",
+    "scale": 0.4188,
+    "delay_ms": 83.33,
+    "cycle_frames": 48,
+    "cycle_seconds": 4.0,
+    "subsampled": false,
+    "cell_cap": 64,
+    "top_margin_px": 80,
+    "body_height_target": 129,
+    "foot_anchor": "none",
+    "drift_px": 0,
+    "foot_sway_px": 0,
+    "foot_x": null
+  },
+  "gif": {
+    "file": "idle.gif",
+    "format": "GIF",
+    "n_frames": 48,
+    "loop": 0,
+    "size": [
+      109,
+      134
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 361508
+  },
+  "webp": {
+    "file": "idle.webp",
+    "format": "WEBP",
+    "n_frames": 48,
+    "loop": 0,
+    "size": [
+      109,
+      134
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 934578
+  }
+}

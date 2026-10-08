@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mm_art_manifest.schema.json",
+  "title": "MM Feature Art Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "feature", "scene", "root_node", "style", "assets"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema_version": {"const": 1},
+    "feature": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "scene": {"type": "string", "pattern": "^res://"},
+    "root_node": {"type": "string", "minLength": 1},
+    "style": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reference_images", "prompt_prefix"],
+      "properties": {
+        "reference_images": {"type": "array", "items": {"type": "string"}},
+        "prompt_prefix": {"type": "string"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/styleEvidence"}},
+        "sprite_gen_contract": {"type": "string", "minLength": 1},
+        "visual_anchor": {"type": "string", "minLength": 1},
+        "comfort_constraints": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "avoid": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/asset"}
+    }
+  },
+  "$defs": {
+    "styleEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "kind", "reason"],
+      "properties": {
+        "source": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["art_guide", "design_system", "runtime_screenshot", "runtime_asset", "accepted_manifest", "external_reference"]},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "uiSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["purpose", "display_size", "content_safe_area", "layout", "negative"],
+      "properties": {
+        "purpose": {"type": "string", "minLength": 1},
+        "display_size": {"type": "array", "prefixItems": [{"type": "integer", "minimum": 1}, {"type": "integer", "minimum": 1}], "minItems": 2, "maxItems": 2},
+        "content_safe_area": {"type": "array", "items": {"type": "integer", "minimum": 0}, "minItems": 4, "maxItems": 4},
+        "layout": {"type": "string", "minLength": 1},
+        "state_contract": {"type": "string", "minLength": 1},
+        "negative": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true}
+      }
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node"],
+      "properties": {
+        "scope": {"enum": ["scene", "component"]},
+        "node": {"type": "string"},
+        "property": {"type": "string"},
+        "property_map": {"type": "object", "additionalProperties": {"type": "string"}}
+      },
+      "oneOf": [{"required": ["property"]}, {"required": ["property_map"]}]
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "role", "generation", "bindings"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "kind": {"enum": ["background", "portrait", "illustration", "panel", "button", "icon", "bar", "decoration", "text"]},
+        "role": {"type": "string", "minLength": 1},
+        "states": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+        "generation": {
+          "type": "object",
+          "required": ["enabled"],
+          "properties": {
+            "enabled": {"type": "boolean"},
+            "provider": {"type": "string"},
+            "model": {"type": "string"},
+            "prompt": {"type": "string"},
+            "transparent": {"type": "boolean"}
+          }
+        },
+        "output": {
+          "type": "object",
+          "required": ["size", "mode"],
+          "properties": {
+            "path": {"type": "string"},
+            "path_pattern": {"type": "string"},
+            "size": {"type": "array", "prefixItems": [{"type": "integer", "minimum": 1}, {"type": "integer", "minimum": 1}], "minItems": 2, "maxItems": 2},
+            "mode": {"enum": ["full_image", "nine_patch"]},
+            "patch_margin": {"type": "array", "items": {"type": "integer", "minimum": 0}, "minItems": 4, "maxItems": 4},
+            "content_margin": {"type": "array", "items": {"type": "integer", "minimum": 0}, "minItems": 4, "maxItems": 4}
+          },
+          "oneOf": [{"required": ["path"]}, {"required": ["path_pattern"]}]
+        },
+        "runtime": {"type": "object"},
+        "ui_spec": {"$ref": "#/$defs/uiSpec"},
+        "bindings": {"type": "array", "items": {"$ref": "#/$defs/binding"}, "minItems": 1}
+      }
+    }
+  }
+}

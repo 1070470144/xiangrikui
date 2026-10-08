@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: 2D game actor state sheet with transparent background
+Primary request: A coherent production asset sheet containing exactly eight isolated objects for a dark fantasy garden defense game.
+Subjects and layout: two rows by four columns. Top row: powered thorn flower, unpowered thorn flower, powered prism flower, unpowered prism flower. Bottom row: shadow beast moving, shadow beast attacking, erosion bug moving, erosion bug attacking.
+Plant design: thorn flower is low and horizontally spreading with believable curled thorn vines, dark green leaves and a warm gold life core; unpowered version droops and loses saturation. Prism flower is taller with crystal-faceted petals and a focused warm-white flower center; unpowered version is dim, folded and cold violet.
+Enemy design: shadow beast is a low crouched corrupted quadruped made from dark violet organic shadow with readable limbs, bark-like plates and cold cyan fissure eyes; attack pose lunges forward. Erosion bug is smaller, segmented, insect-like, with mandibles, root-eating forelimbs and cold cyan corrupted seams; attack pose clearly bites forward.
+Style/medium: premium hand-painted storybook game assets, thick painterly brushwork, botanical realism, clear production silhouettes, subtle paper grain.
+Composition/framing: strict 2x4 layout, equal cell spacing, one object centered per cell, no overlap, 3/4 top-down game perspective, all subjects facing generally right, consistent upper-left lighting, consistent ground-contact line per row.
+Color palette: player plants use moss green, muted ochre and restrained gold #E5B94B; enemies use black-violet #211C32 and cold cyan #4C8490; no enemy gold cores.
+Constraints: genuinely transparent background, no floor, no shadows extending into neighboring cells, no text, no labels, no borders, no grid lines, no watermark, every full silhouette visible.
+Avoid: cute chibi, anime, pure black silhouettes, photorealism, pixel art, flat vector style, neon cyberpunk, saturated rainbow colors.

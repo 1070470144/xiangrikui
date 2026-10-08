@@ -1,0 +1,8 @@
+Use case: stylized-concept
+Asset type: 2D game prop state sheet with transparent background
+Primary request: Three aligned states of the exact same magical light-vein bud node: healthy, damaged, broken.
+Subject: A grounded botanical node made from intertwined roots and a small protective flower-bud casing around a solar light seed. Healthy has a warm gold-white core and living green-gold roots. Damaged has visible fractures, flickering dim light and some wilted fibers. Broken has a collapsed husk, severed roots and cold violet corruption, with almost no warm light.
+Style/medium: premium hand-painted storybook game prop, thick painterly brushwork, believable botanical structure, subtle paper grain.
+Composition/framing: one horizontal row of exactly three isolated props, identical scale and 3/4 top-down perspective, each centered in one third, consistent ground contact.
+Constraints: genuinely transparent background, no text, no frame, no grid lines, no labels, no watermark, no overlap, full roots visible.
+Avoid: sci-fi machinery, crystal pedestal, flat icon, anime, pure black outline.

@@ -1,0 +1,7 @@
+Use case: stylized-concept
+Asset type: seamless 2D game swamp ground texture tile source
+Primary request: one single square, perfectly tileable rain-soaked corrupted swamp soil texture for a hand-painted botanical dark-fantasy battlefield. The image must repeat identically and seamlessly along all four boundaries. No distinct central feature or large compositional gradient.
+Scene/backdrop: damp muddy earth, fine muted green fungal fibers and sparse shallow dark puddle glints, uniformly distributed; no edge or boundary against dry soil.
+Style/medium: high-definition hand-painted storybook game texture, botanical realism, crisp fine detail at close zoom. Orthographic top-down ground surface without perspective or illumination falloff.
+Color palette: dark violet-brown, muted swamp green #263D35, subdued cold cyan #4C8490.
+Constraints: seamless wrap on left/right/top/bottom; homogeneous material; no roads, paths, walls, fences, stones, plants, props, UI, text, frame, vignette, horizon, or isolated landmarks.

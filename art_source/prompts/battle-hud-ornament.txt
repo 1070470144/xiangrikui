@@ -1,0 +1,9 @@
+Use case: game-ui-asset
+Asset type: reusable transparent battle HUD ornament set
+Primary request: separate dark apocalyptic greenhouse HUD frames, card borders, circular radar rings, sunflower badges, seed and light emblems, and a circular solar skill bezel
+Style/medium: highly polished hand-painted dark fantasy game interface, weathered blackened brass, fine thorn-vine filigree, restrained antique gold trim
+Composition/framing: isolated reusable interface parts with generous transparent padding; clean interiors for runtime labels and values
+Lighting/mood: subtle warm solar glow against cold blue-black metal
+Color palette: charcoal, oxidized bronze, antique gold, muted moss green, restrained crimson warning accents
+Text: none
+Constraints: transparent backgrounds; sharp edges; symmetrical frames; no embedded numbers, labels, buttons, characters, roads, scenery, watermark, or logo

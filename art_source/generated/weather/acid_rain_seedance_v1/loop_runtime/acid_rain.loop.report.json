@@ -1,0 +1,87 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\weather\\acid_rain_seedance_v1\\frames_runtime\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\weather\\acid_rain_seedance_v1\\loop_runtime",
+  "state": null,
+  "fps": 24.0,
+  "frames_total": 121,
+  "window": [
+    12,
+    54
+  ],
+  "profile": "generic in-place action",
+  "cycle_mode": "fixed",
+  "seam_max": 2.0,
+  "anchor": "none",
+  "seam_measurement": "source-frames",
+  "cycle": {
+    "kind": "fixed",
+    "start": 0,
+    "length": 55,
+    "seam": 0.014792963862419128,
+    "inner_mean_adjacent": 0.01446009986102581,
+    "ratio": 1.0230194815106695,
+    "period_global": null,
+    "periodicity": null
+  },
+  "periodic_attempt": null,
+  "cycle_seconds": 2.2917,
+  "n_out": 55,
+  "gif_fps": 24.0,
+  "delay_ms": 42,
+  "status": "passed",
+  "resampled_seam": 0.014792963862419128,
+  "resampled_inner_mean_adjacent": 0.01446009986102581,
+  "resampled_seam_ratio": 1.023,
+  "scrubbed_rgb_pixels": 0,
+  "specks_dropped": 333,
+  "strip": {
+    "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\weather\\acid_rain_seedance_v1\\loop_runtime\\acid_rain.strip.png",
+    "frames": 55,
+    "w": 132,
+    "h": 128,
+    "kind": "fixed",
+    "loop": true,
+    "body_h": 128,
+    "body_src_h": 480,
+    "body_ref": "tallest-grounded",
+    "scale": 0.2667,
+    "delay_ms": 41.67,
+    "cycle_frames": 55,
+    "cycle_seconds": 2.2917,
+    "subsampled": false,
+    "cell_cap": 64,
+    "top_margin_px": 0,
+    "body_height_target": null,
+    "foot_anchor": "none",
+    "drift_px": 0,
+    "foot_sway_px": 0,
+    "foot_x": null
+  },
+  "gif": {
+    "file": "acid_rain.gif",
+    "format": "GIF",
+    "n_frames": 55,
+    "loop": 0,
+    "size": [
+      132,
+      128
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 127291
+  },
+  "webp": {
+    "file": "acid_rain.webp",
+    "format": "WEBP",
+    "n_frames": 55,
+    "loop": 0,
+    "size": [
+      132,
+      128
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 285692
+  }
+}

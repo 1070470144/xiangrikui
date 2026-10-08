@@ -1,0 +1,9 @@
+Use case: production game main-menu background
+Asset type: opaque 2D environment illustration, no interface elements
+Primary request: The interior entrance of a ruined Victorian greenhouse after the sun has died, for a dark fantasy botanical defense game called The Last Sunflower. A healthy solar mother flower grows slightly left of center and is the only strong warm light source. The rightmost 36 percent is a calm, low-detail, dark negative-space area reserved for a native game menu.
+Style and medium: premium hand-painted storybook environment, thick painterly brushwork, botanical realism, subtle paper grain, restrained oxidized metal and worn horticultural materials, production-quality 2D game art.
+Composition: exact wide 16:9 frame. Broken greenhouse ribs, shattered glass silhouettes, dead leaves and cold mist frame the outer edges. Keep the mother flower silhouette unobstructed. Preserve strong readable separation between the left focal area and right menu-safe area without drawing a vertical divider or panel.
+Lighting and mood: melancholic and dangerous but still hopeful. Cold blue-violet ruined night surrounds a warm golden living core. The mother flower is the brightest and warmest object, with restrained roots and a few subtle floating motes; no large bloom cloud.
+Palette: deep navy #111827, muted gray-violet #25263A, brown-purple #3A3032, desaturated moss #263D35, life gold #E5B94B and warm highlight #FFF0B0.
+Constraints: no words, no letters, no numbers, no labels, no logo, no watermark, no buttons, no frames, no cards, no HUD, no people, no menu UI, no split-screen divider. The right side must remain readable beneath a translucent dark panel.
+Avoid: photorealism, anime, pixel art, flat vector art, neon cyberpunk, glassmorphism, ornate medieval filigree, bright saturated rainbow colors, central symmetry, a sunflower placed on the right side.

@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: 2D game visual effect sheet with transparent background
+Primary request: Exactly three isolated visual effects for a dark fantasy botanical defense game, arranged left to right: prism projectile, sunburst ring, shadow dissolve.
+Effect 1: a compact horizontal gold-white light projectile pointing right, warm white core, faceted golden flare and short elegant trail.
+Effect 2: a large radial solar shockwave ring seen straight-on, transparent center, warm-white inner edge, painterly gold-orange outer fire, symmetrical and usable as a scaling game effect.
+Effect 3: a cloud of dissolving blue-violet shadow smoke with cold cyan shards and a few subtle warm rim-lit particles, no creature body.
+Style/medium: painterly 2D game VFX, soft textured brush edges, polished production asset.
+Composition/framing: one horizontal row, generous separation, each effect fully contained and centered in its third.
+Constraints: genuinely transparent background, no floor, no text, no labels, no borders, no grid, no watermark.
+Avoid: lens flare photography, sci-fi laser, cartoon emoji, opaque black rectangle.

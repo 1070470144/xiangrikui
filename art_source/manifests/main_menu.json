@@ -1,0 +1,98 @@
+{
+  "$schema": "../schemas/mm_art_manifest.schema.json",
+  "schema_version": 1,
+  "feature": "main_menu",
+  "scene": "res://scenes/main.tscn",
+  "root_node": "Main",
+  "style": {
+    "reference_images": [
+      "res://assets/backgrounds/ART_BG_MainMenu_Greenhouse.png",
+      "res://art_source/evidence/main_menu_runtime.png",
+      "res://docs/superpowers/specs/2026-09-29-greenhouse-gardener-record-menu-design.md"
+    ],
+    "prompt_prefix": "《最后的向日葵》原项目末日温室厚涂绘本风；废弃维多利亚温室、冷蓝月光、深墨绿旧园艺档案、氧化黄铜、暗色涂漆金属、局部破损玻璃与克制的向日葵暖光；低视觉密度，真实磨损",
+    "evidence": [
+      {"source": "res://assets/backgrounds/ART_BG_MainMenu_Greenhouse.png", "kind": "runtime_asset", "reason": "主菜单实际温室色温、光源和材质基准"},
+      {"source": "res://art_source/evidence/main_menu_runtime.png", "kind": "runtime_screenshot", "reason": "Godot 主菜单实际运行截图，确认右侧档案面板的尺寸、层级和背景对比度"},
+      {"source": "res://Design/Sunflower-Defense-Art-Style-Guide.md", "kind": "art_guide", "reason": "项目批准的末日温室色彩、材质和植物绘本视觉语言"},
+      {"source": "res://docs/superpowers/specs/2026-09-29-greenhouse-gardener-record-menu-design.md", "kind": "design_system", "reason": "已确认的园丁档案视觉约束"}
+    ],
+    "sprite_gen_contract": "sprite-gen/docs/gen.md",
+    "visual_anchor": "深墨绿旧档案纸，氧化黄铜细边，暗色温室玻璃，克制暖金高光，可见手绘笔触",
+    "comfort_constraints": ["按钮高度不低于 50 像素", "中央保持低细节", "高亮只服务主操作", "目录行之间保留呼吸间距"],
+    "avoid": ["东方卷轴", "朱砂印章", "中式牌匾", "云纹", "伪文字", "水印", "按钮内部场景插画", "厚重外发光"]
+  },
+  "assets": [
+    {
+      "id": "main_menu_background", "kind": "background", "role": "现有废弃温室背景，是右侧 UI 的色温、材质和视觉密度基准", "generation": {"enabled": false},
+      "output": {"path": "res://assets/backgrounds/ART_BG_MainMenu_Greenhouse.png", "size": [1152, 648], "mode": "full_image"},
+      "bindings": [{"node": "MainMenuBackground", "property": "texture"}]
+    },
+    {
+      "id": "greenhouse_record_panel", "kind": "panel", "role": "右侧园丁档案面板，融入温室阴影并承载全部菜单控件",
+      "ui_spec": {"purpose": "右侧园丁档案面板", "display_size": [346, 506], "content_safe_area": [28, 28, 28, 22], "layout": "竖向低对比面板，边缘材质克制，中央控件区域均匀安静", "state_contract": "单一静态面板，缩放后边缘结构保持稳定", "negative": ["文字", "字母", "数字", "按钮", "图标", "东方卷轴", "朱砂印章", "中式牌匾", "场景插画", "厚重外发光"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "单个竖向园丁档案面板，深墨绿旧档案纸与暗色涂漆金属结合，细窄氧化黄铜压边，少量破损玻璃边角，中央 82% 区域低细节且均匀；无卷轴、无牌匾、无印章、无大花朵、无场景插画", "transparent": false},
+      "output": {"path": "res://assets/ui/generated/mm_greenhouse_record_panel_v2.png", "size": [692, 1012], "mode": "full_image"},
+      "bindings": [{"node": "PageStack/HomePage/MenuJournal", "property": "theme_override_styles/panel"}]
+    },
+    {
+      "id": "greenhouse_account_plate", "kind": "panel", "role": "右上角本地账号园丁铭牌",
+      "ui_spec": {"purpose": "本地账号园丁铭牌", "display_size": [278, 58], "content_safe_area": [46, 10, 18, 10], "layout": "低矮横向铭牌，左侧徽记槽，中央文字区域留空", "state_contract": "默认态保持低对比，悬停由 Godot 叠加亮度", "negative": ["文字", "字母", "数字", "人物头像", "东方题签", "场景插画", "厚重外发光"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "单个横向园丁身份铭牌，暗绿珐琅或旧漆金属底，极细氧化黄铜框，左侧保留小徽记区域，中央文字区域完全空白；无卷轴、无中式纹样、无文字或符号", "transparent": false},
+      "output": {"path": "res://assets/ui/generated/mm_greenhouse_account_plate_v2.png", "size": [556, 116], "mode": "full_image", "content_margin": [56, 7, 14, 7]},
+      "bindings": [
+        {"node": "PageStack/HomePage/AccountEntry", "property": "theme_override_styles/normal"},
+        {"node": "PageStack/HomePage/AccountEntry", "property": "theme_override_styles/hover"},
+        {"node": "PageStack/HomePage/AccountEntry", "property": "theme_override_styles/pressed"}
+      ]
+    },
+    {
+      "id": "greenhouse_divider", "kind": "decoration", "role": "园丁档案标题下的低对比植物学分隔线",
+      "ui_spec": {"purpose": "园丁档案植物学分隔线", "display_size": [290, 8], "content_safe_area": [12, 0, 12, 0], "layout": "极细水平线，两端只有微小植物标本刻痕", "state_contract": "静态装饰，缩放后保持一像素级视觉重量", "negative": ["文字", "字母", "数字", "粗边框", "大花朵", "场景背景", "发光云雾"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "一条极细低对比氧化黄铜档案分隔线，两端仅有微小温室藤蔓或植物标本刻痕，中心为干净直线；无背景场景、无文字、无中式花纹", "transparent": false},
+      "output": {"path": "res://assets/ui/generated/mm_greenhouse_divider.png", "size": [620, 24], "mode": "full_image"},
+      "bindings": []
+    },
+    {
+      "id": "greenhouse_badge", "kind": "icon", "role": "园丁记录标题旁的小型温室档案徽记",
+      "ui_spec": {"purpose": "温室园丁档案徽记", "display_size": [28, 28], "content_safe_area": [4, 4, 4, 4], "layout": "小型方形徽记，轮廓简洁，缩小后仍可辨识", "state_contract": "静态徽记，不承担按钮状态", "negative": ["文字", "字母", "数字", "人脸", "朱砂印章", "复杂花束", "场景背景"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "单个小型园丁档案徽记，旧黄铜温室拱顶轮廓包围一颗简洁种子，暗绿底，高对比小尺寸轮廓；无文字、无太阳花人物、无印章形态", "transparent": false},
+      "output": {"path": "res://assets/ui/generated/mm_greenhouse_badge.png", "size": [96, 96], "mode": "full_image"},
+      "bindings": []
+    },
+    {
+      "id": "greenhouse_primary_states", "kind": "button", "role": "继续守夜主操作的四种温室档案状态", "states": ["normal", "hover", "pressed", "disabled"],
+      "ui_spec": {"purpose": "继续守夜主操作按钮边框", "display_size": [290, 70], "content_safe_area": [46, 14, 46, 14], "layout": "低矮横向温室玻璃与旧黄铜按钮，中央文字区域留空", "state_contract": "所有状态保持相同轮廓和装饰位置，只改变边缘亮度、暖光强度和按压深度", "negative": ["文字", "字母", "数字", "图标", "场景插画", "大花朵", "东方卷轴", "中式牌匾", "厚重外发光"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "单个横向主操作按钮，暗色温室玻璃与深墨绿旧漆金属底，细窄氧化黄铜框；所有装饰严格限制在外侧 12%，中央 76% 是均匀深色纯净文字安全区；状态变化仅通过边缘暖光、亮度和压暗表现，无卷轴、无牌匾、无场景、无花朵、无文字", "transparent": false},
+      "output": {"path_pattern": "res://assets/ui/generated/mm_greenhouse_primary_v2_{state}.png", "size": [580, 128], "mode": "full_image", "patch_margin": [0, 0, 0, 0]},
+      "bindings": [{"node": "PageStack/HomePage/MenuJournal/ContentMargin/ActionList/PrimaryStartButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "pressed": "theme_override_styles/pressed", "disabled": "theme_override_styles/disabled"}}]
+    },
+    {
+      "id": "greenhouse_secondary_states", "kind": "button", "role": "档案目录行的四种交互状态", "states": ["normal", "hover", "pressed", "disabled"],
+      "ui_spec": {"purpose": "园丁档案目录按钮行", "display_size": [290, 50], "content_safe_area": [36, 10, 36, 10], "layout": "低矮横向目录行，仅底部细黄铜归档线，中央文字区域留空", "state_contract": "所有状态保持相同轮廓和装饰位置，只改变底线亮度、纸面明度和按压深度", "negative": ["文字", "字母", "数字", "图标", "封闭厚边框", "场景插画", "大花朵", "东方卷轴", "中式牌匾", "厚重外发光"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "单个低矮横向园丁档案目录行，深墨绿旧纸或暗色涂漆金属，底部一条细黄铜归档线；所有纹理低对比，中央 82% 完全无装饰并适合文字，状态变化克制；无封闭厚边框、无卷轴、无牌匾、无场景、无花朵、无文字", "transparent": false},
+      "output": {"path_pattern": "res://assets/ui/generated/mm_greenhouse_secondary_v2_{state}.png", "size": [580, 104], "mode": "full_image", "patch_margin": [0, 0, 0, 0]},
+      "bindings": [
+        {"node": "PageStack/HomePage/MenuJournal/ContentMargin/ActionList/DeckBuilderButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "pressed": "theme_override_styles/pressed", "disabled": "theme_override_styles/disabled"}},
+        {"node": "PageStack/HomePage/MenuJournal/ContentMargin/ActionList/NightRecordsButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "pressed": "theme_override_styles/pressed", "disabled": "theme_override_styles/disabled"}},
+        {"node": "PageStack/HomePage/MenuJournal/ContentMargin/ActionList/CodexButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "pressed": "theme_override_styles/pressed", "disabled": "theme_override_styles/disabled"}},
+        {"node": "PageStack/HomePage/MenuJournal/ContentMargin/ActionList/SettingsButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "pressed": "theme_override_styles/pressed", "disabled": "theme_override_styles/disabled"}}
+      ]
+    },
+    {
+      "id": "home_title", "kind": "text", "role": "主菜单艺术字标题，由 Godot 字体绘制", "generation": {"enabled": false},
+      "runtime": {"text": "最后的向日葵", "font_size": 52, "color": "#FFF3BD"},
+      "bindings": []
+    },
+    {
+      "id": "record_title", "kind": "text", "role": "右侧档案标题，由 Godot 字体绘制", "generation": {"enabled": false},
+      "runtime": {"text": "园丁记录", "font_size": 18, "color": "#C9C5A5"},
+      "bindings": []
+    },
+    {
+      "id": "home_tagline", "kind": "text", "role": "主菜单副文案，由 Godot 字体绘制", "generation": {"enabled": false},
+      "runtime": {"text": "太阳已经熄灭，而守夜仍将继续。", "font_size": 18, "color": "#D5DCCB"},
+      "bindings": []
+    }
+  ]
+}

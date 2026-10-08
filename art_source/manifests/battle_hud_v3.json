@@ -1,0 +1,596 @@
+{
+  "$schema": "../schemas/mm_art_manifest.schema.json",
+  "schema_version": 1,
+  "feature": "battle_hud_v3",
+  "scene": "res://scenes/main.tscn",
+  "root_node": "BattleHudRoot",
+  "style": {
+    "reference_images": [
+      "res://tmp/battle-ui-v3-baseline/hud-day-runtime.png",
+      "res://tmp/battle-ui-v3-baseline/hud-night-runtime.png"
+    ],
+    "prompt_prefix": "Project greenhouse botanical storybook UI, as specified by ordered per-resource contracts.",
+    "evidence": [
+      {
+        "kind": "art_guide",
+        "source": "res://Design/Sunflower-Defense-Art-Style-Guide.md",
+        "reason": "Approved project botanical storybook art guide"
+      },
+      {
+        "kind": "accepted_manifest",
+        "source": "res://docs/superpowers/specs/2026-09-29-battle-hud-redesign.md",
+        "reason": "Existing approved HUD layout research and gameplay boundary; reuse stable phase-specific interaction anchors"
+      },
+      {
+        "kind": "accepted_manifest",
+        "source": "res://docs/mm-tools-battle-hud-v3-stage12.md",
+        "reason": "Current requested optimization within existing approved greenhouse direction; stage 1 concrete findings and stage 2 contract"
+      },
+      {
+        "kind": "runtime_screenshot",
+        "source": "res://tmp/battle-ui-v3-baseline/hud-day-runtime.png",
+        "reason": "Actual Godot tests/battle_ui_v3_capture.gd, 1280x720, state day deployment"
+      },
+      {
+        "kind": "runtime_screenshot",
+        "source": "res://tmp/battle-ui-v3-baseline/hud-night-runtime.png",
+        "reason": "Actual Godot tests/battle_ui_v3_capture.gd, 1280x720, state night with four cards, insufficient energy and boss threat"
+      },
+      {
+        "kind": "runtime_screenshot",
+        "source": "res://tmp/battle-ui-v3-baseline/hud-mother-choice-runtime.png",
+        "reason": "Actual Godot tests/battle_ui_v3_capture.gd, 1280x720, state mother upgrade choices"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+        "reason": "status portrait"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/ui/UI_ICON_ThornFlower.png",
+        "reason": "deployment action"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/ui/UI_ICON_PrismFlower.png",
+        "reason": "deployment action"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/ui/UI_ICON_Repair.png",
+        "reason": "repair action"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/ui/generated/battle_hud/tactical_instrument_frame.png",
+        "reason": "instrument brass geometry"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/ui/generated/battle_hud/runtime_primary_action_normal_v2.png",
+        "reason": "existing action brass and glass"
+      },
+      {
+        "kind": "external_reference",
+        "source": "https://store.steampowered.com/app/2239150/Thronefall/",
+        "reason": "layout-only; low-obstruction center and day/night-dependent actions; verified commercial Steam listing 2026-09-30; existing approved research provides UI analysis; not an art authority"
+      },
+      {
+        "kind": "external_reference",
+        "source": "https://store.steampowered.com/app/644930/They_Are_Billions/",
+        "reason": "layout-only; stable resource anchors and grouped build operations; verified commercial Steam listing 2026-09-30; existing approved research provides UI analysis; not an art authority"
+      }
+    ],
+    "sprite_gen_contract": "sprite-gen/docs/gen.md",
+    "visual_anchor": "res://Design/Sunflower-Defense-Art-Style-Guide.md; res://tmp/battle-ui-v3-baseline/hud-day-runtime.png; res://assets/ui/generated/battle_hud/runtime_primary_action_normal_v2.png. Deep ink-green glass, thin oxidized aged brass, sparse leaf engraving, warm upper-left highlights, botanical storybook brushwork.",
+    "comfort_constraints": [
+      "Low contrast centers; restrained warm highlights without bloom",
+      "Sparse edge engraving; no flashing or motion implied",
+      "Clear silhouettes at 160 and 176 pixels; quiet runtime text areas"
+    ],
+    "avoid": [
+      "pixel art",
+      "photography",
+      "candy saturation",
+      "neon",
+      "chrome",
+      "plastic",
+      "dense decoration",
+      "baked UI",
+      "text",
+      "watermark",
+      "logo"
+    ]
+  },
+  "assets": [
+    {
+      "id": "primary_action_frame",
+      "kind": "button",
+      "role": "Identify the phase's one decisive action: start night or sunburst",
+      "states": [
+        "normal",
+        "hover",
+        "pressed",
+        "disabled"
+      ],
+      "generation": {
+        "enabled": true,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "transparent": true,
+        "prompt": "1. Game asset use: Identify the phase's one decisive action: start night or sunburst.\n2. Runtime size and safe area: output [512, 384] pixels, Godot display [160, 114] pixels. Full artwork must fill canvas with 8px outer transparent margin; no cropping; content safe margins left/top/right/bottom [28, 25, 28, 32].\n3. Project visual anchor: res://Design/Sunflower-Defense-Art-Style-Guide.md; res://tmp/battle-ui-v3-baseline/hud-day-runtime.png; res://assets/ui/generated/battle_hud/runtime_primary_action_normal_v2.png. Deep ink-green glass, thin oxidized aged brass, sparse leaf engraving, warm upper-left highlights, botanical storybook brushwork.\n4. Composition and state contract: One horizontal rounded rectangular greenhouse action frame, aspect 4:3. Stable narrow brass edge, sparse leaf relief only in corners; empty ink-green glass center, no icons. Orthographic UI view; upper-left soft light. Identical silhouette for all states; only tint and rim luminance change at runtime.\n5. Comfort: Low contrast centers; restrained warm highlights without bloom; Sparse edge engraving; no flashing or motion implied; Clear silhouettes at 160 and 176 pixels; quiet runtime text areas.\n6. Project and AI exclusions: pixel art; photography; candy saturation; neon; chrome; plastic; dense decoration; baked UI; text; watermark; logo; no text, no watermark, no logo, no unintended objects, no baked UI, no alternatives or contact sheet.\n7. Transparent output: real RGBA transparent exterior, clean unpremultiplied alpha edges, no solid backdrop, checkerboard or environment."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/battle_hud_v3/primary_action_frame.png",
+        "size": [
+          512,
+          384
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          36,
+          32,
+          36,
+          32
+        ]
+      },
+      "runtime": {
+        "size": [
+          160,
+          114
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          30,
+          23,
+          30,
+          23
+        ],
+        "content_margin": [
+          12,
+          16,
+          12,
+          16
+        ],
+        "path_pattern": "res://assets/ui/generated/battle_hud_v3/primary_action_{state}.png",
+        "derived_by": "res://art_source/process_battle_hud_v3.py"
+      },
+      "ui_spec": {
+        "purpose": "Identify the phase's one decisive action: start night or sunburst",
+        "display_size": [
+          160,
+          114
+        ],
+        "content_safe_area": [
+          28,
+          25,
+          28,
+          32
+        ],
+        "layout": "One horizontal rounded rectangular greenhouse action frame, aspect 4:3. Stable narrow brass edge, sparse leaf relief only in corners; empty ink-green glass center, no icons. Orthographic UI view; upper-left soft light. Identical silhouette for all states; only tint and rim luminance change at runtime.",
+        "state_contract": "One generated master; button hover/pressed/disabled derive from its exact alpha; bezel remains neutral",
+        "negative": [
+          "pixel art",
+          "photography",
+          "candy saturation",
+          "neon",
+          "chrome",
+          "plastic",
+          "dense decoration",
+          "baked UI",
+          "text",
+          "watermark",
+          "logo"
+        ]
+      },
+      "bindings": [
+        {
+          "node": "PrimaryActionButton/StartNightButton",
+          "property_map": {
+            "normal": "theme_override_styles/normal",
+            "hover": "theme_override_styles/hover",
+            "pressed": "theme_override_styles/pressed",
+            "disabled": "theme_override_styles/disabled"
+          }
+        },
+        {
+          "node": "PrimaryActionButton/SunburstButton",
+          "property_map": {
+            "normal": "theme_override_styles/normal",
+            "hover": "theme_override_styles/hover",
+            "pressed": "theme_override_styles/pressed",
+            "disabled": "theme_override_styles/disabled"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tactical_bezel",
+      "kind": "decoration",
+      "role": "Identify the combined light-network and directional-threat tactical instrument",
+      "states": [
+        "neutral"
+      ],
+      "generation": {
+        "enabled": true,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "transparent": true,
+        "prompt": "1. Game asset use: Identify the combined light-network and directional-threat tactical instrument.\n2. Runtime size and safe area: output [512, 512] pixels, Godot display [176, 176] pixels. Full artwork must fill canvas with 8px outer transparent margin; no cropping; content safe margins left/top/right/bottom [42, 42, 42, 42].\n3. Project visual anchor: res://Design/Sunflower-Defense-Art-Style-Guide.md; res://tmp/battle-ui-v3-baseline/hud-day-runtime.png; res://assets/ui/generated/battle_hud/runtime_primary_action_normal_v2.png. Deep ink-green glass, thin oxidized aged brass, sparse leaf engraving, warm upper-left highlights, botanical storybook brushwork.\n4. Composition and state contract: One perfectly centered circular thin aged-brass greenhouse instrument rim; sparse botanical etching, real transparent central opening for Godot radar and threats; no needles, ticks, lettering, stand, protruding hardware. Upper-left soft warm highlight; neutral daytime and nighttime state.\n5. Comfort: Low contrast centers; restrained warm highlights without bloom; Sparse edge engraving; no flashing or motion implied; Clear silhouettes at 160 and 176 pixels; quiet runtime text areas.\n6. Project and AI exclusions: pixel art; photography; candy saturation; neon; chrome; plastic; dense decoration; baked UI; text; watermark; logo; no text, no watermark, no logo, no unintended objects, no baked UI, no alternatives or contact sheet.\n7. Transparent output: real RGBA transparent exterior, clean unpremultiplied alpha edges, no solid backdrop, checkerboard or environment."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/battle_hud_v3/tactical_bezel.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/battle_hud_v3/tactical_bezel.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "full_image"
+      },
+      "ui_spec": {
+        "purpose": "Identify the combined light-network and directional-threat tactical instrument",
+        "display_size": [
+          176,
+          176
+        ],
+        "content_safe_area": [
+          42,
+          42,
+          42,
+          42
+        ],
+        "layout": "One perfectly centered circular thin aged-brass greenhouse instrument rim; sparse botanical etching, real transparent central opening for Godot radar and threats; no needles, ticks, lettering, stand, protruding hardware. Upper-left soft warm highlight; neutral daytime and nighttime state.",
+        "state_contract": "One generated master; button hover/pressed/disabled derive from its exact alpha; bezel remains neutral",
+        "negative": [
+          "pixel art",
+          "photography",
+          "candy saturation",
+          "neon",
+          "chrome",
+          "plastic",
+          "dense decoration",
+          "baked UI",
+          "text",
+          "watermark",
+          "logo"
+        ]
+      },
+      "bindings": [
+        {
+          "node": "TacticalInstrumentFrame/TacticalBezelArt",
+          "property": "texture"
+        }
+      ]
+    },
+    {
+      "id": "mother_status",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; mother_status",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "MotherStatusPanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "phase_banner",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; phase_banner",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseBanner",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "resource_panel",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; resource_panel",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "ResourcePanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "phase_tray",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; phase_tray",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseActionTray",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "day_actions",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; day_actions",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseActionTray/DayActionPanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "night_hand",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; night_hand",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseActionTray/NightHandPanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "health_bar",
+      "kind": "bar",
+      "role": "Godot native style or preserved existing resource; health_bar",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "MotherStatusPanel",
+          "property": "modulate"
+        }
+      ]
+    },
+    {
+      "id": "selection_detail",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; selection_detail",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "SelectionDetailPanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "notification",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; notification",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "NotificationBanner",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "mother_choices",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; mother_choices",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "MotherChoiceOverlay/MotherChoicePanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "result",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; result",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "ResultPanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "tactical_fallback",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; tactical_fallback",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "TacticalInstrumentFrame",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "button_states",
+      "kind": "button",
+      "role": "Godot native style or preserved existing resource; button_states",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PrimaryActionButton/StartNightButton",
+          "property": "theme_override_styles/hover"
+        }
+      ]
+    },
+    {
+      "id": "phase_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseBanner/PhaseContent/PhaseLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "wave_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseBanner/PhaseContent/PhaseDetailRow/WaveLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "timer_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseBanner/PhaseContent/PhaseDetailRow/TimerLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "enemy_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseBanner/PhaseContent/PhaseDetailRow/EnemyCountLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "energy_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "ResourcePanel/ResourceRow/EnergyValue",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "seed_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "ResourcePanel/ResourceRow/SeedLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "cost_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PrimaryActionButton/CostOverlay/SunburstCostLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "shortcut_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PrimaryActionButton/CostOverlay/PrimaryShortcut",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "selection_title",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "SelectionDetailPanel/SelectionContent/SelectionTitle",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "selection_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "SelectionDetailPanel/SelectionContent/SelectionValue",
+          "property": "text"
+        }
+      ]
+    }
+  ]
+}

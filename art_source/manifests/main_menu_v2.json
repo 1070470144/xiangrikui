@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/mm_art_manifest.schema.json",
+  "schema_version": 1,
+  "feature": "main_menu_v2",
+  "scene": "res://scenes/main.tscn",
+  "root_node": "Main",
+  "style": {
+    "reference_images": [
+      "res://assets/backgrounds/ART_BG_MainMenu_Greenhouse.png",
+      "res://art_source/evidence/main_menu_runtime.png",
+      "res://docs/superpowers/specs/2026-09-29-greenhouse-gardener-record-menu-design.md"
+    ],
+    "prompt_prefix": "《最后的向日葵》末日温室绘本风：深墨绿旧园艺档案纸、氧化黄铜细边、暗色温室玻璃、克制暖金高光与冷蓝月光；继承当前 Godot 主菜单的低视觉密度，不引用外部美术风格",
+    "evidence": [
+      {"source": "res://assets/backgrounds/ART_BG_MainMenu_Greenhouse.png", "kind": "runtime_asset", "reason": "实际主菜单背景，作为温室色温、材质和光线基准"},
+      {"source": "res://art_source/evidence/main_menu_runtime.png", "kind": "runtime_screenshot", "reason": "主菜单实际运行证据，确认面板尺寸、信息层级和控件位置"},
+      {"source": "res://assets/ui/generated/mm_greenhouse_record_panel_v2.png", "kind": "runtime_asset", "reason": "现有档案面板，作为边缘处理、表面纹理和视觉重量基准"},
+      {"source": "res://assets/ui/generated/mm_greenhouse_primary_v2_normal.png", "kind": "runtime_asset", "reason": "现有主操作正常态，作为文字安全区与主操作材质基准"},
+      {"source": "res://assets/ui/generated/mm_greenhouse_secondary_v2_normal.png", "kind": "runtime_asset", "reason": "现有目录正常态，作为低对比底线与次级层级基准"},
+      {"source": "res://assets/ui/generated/mm_greenhouse_account_plate_v2.png", "kind": "runtime_asset", "reason": "现有账号铭牌，作为小型横向控件材质基准"},
+      {"source": "res://assets/ui/UI_ICON_Repair.png", "kind": "runtime_asset", "reason": "现有项目图标，作为小尺寸轮廓和暖金对比基准"},
+      {"source": "res://docs/superpowers/specs/2026-09-29-greenhouse-gardener-record-menu-design.md", "kind": "design_system", "reason": "已确认的温室园丁档案视觉约束"}
+    ],
+    "sprite_gen_contract": "sprite-gen/docs/gen.md",
+    "visual_anchor": "暗绿涂漆金属与旧档案纸面，氧化黄铜窄边，边缘少量磨损，中央干净均匀；主光仍是现有背景左侧冷月光，黄铜只承接微弱暖色反光",
+    "comfort_constraints": ["面板与控件文字区域保持低纹理", "按钮高度至少 50 像素", "默认与悬停状态保持可辨但不闪烁", "状态图只改变边缘亮度或压按深度", "控制高光和饱和度，保证浅色文字对比"],
+    "avoid": ["东方卷轴", "朱砂印章", "中式牌匾", "云纹", "伪文字", "水印", "按钮内场景插画", "厚重外发光", "高频噪声纹理", "未经需求要求的新增图标"]
+  },
+  "assets": [
+    {
+      "id": "journal_panel_v2",
+      "kind": "panel",
+      "role": "右侧园丁档案面板的材质母版；保持已验证几何与文字内容安全区",
+      "ui_spec": {"purpose": "右侧园丁档案底板", "display_size": [346, 506], "content_safe_area": [28, 28, 28, 22], "layout": "竖向面板，边缘装饰克制，中央内容区均匀安静", "negative": ["文字", "字母", "数字", "按钮", "图标", "花朵主体", "场景插画", "卷轴", "印章", "厚重发光"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "用途：园丁记录首页右侧面板，承载标题、进度和导航控件。\n尺寸与安全区：输出 692x1012 PNG，Godot 显示 346x506，完整显示不裁切；四周 56px 内安全边缘，内侧 82% 保持低细节，禁止在文字和按钮区域放置装饰。\n项目视觉锚点：依据 res://assets/backgrounds/ART_BG_MainMenu_Greenhouse.png、res://art_source/evidence/main_menu_runtime.png、res://assets/ui/generated/mm_greenhouse_record_panel_v2.png；深墨绿档案纸、暗色温室金属、氧化黄铜窄边、左上冷光下微弱暖反射，笔触细腻且低密度。\n构图与状态：单张竖向平面正视面板，四角轮廓稳定，中央干净平整，适配 Control StyleBoxTexture 缩放；相邻文字和按钮由 Godot 绘制，不生成状态变化。\n舒适性：低亮度、低饱和、边缘中等对比、中心纹理极轻，无动态暗示、无闪烁，高缩小比例仍能分辨内外边界。\n排除：东方卷轴、朱砂印章、中式牌匾、云纹、场景插画、花朵、伪文字、水印、logo、额外物件、烘焙 UI。\n输出：不透明完整面板，因需提供连续稳定底色；无独立环境背景。", "transparent": false},
+      "output": {"path": "res://assets/ui/generated/mm_tools/main_menu_v2/journal_panel.png", "size": [692, 1012], "mode": "nine_patch", "patch_margin": [48, 48, 48, 48]},
+      "bindings": [{"node": "PageStack/HomePage/MenuJournal", "property": "theme_override_styles/panel"}]
+    },
+    {
+      "id": "account_plate_v2",
+      "kind": "panel",
+      "role": "本地账号入口的横向铭牌母版；文字由 Godot 绘制",
+      "ui_spec": {"purpose": "右上角本地账号入口底板", "display_size": [278, 58], "content_safe_area": [46, 10, 18, 10], "layout": "横向窄铭牌，左侧小徽记槽，文字区清洁留空", "negative": ["文字", "字母", "数字", "头像", "卷轴", "题签", "场景插画", "发光"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "用途：本地账号入口底板，必须让玩家辨识其可交互，不绘制实际文字。\n尺寸与安全区：输出 556x116 PNG，Godot 显示 278x58，不裁切；左侧 46px 显示区预留徽记槽，右侧文字安全区全空。\n项目视觉锚点：依据 res://assets/backgrounds/ART_BG_MainMenu_Greenhouse.png、res://art_source/evidence/main_menu_runtime.png、res://assets/ui/generated/mm_greenhouse_account_plate_v2.png；深墨绿旧漆金属、氧化黄铜细边、微弱冷色反射与细腻磨损。\n构图与状态：单个横向正视铭牌，轮廓对称稳定，主体装饰仅限外缘；正常态母版，hover/pressed/disabled 由 Godot 对此母版做状态化处理，不需要不同造型。\n舒适性：低纹理密度、柔和对比，不闪烁不发光，缩至 278x58 时边界清楚。\n排除：文字、字母、数字、人脸、logo、水印、卷轴、印章、伪文字、场景背景、烘焙按钮标签。\n输出：不透明独立底板，无环境背景。", "transparent": false},
+      "output": {"path": "res://assets/ui/generated/mm_tools/main_menu_v2/account_plate.png", "size": [556, 116], "mode": "full_image"},
+      "bindings": [{"node": "PageStack/HomePage/AccountEntry", "property": "theme_override_styles/normal"}]
+    },
+    {
+      "id": "primary_button_v2",
+      "kind": "button",
+      "role": "继续守夜主操作视觉母版；派生 hover/pressed/disabled 同轮廓状态",
+      "states": ["normal", "hover", "pressed", "disabled"],
+      "ui_spec": {"purpose": "继续守夜主操作按钮底图", "display_size": [290, 70], "content_safe_area": [46, 14, 46, 14], "layout": "低矮横向温室金属按钮，中心无装饰", "state_contract": "各状态保持轮廓与装饰位置一致，仅边缘亮度、少量暖光和按压深度变化", "negative": ["文字", "字母", "数字", "图标", "场景插画", "花朵", "卷轴", "牌匾", "厚重发光"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "用途：继续守夜唯一主操作按钮底图，中心留给 Godot 标签文字。\n尺寸与安全区：输出 580x140 PNG，Godot 显示 290x70，不裁切；中央 76% 宽、60% 高完全留空，文字与焦点轮廓安全区内不放纹理。\n项目视觉锚点：依据 res://assets/backgrounds/ART_BG_MainMenu_Greenhouse.png、res://art_source/evidence/main_menu_runtime.png、res://assets/ui/generated/mm_greenhouse_primary_v2_normal.png；深绿旧漆金属、细氧化黄铜边缘、局部微弱冷蓝反射，与现有温室绘本笔触一致。\n构图与状态：正视横向矩形，外缘轮廓规则且可九宫格拉伸；先生成 normal 母版，其他三态保留完全相同的几何，仅 hover 稍提亮边缘，pressed 轻微压暗，disabled 降低饱和与亮度，不改变中心色块结构。\n舒适性：文字区与背景有足够对比，状态差异清晰但不闪烁，不加粒子或运动暗示，纹理少且尺度大。\n排除：文字、数字、logo、水印、伪字符、额外图标、花朵、卷轴、场景插画、厚重外发光、烘焙 UI。\n输出：不透明按钮底图，无环境背景。", "transparent": false},
+      "output": {"path_pattern": "res://assets/ui/generated/mm_tools/main_menu_v2/primary_button_{state}.png", "size": [580, 140], "mode": "nine_patch", "patch_margin": [20, 20, 20, 20]},
+      "bindings": [{"node": "PageStack/HomePage/MenuJournal/ContentMargin/ActionList/PrimaryStartButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "pressed": "theme_override_styles/pressed", "disabled": "theme_override_styles/disabled"}}]
+    },
+    {
+      "id": "secondary_row_v2",
+      "kind": "button",
+      "role": "卡组、七夜记录、图鉴与设置共用的目录行母版；派生各交互态",
+      "states": ["normal", "hover", "pressed", "disabled"],
+      "ui_spec": {"purpose": "档案目录次级操作行", "display_size": [290, 50], "content_safe_area": [36, 10, 36, 10], "layout": "低矮深绿目录行，仅保留细黄铜底线和极淡纸面层次", "state_contract": "各状态保持完全相同几何，仅底线亮度、纸面明度和按压深度变化", "negative": ["文字", "字母", "数字", "图标", "封闭厚框", "场景插画", "花朵", "卷轴", "牌匾", "厚重发光"]},
+      "generation": {"enabled": true, "provider": "mm-api", "model": "gpt-image-2", "prompt": "用途：园丁档案内四个次级导航按钮共用底图。\n尺寸与安全区：输出 580x100 PNG，Godot 显示 290x50，不裁切；中央 82% 留空显示 Godot 标签，装饰不得进入文字安全区。\n项目视觉锚点：依据 res://assets/backgrounds/ART_BG_MainMenu_Greenhouse.png、res://art_source/evidence/main_menu_runtime.png、res://assets/ui/generated/mm_greenhouse_secondary_v2_normal.png；深墨绿旧纸或暗色金属，细黄铜底线，边缘真实微磨损，温室冷光色温。\n构图与状态：横向低矮平直目录行，底线和角部特征简单、适配九宫格；normal 母版的 hover 仅提亮底线，pressed 轻压暗，disabled 降低饱和度，全部状态共享轮廓。\n舒适性：非常低纹理密度，文字背景均匀，对比适中；状态变化静态、无闪烁、无粒子。\n排除：文字、数字、图标、logo、水印、伪字符、封闭厚边框、花朵、场景插画、卷轴、牌匾、厚重外发光、烘焙 UI。\n输出：不透明控件底图，无环境背景。", "transparent": false},
+      "output": {"path_pattern": "res://assets/ui/generated/mm_tools/main_menu_v2/secondary_row_{state}.png", "size": [580, 100], "mode": "nine_patch", "patch_margin": [16, 16, 16, 16]},
+      "bindings": [
+        {"node": "PageStack/HomePage/MenuJournal/ContentMargin/ActionList/DeckBuilderButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "pressed": "theme_override_styles/pressed", "disabled": "theme_override_styles/disabled"}},
+        {"node": "PageStack/HomePage/MenuJournal/ContentMargin/ActionList/NightRecordsButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "pressed": "theme_override_styles/pressed", "disabled": "theme_override_styles/disabled"}},
+        {"node": "PageStack/HomePage/MenuJournal/ContentMargin/ActionList/CodexButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "pressed": "theme_override_styles/pressed", "disabled": "theme_override_styles/disabled"}},
+        {"node": "PageStack/HomePage/MenuJournal/ContentMargin/ActionList/SettingsButton", "property_map": {"normal": "theme_override_styles/normal", "hover": "theme_override_styles/hover", "pressed": "theme_override_styles/pressed", "disabled": "theme_override_styles/disabled"}}
+      ]
+    }
+  ]
+}

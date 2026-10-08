@@ -1,0 +1,2745 @@
+{
+  "contract": "xiangrikui_video_motion_plan",
+  "version": 1,
+  "date": "2026-10-02",
+  "status": "planning_only_no_generation",
+  "counts": {
+    "plant_types": 15,
+    "mother_forms": 57,
+    "new_image_calls": 70,
+    "video_calls": 144,
+    "video_seconds": 360,
+    "max_regeneration_calls": 0
+  },
+  "runtime": {
+    "frame_cell": [
+      256,
+      256
+    ],
+    "plant_body_height": 144,
+    "mother_body_height": 224,
+    "fps": 12,
+    "states": {
+      "idle": {
+        "loop": true
+      },
+      "attack": {
+        "loop": false
+      },
+      "transform": {
+        "loop": false
+      }
+    },
+    "anchor": "fixed_root_contact",
+    "required_qa": [
+      "video_ftyp",
+      "observed_real_fps",
+      "real_alpha",
+      "no_key_color_loss",
+      "subject_edge_no_contact",
+      "root_drift",
+      "pinned_idle_seam",
+      "single_attack_return",
+      "firstlast_transform",
+      "per_form_identity",
+      "Godot_runtime_capture"
+    ]
+  },
+  "plants": [
+    "thorn_flower",
+    "prism_flower",
+    "lantern_flower",
+    "frost_bell",
+    "honeydew_flower",
+    "storm_flower",
+    "gale_flower",
+    "sunwell_flower",
+    "ember_flower",
+    "slumber_flower",
+    "spear_bamboo",
+    "burst_flower",
+    "stone_flower",
+    "cleanse_flower",
+    "drum_flower"
+  ],
+  "mother_forms": [
+    {
+      "id": "sun_arrow",
+      "type": "path",
+      "prior": "base",
+      "path": "sun_arrow"
+    },
+    {
+      "id": "root_heart",
+      "type": "path",
+      "prior": "base",
+      "path": "root_heart"
+    },
+    {
+      "id": "dawn_pulse",
+      "type": "path",
+      "prior": "base",
+      "path": "dawn_pulse"
+    },
+    {
+      "id": "mother_sunseed_01",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunseed",
+      "rank": 1,
+      "prior": "sun_arrow"
+    },
+    {
+      "id": "mother_sunseed_02",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunseed",
+      "rank": 2,
+      "prior": "mother_sunseed_01"
+    },
+    {
+      "id": "mother_sunseed_03",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunseed",
+      "rank": 3,
+      "prior": "mother_sunseed_02"
+    },
+    {
+      "id": "mother_sunseed_04",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunseed",
+      "rank": 4,
+      "prior": "mother_sunseed_03"
+    },
+    {
+      "id": "mother_sunseed_05",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunseed",
+      "rank": 5,
+      "prior": "mother_sunseed_04"
+    },
+    {
+      "id": "mother_sunseed_06",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunseed",
+      "rank": 6,
+      "prior": "mother_sunseed_05"
+    },
+    {
+      "id": "mother_corona_01",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "corona",
+      "rank": 1,
+      "prior": "sun_arrow"
+    },
+    {
+      "id": "mother_corona_02",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "corona",
+      "rank": 2,
+      "prior": "mother_corona_01"
+    },
+    {
+      "id": "mother_corona_03",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "corona",
+      "rank": 3,
+      "prior": "mother_corona_02"
+    },
+    {
+      "id": "mother_corona_04",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "corona",
+      "rank": 4,
+      "prior": "mother_corona_03"
+    },
+    {
+      "id": "mother_corona_05",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "corona",
+      "rank": 5,
+      "prior": "mother_corona_04"
+    },
+    {
+      "id": "mother_corona_06",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "corona",
+      "rank": 6,
+      "prior": "mother_corona_05"
+    },
+    {
+      "id": "mother_sunburst_01",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunburst",
+      "rank": 1,
+      "prior": "sun_arrow"
+    },
+    {
+      "id": "mother_sunburst_02",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunburst",
+      "rank": 2,
+      "prior": "mother_sunburst_01"
+    },
+    {
+      "id": "mother_sunburst_03",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunburst",
+      "rank": 3,
+      "prior": "mother_sunburst_02"
+    },
+    {
+      "id": "mother_sunburst_04",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunburst",
+      "rank": 4,
+      "prior": "mother_sunburst_03"
+    },
+    {
+      "id": "mother_sunburst_05",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunburst",
+      "rank": 5,
+      "prior": "mother_sunburst_04"
+    },
+    {
+      "id": "mother_sunburst_06",
+      "type": "upgrade",
+      "path": "sun_arrow",
+      "branch": "sunburst",
+      "rank": 6,
+      "prior": "mother_sunburst_05"
+    },
+    {
+      "id": "mother_receptacle_01",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "receptacle",
+      "rank": 1,
+      "prior": "root_heart"
+    },
+    {
+      "id": "mother_receptacle_02",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "receptacle",
+      "rank": 2,
+      "prior": "mother_receptacle_01"
+    },
+    {
+      "id": "mother_receptacle_03",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "receptacle",
+      "rank": 3,
+      "prior": "mother_receptacle_02"
+    },
+    {
+      "id": "mother_receptacle_04",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "receptacle",
+      "rank": 4,
+      "prior": "mother_receptacle_03"
+    },
+    {
+      "id": "mother_receptacle_05",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "receptacle",
+      "rank": 5,
+      "prior": "mother_receptacle_04"
+    },
+    {
+      "id": "mother_receptacle_06",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "receptacle",
+      "rank": 6,
+      "prior": "mother_receptacle_05"
+    },
+    {
+      "id": "mother_sap_01",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "sap",
+      "rank": 1,
+      "prior": "root_heart"
+    },
+    {
+      "id": "mother_sap_02",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "sap",
+      "rank": 2,
+      "prior": "mother_sap_01"
+    },
+    {
+      "id": "mother_sap_03",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "sap",
+      "rank": 3,
+      "prior": "mother_sap_02"
+    },
+    {
+      "id": "mother_sap_04",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "sap",
+      "rank": 4,
+      "prior": "mother_sap_03"
+    },
+    {
+      "id": "mother_sap_05",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "sap",
+      "rank": 5,
+      "prior": "mother_sap_04"
+    },
+    {
+      "id": "mother_sap_06",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "sap",
+      "rank": 6,
+      "prior": "mother_sap_05"
+    },
+    {
+      "id": "mother_counterroot_01",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "counterroot",
+      "rank": 1,
+      "prior": "root_heart"
+    },
+    {
+      "id": "mother_counterroot_02",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "counterroot",
+      "rank": 2,
+      "prior": "mother_counterroot_01"
+    },
+    {
+      "id": "mother_counterroot_03",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "counterroot",
+      "rank": 3,
+      "prior": "mother_counterroot_02"
+    },
+    {
+      "id": "mother_counterroot_04",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "counterroot",
+      "rank": 4,
+      "prior": "mother_counterroot_03"
+    },
+    {
+      "id": "mother_counterroot_05",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "counterroot",
+      "rank": 5,
+      "prior": "mother_counterroot_04"
+    },
+    {
+      "id": "mother_counterroot_06",
+      "type": "upgrade",
+      "path": "root_heart",
+      "branch": "counterroot",
+      "rank": 6,
+      "prior": "mother_counterroot_05"
+    },
+    {
+      "id": "mother_charge_01",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "charge",
+      "rank": 1,
+      "prior": "dawn_pulse"
+    },
+    {
+      "id": "mother_charge_02",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "charge",
+      "rank": 2,
+      "prior": "mother_charge_01"
+    },
+    {
+      "id": "mother_charge_03",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "charge",
+      "rank": 3,
+      "prior": "mother_charge_02"
+    },
+    {
+      "id": "mother_charge_04",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "charge",
+      "rank": 4,
+      "prior": "mother_charge_03"
+    },
+    {
+      "id": "mother_charge_05",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "charge",
+      "rank": 5,
+      "prior": "mother_charge_04"
+    },
+    {
+      "id": "mother_charge_06",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "charge",
+      "rank": 6,
+      "prior": "mother_charge_05"
+    },
+    {
+      "id": "mother_quelling_01",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "quelling",
+      "rank": 1,
+      "prior": "dawn_pulse"
+    },
+    {
+      "id": "mother_quelling_02",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "quelling",
+      "rank": 2,
+      "prior": "mother_quelling_01"
+    },
+    {
+      "id": "mother_quelling_03",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "quelling",
+      "rank": 3,
+      "prior": "mother_quelling_02"
+    },
+    {
+      "id": "mother_quelling_04",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "quelling",
+      "rank": 4,
+      "prior": "mother_quelling_03"
+    },
+    {
+      "id": "mother_quelling_05",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "quelling",
+      "rank": 5,
+      "prior": "mother_quelling_04"
+    },
+    {
+      "id": "mother_quelling_06",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "quelling",
+      "rank": 6,
+      "prior": "mother_quelling_05"
+    },
+    {
+      "id": "mother_morningstar_01",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "morningstar",
+      "rank": 1,
+      "prior": "dawn_pulse"
+    },
+    {
+      "id": "mother_morningstar_02",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "morningstar",
+      "rank": 2,
+      "prior": "mother_morningstar_01"
+    },
+    {
+      "id": "mother_morningstar_03",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "morningstar",
+      "rank": 3,
+      "prior": "mother_morningstar_02"
+    },
+    {
+      "id": "mother_morningstar_04",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "morningstar",
+      "rank": 4,
+      "prior": "mother_morningstar_03"
+    },
+    {
+      "id": "mother_morningstar_05",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "morningstar",
+      "rank": 5,
+      "prior": "mother_morningstar_04"
+    },
+    {
+      "id": "mother_morningstar_06",
+      "type": "upgrade",
+      "path": "dawn_pulse",
+      "branch": "morningstar",
+      "rank": 6,
+      "prior": "mother_morningstar_05"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "thorn_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/thorn_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "thorn_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/thorn_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "prism_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/ART_PLANT_PrismFlower_Powered.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/prism_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "prism_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/ART_PLANT_PrismFlower_Powered.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/prism_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "lantern_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/lantern_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "lantern_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/lantern_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/lantern_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "lantern_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/lantern_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/lantern_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "frost_bell_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/frost_bell.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "frost_bell_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/frost_bell.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/frost_bell/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "frost_bell_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/frost_bell.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/frost_bell/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "honeydew_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/honeydew_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "honeydew_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/honeydew_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/honeydew_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "honeydew_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/honeydew_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/honeydew_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "storm_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/storm_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "storm_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/storm_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/storm_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "storm_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/storm_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/storm_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "gale_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/gale_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "gale_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/gale_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/gale_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "gale_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/gale_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/gale_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "sunwell_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/sunwell_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "sunwell_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/sunwell_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/sunwell_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "sunwell_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/sunwell_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/sunwell_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "ember_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/ember_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "ember_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/ember_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/ember_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "ember_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/ember_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/ember_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "slumber_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/slumber_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "slumber_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/slumber_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/slumber_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "slumber_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/slumber_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/slumber_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "spear_bamboo_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/spear_bamboo.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "spear_bamboo_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/spear_bamboo.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/spear_bamboo/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "spear_bamboo_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/spear_bamboo.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/spear_bamboo/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "burst_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/burst_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "burst_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/burst_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/burst_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "burst_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/burst_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/burst_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "stone_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/stone_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "stone_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/stone_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/stone_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "stone_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/stone_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/stone_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "cleanse_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/cleanse_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "cleanse_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/cleanse_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/cleanse_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "cleanse_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/cleanse_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/cleanse_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "drum_flower_still",
+      "kind": "image",
+      "source_reference": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+      "out": "res://assets/plants/generated/plant_expansion/drum_flower.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "drum_flower_idle",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/drum_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/plant_motion/drum_flower/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "drum_flower_attack",
+      "kind": "video",
+      "source": "res://assets/plants/generated/plant_expansion/drum_flower.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/plant_motion/drum_flower/attack/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "sun_arrow_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/sun_arrow.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "sun_arrow_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/sun_arrow.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/sun_arrow/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "sun_arrow_transform",
+      "kind": "video",
+      "source": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "last_frame": "res://assets/core/generated/mother_forms/sun_arrow.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/sun_arrow/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "root_heart_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/root_heart.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "root_heart_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/root_heart.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/root_heart/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "root_heart_transform",
+      "kind": "video",
+      "source": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "last_frame": "res://assets/core/generated/mother_forms/root_heart.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/root_heart/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "dawn_pulse_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/dawn_pulse.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "dawn_pulse_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/dawn_pulse.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/dawn_pulse/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "dawn_pulse_transform",
+      "kind": "video",
+      "source": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "last_frame": "res://assets/core/generated/mother_forms/dawn_pulse.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/dawn_pulse/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_01_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunseed_01.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_01_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_01.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_01/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_01_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/sun_arrow.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunseed_01.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_01/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_02_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunseed_02.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_02_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_02.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_02/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_02_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_01.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunseed_02.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_02/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_03_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunseed_03.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_03_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_03.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_03/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_03_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_02.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunseed_03.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_03/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_04_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunseed_04.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_04_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_04.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_04/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_04_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_03.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunseed_04.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_04/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_05_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunseed_05.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_05_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_05.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_05/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_05_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_04.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunseed_05.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_05/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_06_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunseed_06.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_06_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_06.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_06/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunseed_06_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunseed_05.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunseed_06.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunseed_06/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_01_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_corona_01.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_01_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_01.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_corona_01/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_01_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/sun_arrow.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_corona_01.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_corona_01/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_02_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_corona_02.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_02_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_02.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_corona_02/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_02_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_01.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_corona_02.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_corona_02/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_03_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_corona_03.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_03_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_03.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_corona_03/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_03_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_02.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_corona_03.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_corona_03/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_04_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_corona_04.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_04_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_04.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_corona_04/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_04_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_03.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_corona_04.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_corona_04/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_05_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_corona_05.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_05_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_05.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_corona_05/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_05_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_04.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_corona_05.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_corona_05/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_06_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_corona_06.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_06_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_06.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_corona_06/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_corona_06_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_corona_05.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_corona_06.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_corona_06/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_01_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunburst_01.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_01_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_01.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_01/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_01_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/sun_arrow.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunburst_01.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_01/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_02_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunburst_02.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_02_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_02.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_02/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_02_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_01.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunburst_02.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_02/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_03_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunburst_03.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_03_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_03.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_03/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_03_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_02.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunburst_03.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_03/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_04_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunburst_04.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_04_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_04.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_04/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_04_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_03.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunburst_04.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_04/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_05_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunburst_05.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_05_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_05.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_05/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_05_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_04.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunburst_05.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_05/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_06_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sunburst_06.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_06_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_06.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_06/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sunburst_06_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sunburst_05.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sunburst_06.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sunburst_06/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_01_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_receptacle_01.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_01_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_01.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_01/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_01_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/root_heart.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_receptacle_01.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_01/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_02_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_receptacle_02.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_02_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_02.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_02/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_02_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_01.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_receptacle_02.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_02/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_03_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_receptacle_03.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_03_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_03.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_03/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_03_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_02.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_receptacle_03.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_03/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_04_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_receptacle_04.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_04_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_04.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_04/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_04_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_03.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_receptacle_04.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_04/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_05_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_receptacle_05.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_05_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_05.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_05/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_05_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_04.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_receptacle_05.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_05/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_06_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_receptacle_06.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_06_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_06.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_06/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_receptacle_06_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_receptacle_05.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_receptacle_06.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_receptacle_06/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_01_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sap_01.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_01_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_01.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sap_01/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_01_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/root_heart.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sap_01.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sap_01/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_02_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sap_02.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_02_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_02.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sap_02/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_02_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_01.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sap_02.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sap_02/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_03_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sap_03.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_03_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_03.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sap_03/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_03_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_02.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sap_03.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sap_03/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_04_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sap_04.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_04_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_04.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sap_04/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_04_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_03.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sap_04.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sap_04/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_05_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sap_05.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_05_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_05.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sap_05/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_05_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_04.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sap_05.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sap_05/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_06_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_sap_06.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_06_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_06.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_sap_06/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_sap_06_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_sap_05.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_sap_06.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_sap_06/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_01_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_counterroot_01.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_01_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_01.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_01/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_01_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/root_heart.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_counterroot_01.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_01/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_02_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_counterroot_02.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_02_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_02.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_02/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_02_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_01.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_counterroot_02.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_02/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_03_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_counterroot_03.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_03_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_03.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_03/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_03_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_02.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_counterroot_03.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_03/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_04_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_counterroot_04.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_04_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_04.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_04/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_04_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_03.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_counterroot_04.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_04/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_05_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_counterroot_05.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_05_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_05.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_05/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_05_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_04.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_counterroot_05.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_05/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_06_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_counterroot_06.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_06_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_06.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_06/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_counterroot_06_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_counterroot_05.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_counterroot_06.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_counterroot_06/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_01_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_charge_01.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_01_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_01.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_charge_01/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_01_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/dawn_pulse.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_charge_01.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_charge_01/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_02_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_charge_02.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_02_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_02.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_charge_02/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_02_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_01.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_charge_02.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_charge_02/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_03_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_charge_03.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_03_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_03.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_charge_03/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_03_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_02.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_charge_03.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_charge_03/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_04_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_charge_04.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_04_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_04.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_charge_04/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_04_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_03.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_charge_04.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_charge_04/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_05_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_charge_05.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_05_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_05.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_charge_05/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_05_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_04.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_charge_05.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_charge_05/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_06_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_charge_06.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_06_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_06.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_charge_06/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_charge_06_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_charge_05.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_charge_06.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_charge_06/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_01_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_quelling_01.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_01_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_01.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_01/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_01_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/dawn_pulse.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_quelling_01.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_01/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_02_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_quelling_02.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_02_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_02.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_02/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_02_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_01.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_quelling_02.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_02/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_03_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_quelling_03.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_03_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_03.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_03/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_03_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_02.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_quelling_03.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_03/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_04_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_quelling_04.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_04_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_04.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_04/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_04_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_03.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_quelling_04.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_04/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_05_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_quelling_05.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_05_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_05.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_05/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_05_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_04.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_quelling_05.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_05/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_06_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_quelling_06.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_06_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_06.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_06/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_quelling_06_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_quelling_05.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_quelling_06.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_quelling_06/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_01_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_morningstar_01.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_01_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_01.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_01/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_01_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/dawn_pulse.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_morningstar_01.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_01/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_02_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_morningstar_02.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_02_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_02.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_02/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_02_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_01.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_morningstar_02.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_02/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_03_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_morningstar_03.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_03_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_03.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_03/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_03_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_02.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_morningstar_03.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_03/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_04_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_morningstar_04.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_04_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_04.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_04/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_04_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_03.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_morningstar_04.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_04/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_05_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_morningstar_05.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_05_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_05.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_05/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_05_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_04.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_morningstar_05.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_05/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_06_still",
+      "kind": "image",
+      "source_reference": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+      "out": "res://assets/core/generated/mother_forms/mother_morningstar_06.png",
+      "provider": "mm-api",
+      "model": "gpt-image-2",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_06_idle",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_06.png",
+      "last_frame": "same_as_source",
+      "duration_seconds": 3,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_06/idle/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    },
+    {
+      "id": "mother_morningstar_06_transform",
+      "kind": "video",
+      "source": "res://assets/core/generated/mother_forms/mother_morningstar_05.png",
+      "last_frame": "res://assets/core/generated/mother_forms/mother_morningstar_06.png",
+      "duration_seconds": 2,
+      "out": "res://art_source/generated/mother_motion/mother_morningstar_06/transform/clip.mp4",
+      "provider": "unresolved_video",
+      "model": "unresolved_video",
+      "approval": "pending"
+    }
+  ],
+  "blockers": [
+    "video_provider_endpoint_model_and_credential_authorization",
+    "grok_credential_unavailable",
+    "ffmpeg_ffprobe_img2webp_not_found",
+    "paid_concrete_batch_confirmation_pending"
+  ],
+  "notes": [
+    "Image endpoint gpt-image-2 is not a video endpoint.",
+    "Existing monster pipeline uses image rows, not video; do not present image rows or shader sway as video output.",
+    "Plant video loops use magenta chroma to protect green botanical anatomy.",
+    "Transform target describes one path or upgrade form, not all combinatorial active upgrades."
+  ]
+}

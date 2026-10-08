@@ -1,0 +1,20 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "Single isolated horizontal game UI primary button plate on a uniform pure white background. Exact visible button proportion 4.53:1, wide and low, front-facing orthographic view with no perspective. Restrained abandoned greenhouse design: dark bottle-green translucent glass center, thin aged brass outline, tiny symmetrical botanical vine corner brackets only, subtle surface wear, faint warm edge glint. The complete outer silhouette must be clean, balanced and symmetrical. Keep the central 72 percent flat, calm and decoration-free for later Chinese text. One button only. No text, letters, numbers, icons, flowers, scene, extra panels, drop shadow, watermark, fake writing, heavy ornament or glow. Leave generous white margin around the object for clean background removal.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\main_menu_primary_v2.generated.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\main_menu_primary_v2.generated.png.raw.png",
+  "raw_bytes": 983505,
+  "elapsed_seconds": 46.046,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

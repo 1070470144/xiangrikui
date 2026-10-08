@@ -1,0 +1,2071 @@
+{
+  "$schema": "../schemas/mm_art_manifest.schema.json",
+  "schema_version": 1,
+  "feature": "deck_builder",
+  "scene": "res://scenes/deck_builder.tscn",
+  "root_node": "DeckBuilder",
+  "style": {
+    "reference_images": [
+      "res://art_source/evidence/deck_builder_runtime.png",
+      "res://output/imagegen/previews/03-deck-builder.png"
+    ],
+    "prompt_prefix": "《最后的向日葵》卡组配置界面，末日温室植物收藏档案风格，深蓝黑与墨绿底色，氧化黄铜细边，暖金光能点缀；用于 Godot 1152x648 桌面卡牌收藏与组牌界面，保持紧凑清晰并为运行时文字和卡牌插画留白",
+    "evidence": [
+      {
+        "source": "res://Design/Sunflower-Defense-Art-Style-Guide.md",
+        "kind": "art_guide",
+        "reason": "项目批准的末日温室色彩、材质、植物造型和界面视觉语言"
+      },
+      {
+        "source": "res://art_source/evidence/deck_builder_runtime.png",
+        "kind": "runtime_screenshot",
+        "reason": "Godot 卡组配置界面实际运行截图，确认三栏布局、卡牌密度和控件显示尺寸"
+      },
+      {
+        "source": "res://output/imagegen/previews/03-deck-builder.png",
+        "kind": "runtime_screenshot",
+        "reason": "已纳入版本管理的卡组配置整体视觉记录，用于核对植物档案布局和信息层级"
+      }
+    ],
+    "sprite_gen_contract": "sprite-gen/docs/gen.md",
+    "visual_anchor": "24 张战斗卡各有独立植物插画；暖金主光与深绿温室阴影统一，卡面名称及插画窗口按品质框位对齐。",
+    "comfort_constraints": [
+      "卡牌在 158x196 显示尺寸下有清晰插画与轮廓，1152x648 下显示两排",
+      "所有面板中央保持低细节以承载运行时文字与卡牌",
+      "交互高亮仅改变边缘亮度和按压深度",
+      "底栏按钮保持至少 48 像素高度"
+    ],
+    "avoid": [
+      "伪文字",
+      "水印",
+      "现代科技 HUD",
+      "霓虹赛博风",
+      "玻璃拟态",
+      "高频植物纹样",
+      "厚重外发光",
+      "把卡牌插画或控件画进底板"
+    ],
+    "benchmark_urls": [
+      "https://hearthstone.blizzard.com/en-us/cards",
+      "https://www.playgwent.com/en/media#/screenshots"
+    ]
+  },
+  "assets": [
+    {
+      "id": "deck_background",
+      "kind": "background",
+      "role": "卡组配置全屏温室档案室背景，中央保持低细节",
+      "ui_spec": {
+        "purpose": "1152x648 卡组配置页全屏背景",
+        "display_size": [
+          1152,
+          648
+        ],
+        "content_safe_area": [
+          24,
+          20,
+          24,
+          20
+        ],
+        "layout": "横向温室档案室，左侧卡库和右侧详情区域均保持低细节",
+        "negative": [
+          "文字",
+          "卡牌",
+          "按钮",
+          "面板框",
+          "角色",
+          "水印",
+          "高对比中心"
+        ]
+      },
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Painterly 16:9 game background for The Last Sunflower: post-apocalyptic botanical greenhouse archive, subdued deep petrol blue and forest green, soft warm amber light upper left, sparse botanical silhouettes at extreme outer edges, old greenhouse glass geometry above. Central 90 percent dark quiet low contrast for card collection UI overlay. Atmospheric hand-painted illustration, restrained lighting, no text, letters, numbers, cards, panels, buttons, UI frames, watermark, or glowing borders.",
+        "transparent": false,
+        "api_base": "https://newapi.oairegbox.cc/v1"
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/deck_background_v2.png",
+        "size": [
+          1672,
+          941
+        ],
+        "mode": "full_image"
+      },
+      "bindings": [
+        {
+          "node": "Background",
+          "property": "texture"
+        }
+      ]
+    },
+    {
+      "id": "library_panel",
+      "kind": "panel",
+      "role": "左侧四列收藏卡牌库底板",
+      "ui_spec": {
+        "purpose": "左侧可滚动收藏卡牌库底板",
+        "display_size": [
+          730,
+          496
+        ],
+        "content_safe_area": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "layout": "宽幅可拉伸面板，边缘细窄，中央容纳四列卡牌并保持安静",
+        "negative": [
+          "文字",
+          "卡牌",
+          "按钮",
+          "图标",
+          "固定格线",
+          "水印",
+          "繁密中心纹样"
+        ]
+      },
+      "generation": {
+        "enabled": false,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "宽幅深墨绿旧植物收藏档案面板，细黄铜边框和可拉伸低细节中央，用作四列运行时卡牌库底板；不包含文字、卡牌、按钮或固定格线",
+        "transparent": true
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/library_panel.png",
+        "size": [
+          720,
+          520
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "content_margin": [
+          32,
+          32,
+          32,
+          32
+        ]
+      },
+      "bindings": [],
+      "runtime": {
+        "implementation": "res://scripts/deck_builder_style.gd",
+        "reason": "Native quiet surfaces and consistent interaction states; cost distribution rendered from current draft."
+      }
+    },
+    {
+      "id": "detail_panel",
+      "kind": "panel",
+      "role": "旧右上详情面板已移除",
+      "ui_spec": {
+        "purpose": "右栏选中卡牌详情底板",
+        "display_size": [
+          350,
+          270
+        ],
+        "content_safe_area": [
+          28,
+          28,
+          28,
+          28
+        ],
+        "layout": "竖向可拉伸旧园艺手册框，中央供运行时名称、说明和数值排版",
+        "negative": [
+          "文字",
+          "数字",
+          "卡牌插画",
+          "按钮",
+          "图标",
+          "水印",
+          "繁密中央纹样"
+        ]
+      },
+      "generation": {
+        "enabled": false,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "右栏选中卡牌的竖向旧园艺手册详情底板，暗绿纸张和细黄铜边，可拉伸中央完全留空以承载运行时名称、说明和数值；不含文字、数字、插画或按钮",
+        "transparent": true
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/detail_panel.png",
+        "size": [
+          380,
+          270
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          28,
+          28,
+          28,
+          28
+        ],
+        "content_margin": [
+          28,
+          28,
+          28,
+          28
+        ]
+      },
+      "bindings": [],
+      "runtime": {
+        "implementation": "res://scripts/deck_builder_style.gd",
+        "reason": "Native quiet surfaces and consistent interaction states; cost distribution rendered from current draft."
+      }
+    },
+    {
+      "id": "deck_panel",
+      "kind": "panel",
+      "role": "右侧当前卡组清单底板",
+      "ui_spec": {
+        "purpose": "右栏当前卡组滚动清单底板",
+        "display_size": [
+          350,
+          250
+        ],
+        "content_safe_area": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "layout": "紧凑可拉伸纵向清单框，中央为运行时卡组条目留白",
+        "negative": [
+          "文字",
+          "数字",
+          "卡牌条目",
+          "按钮",
+          "图标",
+          "水印",
+          "高对比中心"
+        ]
+      },
+      "generation": {
+        "enabled": false,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "紧凑竖向当前卡组清单底板，深蓝黑旧档案纸和细黄铜边，可拉伸中央留给运行时卡组条目；不含文字、数字、卡牌或按钮",
+        "transparent": true
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/deck_panel.png",
+        "size": [
+          380,
+          250
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "content_margin": [
+          24,
+          24,
+          24,
+          24
+        ]
+      },
+      "bindings": [],
+      "runtime": {
+        "implementation": "res://scripts/deck_builder_style.gd",
+        "reason": "Native quiet surfaces and consistent interaction states; cost distribution rendered from current draft."
+      }
+    },
+    {
+      "id": "card_frame_common",
+      "kind": "panel",
+      "role": "普通收藏卡框及选中状态",
+      "states": [
+        "normal",
+        "hover",
+        "selected",
+        "disabled"
+      ],
+      "ui_spec": {
+        "purpose": "普通品质收藏卡的四态边框",
+        "display_size": [
+          158,
+          196
+        ],
+        "content_safe_area": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "layout": "固定比例卡框，装饰只在外缘，中央透明以显示运行时插画与文字",
+        "state_contract": "四态保持完全相同的 158:220 轮廓、圆角、边框厚度和刻纹位置，只改变边缘亮度、选中描边与禁用饱和度",
+        "negative": [
+          "文字",
+          "数字",
+          "卡牌插画",
+          "费用徽章",
+          "锁图标",
+          "水印",
+          "几何漂移"
+        ]
+      },
+      "generation": {
+        "enabled": false,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "普通品质植物收藏卡固定几何边框，暗绿与旧铜，装饰仅位于外缘，中央透明供运行时插画和文字；不得生成文字、数字、插画、徽章或锁图标",
+        "transparent": true
+      },
+      "output": {
+        "path_pattern": "res://art_source/generated/mm_tools/deck_builder/card_common_{state}.png",
+        "size": [
+          284,
+          396
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          24,
+          24,
+          24,
+          24
+        ]
+      },
+      "bindings": [],
+      "runtime": {
+        "implementation": "res://scripts/deck_builder_style.gd",
+        "reason": "Native quiet surfaces and consistent interaction states; cost distribution rendered from current draft."
+      }
+    },
+    {
+      "id": "card_frame_rare",
+      "kind": "panel",
+      "role": "稀有收藏卡框及选中状态",
+      "states": [
+        "normal",
+        "hover",
+        "selected",
+        "disabled"
+      ],
+      "ui_spec": {
+        "purpose": "稀有品质收藏卡的四态边框",
+        "display_size": [
+          158,
+          196
+        ],
+        "content_safe_area": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "layout": "固定比例卡框，蓝紫叶脉只在外缘，中央透明以显示运行时内容",
+        "state_contract": "四态保持完全相同的 158:220 轮廓、圆角、边框厚度和叶脉位置，只改变边缘亮度、选中描边与禁用饱和度",
+        "negative": [
+          "文字",
+          "数字",
+          "卡牌插画",
+          "费用徽章",
+          "锁图标",
+          "水印",
+          "几何漂移"
+        ]
+      },
+      "generation": {
+        "enabled": false,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "稀有品质植物收藏卡固定几何边框，暗绿底配克制蓝紫叶脉，装饰仅位于外缘，中央透明供运行时内容；不得生成文字、数字、插画、徽章或锁图标",
+        "transparent": true
+      },
+      "output": {
+        "path_pattern": "res://art_source/generated/mm_tools/deck_builder/card_rare_{state}.png",
+        "size": [
+          284,
+          396
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          24,
+          24,
+          24,
+          24
+        ]
+      },
+      "bindings": [],
+      "runtime": {
+        "implementation": "res://scripts/deck_builder_style.gd",
+        "reason": "Native quiet surfaces and consistent interaction states; cost distribution rendered from current draft."
+      }
+    },
+    {
+      "id": "card_frame_legendary",
+      "kind": "panel",
+      "role": "传奇收藏卡框及选中状态",
+      "states": [
+        "normal",
+        "hover",
+        "selected",
+        "disabled"
+      ],
+      "ui_spec": {
+        "purpose": "传奇品质收藏卡的四态边框",
+        "display_size": [
+          158,
+          196
+        ],
+        "content_safe_area": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "layout": "固定比例卡框，暖金太阳刻纹只在外缘，中央透明以显示运行时内容",
+        "state_contract": "四态保持完全相同的 158:220 轮廓、圆角、边框厚度和太阳刻纹位置，只改变边缘亮度、选中描边与禁用饱和度",
+        "negative": [
+          "文字",
+          "数字",
+          "卡牌插画",
+          "费用徽章",
+          "锁图标",
+          "水印",
+          "几何漂移"
+        ]
+      },
+      "generation": {
+        "enabled": false,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "传奇品质植物收藏卡固定几何边框，深色底配克制暖金太阳花刻纹，装饰仅位于外缘，中央透明供运行时内容；不得生成文字、数字、插画、徽章或锁图标",
+        "transparent": true
+      },
+      "output": {
+        "path_pattern": "res://art_source/generated/mm_tools/deck_builder/card_legendary_{state}.png",
+        "size": [
+          284,
+          396
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          24,
+          24,
+          24,
+          24
+        ]
+      },
+      "bindings": [],
+      "runtime": {
+        "implementation": "res://scripts/deck_builder_style.gd",
+        "reason": "Native quiet surfaces and consistent interaction states; cost distribution rendered from current draft."
+      }
+    },
+    {
+      "id": "lock_overlay",
+      "kind": "icon",
+      "role": "未解锁卡牌的锁定覆盖图标",
+      "ui_spec": {
+        "purpose": "未解锁卡牌的锁定状态图标",
+        "display_size": [
+          22,
+          22
+        ],
+        "content_safe_area": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "layout": "单个居中黄铜锁，轮廓简洁并保留透明边距",
+        "negative": [
+          "文字",
+          "数字",
+          "卡牌底板",
+          "多个图标",
+          "钥匙",
+          "水印",
+          "细碎纹理"
+        ]
+      },
+      "generation": {
+        "enabled": true,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "单个用于 22x22 卡牌锁定状态的植物藤蔓黄铜锁图标，强轮廓、透明边距；无文字、数字、卡牌底板、钥匙或多个方案",
+        "transparent": true
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/lock_overlay.png",
+        "size": [
+          96,
+          96
+        ],
+        "mode": "full_image"
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/LockOverlay",
+          "property": "texture"
+        }
+      ]
+    },
+    {
+      "id": "energy_badge",
+      "kind": "icon",
+      "role": "卡牌左上光能费用徽章",
+      "ui_spec": {
+        "purpose": "卡牌左上角运行时费用数字的徽章底板",
+        "display_size": [
+          22,
+          22
+        ],
+        "content_safe_area": [
+          6,
+          5,
+          6,
+          5
+        ],
+        "layout": "单个圆形向日葵光能徽章，中央完全留空供 Godot 数字",
+        "negative": [
+          "文字",
+          "数字",
+          "卡牌底板",
+          "多个徽章",
+          "水印",
+          "长射线",
+          "复杂花瓣"
+        ]
+      },
+      "generation": {
+        "enabled": true,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "单个用于 22x22 卡牌费用的向日葵光能徽章底板，紧凑圆形轮廓和透明边距，中央完全空白供 Godot 绘制数字；不得生成文字、数字、卡牌或多个方案",
+        "transparent": true
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/energy_badge.png",
+        "size": [
+          64,
+          64
+        ],
+        "mode": "full_image"
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/Cost",
+          "property": "theme_override_styles/normal"
+        }
+      ]
+    },
+    {
+      "id": "action_button_states",
+      "kind": "button",
+      "role": "底栏与卡牌操作按钮四态",
+      "states": [
+        "normal",
+        "hover",
+        "pressed",
+        "disabled"
+      ],
+      "ui_spec": {
+        "purpose": "底栏保存操作的四态按钮框",
+        "display_size": [
+          180,
+          48
+        ],
+        "content_safe_area": [
+          24,
+          12,
+          24,
+          12
+        ],
+        "layout": "低矮横向按钮，植物刻纹只在端部，中央留给 Godot 文本",
+        "state_contract": "四态保持完全相同的 180x48 轮廓、端部和刻纹位置，只改变亮度、边缘高光、按压深度与禁用饱和度",
+        "negative": [
+          "文字",
+          "字母",
+          "数字",
+          "图标",
+          "场景插画",
+          "水印",
+          "厚重外发光",
+          "几何漂移"
+        ]
+      },
+      "generation": {
+        "enabled": false,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "用于 180x48 底栏保存操作的低矮植物档案按钮框，暗绿底和细黄铜边，端部少量刻纹，中央完全留空供运行时文字；无文字、数字、图标或场景插画",
+        "transparent": true
+      },
+      "output": {
+        "path_pattern": "res://art_source/generated/mm_tools/deck_builder/action_button_{state}.png",
+        "size": [
+          220,
+          72
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          24,
+          18,
+          24,
+          18
+        ]
+      },
+      "bindings": [],
+      "runtime": {
+        "implementation": "res://scripts/deck_builder_style.gd",
+        "reason": "Native quiet surfaces and consistent interaction states; cost distribution rendered from current draft."
+      }
+    },
+    {
+      "id": "cost_curve_ornament",
+      "kind": "decoration",
+      "role": "费用曲线区域的克制植物刻度底纹",
+      "ui_spec": {
+        "purpose": "右栏费用曲线区域的静态植物刻度装饰",
+        "display_size": [
+          350,
+          28
+        ],
+        "content_safe_area": [
+          12,
+          4,
+          12,
+          4
+        ],
+        "layout": "单条横向暗金茎秆刻度线，细节集中在上下边缘",
+        "negative": [
+          "文字",
+          "数字",
+          "柱状图",
+          "数据点",
+          "按钮",
+          "水印",
+          "粗重背景"
+        ]
+      },
+      "generation": {
+        "enabled": false,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "用于 350x28 费用曲线区域的单条极简植物茎秆暗金刻度装饰，只提供安静底纹；无数字、文字、柱状图、数据点或背景面板",
+        "transparent": true
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/cost_curve_ornament.png",
+        "size": [
+          360,
+          54
+        ],
+        "mode": "full_image"
+      },
+      "bindings": [],
+      "runtime": {
+        "implementation": "res://scripts/deck_builder_style.gd",
+        "reason": "Native quiet surfaces and consistent interaction states; cost distribution rendered from current draft."
+      }
+    },
+    {
+      "id": "page_title_text",
+      "kind": "text",
+      "role": "页面标题由 Godot 字体绘制",
+      "generation": {
+        "enabled": false
+      },
+      "runtime": {
+        "text": "卡组配置",
+        "font_size": 28,
+        "color": "#FFE6A0"
+      },
+      "bindings": [
+        {
+          "node": "Root/TopBar/Title",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "validation_text",
+      "kind": "text",
+      "role": "卡组规则反馈由 Godot 字体绘制",
+      "generation": {
+        "enabled": false
+      },
+      "runtime": {
+        "font_size": 14,
+        "color": "#D7C993"
+      },
+      "bindings": [
+        {
+          "node": "Root/MainSplit/Sidebar/ValidationLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "card_emergency_dew_illustration_v3",
+      "kind": "illustration",
+      "role": "card_emergency_dew 独立植物档案卡面插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A glowing large dewdrop hanging from a pale white healing flower above a damaged leaf that is becoming healthy green again; luminous cool turquoise dew with warm golden highlights, gentle restorative botanical magic.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_emergency_dew.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_emergency_dew.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_emergency_dew"
+        }
+      ]
+    },
+    {
+      "id": "card_emergency_light_illustration_v3",
+      "kind": "illustration",
+      "role": "card_emergency_light 独立植物档案卡面插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A botanical lantern formed by a living translucent green leaf enclosing a bright amber sun seed, sending soft golden rays to nearby drooping foliage; lifegiving light supply and green leaves, gentle radiant core.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_emergency_light.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_emergency_light.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_emergency_light"
+        }
+      ]
+    },
+    {
+      "id": "card_focus_mark_illustration_v3",
+      "kind": "illustration",
+      "role": "card_focus_mark 独立植物档案卡面插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A single large golden glowing circular targeting sigil formed naturally from a ring of sunflower petals, with a sharply focused beam converging on a small crystal at its center; botanical concentration magic, precise symmetrical focal point.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_focus_mark.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_focus_mark.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_focus_mark"
+        }
+      ]
+    },
+    {
+      "id": "card_lure_bud_illustration_v3",
+      "kind": "illustration",
+      "role": "card_lure_bud 独立植物档案卡面插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A delicate luminous golden flower bud on a curved green stem, with a few amber fireflies drawn toward it against dark teal greenhouse foliage; mysterious alluring beacon, simple strong bud silhouette.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_lure_bud.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_lure_bud.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_lure_bud"
+        }
+      ]
+    },
+    {
+      "id": "card_root_snare_illustration_v3",
+      "kind": "illustration",
+      "role": "card_root_snare 独立植物档案卡面插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A spiral of living thorn-covered roots emerging from damp soil, wrapping around a dark stone at center; curling root silhouette, verdant moss, restrained warm amber highlights, botanical binding magic.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_root_snare.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_root_snare.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_root_snare"
+        }
+      ]
+    },
+    {
+      "id": "card_root_wall_illustration_v3",
+      "kind": "illustration",
+      "role": "card_root_wall 独立植物档案卡面插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A sturdy protective wall woven from thick interlocking tree roots, moss and broad leaves; upward arching shield-like silhouette planted firmly in soil, warm light peeking through root gaps, defensive botanical magic.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_root_wall.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_root_wall.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_root_wall"
+        }
+      ]
+    },
+    {
+      "id": "card_sun_mine_illustration_v3",
+      "kind": "illustration",
+      "role": "card_sun_mine 独立植物档案卡面插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A closed sunflower seed pod nestled in dark soil, a brilliant golden sun core glowing through the segmented shell, small radial root tendrils and a halo of drifting pollen; a charged solar botanical trap.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_sun_mine.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_sun_mine.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_sun_mine"
+        }
+      ]
+    },
+    {
+      "id": "card_sun_pierce_illustration_v3",
+      "kind": "illustration",
+      "role": "card_sun_pierce 独立植物档案卡面插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A single crystal-tipped sunflower lance firing a narrow golden ray diagonally through midnight greenhouse mist; striking luminous spearhead, elegant leaves, sense of precise focused piercing energy.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_sun_pierce.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_sun_pierce.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_sun_pierce"
+        }
+      ]
+    },
+    {
+      "id": "card_detail_overlay",
+      "kind": "panel",
+      "role": "竖版双面卡牌展示，连续旋转及点击翻面，背面显示效果档案",
+      "generation": {
+        "enabled": false
+      },
+      "runtime": {
+        "implementation": "res://scripts/card_turntable.gd",
+        "display_size": [
+          350,
+          430
+        ],
+        "interaction": "拖动旋转；点击翻面；松手吸附；背面效果可滚动"
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "CardDetailOverlay",
+          "property": "visible"
+        }
+      ]
+    },
+    {
+      "id": "card_drag_preview",
+      "kind": "panel",
+      "role": "双向拖拽时跟随鼠标显示卡牌插画、名称、消耗和落点提示",
+      "generation": {
+        "enabled": false
+      },
+      "runtime": {
+        "implementation": "res://scripts/deck_builder.gd",
+        "display_size": [
+          160,
+          130
+        ]
+      },
+      "bindings": []
+    },
+    {
+      "id": "card_material_common_v4",
+      "kind": "panel",
+      "role": "common 品质实体卡牌边框（历史版本，已由 v5 替代）",
+      "generation": {
+        "enabled": false,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "A single complete vertical collectible strategy card FRAME only, portrait 3:4, 768x1024. Transparent center aperture must be perfectly empty and transparent from x=100 to x=668 and y=150 to y=900, for runtime artwork and text. Frame occupies only the outer 12 percent of the canvas; crisp symmetric silhouette, consistent 3:4 geometry, no interior background. Premium hand-painted game UI asset for The Last Sunflower, post-apocalyptic botanical greenhouse archive, realistic material texture, soft upper-left warm light. No text, letters, numbers, symbols, logos, watermark, illustration, scene, card title, cost badge, or button. Common quality: restrained weathered dark green painted metal and aged oxidized brass, thin practical corners, tiny botanical etching, one subtle warm amber gem at top and bottom, low ornament, grounded handcrafted game card frame.",
+        "transparent": true
+      },
+      "ui_spec": {
+        "purpose": "卡库及旋转详情品质边框",
+        "display_size": [
+          350,
+          430
+        ],
+        "content_safe_area": [
+          36,
+          46,
+          36,
+          40
+        ],
+        "layout": "透明中心，外缘材质",
+        "negative": [
+          "文字",
+          "插画",
+          "水印"
+        ]
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/frames_v4/card_frame_common_v4.png",
+        "size": [
+          1086,
+          1448
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/frames_v4/card_frame_common_v4.png",
+        "size": [
+          420,
+          560
+        ]
+      },
+      "bindings": []
+    },
+    {
+      "id": "card_material_rare_v4",
+      "kind": "panel",
+      "role": "rare 品质实体卡牌边框（历史版本，已由 v5 替代）",
+      "generation": {
+        "enabled": false,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "A single complete vertical collectible strategy card FRAME only, portrait 3:4, 768x1024. Transparent center aperture must be perfectly empty and transparent from x=100 to x=668 and y=150 to y=900, for runtime artwork and text. Frame occupies only the outer 12 percent of the canvas; crisp symmetric silhouette, consistent 3:4 geometry, no interior background. Premium hand-painted game UI asset for The Last Sunflower, post-apocalyptic botanical greenhouse archive, realistic material texture, soft upper-left warm light. No text, letters, numbers, symbols, logos, watermark, illustration, scene, card title, cost badge, or button. Rare quality: dark emerald lacquer frame with cool moonlit silver and muted blue-violet enamel inlays, elegant branching leaf veins and two small pale sapphire gems, visibly more refined than common but still readable and restrained.",
+        "transparent": true
+      },
+      "ui_spec": {
+        "purpose": "卡库及旋转详情品质边框",
+        "display_size": [
+          350,
+          430
+        ],
+        "content_safe_area": [
+          36,
+          46,
+          36,
+          40
+        ],
+        "layout": "透明中心，外缘材质",
+        "negative": [
+          "文字",
+          "插画",
+          "水印"
+        ]
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/frames_v4/card_frame_rare_v4.png",
+        "size": [
+          1086,
+          1448
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/frames_v4/card_frame_rare_v4.png",
+        "size": [
+          420,
+          560
+        ]
+      },
+      "bindings": []
+    },
+    {
+      "id": "card_material_legendary_v4",
+      "kind": "panel",
+      "role": "legendary 品质实体卡牌边框（历史版本，已由 v5 替代）",
+      "generation": {
+        "enabled": false,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "A single complete vertical collectible strategy card FRAME only, portrait 3:4, 768x1024. Transparent center aperture must be perfectly empty and transparent from x=100 to x=668 and y=150 to y=900, for runtime artwork and text. Frame occupies only the outer 12 percent of the canvas; crisp symmetric silhouette, consistent 3:4 geometry, no interior background. Premium hand-painted game UI asset for The Last Sunflower, post-apocalyptic botanical greenhouse archive, realistic material texture, soft upper-left warm light. No text, letters, numbers, symbols, logos, watermark, illustration, scene, card title, cost badge, or button. Legendary quality: deep forest-black frame with rich antique gold, warm sunflower medallions at top and bottom, precise art-nouveau leaf engraving and a few restrained sun rays, premium heirloom card frame, clearly the most ornate quality.",
+        "transparent": true
+      },
+      "ui_spec": {
+        "purpose": "卡库及旋转详情品质边框",
+        "display_size": [
+          350,
+          430
+        ],
+        "content_safe_area": [
+          36,
+          46,
+          36,
+          40
+        ],
+        "layout": "透明中心，外缘材质",
+        "negative": [
+          "文字",
+          "插画",
+          "水印"
+        ]
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/frames_v4/card_frame_legendary_v4.png",
+        "size": [
+          1086,
+          1448
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/frames_v4/card_frame_legendary_v4.png",
+        "size": [
+          420,
+          560
+        ]
+      },
+      "bindings": []
+    },
+    {
+      "id": "card_face_common_v5",
+      "kind": "panel",
+      "role": "common 品质实体卡面",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "One finished physical trading-card FRONT chassis only, portrait 3:4. Single card nearly fills canvas with very small transparent exterior margin, rounded clipped corners. Realistic layered printed cardstock, beveled thin metal trim, tactile paper grain, premium hand-painted botanical fantasy collectible. Top 8 percent narrow empty name ribbon, upper middle from y=12 to y=46 percent an empty dark rectangular artwork window, lower half y=49 to y=87 percent quiet pale warm parchment rules panel entirely empty. Bottom 8 percent narrow empty metadata strip. A small EMPTY circular cost medallion fully INSIDE top-left card corner. Everything contained within card silhouette. Inspired by mature collectible game card information hierarchy, original greenhouse sunflower design. No text, letters, numbers, scene illustration, watermark, logo, floating ornaments, surrounding background. Common quality: restrained weathered dark green painted metal and aged oxidized brass, thin practical corners, tiny botanical etching, one subtle warm amber gem at top and bottom, low ornament, grounded handcrafted game card frame. Outside the single card silhouette use flat pure magenta #FF00FF, no gradient, shadow or checkerboard outside. This is a chroma key production asset.",
+        "transparent": true
+      },
+      "ui_spec": {
+        "purpose": "卡库与旋转详情完整卡面",
+        "display_size": [
+          350,
+          430
+        ],
+        "content_safe_area": [
+          30,
+          60,
+          30,
+          30
+        ],
+        "layout": "外沿透明；纸张与金属材质；运行时文字位于正面",
+        "negative": [
+          "伪文字",
+          "水印",
+          "外部背景"
+        ]
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/faces_v5/card_face_common_v5.png",
+        "size": [
+          1086,
+          1448
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/faces_v5/card_face_common_v5.png",
+        "size": [
+          700,
+          860
+        ],
+        "implementation": "res://scripts/card_material.gd",
+        "reason": "完整纹理绘制，不使用九宫格拉伸；原生透明卡背、抠色卡面经检查后裁透明边距"
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "CardMaterial",
+          "property": "frame",
+          "rarity": "common"
+        }
+      ]
+    },
+    {
+      "id": "card_face_rare_v5",
+      "kind": "panel",
+      "role": "rare 品质实体卡面",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "One finished physical trading-card FRONT chassis only, portrait 3:4. Single card nearly fills canvas with very small transparent exterior margin, rounded clipped corners. Realistic layered printed cardstock, beveled thin metal trim, tactile paper grain, premium hand-painted botanical fantasy collectible. Top 8 percent narrow empty name ribbon, upper middle from y=12 to y=46 percent an empty dark rectangular artwork window, lower half y=49 to y=87 percent quiet pale warm parchment rules panel entirely empty. Bottom 8 percent narrow empty metadata strip. A small EMPTY circular cost medallion fully INSIDE top-left card corner. Everything contained within card silhouette. Inspired by mature collectible game card information hierarchy, original greenhouse sunflower design. No text, letters, numbers, scene illustration, watermark, logo, floating ornaments, surrounding background. Rare quality: dark emerald lacquer frame with cool moonlit silver and muted blue-violet enamel inlays, elegant branching leaf veins and two small pale sapphire gems, visibly more refined than common but still readable and restrained. Outside the single card silhouette use flat pure magenta #FF00FF, no gradient, shadow or checkerboard outside. This is a chroma key production asset.",
+        "transparent": true
+      },
+      "ui_spec": {
+        "purpose": "卡库与旋转详情完整卡面",
+        "display_size": [
+          350,
+          430
+        ],
+        "content_safe_area": [
+          30,
+          60,
+          30,
+          30
+        ],
+        "layout": "外沿透明；纸张与金属材质；运行时文字位于正面",
+        "negative": [
+          "伪文字",
+          "水印",
+          "外部背景"
+        ]
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/faces_v5/card_face_rare_v5.png",
+        "size": [
+          1086,
+          1448
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/faces_v5/card_face_rare_v5.png",
+        "size": [
+          700,
+          860
+        ],
+        "implementation": "res://scripts/card_material.gd",
+        "reason": "完整纹理绘制，不使用九宫格拉伸；原生透明卡背、抠色卡面经检查后裁透明边距"
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "CardMaterial",
+          "property": "frame",
+          "rarity": "rare"
+        }
+      ]
+    },
+    {
+      "id": "card_face_legendary_v5",
+      "kind": "panel",
+      "role": "legendary 品质实体卡面",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "One finished physical trading-card FRONT chassis only, portrait 3:4. Single card nearly fills canvas with very small transparent exterior margin, rounded clipped corners. Realistic layered printed cardstock, beveled thin metal trim, tactile paper grain, premium hand-painted botanical fantasy collectible. Top 8 percent narrow empty name ribbon, upper middle from y=12 to y=46 percent an empty dark rectangular artwork window, lower half y=49 to y=87 percent quiet pale warm parchment rules panel entirely empty. Bottom 8 percent narrow empty metadata strip. A small EMPTY circular cost medallion fully INSIDE top-left card corner. Everything contained within card silhouette. Inspired by mature collectible game card information hierarchy, original greenhouse sunflower design. No text, letters, numbers, scene illustration, watermark, logo, floating ornaments, surrounding background. Legendary quality: deep forest-black frame with rich antique gold, warm sunflower medallions at top and bottom, precise art-nouveau leaf engraving and a few restrained sun rays, premium heirloom card frame, clearly the most ornate quality. Outside the single card silhouette use flat pure magenta #FF00FF, no gradient, shadow or checkerboard outside. This is a chroma key production asset.",
+        "transparent": true
+      },
+      "ui_spec": {
+        "purpose": "卡库与旋转详情完整卡面",
+        "display_size": [
+          350,
+          430
+        ],
+        "content_safe_area": [
+          30,
+          60,
+          30,
+          30
+        ],
+        "layout": "外沿透明；纸张与金属材质；运行时文字位于正面",
+        "negative": [
+          "伪文字",
+          "水印",
+          "外部背景"
+        ]
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/faces_v5/card_face_legendary_v5.png",
+        "size": [
+          1086,
+          1448
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/faces_v5/card_face_legendary_v5.png",
+        "size": [
+          700,
+          860
+        ],
+        "implementation": "res://scripts/card_material.gd",
+        "reason": "完整纹理绘制，不使用九宫格拉伸；原生透明卡背、抠色卡面经检查后裁透明边距"
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "CardMaterial",
+          "property": "frame",
+          "rarity": "legendary"
+        }
+      ]
+    },
+    {
+      "id": "card_face_back_v5",
+      "kind": "panel",
+      "role": "完整纹章卡背",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "A single finished physical trading-card BACK, portrait 3:4, nearly fills canvas with tiny transparent exterior margin. Rounded clipped corners, deep midnight green woven leather and printed cardstock, symmetric antique brass botanical filigree, central embossed sunflower seed seal within concentric leaf mandala, luminous restrained warm amber center, corner root motifs, tactile fine grain, thin bevel edge and real card thickness. Entire inside opaque richly designed; only outside silhouette transparent. Original botanical greenhouse fantasy card back, no text, letters, numbers, watermark, empty panels, illustration windows, floating elements or surrounding backdrop. Outside the single card silhouette use flat pure magenta #FF00FF, no gradient, shadow or checkerboard outside. This is a chroma key production asset.",
+        "transparent": true
+      },
+      "ui_spec": {
+        "purpose": "完整卡背",
+        "display_size": [
+          350,
+          430
+        ],
+        "content_safe_area": [
+          30,
+          60,
+          30,
+          30
+        ],
+        "layout": "外沿透明；纸张与金属材质；运行时文字位于正面",
+        "negative": [
+          "伪文字",
+          "水印",
+          "外部背景"
+        ]
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/faces_v5/card_face_back_v5.png",
+        "size": [
+          1086,
+          1448
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/faces_v5/card_face_back_v5.png",
+        "size": [
+          700,
+          860
+        ],
+        "implementation": "res://scripts/card_material.gd",
+        "reason": "完整纹理绘制，不使用九宫格拉伸；原生透明卡背、抠色卡面经检查后裁透明边距"
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "CardMaterial",
+          "property": "frame",
+          "rarity": "back"
+        }
+      ]
+    },
+    {
+      "id": "button_secondary_v6",
+      "kind": "button",
+      "role": "旧铜植物皮革按钮底板",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "One single horizontal game UI button plate, wide 3:1 silhouette, centered and nearly filling canvas. Front orthographic view, clipped rounded corners, realistic fine-grain embossed dark forest green leather center, slim weathered brass double bevel rim, tactile worn metal, delicate botanical engravings only at the two ends. Inspired by mature fantasy collectible card game material hierarchy, original post-apocalyptic greenhouse botanical art. Center 75 percent quiet dark leather with visible subtle grain to support runtime white Chinese text. No text, glyphs, letters, numbers, icons, watermark, surrounding panel or scenery. Button entire interior opaque; outside silhouette pure flat magenta #FF00FF for chroma key production. Restrained oxidized old copper rim, cool emerald leather, tiny etched leaf tips at ends, subtle upper-left highlight.",
+        "transparent": true
+      },
+      "ui_spec": {
+        "purpose": "卡组按钮材质与交互状态",
+        "display_size": [
+          180,
+          48
+        ],
+        "content_safe_area": [
+          20,
+          8,
+          20,
+          8
+        ],
+        "layout": "两端叶纹与金属边，中央皮革供运行时文字；九宫格保留角部",
+        "negative": [
+          "文字",
+          "水印",
+          "中心徽章"
+        ]
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/buttons_v6/button_secondary_v6.png",
+        "size": [
+          2137,
+          736
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/buttons_v6/button_secondary_v6.png",
+        "size": [
+          192,
+          48
+        ],
+        "implementation": "res://scripts/deck_builder_style.gd",
+        "reason": "sprite-gen 抠色，裁透明外边距；同一纹理调色实现悬停/按下/禁用，保持轮廓稳定"
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "ButtonPlate",
+          "property": "texture",
+          "variant": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "button_primary_v6",
+      "kind": "button",
+      "role": "金叶纹主操作按钮底板",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "One single horizontal game UI button plate, wide 3:1 silhouette, centered and nearly filling canvas. Front orthographic view, clipped rounded corners, realistic fine-grain embossed dark forest green leather center, slim weathered brass double bevel rim, tactile worn metal, delicate botanical engravings only at the two ends. Inspired by mature fantasy collectible card game material hierarchy, original post-apocalyptic greenhouse botanical art. Center 75 percent quiet dark leather with visible subtle grain to support runtime white Chinese text. No text, glyphs, letters, numbers, icons, watermark, surrounding panel or scenery. Button entire interior opaque; outside silhouette pure flat magenta #FF00FF for chroma key production. Premium antique gold rim, warm gold etched laurel leaves at ends, rich emerald leather, fine amber upper bevel highlight; more important action without bright central glow.",
+        "transparent": true
+      },
+      "ui_spec": {
+        "purpose": "卡组按钮材质与交互状态",
+        "display_size": [
+          180,
+          48
+        ],
+        "content_safe_area": [
+          20,
+          8,
+          20,
+          8
+        ],
+        "layout": "两端叶纹与金属边，中央皮革供运行时文字；九宫格保留角部",
+        "negative": [
+          "文字",
+          "水印",
+          "中心徽章"
+        ]
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/buttons_v6/button_primary_v6.png",
+        "size": [
+          2135,
+          736
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/buttons_v6/button_primary_v6.png",
+        "size": [
+          192,
+          48
+        ],
+        "implementation": "res://scripts/deck_builder_style.gd",
+        "reason": "sprite-gen 抠色，裁透明外边距；同一纹理调色实现悬停/按下/禁用，保持轮廓稳定"
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "ButtonPlate",
+          "property": "texture",
+          "variant": "primary"
+        }
+      ]
+    },
+    {
+      "id": "card_transplant_shovel_illustration_v3",
+      "kind": "illustration",
+      "role": "移植铲独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. An antique brass gardening spade gently lifting a healthy young flowering plant with its intact ball of soil and luminous roots, preparing to transplant it; warm daytime greenhouse light, clear spade and root-ball silhouette.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_transplant_shovel.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_transplant_shovel.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_transplant_shovel"
+        }
+      ]
+    },
+    {
+      "id": "card_frenzy_growth_illustration_v3",
+      "kind": "illustration",
+      "role": "狂化生长独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A fierce thorn flower rapidly unfurling vibrant leaves and sharp branching vines, glowing amber sap rushing through its stem, dynamic spiraling growth burst at night; energetic organic motion, dominant flower at center.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_frenzy_growth.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_frenzy_growth.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_frenzy_growth"
+        }
+      ]
+    },
+    {
+      "id": "card_local_repair_rain_illustration_v3",
+      "kind": "illustration",
+      "role": "局部修复雨独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A gentle localized shower of luminous turquoise dewdrops over a small cluster of torn leaves and damaged botanical lanterns, wounds closing into healthy foliage beneath the rain; focused restorative garden scene.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_local_repair_rain.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_local_repair_rain.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_local_repair_rain"
+        }
+      ]
+    },
+    {
+      "id": "card_hex_break_lamp_illustration_v3",
+      "kind": "illustration",
+      "role": "驱咒灯独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A living brass-and-leaf garden lantern releasing a radiant warm halo that breaks smoky violet curse tendrils into drifting harmless particles; prominent luminous lantern surrounded by freed healthy leaves.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_hex_break_lamp.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_hex_break_lamp.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_hex_break_lamp"
+        }
+      ]
+    },
+    {
+      "id": "card_sun_arrow_rain_illustration_v3",
+      "kind": "illustration",
+      "role": "日矢雨独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. Several bright golden sunflower-tipped arrows raining diagonally from above onto a dark garden path, trails of radiant pollen in midnight mist; distinct repeated arrow silhouettes and powerful concentrated solar volley.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_sun_arrow_rain.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_sun_arrow_rain.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_sun_arrow_rain"
+        }
+      ]
+    },
+    {
+      "id": "card_root_prison_illustration_v3",
+      "kind": "illustration",
+      "role": "根牢独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. An imposing cage of curved woody roots arching around a trapped dark shadow beast, moss-covered living bars and a faint amber root pulse; clear closed prison silhouette with bound creature at center.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_root_prison.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_root_prison.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_root_prison"
+        }
+      ]
+    },
+    {
+      "id": "card_golden_rain_illustration_v3",
+      "kind": "illustration",
+      "role": "黄金甘霖独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. Warm shimmering golden rain falling across a lush cluster of flowers and broad leaves, damaged plants recovering under the amber droplets; golden restorative cascade distinct from cool single-drop healing.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_golden_rain.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_golden_rain.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_golden_rain"
+        }
+      ]
+    },
+    {
+      "id": "card_temporary_sprout_illustration_v3",
+      "kind": "illustration",
+      "role": "临时光芽独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A fresh luminous emerald sprout emerging from dark soil, its translucent leaves enclosing a bright solar seed and spreading a network of glowing root connections to nearby seedlings; temporary botanical light source.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_temporary_sprout.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_temporary_sprout.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_temporary_sprout"
+        }
+      ]
+    },
+    {
+      "id": "card_node_overload_illustration_v3",
+      "kind": "illustration",
+      "role": "光脉过载独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A botanical light node bursting with concentrated amber energy, glowing leaf veins and roots sending intense branching luminous pulses into the surrounding network; energized seed bulb under controlled overload.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_node_overload.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_node_overload.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_node_overload"
+        }
+      ]
+    },
+    {
+      "id": "card_path_beacon_illustration_v3",
+      "kind": "illustration",
+      "role": "引路灯标独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A tall living beacon flower with a golden lantern-like seed head above a winding moonlit garden path, a trail of tiny fireflies converging toward the bright bud; tall guiding silhouette and readable curved path.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_path_beacon.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_path_beacon.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_path_beacon"
+        }
+      ]
+    },
+    {
+      "id": "card_phantom_bloom_illustration_v3",
+      "kind": "illustration",
+      "role": "幻影开花独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A solid emerald fighting flower next to its translucent ghostly teal duplicate blooming from swirling golden pollen, clearly two mirrored organic blossoms with one spectral silhouette; magical botanical echo.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_phantom_bloom.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_phantom_bloom.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_phantom_bloom"
+        }
+      ]
+    },
+    {
+      "id": "card_weather_seal_illustration_v3",
+      "kind": "illustration",
+      "role": "天候封印独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A protective dome woven from interlocking luminous leaves above a greenhouse garden, holding back storm clouds, wind and cold rain outside; calm clear plants inside the sealed botanical canopy.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_weather_seal.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_weather_seal.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_weather_seal"
+        }
+      ]
+    },
+    {
+      "id": "card_time_stasis_illustration_v3",
+      "kind": "illustration",
+      "role": "黎明静止独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. An immense radiant sunflower sun disk rising at dawn over a garden where dewdrops, fallen petals and dark shadow beasts hang motionless in midair, concentric amber light ripples freezing the moment; legendary serene solar time magic.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_time_stasis.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_time_stasis.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_time_stasis"
+        }
+      ]
+    },
+    {
+      "id": "card_golden_domain_illustration_v3",
+      "kind": "illustration",
+      "role": "黄金领域独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A majestic mature sunflower surrounded by a wide circular sanctuary of golden roots and glowing pollen, smaller garden flowers flourishing within the warm dome while darkness stays beyond; legendary golden protective domain.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_golden_domain.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_golden_domain.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_golden_domain"
+        }
+      ]
+    },
+    {
+      "id": "card_garden_resurrection_illustration_v3",
+      "kind": "illustration",
+      "role": "花园复生独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. Several wilted fallen garden flowers rising back into life from richly glowing golden roots, an enormous radiant sunflower behind them illuminating fresh green shoots emerging from cracked soil; legendary botanical resurrection, unmistakable rebirth.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_garden_resurrection.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_garden_resurrection.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_garden_resurrection"
+        }
+      ]
+    },
+    {
+      "id": "card_shadow_redemption_illustration_v3",
+      "kind": "illustration",
+      "role": "阴影归化独立卡牌插画",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A powerful dark wolf-like shadow creature being transformed by golden living vines and sunflower light, one half smoky charcoal and the other half emerald leaves and warm amber fur, peaceful glowing eyes; legendary conversion from shadow into a garden ally.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/deck_builder/illustrations_v3/card_shadow_redemption.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/deck_builder/illustrations_v3/card_shadow_redemption.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "DeckCardView/CardArt",
+          "property": "texture",
+          "card_id": "card_shadow_redemption"
+        }
+      ]
+    }
+  ]
+}

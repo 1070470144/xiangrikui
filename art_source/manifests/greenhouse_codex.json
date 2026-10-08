@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "feature": "greenhouse_codex",
+  "scene": "res://scenes/main.tscn",
+  "root_node": "Main",
+  "style": {
+    "reference_images": [
+      "https://www.supergiantgames.com/games/hades/",
+      "https://www.playgwent.com/en/media#/screenshots"
+    ],
+    "prompt_prefix": "温室图鉴，手绘植物与怪物主体，深绿皮革与旧铜边框，暖金高光。",
+    "sprite_gen_contract": "sprite-gen/docs/gen.md",
+    "comfort_constraints": [
+      "插画与文字分区",
+      "名称与数值清晰",
+      "1152x648完整显示"
+    ],
+    "avoid": [
+      "伪文字",
+      "水印",
+      "高频中心装饰"
+    ],
+    "evidence": [
+      {
+        "source": "res://art_source/evidence/greenhouse_codex_runtime.png",
+        "kind": "runtime_screenshot",
+        "reason": "图鉴实机图文排版"
+      }
+    ],
+    "visual_anchor": "大幅手绘植物/怪物主体、游戏内造型对照、皮革资料板与旧铜细边；文字与图片分区"
+  },
+  "assets": [
+    {
+      "id": "background",
+      "kind": "background",
+      "role": "温室图鉴 background",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Dark botanical study in ruined greenhouse, landscape 16:9. Dim specimen shelves at far left, old gardening books and faint lantern at far right, moonlit glass above. Center 90 percent quiet dark green blue low contrast for UI overlay. Painterly original fantasy game background, no UI, text, panels or watermark.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/greenhouse_codex/background.png",
+        "size": [
+          1672,
+          940
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/greenhouse_codex/background.png",
+        "size": [
+          1152,
+          648
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "GreenhouseCodexView",
+          "property": "texture",
+          "asset": "background"
+        }
+      ]
+    },
+    {
+      "id": "erosion_bug",
+      "kind": "illustration",
+      "role": "温室图鉴 erosion_bug",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Premium painterly fantasy botanical bestiary illustration for The Last Sunflower. Dark emerald and petrol blue greenhouse background, warm amber rim light, tactile organic details. One prominent centered complete subject filling 70 percent of canvas, landscape 3:2. Quiet environment, no UI, frame, text, letters, numbers, watermark. A sinister large beetle-like erosion insect with dark chitin shell, articulated legs, glowing sickly amber mandibles biting an exposed luminous plant root, complete insect silhouette on dark moss.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/greenhouse_codex/erosion_bug.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/greenhouse_codex/erosion_bug.png",
+        "size": [
+          900,
+          600
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "GreenhouseCodexView",
+          "property": "texture",
+          "asset": "erosion_bug"
+        }
+      ]
+    },
+    {
+      "id": "prism_flower",
+      "kind": "illustration",
+      "role": "温室图鉴 prism_flower",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Premium painterly fantasy botanical bestiary illustration for The Last Sunflower. Dark emerald and petrol blue greenhouse background, warm amber rim light, tactile organic details. One prominent centered complete subject filling 70 percent of canvas, landscape 3:2. Quiet environment, no UI, frame, text, letters, numbers, watermark. A crystalline prism flower with translucent amber faceted petals, narrow luminous sun core and elegant emerald leaves, projecting a precise golden beam through greenhouse mist.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/greenhouse_codex/prism_flower.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/greenhouse_codex/prism_flower.png",
+        "size": [
+          900,
+          600
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "GreenhouseCodexView",
+          "property": "texture",
+          "asset": "prism_flower"
+        }
+      ]
+    },
+    {
+      "id": "shadow_beast",
+      "kind": "illustration",
+      "role": "温室图鉴 shadow_beast",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Premium painterly fantasy botanical bestiary illustration for The Last Sunflower. Dark emerald and petrol blue greenhouse background, warm amber rim light, tactile organic details. One prominent centered complete subject filling 70 percent of canvas, landscape 3:2. Quiet environment, no UI, frame, text, letters, numbers, watermark. A threatening charcoal-black wolf-like shadow beast, flowing smoky mane, glowing amber eyes, sharp claws, prowling low through blue-green moonlit greenhouse roots, complete beast silhouette.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/greenhouse_codex/shadow_beast.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/greenhouse_codex/shadow_beast.png",
+        "size": [
+          900,
+          600
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "GreenhouseCodexView",
+          "property": "texture",
+          "asset": "shadow_beast"
+        }
+      ]
+    },
+    {
+      "id": "specimen_board",
+      "kind": "panel",
+      "role": "温室图鉴 specimen_board",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "One horizontal fantasy botanical specimen archive board, 16:9 fills canvas. Refined dark emerald leather interior with subtle grain, slim old brass double rim, tiny botanical corner etchings and clipped corners. Entire center quiet textured low contrast for runtime image and text. No text, symbols, UI divisions, slots, scene, watermark.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/greenhouse_codex/specimen_board.png",
+        "size": [
+          1672,
+          941
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/greenhouse_codex/specimen_board.png",
+        "size": [
+          1152,
+          648
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "GreenhouseCodexView",
+          "property": "texture",
+          "asset": "specimen_board"
+        }
+      ],
+      "ui_spec": {
+        "purpose": "图鉴档案底板",
+        "display_size": [
+          1096,
+          531
+        ],
+        "content_safe_area": [
+          25,
+          25,
+          25,
+          25
+        ],
+        "layout": "暗绿皮革中心，边缘旧铜与植物刻纹，供运行时图文分区",
+        "negative": [
+          "文字",
+          "图标",
+          "水印",
+          "固定格子"
+        ]
+      }
+    },
+    {
+      "id": "thorn_flower",
+      "kind": "illustration",
+      "role": "温室图鉴 thorn_flower",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "prompt": "Premium painterly fantasy botanical bestiary illustration for The Last Sunflower. Dark emerald and petrol blue greenhouse background, warm amber rim light, tactile organic details. One prominent centered complete subject filling 70 percent of canvas, landscape 3:2. Quiet environment, no UI, frame, text, letters, numbers, watermark. A defensive emerald thorn flower with a radiant golden flower head, sturdy leafy stem and sharp curved thorn vines sweeping outward over dark moss, botanical guardian.",
+        "transparent": false
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/greenhouse_codex/thorn_flower.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/greenhouse_codex/thorn_flower.png",
+        "size": [
+          900,
+          600
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "GreenhouseCodexView",
+          "property": "texture",
+          "asset": "thorn_flower"
+        }
+      ]
+    }
+  ]
+}

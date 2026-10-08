@@ -1,0 +1,256 @@
+{
+  "$schema": "../schemas/mm_art_manifest.schema.json",
+  "schema_version": 1,
+  "feature": "mother_buff_ui",
+  "scene": "res://scenes/main.tscn",
+  "root_node": "BattleHudRoot",
+  "style": {
+    "reference_images": [
+      "res://output/imagegen/previews/mother-buff-effects-1280x720.png"
+    ],
+    "prompt_prefix": "Project botanical greenhouse storybook UI; midnight blue-grey glass, warm ivory paper, aged copper edges.",
+    "evidence": [
+      {
+        "kind": "art_guide",
+        "source": "res://Design/Sunflower-Defense-Art-Style-Guide.md",
+        "reason": "Approved botanical storybook material and muted botanical geometry."
+      },
+      {
+        "kind": "accepted_manifest",
+        "source": "res://docs/mm-tools-mother-buff-ui-stage12.md",
+        "reason": "Stage 1/2 functional card hierarchy, exact effects and one shared master scope."
+      },
+      {
+        "kind": "runtime_screenshot",
+        "source": "res://output/imagegen/previews/battle-flow-v7-loadout-selection-1280x720.png",
+        "reason": "Approved native daily chooser flow baseline."
+      },
+      {
+        "kind": "runtime_screenshot",
+        "source": "res://output/imagegen/previews/mother-buff-effects-1280x720.png",
+        "reason": "Actual Godot buff fallback, three choices, typography and effect safe areas."
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+        "reason": "Mother flower portrait, hand-painted upper-left warm light and botanical detail."
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/ui/generated/battle_ui_v5/primary_action_normal.png",
+        "reason": "Navy copper edge material and restrained botanical carving."
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/ui/generated/battle_ui_v5/tactical_bezel.png",
+        "reason": "Transparent instrument edge treatment and visual weight."
+      },
+      {
+        "kind": "external_reference",
+        "source": "https://store.steampowered.com/app/646570/Slay_the_Spire/",
+        "reason": "layout-only: equal choices with independently readable effects; source fetched tmp/mother-buff-research/slay.html. No art authority."
+      },
+      {
+        "kind": "external_reference",
+        "source": "https://www.supergiantgames.com/games/hades/",
+        "reason": "layout-only: choose one immediate persistent boon with branch/benefit first hierarchy; fetched tmp/mother-buff-research/hades.html. No art authority."
+      }
+    ],
+    "visual_anchor": "Midnight navy panel, warm ivory effect paper, aged copper border, mother flower remains unobstructed.",
+    "comfort_constraints": [
+      "No neon",
+      "No dense texture",
+      "Effect text remains readable at 16px"
+    ],
+    "avoid": [
+      "brand imitation",
+      "baked text",
+      "watermark"
+    ],
+    "sprite_gen_contract": "sprite-gen/docs/gen.md"
+  },
+  "assets": [
+    {
+      "id": "mother_buff_card_frame",
+      "kind": "panel",
+      "role": "Shared transparent ornamental outer edge for all 57 independently selectable mother choice identities. Native text, portrait, ivory paper and input remain separate.",
+      "generation": {
+        "enabled": true,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "prompt": "1. Game resource purpose: transparent ornamental outer frame for the three-option mother evolution choice modal, each card is independently selectable. It encloses botanical portrait, title, branch/rank and exact effect text drawn by Godot. 2. Runtime and safe areas: 768x1024 source, scaled with preserved aspect to fit a 252x350 native card. Outer ornament limited to 24px of runtime edge; center entirely alpha. Preserve title y136-172 and effect y180-300 safe areas with no overlap. 3. Project visual anchor: res://assets/ui/generated/battle_ui_v5/primary_action_normal.png and tactical_bezel.png establish midnight blue-grey glass #172331, restrained aged copper #b98b55, fine worn hand-painted edges; mother portrait res://assets/core/ART_CORE_MotherFlower_Healthy.png establishes upper-left soft warm light. 4. Composition and states: front-view rounded rectangle botanical metal edging with sparse copper leaves at four corners, no perspective. Top and bottom continuous quiet edges, no holes through silhouette; empty transparent center. Native hover/pressed border handled separately, one shared normal master. 5. Comfort: low saturation, no glow, no blinking or motion streaks, light sparse texture, legible edge at small display. 6. Exclusions: no text, no watermark, no logo, no unintended objects, no baked UI, no plant portrait, no paper center, no neon, no brand imitation, no glossy sci-fi metal. 7. Transparency: true transparent RGBA alpha everywhere outside frame and inside center; clean antialiased alpha edges, no white/black/matte/color backdrop, no checkerboard, no environmental background.",
+        "transparent": true
+      },
+      "output": {
+        "path": "res://assets/ui/generated/mother_buff_ui/mother_buff_card_frame.png",
+        "size": [
+          768,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "ui_spec": {
+        "purpose": "Frame around the three-option mother evolution modal; communicates hover/pressed choice without hiding effect copy.",
+        "display_size": [
+          252,
+          350
+        ],
+        "content_safe_area": [
+          20,
+          18,
+          20,
+          18
+        ],
+        "layout": "Three equal cards centered in modal, title and effect paper inside card.",
+        "state_contract": "One shared master; hover, focus, pressed and disabled feedback drawn by native styles.",
+        "negative": [
+          "no text",
+          "no logo",
+          "no baked UI"
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "scene",
+          "node": "FrameArt",
+          "property": "texture"
+        }
+      ]
+    },
+    {
+      "id": "mother_buff_title",
+      "kind": "text",
+      "role": "Per-option name from ContentData.",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "Content/Title",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "mother_buff_rank",
+      "kind": "text",
+      "role": "Branch and current rank to next rank, or initial-path label.",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "Content/Rank",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "mother_buff_effect",
+      "kind": "text",
+      "role": "Precise natural-language resolver effects for all 54 upgrades and 3 initial paths.",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "Content/EffectPaper/Effect",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "mother_buff_action",
+      "kind": "text",
+      "role": "Hover action feedback and single-choice input.",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "Content/ChoiceAction",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "mother_buff_paper",
+      "kind": "panel",
+      "role": "Native warm ivory paper preserves text contrast.",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "Content/EffectPaper",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "mother_buff_portrait",
+      "kind": "portrait",
+      "role": "Existing mother portrait until per-option form manifest accepted; independently bound node.",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "Content/MotherPortrait",
+          "property": "texture"
+        }
+      ]
+    },
+    {
+      "id": "mother_buff_overlay",
+      "kind": "panel",
+      "role": "Dimmed full-screen input blocker; foreground card choices remain legible.",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "MotherChoiceOverlay",
+          "property": "color"
+        }
+      ]
+    },
+    {
+      "id": "mother_buff_modal",
+      "kind": "panel",
+      "role": "Native navy copper modal behind three options.",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "MotherChoiceOverlay/MotherChoicePanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "mother_buff_heading",
+      "kind": "text",
+      "role": "Stage-specific instruction: initial evolution path or daily upgrade.",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "MotherChoiceOverlay/MotherChoicePanel/MotherChoiceBox/MotherChoiceTitle",
+          "property": "text"
+        }
+      ]
+    }
+  ]
+}

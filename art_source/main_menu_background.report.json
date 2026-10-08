@@ -1,0 +1,47 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Use case: production game main-menu background\nAsset type: opaque 2D environment illustration, no interface elements\nPrimary request: The interior entrance of a ruined Victorian greenhouse after the sun has died, for a dark fantasy botanical defense game called The Last Sunflower. A healthy solar mother flower grows slightly left of center and is the only strong warm light source. The rightmost 36 percent is a calm, low-detail, dark negative-space area reserved for a native game menu.\nStyle and medium: premium hand-painted storybook environment, thick painterly brushwork, botanical realism, subtle paper grain, restrained oxidized metal and worn horticultural materials, production-quality 2D game art.\nComposition: exact wide 16:9 frame. Broken greenhouse ribs, shattered glass silhouettes, dead leaves and cold mist frame the outer edges. Keep the mother flower silhouette unobstructed. Preserve strong readable separation between the left focal area and right menu-safe area without drawing a vertical divider or panel.\nLighting and mood: melancholic and dangerous but still hopeful. Cold blue-violet ruined night surrounds a warm golden living core. The mother flower is the brightest and warmest object, with restrained roots and a few subtle floating motes; no large bloom cloud.\nPalette: deep navy #111827, muted gray-violet #25263A, brown-purple #3A3032, desaturated moss #263D35, life gold #E5B94B and warm highlight #FFF0B0.\nConstraints: no words, no letters, no numbers, no labels, no logo, no watermark, no buttons, no frames, no cards, no HUD, no people, no menu UI, no split-screen divider. The right side must remain readable beneath a translucent dark panel.\nAvoid: photorealism, anime, pixel art, flat vector art, neon cyberpunk, glassmorphism, ornate medieval filigree, bright saturated rainbow colors, central symmetry, a sunflower placed on the right side.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\main_menu_background.generated.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\main_menu_background.generated.png.raw.png",
+  "raw_bytes": 2209412,
+  "elapsed_seconds": 47.344,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "high",
+    "size": "1536x864",
+    "background": "opaque",
+    "usage": {
+      "prompt_tokens": 401,
+      "completion_tokens": 1640,
+      "total_tokens": 2041,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "video_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

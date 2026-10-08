@@ -1,0 +1,238 @@
+{
+  "schema_version": 2,
+  "feature": "battle_ui_v2",
+  "scene": "res://scenes/main.tscn",
+  "root_node": "BattleUiRoot",
+  "report": {
+    "path": "res://assets/ui/generated/battle_ui_v2/derivation_report.json"
+  },
+  "style": {
+    "prompt_prefix": "The Last Sunflower battle interface, approved dark botanical storybook style, deep ink-green and brown-violet translucent surfaces, thin worn aged-brass rims, restrained warm-gold, cool-cyan, or dark-red accents, hand-painted greenhouse root and leaf engraving. Isolated modular UI artwork on a real transparent background; quiet empty content areas; no letters, words, numbers, costs, countdowns, direction markers, signatures, watermarks, screenshots, or multiple alternatives.",
+    "avoid": [
+      "modern technology HUD",
+      "neon cyberpunk",
+      "heavy medieval ornament",
+      "candy saturation",
+      "checkerboard or simulated transparency",
+      "baked text or dynamic values"
+    ]
+  },
+  "assets": [
+    {
+      "id": "compact_status_frame",
+      "kind": "nine_patch_panel",
+      "display_size": [300, 82],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/compact_status_frame.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/compact_status_frame.png", "size": [600, 164], "mode": "nine_patch", "patch_margin": [42, 30, 42, 30], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/MotherStatusPanel", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Compact horizontal mother-flower status frame, dark botanical glass inset and narrow aged-brass edge, sparse leaf engraving at the ends, empty center."}
+    },
+    {
+      "id": "phase_banner_frame",
+      "kind": "nine_patch_panel",
+      "display_size": [280, 72],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/phase_banner_frame.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/phase_banner_frame.png", "size": [560, 144], "mode": "nine_patch", "patch_margin": [52, 30, 52, 30], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/PhaseBanner", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Shallow centered phase banner frame, dark old-paper glass, slim aged-brass rim and restrained botanical endcaps, wide quiet center."}
+    },
+    {
+      "id": "resource_panel_frame",
+      "kind": "nine_patch_panel",
+      "display_size": [260, 82],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/resource_panel_frame.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/resource_panel_frame.png", "size": [520, 164], "mode": "nine_patch", "patch_margin": [42, 30, 42, 30], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/ResourcePanel", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Compact horizontal resource frame, deep ink-green glass and worn brass botanical edge, three calm empty readout zones."}
+    },
+    {
+      "id": "phase_action_tray",
+      "kind": "nine_patch_panel",
+      "display_size": [620, 114],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/phase_action_tray.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/phase_action_tray.png", "size": [1240, 228], "mode": "nine_patch", "patch_margin": [56, 38, 56, 38], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/PhaseActionTray", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Wide shallow action tray, translucent ink-green center, thin old-brass greenhouse corners, low-contrast empty middle for live cards."}
+    },
+    {
+      "id": "selection_detail_frame",
+      "kind": "nine_patch_panel",
+      "display_size": [280, 160],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/selection_detail_frame.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/selection_detail_frame.png", "size": [560, 320], "mode": "nine_patch", "patch_margin": [48, 44, 48, 44], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/SelectionDetailPanel", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Compact botanical specimen detail frame, dark aged-paper glass and fine brass border, quiet portrait and description regions."}
+    },
+    {
+      "id": "tactical_instrument_frame",
+      "kind": "full_image",
+      "display_size": [176, 176],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/tactical_instrument_frame.png", "size": [1024, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/tactical_instrument_frame.png", "size": [352, 352], "mode": "full_image", "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/TacticalInstrumentFrame", "property": "texture"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Perfectly circular greenhouse tactical instrument bezel, transparent dark glass center, old-brass botanical ticks without letters or needles."}
+    },
+    {
+      "id": "primary_action_button_normal",
+      "kind": "button_state",
+      "display_size": [162, 80],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/primary_action_button_normal.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/primary_action_button_normal.png", "size": [324, 160], "mode": "nine_patch", "patch_margin": [44, 34, 44, 34], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/PrimaryActionButton", "property": "theme_override_styles/normal"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Single primary action button frame in normal state, dark green inset, stable worn-brass botanical endcaps, empty center."}
+    },
+    {
+      "id": "primary_action_button_hover",
+      "kind": "button_state",
+      "display_size": [162, 80],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/primary_action_button_hover.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/primary_action_button_hover.png", "size": [324, 160], "mode": "nine_patch", "patch_margin": [44, 34, 44, 34], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/PrimaryActionButton", "property": "theme_override_styles/hover"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Single primary action button hover frame, identical silhouette and engraving to normal, subtly brighter warm-brass rim, empty center."}
+    },
+    {
+      "id": "primary_action_button_pressed",
+      "kind": "button_state",
+      "display_size": [162, 80],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/primary_action_button_pressed.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/primary_action_button_pressed.png", "size": [324, 160], "mode": "nine_patch", "patch_margin": [44, 34, 44, 34], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/PrimaryActionButton", "property": "theme_override_styles/pressed"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Single primary action button pressed frame, identical silhouette and engraving to normal, restrained inset depth and dimmer face, empty center."}
+    },
+    {
+      "id": "primary_action_button_disabled",
+      "kind": "button_state",
+      "display_size": [162, 80],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/primary_action_button_disabled.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/primary_action_button_disabled.png", "size": [324, 160], "mode": "nine_patch", "patch_margin": [44, 34, 44, 34], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/PrimaryActionButton", "property": "theme_override_styles/disabled"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Single primary action button disabled frame, identical silhouette and engraving to normal, reduced brightness and saturation without a flat gray mask, empty center."}
+    },
+    {
+      "id": "start_night_icon",
+      "kind": "icon",
+      "display_size": [44, 44],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/start_night_icon.png", "size": [1024, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/start_night_icon.png", "size": [96, 96], "mode": "full_image", "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/PrimaryActionButton/StartNightIcon", "property": "texture"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "One compact twilight greenhouse emblem, setting amber sun crossing a dark glass horizon with a delicate leaf silhouette, no plate."}
+    },
+    {
+      "id": "sunburst_icon",
+      "kind": "icon",
+      "display_size": [44, 44],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/sunburst_icon.png", "size": [1024, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/sunburst_icon.png", "size": [96, 96], "mode": "full_image", "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/PrimaryActionButton/SunburstIcon", "property": "texture"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "One radiant golden sunflower burst skill emblem, compact bright core and crisp short rays, no plate or text."}
+    },
+    {
+      "id": "pause_frame",
+      "kind": "nine_patch_panel",
+      "display_size": [360, 400],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/pause_frame.png", "size": [1024, 1536]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/pause_frame.png", "size": [720, 800], "mode": "nine_patch", "patch_margin": [58, 70, 58, 70], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/PauseOverlay/PauseFrame", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Narrow greenhouse gardening-record pause panel, dark aged paper and glass, fine worn-brass botanical frame, calm empty title and action regions."}
+    },
+    {
+      "id": "mother_choice_card_life",
+      "kind": "nine_patch_card",
+      "display_size": [240, 340],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/mother_choice_card_life.png", "size": [1024, 1536]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/mother_choice_card_life.png", "size": [480, 680], "mode": "nine_patch", "patch_margin": [48, 68, 48, 68], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/MotherChoiceOverlay/LifeChoiceCard", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Vertical mother-flower specimen choice card frame for the life route, stable brass silhouette, warm-gold whole-petal emblem, empty icon and copy areas."}
+    },
+    {
+      "id": "mother_choice_card_network",
+      "kind": "nine_patch_card",
+      "display_size": [240, 340],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/mother_choice_card_network.png", "size": [1024, 1536]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/mother_choice_card_network.png", "size": [480, 680], "mode": "nine_patch", "patch_margin": [48, 68, 48, 68], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/MotherChoiceOverlay/NetworkChoiceCard", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Vertical mother-flower specimen choice card frame for the light-network route, identical brass silhouette to the life card, cool-cyan root-node emblem, empty icon and copy areas."}
+    },
+    {
+      "id": "mother_choice_card_risk",
+      "kind": "nine_patch_card",
+      "display_size": [240, 340],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/mother_choice_card_risk.png", "size": [1024, 1536]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/mother_choice_card_risk.png", "size": [480, 680], "mode": "nine_patch", "patch_margin": [48, 68, 48, 68], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/MotherChoiceOverlay/RiskChoiceCard", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Vertical mother-flower specimen choice card frame for the risky route, identical brass silhouette to the life card, restrained dark-red thorn emblem, empty icon and copy areas."}
+    },
+    {
+      "id": "victory_frame",
+      "kind": "nine_patch_panel",
+      "display_size": [560, 380],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/victory_frame.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/victory_frame.png", "size": [1120, 760], "mode": "nine_patch", "patch_margin": [70, 72, 70, 72], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/ResultOverlay/VictoryFrame", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Hopeful victory archive frame, repaired aged brass with restrained warm dawn glow and living leaf corners, broad empty result area."}
+    },
+    {
+      "id": "defeat_frame",
+      "kind": "nine_patch_panel",
+      "display_size": [560, 380],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/defeat_frame.png", "size": [1536, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/defeat_frame.png", "size": [1120, 760], "mode": "nine_patch", "patch_margin": [70, 72, 70, 72], "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/ResultOverlay/DefeatFrame", "property": "theme_override_styles/panel"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Somber defeat archive frame, cold brown-violet glass, cracked worn brass and restrained wilted botanical corners, broad readable empty result area."}
+    },
+    {
+      "id": "victory_seal",
+      "kind": "icon",
+      "display_size": [96, 96],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/victory_seal.png", "size": [1024, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/victory_seal.png", "size": [192, 192], "mode": "full_image", "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/ResultOverlay/VictoryFrame/VictorySeal", "property": "texture"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Complete mother-flower victory seal, healthy sunflower and repaired circular aged brass, warm dawn highlights, no plaque or text."}
+    },
+    {
+      "id": "defeat_seal",
+      "kind": "icon",
+      "display_size": [96, 96],
+      "source": {"path": "res://art_source/generated/battle_ui_v2/defeat_seal.png", "size": [1024, 1024]},
+      "runtime": {"path": "res://assets/ui/generated/battle_ui_v2/defeat_seal.png", "size": [192, 192], "mode": "full_image", "derived_by": "res://art_source/process_battle_ui_v2.py"},
+      "bindings": [{"node": "BattleUiRoot/ResultOverlay/DefeatFrame/DefeatSeal", "property": "texture"}],
+      "generation": {"enabled": true, "provider": "openai_image", "model": "gpt-image-2", "transparent": true, "prompt": "Withered mother-flower defeat seal, drooping petals and broken circular aged brass, cool violet corruption restrained for readability, no plaque or text."}
+    },
+    {
+      "id": "dynamic_text",
+      "kind": "runtime_text",
+      "generation": {"enabled": false},
+      "bindings": [
+        {"node": "BattleUiRoot/PhaseBanner/PhaseLabel", "property": "text"},
+        {"node": "BattleUiRoot/SelectionDetailPanel/Title", "property": "text"},
+        {"node": "BattleUiRoot/NotificationBanner/Message", "property": "text"}
+      ]
+    },
+    {
+      "id": "dynamic_values",
+      "kind": "runtime_text",
+      "generation": {"enabled": false},
+      "bindings": [
+        {"node": "BattleUiRoot/MotherStatusPanel/HealthValue", "property": "text"},
+        {"node": "BattleUiRoot/ResourcePanel/EnergyValue", "property": "text"},
+        {"node": "BattleUiRoot/ResourcePanel/SeedValue", "property": "text"},
+        {"node": "BattleUiRoot/PhaseBanner/EnemyValue", "property": "text"}
+      ]
+    },
+    {
+      "id": "dynamic_costs",
+      "kind": "runtime_text",
+      "generation": {"enabled": false},
+      "bindings": [
+        {"node": "BattleUiRoot/PrimaryActionButton/CostLabel", "property": "text"},
+        {"node": "BattleUiRoot/PhaseActionTray", "property": "card_costs"}
+      ]
+    },
+    {
+      "id": "tactical_direction_markers",
+      "kind": "runtime_markers",
+      "generation": {"enabled": false},
+      "bindings": [{"node": "BattleUiRoot/TacticalInstrumentFrame/ThreatCompass", "property": "direction_markers"}]
+    }
+  ]
+}

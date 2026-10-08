@@ -1,0 +1,7 @@
+Use case: reusable 2D game UI icon and status material sheet for a dark fantasy botanical defense game.
+Create one clean organized 4x2 sheet, front-facing and orthographic, with generous spacing and no overlap.
+Include eight isolated assets: health bar frame, energy bar frame, selected tab, unselected tab, healthy light-core status icon, warning status icon, corrupted status icon, threat/radar marker. Bars are horizontal and empty inside; tabs have empty centers for Godot labels; icons are simple readable botanical instrument symbols.
+All assets must be fully visible on a transparent background, with consistent scale language, thin worn gold botanical linework, and restrained glow. No words, no letters, no numbers, no labels, no watermark.
+Style: premium hand-painted storybook UI, old gardener field journal plus softly glowing botanical instrument, subtle paper and oxidized brass texture, readable at small size.
+Palette: #111827, #25263A, #3A3032, #E5B94B, #FFF0B0, restrained #8E3D4A and #4C8490.
+Avoid: modern sci-fi HUD, neon cyberpunk, glassmorphism, ornate medieval filigree overload, saturated candy colors, perspective tilt, fake text, grid lines.

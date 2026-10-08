@@ -1,0 +1,8 @@
+Use case: reusable 2D game UI material sheet for a dark fantasy botanical defense game.
+Create one clean organized 4x2 sheet, front-facing and orthographic, with generous spacing and no overlap.
+Row 1: four identical-size horizontal stretchable frames: dark navy greenhouse top panel, dark brown-purple action panel, primary button normal, primary button hover.
+Row 2: four identical-size horizontal stretchable frames: primary button pressed, primary button disabled, compact card frame, modal/dialog frame.
+Every frame must have an empty quiet center for Godot text overlays, consistent corners, consistent thin worn gold botanical border, clear interior/exterior separation, and enough margin for nine-patch slicing. Make every item fully visible and isolated on a transparent background. No words, no letters, no numbers, no labels, no icons, no watermark.
+Style: premium hand-painted storybook UI, old gardener field journal plus softly glowing botanical instrument, subtle paper and oxidized brass texture, restrained golden illumination, readable silhouettes.
+Palette: #111827, #25263A, #3A3032, #E5B94B, #FFF0B0, restrained #8E3D4A and #4C8490.
+Avoid: modern sci-fi HUD, neon cyberpunk, glassmorphism, ornate medieval filigree overload, saturated candy colors, perspective tilt, fake text, grid lines.

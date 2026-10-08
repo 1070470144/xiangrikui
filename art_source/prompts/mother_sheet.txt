@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: 2D game character state sheet with transparent background
+Primary request: Three aligned states of the exact same giant magical sunflower guardian for a dark fantasy garden defense game: healthy, damaged, critical.
+Subject: A majestic central sunflower called the Mother Flower, multilayer ochre-gold petals, believable botanical disk florets, thick root collar and short visible roots, warm white-gold solar core embedded in the flower center. Healthy state is upright and radiant; damaged state has several bent or chipped petals and reduced glow; critical state is visibly drooping and partly desaturated but still recognizable and alive.
+Style/medium: premium hand-painted storybook game asset, thick painterly brushwork, botanical realism with functional fantasy exaggeration, subtle paper grain.
+Composition/framing: one horizontal row of exactly three isolated full-body objects, equal size, equal camera and perspective, generous separation, each centered in one third of the image, 3/4 top-down game perspective, identical ground contact and silhouette scale between states.
+Lighting/mood: soft upper-left cool ambient light plus warm internal golden glow.
+Color palette: petals #E5B94B and muted ochre, core #FFF0B0, roots dark brown-purple, damaged accents #8E3D4A, restrained moss green leaves.
+Constraints: genuinely transparent background, no floor, no frame, no grid lines, no text, no labels, no watermark, no extra objects, no overlap, no cropped roots or petals.
+Avoid: cartoon mascot face, anime, photorealism, pixel art, flat vector icon, black outline, bright rainbow colors.

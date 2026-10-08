@@ -1,0 +1,9 @@
+Use case: ui-mockup
+Asset type: 2D game UI material and icon sheet
+Primary request: A cohesive material sheet for a dark fantasy botanical defense game UI inspired by an old gardener's field journal and softly glowing botanical instruments.
+Contents: one wide dark navy-gray top panel with thin worn gold botanical border; one wide dark brown-purple action panel; four rounded rectangular button states (normal, hover, pressed, disabled) with identical dimensions and safe empty centers; four square icons showing thorn flower, prism flower, sunburst, and root repair; two horizontal progress bar materials for mother-flower life and golden light energy.
+Style/medium: premium hand-painted storybook UI, subtle paper and oxidized metal texture, elegant thin botanical linework, restrained golden illumination.
+Composition/framing: clean organized sheet with generous separation between assets, front-facing UI elements, no perspective tilt.
+Color palette: #111827, #25263A, #3A3032, #E5B94B, #FFF0B0, restrained #8E3D4A and #4C8490.
+Constraints: no words, no letters, no numbers, no labels, no watermark, no game screenshot behind the elements, empty button centers suitable for text overlays.
+Avoid: modern sci-fi HUD, neon cyberpunk, glassmorphism, ornate medieval filigree overload, bright saturated colors.

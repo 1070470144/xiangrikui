@@ -1,0 +1,7 @@
+Use case: stylized-concept
+Asset type: seamless 2D game ground texture tile source
+Primary request: one single square, perfectly tileable dark fertile soil texture for a hand-painted botanical dark-fantasy battlefield. The image must repeat identically and seamlessly along all four boundaries. No distinct central feature or large compositional gradient.
+Scene/backdrop: continuous unbroken earth in a ruined greenhouse; tiny roots, restrained moss flecks and damp granules uniformly distributed. Fine crisp brush detail at close zoom.
+Style/medium: high-definition hand-painted storybook game texture, botanical realism, detailed but low contrast. Orthographic top-down ground surface without perspective or illumination falloff.
+Color palette: dark brown-violet #3A3032, muted moss #263D35, subtle cool blue-black #111827.
+Constraints: seamless wrap on left/right/top/bottom; homogeneous material; no roads, paths, walls, fences, stones, plants, props, UI, text, frame, vignette, horizon, or isolated landmarks.

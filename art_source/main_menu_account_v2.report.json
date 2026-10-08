@@ -1,0 +1,20 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "mm-api",
+  "prompt": "Single isolated horizontal game save-profile plate on a uniform pure white background. Exact visible plate proportion 4.79:1, front-facing orthographic view with no perspective. Restrained abandoned greenhouse design matching the journal: translucent dark bottle-green glass, thin aged-brass outline, a small circular seed emblem recess at the far left, and a completely calm flat two-line text area across the remaining width. Subtle wear, tiny symmetrical vine ticks, no scenic imagery. The complete silhouette must be clean and balanced. No text, letters, numbers, portraits, flowers, buttons, watermark, fake writing, heavy ornament or glow. Leave generous white margin around the object for clean background removal.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\main_menu_account_v2.generated.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\main_menu_account_v2.generated.png.raw.png",
+  "raw_bytes": 1009602,
+  "elapsed_seconds": 62.0,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "transport": "openai-compatible",
+    "endpoint": "https://newapi.oairegbox.cc/v1/images/generations"
+  },
+  "provider_resolved_from": "explicit"
+}

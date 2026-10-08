@@ -1,0 +1,369 @@
+{
+  "schema_version": 1,
+  "feature": "night_records",
+  "scene": "res://scenes/main.tscn",
+  "root_node": "Main",
+  "style": {
+    "reference_images": [
+      "https://www.supergiantgames.com/games/hades/",
+      "https://www.playgwent.com/en/media#/screenshots"
+    ],
+    "evidence": [
+      {
+        "source": "res://art_source/evidence/night_records_runtime.png",
+        "kind": "runtime_screenshot",
+        "reason": "七夜档案界面实际运行，检查章节与详情布局"
+      }
+    ],
+    "visual_anchor": "深绿皮革档案底板、旧铜边、每夜独立手绘场景；明亮文字与克制暖金状态",
+    "prompt_prefix": "七夜守夜档案，深绿皮革与细旧铜边；独立植物夜景插画、明亮清晰文字。",
+    "sprite_gen_contract": "sprite-gen/docs/gen.md",
+    "comfort_constraints": [
+      "文字与插画分区",
+      "1152x648七章及详情完整可见",
+      "装饰集中外缘"
+    ],
+    "avoid": [
+      "伪文字",
+      "中心高频纹饰",
+      "水印"
+    ]
+  },
+  "assets": [
+    {
+      "id": "background",
+      "kind": "background",
+      "role": "七夜记录 background",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "transparent": false,
+        "prompt": "A premium painterly dark botanical archive room background, landscape 16:9. Old greenhouse at midnight, dim shelves and hanging roots only at far outer edges, warm amber lantern far left, cool blue-green glass at far right. Center 90 percent very dark quiet low contrast, soft tactile shadows. Original fantasy game journal atmosphere. No UI, panels, frames, text, numbers, logos, watermark."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/night_records/background.png",
+        "size": [
+          1672,
+          940
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/night_records/background.png",
+        "size": [
+          1152,
+          648
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "NightRecordsView",
+          "property": "texture",
+          "asset": "background"
+        }
+      ]
+    },
+    {
+      "id": "journal_panel",
+      "kind": "panel",
+      "role": "七夜记录 journal_panel",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "transparent": false,
+        "prompt": "One large rectangular horizontal fantasy game journal panel, 16:9 nearly fills canvas. Opaque midnight emerald worn leather center with subtle paper fibers, slim antique brass double rim, clipped corners, tiny embossed sunflower and root engravings only in outer 4 percent corners. Center 90 percent completely quiet dark textured leather for runtime UI. Orthographic front view, original botanical archive design, refined mature game interface craftsmanship. No text, letters, icons, numbers, dividers, slots, buttons, illustrations, watermark, shadows outside panel."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/night_records/journal_panel.png",
+        "size": [
+          1672,
+          941
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/night_records/journal_panel.png",
+        "size": [
+          1152,
+          648
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "NightRecordsView",
+          "property": "texture",
+          "asset": "journal_panel"
+        }
+      ],
+      "ui_spec": {
+        "purpose": "七夜档案底板",
+        "display_size": [
+          1096,
+          530
+        ],
+        "content_safe_area": [
+          26,
+          22,
+          26,
+          22
+        ],
+        "layout": "低对比皮革中心供章节和详情，细铜边和角部植物纹饰",
+        "negative": [
+          "文字",
+          "按钮",
+          "固定格子",
+          "水印"
+        ]
+      }
+    },
+    {
+      "id": "night_1",
+      "kind": "illustration",
+      "role": "七夜记录 night_1",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "transparent": false,
+        "prompt": "Premium painterly botanical dark fantasy game illustration for The Last Sunflower. Post-apocalyptic greenhouse, forest green and petrol blue shadows, restrained amber sunlight, fine organic engraved details, one clearly readable focal subject in center, landscape composition. Edge-to-edge finished artwork. No text, lettering, numbers, logos, watermark, UI or frame. The first night: a small glowing sunflower lantern standing bravely at the center of an overgrown moonlit greenhouse, two dark shadow beasts cautiously approaching through mist; fragile hopeful first defense."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/night_records/night_1.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/night_records/night_1.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "NightRecordsView",
+          "property": "texture",
+          "asset": "night_1"
+        }
+      ]
+    },
+    {
+      "id": "night_2",
+      "kind": "illustration",
+      "role": "七夜记录 night_2",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "transparent": false,
+        "prompt": "Premium painterly botanical dark fantasy game illustration for The Last Sunflower. Post-apocalyptic greenhouse, forest green and petrol blue shadows, restrained amber sunlight, fine organic engraved details, one clearly readable focal subject in center, landscape composition. Edge-to-edge finished artwork. No text, lettering, numbers, logos, watermark, UI or frame. Attacks from all directions: a radiant sunflower garden at the center, multiple dark beast silhouettes approaching along branching root paths from all edges, tense encirclement but central warm light remains strong."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/night_records/night_2.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/night_records/night_2.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "NightRecordsView",
+          "property": "texture",
+          "asset": "night_2"
+        }
+      ]
+    },
+    {
+      "id": "night_3",
+      "kind": "illustration",
+      "role": "七夜记录 night_3",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "transparent": false,
+        "prompt": "Premium painterly botanical dark fantasy game illustration for The Last Sunflower. Post-apocalyptic greenhouse, forest green and petrol blue shadows, restrained amber sunlight, fine organic engraved details, one clearly readable focal subject in center, landscape composition. Edge-to-edge finished artwork. No text, lettering, numbers, logos, watermark, UI or frame. Acid rain: luminous sickly green rain falling through a cracked greenhouse roof onto battered leaves, protective amber botanical lantern at center, corrosive mist and wet emerald surfaces; distinct toxic weather."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/night_records/night_3.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/night_records/night_3.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "NightRecordsView",
+          "property": "texture",
+          "asset": "night_3"
+        }
+      ]
+    },
+    {
+      "id": "night_4",
+      "kind": "illustration",
+      "role": "七夜记录 night_4",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "transparent": false,
+        "prompt": "Premium painterly botanical dark fantasy game illustration for The Last Sunflower. Post-apocalyptic greenhouse, forest green and petrol blue shadows, restrained amber sunlight, fine organic engraved details, one clearly readable focal subject in center, landscape composition. Edge-to-edge finished artwork. No text, lettering, numbers, logos, watermark, UI or frame. Thunderstorm: blue-white lightning splitting a stormy sky above shattered greenhouse windows, rain swept green foliage and a golden sunflower lantern resisting the wind; dramatic electric storm."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/night_records/night_4.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/night_records/night_4.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "NightRecordsView",
+          "property": "texture",
+          "asset": "night_4"
+        }
+      ]
+    },
+    {
+      "id": "night_5",
+      "kind": "illustration",
+      "role": "七夜记录 night_5",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "transparent": false,
+        "prompt": "Premium painterly botanical dark fantasy game illustration for The Last Sunflower. Post-apocalyptic greenhouse, forest green and petrol blue shadows, restrained amber sunlight, fine organic engraved details, one clearly readable focal subject in center, landscape composition. Edge-to-edge finished artwork. No text, lettering, numbers, logos, watermark, UI or frame. Root-crown colossus: an enormous hulking monster made of twisted dead roots and bark with a thorn crown looming over tiny sunflowers, amber cracks and dark moss, imposing readable boss silhouette."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/night_records/night_5.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/night_records/night_5.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "NightRecordsView",
+          "property": "texture",
+          "asset": "night_5"
+        }
+      ]
+    },
+    {
+      "id": "night_6",
+      "kind": "illustration",
+      "role": "七夜记录 night_6",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "transparent": false,
+        "prompt": "Premium painterly botanical dark fantasy game illustration for The Last Sunflower. Post-apocalyptic greenhouse, forest green and petrol blue shadows, restrained amber sunlight, fine organic engraved details, one clearly readable focal subject in center, landscape composition. Edge-to-edge finished artwork. No text, lettering, numbers, logos, watermark, UI or frame. A breathing space: tranquil damaged greenhouse garden at predawn, a healthy sunflower and fresh shoots growing around a repaired botanical lantern, drifting golden pollen, hopeful quiet recovery after battle."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/night_records/night_6.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/night_records/night_6.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "NightRecordsView",
+          "property": "texture",
+          "asset": "night_6"
+        }
+      ]
+    },
+    {
+      "id": "night_7",
+      "kind": "illustration",
+      "role": "七夜记录 night_7",
+      "generation": {
+        "enabled": true,
+        "provider": "openai",
+        "model": "gpt-image-2",
+        "transparent": false,
+        "prompt": "Premium painterly botanical dark fantasy game illustration for The Last Sunflower. Post-apocalyptic greenhouse, forest green and petrol blue shadows, restrained amber sunlight, fine organic engraved details, one clearly readable focal subject in center, landscape composition. Edge-to-edge finished artwork. No text, lettering, numbers, logos, watermark, UI or frame. Sun devourer: a colossal black shadow creature with a gaping maw and thorned silhouette eclipsing a radiant sunflower sun disk, tiny garden in foreground resisting with amber roots; grand final-night confrontation."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/night_records/night_7.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "full_image"
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/night_records/night_7.png",
+        "size": [
+          768,
+          512
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "NightRecordsView",
+          "property": "texture",
+          "asset": "night_7"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Use case: stylized-concept\nAsset type: 2D game prop state sheet with transparent background\nPrimary request: Three aligned states of the exact same magical light-vein bud node: healthy, damaged, broken.\nSubject: A grounded botanical node made from intertwined roots and a small protective flower-bud casing around a solar light seed. Healthy has a warm gold-white core and living green-gold roots. Damaged has visible fractures, flickering dim light and some wilted fibers. Broken has a collapsed husk, severed roots and cold violet corruption, with almost no warm light.\nStyle/medium: premium hand-painted storybook game prop, thick painterly brushwork, believable botanical structure, subtle paper grain.\nComposition/framing: one horizontal row of exactly three isolated props, identical scale and 3/4 top-down perspective, each centered in one third, consistent ground contact.\nConstraints: genuinely transparent background, no text, no frame, no grid lines, no labels, no watermark, no overlap, full roots visible.\nAvoid: sci-fi machinery, crystal pedestal, flat icon, anime, pure black outline.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\node_sheet.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\node_sheet.png.raw.png",
+  "raw_bytes": 1501173,
+  "elapsed_seconds": 60.61,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\node_sheet.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "2076x757",
+    "alpha_zero_pct": 52.99,
+    "partial_alpha_pct": 47.01,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 6,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "1536x512",
+    "background": "transparent",
+    "usage": {
+      "input_tokens": 227,
+      "output_tokens": 1609,
+      "total_tokens": 1836,
+      "input_tokens_details": {
+        "text_tokens": 227,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1609,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

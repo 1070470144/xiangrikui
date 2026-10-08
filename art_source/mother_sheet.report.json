@@ -1,0 +1,51 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Use case: stylized-concept\nAsset type: 2D game character state sheet with transparent background\nPrimary request: Three aligned states of the exact same giant magical sunflower guardian for a dark fantasy garden defense game: healthy, damaged, critical.\nSubject: A majestic central sunflower called the Mother Flower, multilayer ochre-gold petals, believable botanical disk florets, thick root collar and short visible roots, warm white-gold solar core embedded in the flower center. Healthy state is upright and radiant; damaged state has several bent or chipped petals and reduced glow; critical state is visibly drooping and partly desaturated but still recognizable and alive.\nStyle/medium: premium hand-painted storybook game asset, thick painterly brushwork, botanical realism with functional fantasy exaggeration, subtle paper grain.\nComposition/framing: one horizontal row of exactly three isolated full-body objects, equal size, equal camera and perspective, generous separation, each centered in one third of the image, 3/4 top-down game perspective, identical ground contact and silhouette scale between states.\nLighting/mood: soft upper-left cool ambient light plus warm internal golden glow.\nColor palette: petals #E5B94B and muted ochre, core #FFF0B0, roots dark brown-purple, damaged accents #8E3D4A, restrained moss green leaves.\nConstraints: genuinely transparent background, no floor, no frame, no grid lines, no text, no labels, no watermark, no extra objects, no overlap, no cropped roots or petals.\nAvoid: cartoon mascot face, anime, photorealism, pixel art, flat vector icon, black outline, bright rainbow colors.",
+  "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\mother_sheet.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\art_source\\mother_sheet.png.raw.png",
+  "raw_bytes": 1700625,
+  "elapsed_seconds": 70.938,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\MyData\\GodotData\\MyGame\\art_source\\mother_sheet.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "2123x741",
+    "alpha_zero_pct": 44.1,
+    "partial_alpha_pct": 55.9,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 15,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "1536x512",
+    "background": "transparent",
+    "usage": {
+      "input_tokens": 336,
+      "output_tokens": 1659,
+      "total_tokens": 1995,
+      "input_tokens_details": {
+        "text_tokens": 336,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1659,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

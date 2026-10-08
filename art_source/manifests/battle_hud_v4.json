@@ -1,0 +1,747 @@
+{
+  "$schema": "../schemas/mm_art_manifest.schema.json",
+  "schema_version": 1,
+  "feature": "battle_hud_v4",
+  "scene": "res://scenes/main.tscn",
+  "root_node": "BattleHudRoot",
+  "style": {
+    "reference_images": [
+      "res://output/imagegen/previews/battle-hud-v3-1280x720-hud-day-runtime.png",
+      "res://output/imagegen/previews/battle-hud-v3-1280x720-hud-night-runtime.png"
+    ],
+    "prompt_prefix": "Project greenhouse botanical storybook UI, as specified by ordered per-resource contracts.",
+    "evidence": [
+      {
+        "kind": "art_guide",
+        "source": "res://Design/Sunflower-Defense-Art-Style-Guide.md",
+        "reason": "Approved project botanical storybook art guide"
+      },
+      {
+        "kind": "accepted_manifest",
+        "source": "res://docs/superpowers/specs/2026-09-29-battle-hud-redesign.md",
+        "reason": "Existing approved HUD layout research and gameplay boundary; reuse stable phase-specific interaction anchors"
+      },
+      {
+        "kind": "accepted_manifest",
+        "source": "res://docs/mm-tools-battle-hud-v3-stage12.md",
+        "reason": "Current requested optimization within existing approved greenhouse direction; stage 1 concrete findings and stage 2 contract"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/core/ART_CORE_MotherFlower_Healthy.png",
+        "reason": "Mother portrait and sunlight card category"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/nodes/ART_NODE_LightBud_Healthy.png",
+        "reason": "Day deployment and healing card category"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/ui/UI_ICON_Repair.png",
+        "reason": "Day repair tool/category illustration distinct from deployment"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/plants/ART_PLANT_ThornFlower_Powered.png",
+        "reason": "Day thorn and root combat category illustration"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/plants/ART_PLANT_PrismFlower_Powered.png",
+        "reason": "Day prism and piercing combat category illustration"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/ui/generated/battle_hud_v3/primary_action_normal.png",
+        "reason": "Accepted V3 hand-painted brass and glass anchor; reused"
+      },
+      {
+        "kind": "runtime_asset",
+        "source": "res://assets/ui/generated/battle_hud_v3/tactical_bezel.png",
+        "reason": "Accepted V3 botanical brass upper-left lighting anchor; reused"
+      },
+      {
+        "kind": "accepted_manifest",
+        "source": "res://docs/mm-tools-battle-hud-v4-stage12.md",
+        "reason": "User requested visual polish; reuse V3 accepted gameplay geometry without new layout"
+      },
+      {
+        "kind": "runtime_screenshot",
+        "source": "res://output/imagegen/previews/battle-hud-v3-1280x720-hud-day-runtime.png",
+        "reason": "V3 actual Godot 1280x720 day/night prior visual baseline"
+      },
+      {
+        "kind": "runtime_screenshot",
+        "source": "res://output/imagegen/previews/battle-hud-v3-1280x720-hud-night-runtime.png",
+        "reason": "V3 actual Godot 1280x720 day/night prior visual baseline"
+      }
+    ],
+    "sprite_gen_contract": "sprite-gen/docs/gen.md",
+    "visual_anchor": "Approved botanical greenhouse: hand-painted ink-green glass with blue-grey shaded edges; narrow worn brass double rim; sparse flattened leaf embossing at corners; soft upper-left light; warm pale text; clean quiet readout centers. References res://Design/Sunflower-Defense-Art-Style-Guide.md, res://assets/ui/generated/battle_hud_v3/primary_action_normal.png and res://assets/ui/generated/battle_hud_v3/tactical_bezel.png.",
+    "comfort_constraints": [
+      "Low contrast centers; restrained warm highlights without bloom",
+      "Sparse edge engraving; no flashing or motion implied",
+      "Clear silhouettes at 160 and 176 pixels; quiet runtime text areas"
+    ],
+    "avoid": [
+      "pixel art",
+      "photography",
+      "candy saturation",
+      "neon",
+      "chrome",
+      "plastic",
+      "dense decoration",
+      "baked UI",
+      "text",
+      "watermark",
+      "logo"
+    ]
+  },
+  "assets": [
+    {
+      "id": "status_frame",
+      "kind": "panel",
+      "role": "Unified mother health, phase and resource readout frame",
+      "states": [
+        "neutral"
+      ],
+      "generation": {
+        "enabled": true,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "transparent": true,
+        "prompt": "1. Game asset use: Unified mother health, phase and resource readout frame.\n2. Runtime display size and safe area: source [768, 256], runtime [304, 88]; nine-slice only straight edges and quiet center, corners uniformly scale; transparent outer margin 8px; 20px runtime text and input safe margins.\n3. Project visual anchor: Approved botanical greenhouse: hand-painted ink-green glass with blue-grey shaded edges; narrow worn brass double rim; sparse flattened leaf embossing at corners; soft upper-left light; warm pale text; clean quiet readout centers. References res://Design/Sunflower-Defense-Art-Style-Guide.md, res://assets/ui/generated/battle_hud_v3/primary_action_normal.png and res://assets/ui/generated/battle_hud_v3/tactical_bezel.png.\n4. Composition and state contract: Single 3:1 horizontal greenhouse frame. Thin double brass rim, subtly blue-grey ink-green glass with faint hand-painted edge shading, sparse pressed-leaf relief only in four corners. Empty low-noise central 85 percent. No flower portraits or status indicators. Orthographic view, upper-left soft light. Single neutral master; card states preserve exact alpha geometry through deterministic tint.\n5. Comfort constraints: low contrast center, sparse edge texture, no bloom, motion or flashing; subtle material readable at declared runtime size.\n6. Project and AI exclusions: no neon, plastic, photography, pixel art, dense ornament, bright glow, text, watermark, logo, unintended objects, baked UI, alternatives or contact sheet.\n7. Transparent output: real RGBA exterior and clean alpha; no solid backdrop, checkerboard or environment; glass inset may be translucent."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/battle_hud_v4/status_frame.png",
+        "size": [
+          768,
+          256
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          36,
+          32,
+          36,
+          32
+        ]
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/battle_hud_v4/status_frame.png",
+        "size": [
+          304,
+          88
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          18,
+          16,
+          18,
+          16
+        ],
+        "content_margin": [
+          12,
+          8,
+          12,
+          8
+        ],
+        "derived_by": "res://art_source/process_battle_hud_v4.py",
+        "brightness": 0.68
+      },
+      "ui_spec": {
+        "purpose": "Unified mother health, phase and resource readout frame",
+        "display_size": [
+          304,
+          88
+        ],
+        "content_safe_area": [
+          20,
+          16,
+          20,
+          16
+        ],
+        "layout": "Single 3:1 horizontal greenhouse frame. Thin double brass rim, subtly blue-grey ink-green glass with faint hand-painted edge shading, sparse pressed-leaf relief only in four corners. Empty low-noise central 85 percent. No flower portraits or status indicators.",
+        "state_contract": "Neutral master; all card states share exact alpha",
+        "negative": [
+          "text",
+          "watermark",
+          "logo",
+          "flowers",
+          "portraits",
+          "baked UI",
+          "busy center"
+        ]
+      },
+      "bindings": [
+        {
+          "node": "MotherStatusPanel",
+          "property": "theme_override_styles/panel"
+        },
+        {
+          "node": "PhaseBanner",
+          "property": "theme_override_styles/panel"
+        },
+        {
+          "node": "ResourcePanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "specimen_card_frame",
+      "kind": "button",
+      "role": "Battle action botanical specimen card framing existing live plant illustration, name and cost",
+      "states": [
+        "normal",
+        "hover",
+        "pressed",
+        "disabled"
+      ],
+      "generation": {
+        "enabled": true,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "transparent": true,
+        "prompt": "1. Game asset use: Battle action botanical specimen card framing existing live plant illustration, name and cost.\n2. Runtime display size and safe area: source [512, 512], runtime [142, 110]; nine-slice only straight edges and quiet center, corners uniformly scale; transparent outer margin 8px; 20px runtime text and input safe margins.\n3. Project visual anchor: Approved botanical greenhouse: hand-painted ink-green glass with blue-grey shaded edges; narrow worn brass double rim; sparse flattened leaf embossing at corners; soft upper-left light; warm pale text; clean quiet readout centers. References res://Design/Sunflower-Defense-Art-Style-Guide.md, res://assets/ui/generated/battle_hud_v3/primary_action_normal.png and res://assets/ui/generated/battle_hud_v3/tactical_bezel.png.\n4. Composition and state contract: Single compact nearly square specimen-window card. Narrow copper-brass rim with small upper corner leaf clasps. Quiet upper illustration window and lower dark green record-label region, no actual separator words. No portraits, plants, icons or costs; runtime supplies them. Empty center with restrained grain. Orthographic view, upper-left soft light. Single neutral master; card states preserve exact alpha geometry through deterministic tint.\n5. Comfort constraints: low contrast center, sparse edge texture, no bloom, motion or flashing; subtle material readable at declared runtime size.\n6. Project and AI exclusions: no neon, plastic, photography, pixel art, dense ornament, bright glow, text, watermark, logo, unintended objects, baked UI, alternatives or contact sheet.\n7. Transparent output: real RGBA exterior and clean alpha; no solid backdrop, checkerboard or environment; glass inset may be translucent."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/battle_hud_v4/specimen_card_frame.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          36,
+          32,
+          36,
+          32
+        ]
+      },
+      "runtime": {
+        "size": [
+          142,
+          110
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          18,
+          16,
+          18,
+          16
+        ],
+        "content_margin": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "derived_by": "res://art_source/process_battle_hud_v4.py",
+        "path_pattern": "res://assets/ui/generated/battle_hud_v4/specimen_card_{state}.png",
+        "source_window_fraction": 0.7,
+        "runtime_window_height": 54,
+        "brightness": 0.68
+      },
+      "ui_spec": {
+        "purpose": "Battle action botanical specimen card framing existing live plant illustration, name and cost",
+        "display_size": [
+          142,
+          110
+        ],
+        "content_safe_area": [
+          20,
+          16,
+          20,
+          16
+        ],
+        "layout": "Single compact nearly square specimen-window card. Narrow copper-brass rim with small upper corner leaf clasps. Quiet upper illustration window and lower dark green record-label region, no actual separator words. No portraits, plants, icons or costs; runtime supplies them. Empty center with restrained grain.",
+        "state_contract": "Neutral master; all card states share exact alpha",
+        "negative": [
+          "text",
+          "watermark",
+          "logo",
+          "flowers",
+          "portraits",
+          "baked UI",
+          "busy center"
+        ]
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": ".",
+          "property_map": {
+            "normal": "theme_override_styles/normal",
+            "hover": "theme_override_styles/hover",
+            "pressed": "theme_override_styles/pressed",
+            "disabled": "theme_override_styles/disabled"
+          }
+        }
+      ]
+    },
+    {
+      "id": "action_tray_frame",
+      "kind": "panel",
+      "role": "Low-weight shared day/night action tray beneath interactive cards",
+      "states": [
+        "neutral"
+      ],
+      "generation": {
+        "enabled": true,
+        "provider": "mm-api",
+        "model": "gpt-image-2",
+        "transparent": true,
+        "prompt": "1. Game asset use: Low-weight shared day/night action tray beneath interactive cards.\n2. Runtime display size and safe area: source [1024, 256], runtime [620, 126]; nine-slice only straight edges and quiet center, corners uniformly scale; transparent outer margin 8px; 20px runtime text and input safe margins.\n3. Project visual anchor: Approved botanical greenhouse: hand-painted ink-green glass with blue-grey shaded edges; narrow worn brass double rim; sparse flattened leaf embossing at corners; soft upper-left light; warm pale text; clean quiet readout centers. References res://Design/Sunflower-Defense-Art-Style-Guide.md, res://assets/ui/generated/battle_hud_v3/primary_action_normal.png and res://assets/ui/generated/battle_hud_v3/tactical_bezel.png.\n4. Composition and state contract: One 4:1 shallow tray frame. Transparent dark ink-green glass inset, fine worn brass rail and lightly brushed greenhouse wood edge. Corner leaf impressions only at tiny extreme ends. Calm empty center; no cards, flowers, plaques or buttons. Orthographic view, upper-left soft light. Single neutral master; card states preserve exact alpha geometry through deterministic tint.\n5. Comfort constraints: low contrast center, sparse edge texture, no bloom, motion or flashing; subtle material readable at declared runtime size.\n6. Project and AI exclusions: no neon, plastic, photography, pixel art, dense ornament, bright glow, text, watermark, logo, unintended objects, baked UI, alternatives or contact sheet.\n7. Transparent output: real RGBA exterior and clean alpha; no solid backdrop, checkerboard or environment; glass inset may be translucent."
+      },
+      "output": {
+        "path": "res://art_source/generated/mm_tools/battle_hud_v4/action_tray_frame.png",
+        "size": [
+          1024,
+          256
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          36,
+          32,
+          36,
+          32
+        ]
+      },
+      "runtime": {
+        "path": "res://assets/ui/generated/battle_hud_v4/action_tray_frame.png",
+        "size": [
+          620,
+          126
+        ],
+        "mode": "nine_patch",
+        "patch_margin": [
+          18,
+          16,
+          18,
+          16
+        ],
+        "content_margin": [
+          12,
+          8,
+          12,
+          8
+        ],
+        "derived_by": "res://art_source/process_battle_hud_v4.py",
+        "brightness": 0.62
+      },
+      "ui_spec": {
+        "purpose": "Low-weight shared day/night action tray beneath interactive cards",
+        "display_size": [
+          620,
+          126
+        ],
+        "content_safe_area": [
+          20,
+          16,
+          20,
+          16
+        ],
+        "layout": "One 4:1 shallow tray frame. Transparent dark ink-green glass inset, fine worn brass rail and lightly brushed greenhouse wood edge. Corner leaf impressions only at tiny extreme ends. Calm empty center; no cards, flowers, plaques or buttons.",
+        "state_contract": "Neutral master; all card states share exact alpha",
+        "negative": [
+          "text",
+          "watermark",
+          "logo",
+          "flowers",
+          "portraits",
+          "baked UI",
+          "busy center"
+        ]
+      },
+      "bindings": [
+        {
+          "node": "PhaseActionTray",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "mother_status",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; mother_status",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "MotherStatusPanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "phase_banner",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; phase_banner",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseBanner",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "resource_panel",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; resource_panel",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "ResourcePanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "phase_tray",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; phase_tray",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseActionTray",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "day_actions",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; day_actions",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseActionTray/DayActionPanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "night_hand",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; night_hand",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseActionTray/NightHandPanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "health_bar",
+      "kind": "bar",
+      "role": "Godot native style or preserved existing resource; health_bar",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "MotherStatusPanel",
+          "property": "modulate"
+        }
+      ]
+    },
+    {
+      "id": "selection_detail",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; selection_detail",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "SelectionDetailPanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "notification",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; notification",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "NotificationBanner",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "mother_choices",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; mother_choices",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "MotherChoiceOverlay/MotherChoicePanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "result",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; result",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "ResultPanel",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "tactical_fallback",
+      "kind": "panel",
+      "role": "Godot native style or preserved existing resource; tactical_fallback",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "TacticalInstrumentFrame",
+          "property": "theme_override_styles/panel"
+        }
+      ]
+    },
+    {
+      "id": "button_states",
+      "kind": "button",
+      "role": "Godot native style or preserved existing resource; button_states",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PrimaryActionButton/StartNightButton",
+          "property": "theme_override_styles/hover"
+        }
+      ]
+    },
+    {
+      "id": "phase_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseBanner/PhaseContent/PhaseLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "wave_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseBanner/PhaseContent/PhaseDetailRow/WaveLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "timer_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseBanner/PhaseContent/PhaseDetailRow/TimerLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "enemy_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PhaseBanner/PhaseContent/PhaseDetailRow/EnemyCountLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "energy_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "ResourcePanel/ResourceRow/EnergyValue",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "seed_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "ResourcePanel/ResourceRow/SeedLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "cost_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PrimaryActionButton/CostOverlay/SunburstCostLabel",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "shortcut_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "PrimaryActionButton/CostOverlay/PrimaryShortcut",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "selection_title",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "SelectionDetailPanel/SelectionContent/SelectionTitle",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "selection_text",
+      "kind": "text",
+      "role": "Live localized text drawn by Godot fonts",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "node": "SelectionDetailPanel/SelectionContent/SelectionValue",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "specimen_illustration",
+      "kind": "portrait",
+      "role": "Existing project category illustration or runtime card text; no new generated semantic artwork",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "SpecimenArt",
+          "property": "texture"
+        }
+      ]
+    },
+    {
+      "id": "specimen_title",
+      "kind": "text",
+      "role": "Existing project category illustration or runtime card text; no new generated semantic artwork",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "SpecimenTitle",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "specimen_cost",
+      "kind": "text",
+      "role": "Existing project category illustration or runtime card text; no new generated semantic artwork",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "SpecimenCost",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "id": "specimen_selection",
+      "kind": "decoration",
+      "role": "Native thin warm-brass outline indicates the currently selected combat card without lightening its full face",
+      "generation": {
+        "enabled": false
+      },
+      "bindings": [
+        {
+          "scope": "component",
+          "node": "SpecimenSelection",
+          "property": "visible"
+        }
+      ]
+    }
+  ]
+}

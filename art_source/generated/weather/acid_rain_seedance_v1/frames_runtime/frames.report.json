@@ -1,0 +1,2226 @@
+{
+  "kind": "sprite-gen-video-frames-report",
+  "clip": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\weather\\acid_rain_seedance_v1\\acid_rain_runtime480.mp4",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\weather\\acid_rain_seedance_v1\\frames_runtime",
+  "raw_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\weather\\acid_rain_seedance_v1\\frames_runtime\\raw",
+  "keyed_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\weather\\acid_rain_seedance_v1\\frames_runtime\\keyed",
+  "key": "magenta",
+  "spill": {
+    "mode": "small",
+    "reason": "explicit"
+  },
+  "width": 480,
+  "height": 480,
+  "fps": 24.0,
+  "nb_frames": 121,
+  "duration": 5.041667,
+  "frames": 121,
+  "alpha_zero_pct_min": 63.87,
+  "alpha_zero_pct_max": 100.0,
+  "edge_contacts": [
+    {
+      "frame": "frame-0001.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        79,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0002.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        188,
+        79,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0003.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        78,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0004.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        78,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0005.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        111
+      ]
+    },
+    {
+      "frame": "frame-0006.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0007.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        188,
+        79,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0008.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        188,
+        79,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0009.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        188,
+        80,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0010.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        188,
+        80,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0011.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0012.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        188,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0013.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        188,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0014.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        188,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0015.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0016.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0017.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0018.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        188,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0019.png",
+      "top": 16,
+      "left": 0,
+      "right": 0,
+      "subject": 16,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0020.png",
+      "top": 16,
+      "left": 0,
+      "right": 0,
+      "subject": 16,
+      "residual": 0,
+      "key_painted": [
+        188,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0021.png",
+      "top": 16,
+      "left": 0,
+      "right": 0,
+      "subject": 16,
+      "residual": 0,
+      "key_painted": [
+        188,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0022.png",
+      "top": 8,
+      "left": 0,
+      "right": 0,
+      "subject": 8,
+      "residual": 0,
+      "key_painted": [
+        188,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0048.png",
+      "top": 0,
+      "left": 0,
+      "right": 40,
+      "subject": 40,
+      "residual": 0,
+      "key_painted": [
+        186,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0049.png",
+      "top": 0,
+      "left": 0,
+      "right": 100,
+      "subject": 100,
+      "residual": 0,
+      "key_painted": [
+        186,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0050.png",
+      "top": 0,
+      "left": 36,
+      "right": 104,
+      "subject": 140,
+      "residual": 0,
+      "key_painted": [
+        187,
+        81,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0051.png",
+      "top": 0,
+      "left": 8,
+      "right": 4,
+      "subject": 12,
+      "residual": 0,
+      "key_painted": [
+        187,
+        81,
+        114
+      ]
+    },
+    {
+      "frame": "frame-0062.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        78,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0063.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        78,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0064.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        78,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0065.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        79,
+        112
+      ]
+    },
+    {
+      "frame": "frame-0066.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        79,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0067.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        190,
+        79,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0068.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        190,
+        79,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0069.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        190,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0070.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        190,
+        80,
+        114
+      ]
+    },
+    {
+      "frame": "frame-0071.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        190,
+        80,
+        114
+      ]
+    },
+    {
+      "frame": "frame-0072.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        190,
+        80,
+        114
+      ]
+    },
+    {
+      "frame": "frame-0073.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        190,
+        80,
+        114
+      ]
+    },
+    {
+      "frame": "frame-0074.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        114
+      ]
+    },
+    {
+      "frame": "frame-0075.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        190,
+        80,
+        114
+      ]
+    },
+    {
+      "frame": "frame-0076.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        114
+      ]
+    },
+    {
+      "frame": "frame-0077.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        190,
+        80,
+        114
+      ]
+    },
+    {
+      "frame": "frame-0078.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0079.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0080.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0081.png",
+      "top": 24,
+      "left": 0,
+      "right": 0,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0082.png",
+      "top": 16,
+      "left": 0,
+      "right": 0,
+      "subject": 16,
+      "residual": 0,
+      "key_painted": [
+        189,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0114.png",
+      "top": 0,
+      "left": 0,
+      "right": 124,
+      "subject": 124,
+      "residual": 0,
+      "key_painted": [
+        187,
+        80,
+        113
+      ]
+    },
+    {
+      "frame": "frame-0115.png",
+      "top": 0,
+      "left": 0,
+      "right": 24,
+      "subject": 24,
+      "residual": 0,
+      "key_painted": [
+        156,
+        62,
+        94
+      ]
+    }
+  ],
+  "edge_policy": "subject-allowed",
+  "rows": [
+    {
+      "frame": "frame-0001.png",
+      "alpha_zero_pct": 97.82,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          79,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0002.png",
+      "alpha_zero_pct": 97.84,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          188,
+          79,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0003.png",
+      "alpha_zero_pct": 97.72,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          78,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0004.png",
+      "alpha_zero_pct": 97.73,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          78,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0005.png",
+      "alpha_zero_pct": 97.75,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          111
+        ]
+      }
+    },
+    {
+      "frame": "frame-0006.png",
+      "alpha_zero_pct": 97.8,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0007.png",
+      "alpha_zero_pct": 97.76,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          188,
+          79,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0008.png",
+      "alpha_zero_pct": 97.74,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          188,
+          79,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0009.png",
+      "alpha_zero_pct": 97.74,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          188,
+          80,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0010.png",
+      "alpha_zero_pct": 97.74,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          188,
+          80,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0011.png",
+      "alpha_zero_pct": 97.72,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0012.png",
+      "alpha_zero_pct": 97.66,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          188,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0013.png",
+      "alpha_zero_pct": 97.57,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          188,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0014.png",
+      "alpha_zero_pct": 97.6,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          188,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0015.png",
+      "alpha_zero_pct": 97.62,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0016.png",
+      "alpha_zero_pct": 97.52,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0017.png",
+      "alpha_zero_pct": 97.46,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0018.png",
+      "alpha_zero_pct": 97.57,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          188,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0019.png",
+      "alpha_zero_pct": 97.67,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 16,
+        "left": 0,
+        "right": 0,
+        "subject": 16,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0020.png",
+      "alpha_zero_pct": 97.34,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 16,
+        "left": 0,
+        "right": 0,
+        "subject": 16,
+        "residual": 0,
+        "key_painted": [
+          188,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0021.png",
+      "alpha_zero_pct": 97.34,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 16,
+        "left": 0,
+        "right": 0,
+        "subject": 16,
+        "residual": 0,
+        "key_painted": [
+          188,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0022.png",
+      "alpha_zero_pct": 97.55,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 8,
+        "left": 0,
+        "right": 0,
+        "subject": 8,
+        "residual": 0,
+        "key_painted": [
+          188,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0023.png",
+      "alpha_zero_pct": 97.07,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0024.png",
+      "alpha_zero_pct": 95.48,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0025.png",
+      "alpha_zero_pct": 94.45,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0026.png",
+      "alpha_zero_pct": 93.44,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0027.png",
+      "alpha_zero_pct": 91.24,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0028.png",
+      "alpha_zero_pct": 89.98,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0029.png",
+      "alpha_zero_pct": 89.02,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0030.png",
+      "alpha_zero_pct": 87.85,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0031.png",
+      "alpha_zero_pct": 85.55,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0032.png",
+      "alpha_zero_pct": 84.33,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0033.png",
+      "alpha_zero_pct": 83.45,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0034.png",
+      "alpha_zero_pct": 82.12,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0035.png",
+      "alpha_zero_pct": 79.64,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0036.png",
+      "alpha_zero_pct": 78.51,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0037.png",
+      "alpha_zero_pct": 77.63,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0038.png",
+      "alpha_zero_pct": 76.38,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0039.png",
+      "alpha_zero_pct": 73.78,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0040.png",
+      "alpha_zero_pct": 72.69,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0041.png",
+      "alpha_zero_pct": 71.9,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0042.png",
+      "alpha_zero_pct": 70.59,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0043.png",
+      "alpha_zero_pct": 68.35,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0044.png",
+      "alpha_zero_pct": 67.37,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0045.png",
+      "alpha_zero_pct": 66.7,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0046.png",
+      "alpha_zero_pct": 65.58,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0047.png",
+      "alpha_zero_pct": 63.87,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0048.png",
+      "alpha_zero_pct": 64.8,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 40,
+        "subject": 40,
+        "residual": 0,
+        "key_painted": [
+          186,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0049.png",
+      "alpha_zero_pct": 64.4,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 100,
+        "subject": 100,
+        "residual": 0,
+        "key_painted": [
+          186,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0050.png",
+      "alpha_zero_pct": 96.71,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 36,
+        "right": 104,
+        "subject": 140,
+        "residual": 0,
+        "key_painted": [
+          187,
+          81,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0051.png",
+      "alpha_zero_pct": 99.04,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 8,
+        "right": 4,
+        "subject": 12,
+        "residual": 0,
+        "key_painted": [
+          187,
+          81,
+          114
+        ]
+      }
+    },
+    {
+      "frame": "frame-0052.png",
+      "alpha_zero_pct": 99.63,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0053.png",
+      "alpha_zero_pct": 99.88,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0054.png",
+      "alpha_zero_pct": 99.93,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0055.png",
+      "alpha_zero_pct": 100.0,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0056.png",
+      "alpha_zero_pct": 100.0,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0057.png",
+      "alpha_zero_pct": 100.0,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0058.png",
+      "alpha_zero_pct": 100.0,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0059.png",
+      "alpha_zero_pct": 100.0,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0060.png",
+      "alpha_zero_pct": 100.0,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0061.png",
+      "alpha_zero_pct": 100.0,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0062.png",
+      "alpha_zero_pct": 97.83,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          78,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0063.png",
+      "alpha_zero_pct": 97.8,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          78,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0064.png",
+      "alpha_zero_pct": 97.74,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          78,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0065.png",
+      "alpha_zero_pct": 97.81,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          79,
+          112
+        ]
+      }
+    },
+    {
+      "frame": "frame-0066.png",
+      "alpha_zero_pct": 97.75,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          79,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0067.png",
+      "alpha_zero_pct": 97.71,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          190,
+          79,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0068.png",
+      "alpha_zero_pct": 97.68,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          190,
+          79,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0069.png",
+      "alpha_zero_pct": 97.74,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          190,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0070.png",
+      "alpha_zero_pct": 97.63,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          190,
+          80,
+          114
+        ]
+      }
+    },
+    {
+      "frame": "frame-0071.png",
+      "alpha_zero_pct": 97.59,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          190,
+          80,
+          114
+        ]
+      }
+    },
+    {
+      "frame": "frame-0072.png",
+      "alpha_zero_pct": 97.49,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          190,
+          80,
+          114
+        ]
+      }
+    },
+    {
+      "frame": "frame-0073.png",
+      "alpha_zero_pct": 97.47,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          190,
+          80,
+          114
+        ]
+      }
+    },
+    {
+      "frame": "frame-0074.png",
+      "alpha_zero_pct": 97.5,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          114
+        ]
+      }
+    },
+    {
+      "frame": "frame-0075.png",
+      "alpha_zero_pct": 97.53,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          190,
+          80,
+          114
+        ]
+      }
+    },
+    {
+      "frame": "frame-0076.png",
+      "alpha_zero_pct": 97.43,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          114
+        ]
+      }
+    },
+    {
+      "frame": "frame-0077.png",
+      "alpha_zero_pct": 97.25,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          190,
+          80,
+          114
+        ]
+      }
+    },
+    {
+      "frame": "frame-0078.png",
+      "alpha_zero_pct": 97.47,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0079.png",
+      "alpha_zero_pct": 97.66,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0080.png",
+      "alpha_zero_pct": 97.47,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0081.png",
+      "alpha_zero_pct": 97.38,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 24,
+        "left": 0,
+        "right": 0,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0082.png",
+      "alpha_zero_pct": 97.5,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 16,
+        "left": 0,
+        "right": 0,
+        "subject": 16,
+        "residual": 0,
+        "key_painted": [
+          189,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0083.png",
+      "alpha_zero_pct": 97.71,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0084.png",
+      "alpha_zero_pct": 97.22,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0085.png",
+      "alpha_zero_pct": 96.93,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0086.png",
+      "alpha_zero_pct": 96.36,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0087.png",
+      "alpha_zero_pct": 94.54,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0088.png",
+      "alpha_zero_pct": 93.27,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0089.png",
+      "alpha_zero_pct": 92.33,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0090.png",
+      "alpha_zero_pct": 91.42,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0091.png",
+      "alpha_zero_pct": 89.55,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0092.png",
+      "alpha_zero_pct": 88.39,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0093.png",
+      "alpha_zero_pct": 87.64,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0094.png",
+      "alpha_zero_pct": 86.57,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0095.png",
+      "alpha_zero_pct": 84.42,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0096.png",
+      "alpha_zero_pct": 83.46,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0097.png",
+      "alpha_zero_pct": 82.69,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0098.png",
+      "alpha_zero_pct": 81.51,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0099.png",
+      "alpha_zero_pct": 79.27,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0100.png",
+      "alpha_zero_pct": 78.25,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0101.png",
+      "alpha_zero_pct": 77.52,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0102.png",
+      "alpha_zero_pct": 76.25,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0103.png",
+      "alpha_zero_pct": 73.9,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0104.png",
+      "alpha_zero_pct": 72.86,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0105.png",
+      "alpha_zero_pct": 72.08,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0106.png",
+      "alpha_zero_pct": 70.83,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0107.png",
+      "alpha_zero_pct": 68.76,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0108.png",
+      "alpha_zero_pct": 67.87,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0109.png",
+      "alpha_zero_pct": 67.19,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0110.png",
+      "alpha_zero_pct": 65.29,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0111.png",
+      "alpha_zero_pct": 64.7,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0112.png",
+      "alpha_zero_pct": 65.77,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0113.png",
+      "alpha_zero_pct": 66.38,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0114.png",
+      "alpha_zero_pct": 97.43,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 124,
+        "subject": 124,
+        "residual": 0,
+        "key_painted": [
+          187,
+          80,
+          113
+        ]
+      }
+    },
+    {
+      "frame": "frame-0115.png",
+      "alpha_zero_pct": 99.58,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 24,
+        "subject": 24,
+        "residual": 0,
+        "key_painted": [
+          156,
+          62,
+          94
+        ]
+      }
+    },
+    {
+      "frame": "frame-0116.png",
+      "alpha_zero_pct": 99.74,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0117.png",
+      "alpha_zero_pct": 99.81,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0118.png",
+      "alpha_zero_pct": 99.98,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0119.png",
+      "alpha_zero_pct": 100.0,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0120.png",
+      "alpha_zero_pct": 100.0,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "frame": "frame-0121.png",
+      "alpha_zero_pct": 100.0,
+      "route": "extract:ycbcr",
+      "edge": {
+        "top": 0,
+        "left": 0,
+        "right": 0
+      }
+    }
+  ],
+  "decontam": {
+    "mode": "off",
+    "applied_frames": 0
+  },
+  "report": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\weather\\acid_rain_seedance_v1\\frames_runtime\\frames.report.json",
+  "matte_adapter": "canonical sprite-gen YCbCr, explicit Seedance shaded-key route",
+  "matte_parameters": {
+    "flood_tolerance": 24,
+    "chroma_in": 12,
+    "chroma_out": 42
+  }
+}
