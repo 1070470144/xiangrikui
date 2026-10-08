@@ -1,0 +1,47 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Create ONE complete portrait game upgrade card background, straight-on rectangular 3:4 canvas. Hand-painted dark fantasy botanical greenhouse storybook aesthetic. Full canvas occupied by the card, no exterior margin. Rounded modest corners. Thin aged bronze metal outer edging, restrained engraved sunflower leaves at four corners, dark navy green enamel and subtle brushwork. TOP 58 percent is a quiet very dark blue-green botanical specimen display alcove, empty center for an independently overlaid plant portrait, with a faint desaturated radial circular botanical etching centered at x50 percent y30 percent. No plant drawn. BOTTOM from y60 to y88 percent is warm light ivory matte parchment integrated INTO the card frame, almost solid and quiet, no stains behind text, a very fine bronze rule across its top. At y91 to y98 percent a dark green horizontal action strip with thin antique brass edge, empty. Reserve top y3-8 percent for rank label and y51-59 for title. Upper corners restrained organic leaves, no large ornament crossing text. Legible premium painterly UI for a sunflower garden defense game. Strong quiet material hierarchy, crisp silhouette. No text, letters, numbers, symbols resembling writing, no plant portrait, no icons, no neon, no gloss, no perspective, no mockup, no background scene, no watermark. Single card only.",
+  "out": "D:\\mm\\data\\xiangrikui\\assets\\ui\\generated\\mother_buff_ui\\mother_buff_card_v2.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\assets\\ui\\generated\\mother_buff_ui\\mother_buff_card_v2.png.raw.png",
+  "raw_bytes": 2446623,
+  "elapsed_seconds": 67.266,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "768x1024",
+    "background": "opaque",
+    "usage": {
+      "prompt_tokens": 271,
+      "completion_tokens": 1613,
+      "total_tokens": 1884,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "video_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

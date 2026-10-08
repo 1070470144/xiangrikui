@@ -1,0 +1,14 @@
+{
+  "operation": "video.generate",
+  "model": "minimax_h3_image_audio_to_video",
+  "input": {
+    "prompt": "Animate the supplied shadow beast reference into a polished game animation video. Locked camera, fixed side view facing right, full body centered on a flat pure green background. Perform two complete natural in-place quadruped walking cycles like a high quality action RPG creature: clear weight transfer, stable planted front and hind paws, low recovery arcs, rolling shoulders, hip counterbalance, subtle spine flex and restrained tail counter-motion. Keep exactly four legs with fixed joints and proportions. No camera motion, no zoom, no extra limbs, no morphing, no foot skating, no hopping, no scenery, no text, no blur."
+  },
+  "parameters": {
+    "duration_seconds": 6,
+    "aspect_ratio": "16:9",
+    "resolution": "768p",
+    "generate_audio": true
+  },
+  "idempotency_key": "7d23f031-9f58-4f39-8fa2-ca250df81ca7"
+}

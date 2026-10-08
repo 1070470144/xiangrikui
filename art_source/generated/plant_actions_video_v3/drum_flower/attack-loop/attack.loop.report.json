@@ -1,0 +1,89 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_actions_video_v3\\drum_flower\\attack-frames\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_actions_video_v3\\drum_flower\\attack-loop",
+  "state": "attack",
+  "fps": 24.0,
+  "frames_total": 97,
+  "window": [
+    11,
+    60
+  ],
+  "profile": "swing and return to ready; retain at least half a second of repeat context",
+  "cycle_mode": "pinned",
+  "seam_max": 2.0,
+  "anchor": "none",
+  "seam_measurement": "source-frames",
+  "cycle": {
+    "kind": "pinned",
+    "start": 0,
+    "length": 96,
+    "seam": 0.0007336454000324011,
+    "inner_mean_adjacent": 0.005948297679424286,
+    "ratio": 0.12333703516052141,
+    "pin_error": 0.0007971994346007705,
+    "pin_tolerance": 0.011896595358848572,
+    "period_global": null,
+    "periodicity": null
+  },
+  "periodic_attempt": null,
+  "cycle_seconds": 4.0,
+  "n_out": 64,
+  "gif_fps": 24.0,
+  "delay_ms": 62,
+  "status": "passed",
+  "resampled_seam": 0.0007813501288183033,
+  "resampled_inner_mean_adjacent": 0.007880107499659061,
+  "resampled_seam_ratio": 0.0992,
+  "scrubbed_rgb_pixels": 0,
+  "specks_dropped": 1924,
+  "strip": {
+    "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\plant_actions_video_v3\\drum_flower\\attack-loop\\attack.strip.png",
+    "frames": 64,
+    "w": 168,
+    "h": 138,
+    "kind": "pinned",
+    "loop": true,
+    "body_h": 128,
+    "body_src_h": 200,
+    "body_ref": "first-frame",
+    "scale": 0.64,
+    "delay_ms": 62.5,
+    "cycle_frames": 96,
+    "cycle_seconds": 4.0,
+    "subsampled": true,
+    "cell_cap": 64,
+    "top_margin_px": 187,
+    "body_height_target": 128,
+    "foot_anchor": "none",
+    "drift_px": 0,
+    "foot_sway_px": 0,
+    "foot_x": null
+  },
+  "gif": {
+    "file": "attack.gif",
+    "format": "GIF",
+    "n_frames": 64,
+    "loop": 0,
+    "size": [
+      168,
+      138
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 517862
+  },
+  "webp": {
+    "file": "attack.webp",
+    "format": "WEBP",
+    "n_frames": 64,
+    "loop": 0,
+    "size": [
+      168,
+      138
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 1358440
+  }
+}

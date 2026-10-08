@@ -1,0 +1,51 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Production game asset: one majestic rooted sunflower mother, grounded realistic dark-fantasy botanical creature. Orthographic three-quarter overhead view, full plant including all roots visible, centered isolated on genuine transparent background. Preserve sunflower identity: broad round finely textured brown seed disk with tightly packed spiral florets, tiny restrained amber light deep in the center, irregular overlapping elongated yellow-gold ray petals with thin translucent edges, natural veins and subtle curling, thick fibrous green-brown stem, four asymmetric deep-green leaves with real serrations and venation, sturdy woody branching roots spread horizontally at ground contact. Physically convincing organic materials and restrained cinematic warm lighting from upper left; natural roughness, soft self-shadowing and fine detail. Premium realistic fantasy game rendering inspired by botanical environment art in Diablo IV and Elden Ring, original design. Compact powerful silhouette readable at 140 pixels. No face, eyes, pot, pedestal, ground, scenery, text, border, aura, rays, floating ring, pink color, magical spikes, plastic or metallic petals. No blown-out white flower center. Plenty of transparent margin on every edge.\nSlightly cupped broad sunflower crown, asymmetric leaves and a short sturdy stem.",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mother_realism_v1\\candidate-2.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mother_realism_v1\\candidate-2.png.raw.png",
+  "raw_bytes": 1685269,
+  "elapsed_seconds": 40.953,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "native",
+    "strategy_source": "provider-default",
+    "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mother_realism_v1\\candidate-2.png",
+    "mode": "RGBA",
+    "method": "native",
+    "size": "1254x1254",
+    "alpha_zero_pct": 56.4,
+    "partial_alpha_pct": 43.6,
+    "opaque_pct": 0.0,
+    "cleaned_transparent_rgb_pixels": 235,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "medium",
+    "size": "1024x1024",
+    "background": "transparent",
+    "usage": {
+      "input_tokens": 240,
+      "output_tokens": 1650,
+      "total_tokens": 1890,
+      "input_tokens_details": {
+        "text_tokens": 240,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1650,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

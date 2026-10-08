@@ -1,0 +1,26 @@
+{
+  "frames": 48,
+  "opaque_magenta_pixels": 0,
+  "root_centroid_spread_px": [
+    0.8233419920092615,
+    0.28970352564104473
+  ],
+  "engine_loop": "passed",
+  "selected_candidate": 2,
+  "selection_reason": "Broader flower disk and compact botanical silhouette",
+  "billed_requests": {
+    "images": 2,
+    "videos": 1
+  },
+  "state_resolution_checks": 15,
+  "form_integration_checks": 67,
+  "packed_resource_test": "passed: 15 state/resolution checks plus evolution/danger suites",
+  "image_requested_size": [
+    1024,
+    1024
+  ],
+  "image_actual_size": [
+    1254,
+    1254
+  ]
+}
