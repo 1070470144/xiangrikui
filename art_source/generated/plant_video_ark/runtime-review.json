@@ -1,0 +1,422 @@
+[
+  {
+    "species": "thorn_flower",
+    "state": "idle",
+    "frames": 64,
+    "unique_frames": 64,
+    "seconds": 4.0,
+    "ground_y_range": [
+      138,
+      139
+    ],
+    "root_x_range_px": 4.51,
+    "root_y_range_px": 1,
+    "source": "art_source\\generated\\plant_video_ark\\thorn_flower\\idle.mp4"
+  },
+  {
+    "species": "thorn_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 1.07,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\thorn_flower\\attack.mp4"
+  },
+  {
+    "species": "prism_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.83,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\prism_flower\\idle.mp4"
+  },
+  {
+    "species": "prism_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      137,
+      139
+    ],
+    "root_x_range_px": 0.86,
+    "root_y_range_px": 2,
+    "source": "art_source\\generated\\plant_video_ark\\prism_flower\\attack.mp4"
+  },
+  {
+    "species": "lantern_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.26,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\lantern_flower\\idle.mp4"
+  },
+  {
+    "species": "lantern_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.36,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\lantern_flower\\attack.mp4"
+  },
+  {
+    "species": "frost_bell",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.89,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\frost_bell\\idle.mp4"
+  },
+  {
+    "species": "frost_bell",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 5.05,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\frost_bell\\attack.mp4"
+  },
+  {
+    "species": "honeydew_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.71,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\honeydew_flower\\idle.mp4"
+  },
+  {
+    "species": "honeydew_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.26,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\honeydew_flower\\attack.mp4"
+  },
+  {
+    "species": "storm_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      138,
+      139
+    ],
+    "root_x_range_px": 0.58,
+    "root_y_range_px": 1,
+    "source": "art_source\\generated\\plant_video_ark\\storm_flower\\idle.mp4"
+  },
+  {
+    "species": "storm_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.39,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\storm_flower\\attack.mp4"
+  },
+  {
+    "species": "gale_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 5.29,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\gale_flower\\idle.mp4"
+  },
+  {
+    "species": "gale_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 5.07,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\gale_flower\\attack.mp4"
+  },
+  {
+    "species": "sunwell_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.38,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\sunwell_flower\\idle.mp4"
+  },
+  {
+    "species": "sunwell_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.35,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\sunwell_flower\\attack.mp4"
+  },
+  {
+    "species": "ember_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.22,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\ember_flower\\idle.mp4"
+  },
+  {
+    "species": "ember_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.26,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\ember_flower\\attack.mp4"
+  },
+  {
+    "species": "slumber_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.22,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\slumber_flower\\idle.mp4"
+  },
+  {
+    "species": "slumber_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.39,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\slumber_flower\\attack.mp4"
+  },
+  {
+    "species": "spear_bamboo",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.22,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\spear_bamboo\\idle.mp4"
+  },
+  {
+    "species": "spear_bamboo",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.21,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\spear_bamboo\\attack.mp4"
+  },
+  {
+    "species": "burst_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.24,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\burst_flower\\idle.mp4"
+  },
+  {
+    "species": "burst_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.76,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\burst_flower\\attack.mp4"
+  },
+  {
+    "species": "stone_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.37,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\stone_flower\\idle.mp4"
+  },
+  {
+    "species": "stone_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.39,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\stone_flower\\attack.mp4"
+  },
+  {
+    "species": "cleanse_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.41,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\cleanse_flower\\idle.mp4"
+  },
+  {
+    "species": "cleanse_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.24,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\cleanse_flower\\attack.mp4"
+  },
+  {
+    "species": "drum_flower",
+    "state": "idle",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.79,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\drum_flower\\idle.mp4"
+  },
+  {
+    "species": "drum_flower",
+    "state": "attack",
+    "frames": 48,
+    "unique_frames": 48,
+    "seconds": 3.99984,
+    "ground_y_range": [
+      139,
+      139
+    ],
+    "root_x_range_px": 0.54,
+    "root_y_range_px": 0,
+    "source": "art_source\\generated\\plant_video_ark\\drum_flower\\attack.mp4"
+  }
+]
