@@ -8,6 +8,14 @@ static func load_frames(form: String = "base") -> SpriteFrames:
 	if not form in ["base", "sun_arrow", "root_heart", "dawn_pulse"]: return null
 	if _cache.has(form): return _cache[form]
 	var frames := load_manifest(ROOT + form + "/manifest.json")
+	if form == "sun_arrow" and frames != null:
+		var attack = preload("res://scripts/sun_arrow_visual.gd").frames("attack")
+		if attack != null:
+			frames.add_animation("attack")
+			frames.set_animation_loop("attack", false)
+			frames.set_animation_speed("attack", attack.get_animation_speed("attack"))
+			for i in attack.get_frame_count("attack"):
+				frames.add_frame("attack", attack.get_frame_texture("attack", i))
 	_cache[form] = frames
 	return frames
 

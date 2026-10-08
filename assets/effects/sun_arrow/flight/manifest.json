@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "fps": 24.0,
+  "frame_paths": [
+    "res://assets/effects/sun_arrow/flight/frame-000.png",
+    "res://assets/effects/sun_arrow/flight/frame-001.png",
+    "res://assets/effects/sun_arrow/flight/frame-002.png",
+    "res://assets/effects/sun_arrow/flight/frame-003.png",
+    "res://assets/effects/sun_arrow/flight/frame-004.png",
+    "res://assets/effects/sun_arrow/flight/frame-005.png",
+    "res://assets/effects/sun_arrow/flight/frame-006.png",
+    "res://assets/effects/sun_arrow/flight/frame-007.png",
+    "res://assets/effects/sun_arrow/flight/frame-008.png",
+    "res://assets/effects/sun_arrow/flight/frame-009.png",
+    "res://assets/effects/sun_arrow/flight/frame-010.png",
+    "res://assets/effects/sun_arrow/flight/frame-011.png",
+    "res://assets/effects/sun_arrow/flight/frame-012.png",
+    "res://assets/effects/sun_arrow/flight/frame-013.png",
+    "res://assets/effects/sun_arrow/flight/frame-014.png",
+    "res://assets/effects/sun_arrow/flight/frame-015.png",
+    "res://assets/effects/sun_arrow/flight/frame-016.png",
+    "res://assets/effects/sun_arrow/flight/frame-017.png",
+    "res://assets/effects/sun_arrow/flight/frame-018.png",
+    "res://assets/effects/sun_arrow/flight/frame-019.png",
+    "res://assets/effects/sun_arrow/flight/frame-020.png",
+    "res://assets/effects/sun_arrow/flight/frame-021.png",
+    "res://assets/effects/sun_arrow/flight/frame-022.png",
+    "res://assets/effects/sun_arrow/flight/frame-023.png"
+  ],
+  "source": "art_source\\generated\\sun_arrow_attack\\flight\\clip.mp4",
+  "source_fps": 24,
+  "duration": 1.0
+}

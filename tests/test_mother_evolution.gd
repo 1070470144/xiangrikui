@@ -48,7 +48,7 @@ func test_every_upgrade_has_runtime_effects() -> void:
 	var full_sunseed := MotherEvolution.new(); full_sunseed.choose_path("sun_arrow")
 	for rank in range(1, 7): full_sunseed.choose_upgrade("mother_sunseed_%02d" % rank)
 	expect(full_sunseed.get_mother_attack_damage() == 23.0, "sunseed damage upgrade must apply")
-	expect(full_sunseed.get_mother_attack_range() == 265.0, "sunseed range upgrade must apply")
+	expect(full_sunseed.get_mother_attack_range() == 315.0, "sunseed range upgrade must apply")
 	expect(is_equal_approx(full_sunseed.get_mother_attack_interval(), 1.32), "sunseed attack-speed upgrade must apply")
 	expect(full_sunseed.get_effect_value("attack_extra_every", 0) == 4 and full_sunseed.get_effect_value("attack_pierce_ratio", 0.0) == 0.65, "advanced sunseed behavior must be active")
 	var full_quelling := MotherEvolution.new(); full_quelling.choose_path("dawn_pulse")

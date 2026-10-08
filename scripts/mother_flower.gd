@@ -28,6 +28,10 @@ var evolution := MotherEvolution.new()
 var shield := 0.0
 var damage_reduction := 0.0
 var attack_cooldown := 0.0
+var pending_attack_target: Node
+var attack_windup := -1.0
+var attack_transition_time := 0.0
+var transition_sprite: Sprite2D
 var pulse_cooldown := 0.0
 var root_whip_cooldown := 0.0
 var base_max_health := Balance.MOTHER_MAX_HEALTH
@@ -65,11 +69,30 @@ func _setup_art() -> void:
 	motion_sprite.position = Vector2(0, -24)
 	motion_sprite.scale = Vector2.ONE * 0.56
 	add_child(motion_sprite)
+	transition_sprite = Sprite2D.new()
+	transition_sprite.position = motion_sprite.position
+	transition_sprite.scale = motion_sprite.scale
+	transition_sprite.visible = false
+	add_child(transition_sprite)
+	motion_sprite.animation_finished.connect(func():
+		if motion_sprite.animation == "attack":
+			_begin_animation_transition()
+			motion_sprite.play("idle"))
+
+func _begin_animation_transition() -> void:
+	if transition_sprite == null or motion_sprite.sprite_frames == null: return
+	transition_sprite.texture = motion_sprite.sprite_frames.get_frame_texture(motion_sprite.animation, motion_sprite.frame)
+	transition_sprite.visible = true
+	attack_transition_time = 0.06
 
 func reset_state() -> void:
+	pending_attack_target = null
+	attack_windup = -1.0
+	attack_transition_time = 0.0
 	base_max_health = max_health
 	health = max_health; shield = 0.0; damage_reduction = 0.0; attack_cooldown = 0.0; pulse_cooldown = 0.0; root_whip_cooldown = 0.0
 	combat_night = false; damage_block_cooldown = 0.0; time_since_damage = 999.0; night_kill_heals = 0
+	plant_heal_clock = 0.0
 	recent_damage = 0.0; recent_damage_time = 0.0; damage_burst_cooldown = 0.0; solar_wind_cooldown = 10.0
 	evolution.reset()
 	_animation_id = ""
@@ -170,8 +193,30 @@ func on_day_started() -> void:
 	combat_night = false
 	if evolution.has_upgrade("mother_sap_02"): heal(float(evolution.get_effect_value("day_start_heal", 40.0)))
 
+var plant_heal_clock := 0.0
+
+func advance_root_recovery(delta: float) -> void:
+	if not combat_night or health <= 0.0 or evolution.path_id != "root_heart": return
+	heal(float(evolution.get_effect_value("night_regen", 0.4)) * delta)
+	if not evolution.has_upgrade("mother_sap_01"): return
+	plant_heal_clock += delta
+	var interval := float(evolution.get_effect_value("plant_heal_interval", 5.0))
+	while plant_heal_clock >= interval:
+		plant_heal_clock -= interval
+		var host := get_parent()
+		if host == null or not ("plants" in host): continue
+		var target: Node2D = null
+		var lowest := 1.0
+		for plant in host.plants:
+			if not is_instance_valid(plant) or plant.is_queued_for_deletion() or plant.health <= 0.0 or plant.dying or plant.reviving or plant.temporary_lifetime > 0.0: continue
+			if global_position.distance_squared_to(plant.global_position) > 40000.0: continue
+			var ratio: float = plant.health / maxf(plant.max_health, 1.0)
+			if ratio < lowest: lowest = ratio; target = plant
+		if target != null: target.heal(float(evolution.get_effect_value("plant_heal_amount", 10.0)))
+
 func on_night_started() -> void:
 	combat_night = true; night_kill_heals = 0
+	plant_heal_clock = 0.0
 	if evolution.has_upgrade("mother_receptacle_06"):
 		shield = maxf(shield, float(evolution.get_effect_value("night_shield", 60.0)))
 	if evolution.has_upgrade("mother_charge_03"): pulse_cooldown = 0.0
@@ -185,6 +230,23 @@ func get_evolution_choices() -> Array[String]: return evolution.get_choices()
 func get_evolution_state() -> Dictionary: return evolution.export_state()
 
 func _process(delta: float) -> void:
+	if not combat_night or health <= 0.0:
+		pending_attack_target = null
+		attack_windup = -1.0
+		attack_transition_time = 0.0
+		if motion_sprite != null and motion_sprite.animation == "attack": motion_sprite.play("idle")
+		if motion_sprite != null: motion_sprite.modulate.a = 1.0
+		if transition_sprite != null: transition_sprite.visible = false
+		for effect in get_tree().get_nodes_in_group("mother_attack_effects"):
+			effect.queue_free()
+	elif attack_windup >= 0.0:
+		attack_windup -= delta
+		if attack_windup <= 0.0:
+			attack_windup = -1.0
+			if is_instance_valid(pending_attack_target) and not pending_attack_target.is_queued_for_deletion() and pending_attack_target.health > 0.0:
+				attack_requested.emit(global_position + Vector2(0, -56), pending_attack_target, evolution.get_mother_attack_damage())
+			pending_attack_target = null
+	attack_transition_time = maxf(0.0, attack_transition_time - delta)
 	attack_cooldown = maxf(0.0, attack_cooldown - delta); pulse_cooldown = maxf(0.0, pulse_cooldown - delta); root_whip_cooldown = maxf(0.0, root_whip_cooldown - delta)
 	damage_block_cooldown = maxf(0.0, damage_block_cooldown - delta); time_since_damage += delta
 	damage_burst_cooldown = maxf(0.0, damage_burst_cooldown - delta); recent_damage_time = maxf(0.0, recent_damage_time - delta)
@@ -193,10 +255,10 @@ func _process(delta: float) -> void:
 		solar_wind_cooldown -= delta
 		if solar_wind_cooldown <= 0.0:
 			solar_wind_cooldown = float(evolution.get_effect_value("solar_wind_interval", 10.0)); secondary_damage_requested.emit(global_position, float(evolution.get_effect_value("solar_wind_radius", 180.0)), float(evolution.get_effect_value("solar_wind_damage", 20.0)))
-	if evolution.path_id == "sun_arrow" and attack_cooldown <= 0.0: _mother_attack(); attack_cooldown = evolution.get_mother_attack_interval()
+	if combat_night and health > 0.0 and evolution.path_id == "sun_arrow" and attack_cooldown <= 0.0: _mother_attack(); attack_cooldown = evolution.get_mother_attack_interval()
 	if combat_night and evolution.path_id == "dawn_pulse" and pulse_cooldown <= 0.0: _dawn_pulse(); pulse_cooldown = evolution.get_pulse_interval()
 	if evolution.path_id == "root_heart" and evolution.has_upgrade("mother_counterroot_02") and root_whip_cooldown <= 0.0: _root_whip(); root_whip_cooldown = 3.0
-	if combat_night and evolution.path_id == "root_heart" and evolution.has_upgrade("mother_sap_01"): heal(float(evolution.get_effect_value("night_regen", 0.4)) * delta)
+	advance_root_recovery(delta)
 	if combat_night and evolution.has_upgrade("mother_sap_03") and health < max_health * float(evolution.get_effect_value("low_health_threshold", 0.5)): heal(float(evolution.get_effect_value("low_health_regen", 0.6)) * delta)
 	if combat_night and evolution.has_upgrade("mother_sap_06") and time_since_damage >= float(evolution.get_effect_value("out_of_combat_delay", 6.0)): heal(float(evolution.get_effect_value("out_of_combat_regen", 2.0)) * delta)
 	advance_danger_feedback(delta)
@@ -210,17 +272,30 @@ func _process(delta: float) -> void:
 			sprite.scale = Vector2.ONE * 0.56 * pulse
 			sprite.modulate = tint
 			sprite.rotation = 0.0
+	if transition_sprite != null:
+		var weight := clampf(attack_transition_time / 0.06, 0.0, 1.0)
+		transition_sprite.visible = weight > 0.0
+		transition_sprite.modulate = tint
+		transition_sprite.modulate.a = weight
+		transition_sprite.scale = motion_sprite.scale
+		motion_sprite.modulate.a = 1.0 - weight
 
 func _mother_attack() -> void:
 	var nearest: Node = null; var distance := evolution.get_mother_attack_range()
 	var host := get_parent()
 	var candidates: Array = host.query_enemies_in_radius(global_position, distance) if host != null and host.has_method("query_enemies_in_radius") else get_tree().get_nodes_in_group("enemies")
 	for enemy in candidates:
-		if is_instance_valid(enemy) and enemy.global_position.distance_to(global_position) <= distance:
+		if is_instance_valid(enemy) and not enemy.is_queued_for_deletion() and enemy.health > 0.0 and enemy.global_position.distance_to(global_position) <= distance:
 			var candidate_distance: float = enemy.global_position.distance_to(global_position)
 			if evolution.has_upgrade("mother_sunseed_06") and enemy.get_rank() in ["elite", "boss"] and (nearest == null or nearest.get_rank() == "normal"): nearest = enemy; distance = candidate_distance
 			elif nearest == null or enemy.get_rank() == nearest.get_rank() and candidate_distance <= distance: distance = candidate_distance; nearest = enemy
-	if nearest != null: attack_requested.emit(global_position, nearest, evolution.get_mother_attack_damage())
+	if nearest != null:
+		pending_attack_target = nearest
+		attack_windup = 0.15
+		if motion_sprite.sprite_frames != null and motion_sprite.sprite_frames.has_animation("attack"):
+			_begin_animation_transition()
+			motion_sprite.play("attack")
+			motion_sprite.set_frame_and_progress(0, 0.0)
 
 func _dawn_pulse() -> void:
 	pulse_requested.emit(global_position, evolution.get_pulse_radius(), evolution.get_pulse_damage(), evolution.get_pulse_energy())

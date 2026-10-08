@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "fps": 24.0,
+  "frame_paths": [
+    "res://assets/effects/sun_arrow/attack/frame-000.png",
+    "res://assets/effects/sun_arrow/attack/frame-001.png",
+    "res://assets/effects/sun_arrow/attack/frame-002.png",
+    "res://assets/effects/sun_arrow/attack/frame-003.png",
+    "res://assets/effects/sun_arrow/attack/frame-004.png",
+    "res://assets/effects/sun_arrow/attack/frame-005.png",
+    "res://assets/effects/sun_arrow/attack/frame-006.png",
+    "res://assets/effects/sun_arrow/attack/frame-007.png",
+    "res://assets/effects/sun_arrow/attack/frame-008.png",
+    "res://assets/effects/sun_arrow/attack/frame-009.png",
+    "res://assets/effects/sun_arrow/attack/frame-010.png",
+    "res://assets/effects/sun_arrow/attack/frame-011.png"
+  ],
+  "source": "art_source\\generated\\sun_arrow_attack\\attack_v3\\clip.mp4",
+  "source_fps": 24,
+  "duration": 0.5
+}

@@ -1062,11 +1062,36 @@ func _on_enemy_dark_sun_requested(stored_light_loss: float) -> void:
 			plant.advance_power_state(stored_light_loss)
 
 func _on_mother_attack_requested(origin: Vector2, target: Node, damage: float) -> void:
-	if not is_instance_valid(target): return
+	if not is_instance_valid(target) or target.health <= 0.0: return
 	mother_attack_count += 1
-	if target.get_instance_id() == mother_last_target_id: mother_same_target_hits += 1
-	else: mother_last_target_id = target.get_instance_id(); mother_same_target_hits = 1
+	var snapshot: Dictionary = mother_flower.evolution.export_state()
+	snapshot["explosion"] = mother_flower.evolution.has_upgrade("mother_corona_04") and mother_attack_count % int(mother_flower.evolution.get_effect_value("attack_explosion_every", 6)) == 0
+	var secondary := _nearest_enemy_excluding(origin, mother_flower.evolution.get_mother_attack_range(), target)
+	_launch_mother_arrow(origin, target, damage, snapshot, true)
 	var evolution: RefCounted = mother_flower.evolution
+	if evolution.has_upgrade("mother_sunseed_04") and mother_attack_count % int(evolution.get_effect_value("attack_extra_every", 4)) == 0:
+		if secondary != null: _launch_mother_arrow(origin, secondary, damage, snapshot, false)
+		else: _launch_mother_arrow(origin, target, damage * float(evolution.get_effect_value("attack_extra_same_ratio", 0.5)), snapshot, false)
+
+func _launch_mother_arrow(origin: Vector2, target: Node, damage: float, snapshot: Dictionary, primary: bool) -> void:
+	if not is_instance_valid(target) or target.is_queued_for_deletion() or target.health <= 0.0: return
+	var projectile := ProjectileScript.new()
+	projectile.is_mother_arrow = true
+	projectile.hit_callback = _on_mother_arrow_hit.bind(snapshot, primary)
+	add_child(projectile)
+	projectile.global_position = origin
+	projectile.launch(target, damage)
+
+func _on_mother_arrow_hit(target: Node, origin: Vector2, damage: float, snapshot: Dictionary, primary: bool) -> void:
+	if not is_instance_valid(target) or target.health <= 0.0: return
+	var evolution := preload("res://scripts/mother_evolution.gd").new()
+	evolution.path_id = str(snapshot.get("path_id", "sun_arrow"))
+	evolution.selected_upgrades.assign(snapshot.get("selected_upgrades", []))
+	var hit_position: Vector2 = target.global_position
+	var secondary := _nearest_enemy_excluding(hit_position, evolution.get_mother_attack_range(), target) if primary else null
+	if not snapshot.is_empty():
+		if target.get_instance_id() == mother_last_target_id: mother_same_target_hits += 1
+		else: mother_last_target_id = target.get_instance_id(); mother_same_target_hits = 1
 	var hit_damage := damage
 	if evolution.has_upgrade("mother_corona_03"):
 		hit_damage += minf(float(evolution.get_effect_value("attack_chain_cap", 10.0)), float(mother_same_target_hits - 1) * float(evolution.get_effect_value("attack_chain_add", 2.0)))
@@ -1077,14 +1102,10 @@ func _on_mother_attack_requested(origin: Vector2, target: Node, damage: float) -
 		target.apply_burn(float(evolution.get_effect_value("attack_burn_dps", 3.0)), float(evolution.get_effect_value("attack_burn_duration", 3.0)))
 	if evolution.has_upgrade("mother_corona_02"):
 		_damage_enemies_in_radius(target.global_position, float(evolution.get_effect_value("attack_splash_radius", 45.0)), float(evolution.get_effect_value("attack_splash_damage", 7.0)), target)
-	if evolution.has_upgrade("mother_corona_04") and mother_attack_count % int(evolution.get_effect_value("attack_explosion_every", 6)) == 0:
+	if primary and snapshot.get("explosion", false):
 		_damage_enemies_in_radius(target.global_position, float(evolution.get_effect_value("attack_explosion_radius", 70.0)), float(evolution.get_effect_value("attack_explosion_damage", 28.0)))
-	var secondary := _nearest_enemy_excluding(origin, evolution.get_mother_attack_range(), target)
 	if evolution.has_upgrade("mother_sunseed_05") and secondary != null:
-		secondary.take_mother_damage(damage * float(evolution.get_effect_value("attack_pierce_ratio", 0.65)), origin)
-	if evolution.has_upgrade("mother_sunseed_04") and mother_attack_count % int(evolution.get_effect_value("attack_extra_every", 4)) == 0:
-		if secondary != null: secondary.take_mother_damage(damage, origin)
-		else: target.take_mother_damage(damage * float(evolution.get_effect_value("attack_extra_same_ratio", 0.5)), origin)
+		_launch_mother_arrow(hit_position, secondary, damage * float(evolution.get_effect_value("attack_pierce_ratio", 0.65)), {}, false)
 
 func _on_mother_pulse_requested(center: Vector2, radius: float, damage: float, energy: int) -> void:
 	mother_pulse_count += 1
@@ -1104,9 +1125,9 @@ func _on_mother_pulse_requested(center: Vector2, radius: float, damage: float, e
 		if evolution.has_upgrade("mother_quelling_03") and enemy.get_rank() == "normal": enemy.push_from(center, float(evolution.get_effect_value("pulse_push_normal", 30.0)))
 		if evolution.has_upgrade("mother_quelling_04"): enemy.apply_attack_slow("mother_pulse", float(evolution.get_effect_value("pulse_attack_slow", 0.20)), float(evolution.get_effect_value("pulse_attack_slow_duration", 3.0)))
 		if evolution.has_upgrade("mother_quelling_05"): enemy.interrupt_ability()
-		if evolution.has_upgrade("mother_quelling_06"):
-			if enemy.get_rank() == "normal": enemy.apply_stun(float(evolution.get_effect_value("pulse_stun_normal", 1.0)))
-			elif enemy.get_rank() == "elite": enemy.apply_stun(float(evolution.get_effect_value("pulse_stun_elite", 0.4)))
+		if enemy.health > 0.0:
+			if enemy.get_rank() == "normal": enemy.apply_stun(float(evolution.get_effect_value("pulse_stun_normal", 0.5)))
+			elif enemy.get_rank() == "elite": enemy.apply_stun(float(evolution.get_effect_value("pulse_stun_elite", 0.2)))
 		if evolution.has_upgrade("mother_morningstar_05"): enemy.apply_mother_mark(float(evolution.get_effect_value("pulse_mother_mark_multiplier", 1.15)), float(evolution.get_effect_value("pulse_mother_mark_duration", 3.0)))
 	energy += strong_energy
 	if evolution.has_upgrade("mother_charge_05") and mother_pulse_count % 3 == 0: energy += int(evolution.get_effect_value("pulse_third_energy", 6))
@@ -1184,7 +1205,9 @@ func _finish_wave() -> void:
 	if is_instance_valid(terrain_events): terrain_events.stop_and_restore()
 	threat_levels = PackedFloat32Array([0, 0, 0, 0, 0, 0, 0, 0])
 	if wave_index >= waves.size():
-		phase = Phase.VICTORY; settle_victory(); night_fog.set_active(false); daylight_glow.set_active(true); hud.show_result(true); hud.show_message("最后的太阳碎片撑到了黎明")
+		phase = Phase.VICTORY
+		if is_instance_valid(mother_flower): mother_flower.on_day_started()
+		settle_victory(); night_fog.set_active(false); daylight_glow.set_active(true); hud.show_result(true); hud.show_message("最后的太阳碎片撑到了黎明")
 	else:
 		begin_day(); night_fog.set_active(false); daylight_glow.set_active(true); day_time_left = Balance.DAY_DURATION
 		progression.gain_run_seeds(Balance.NIGHT_SEED_REWARD)

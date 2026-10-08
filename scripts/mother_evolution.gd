@@ -45,12 +45,12 @@ func get_upgrade_effects(id: String) -> Dictionary:
 		"mother_receptacle_04": return {"damage_block_interval":6.0, "damage_block_amount":12.0}
 		"mother_receptacle_05": return {"boss_damage_reduction":0.12}
 		"mother_receptacle_06": return {"night_shield":60.0}
-		"mother_sap_01": return {"night_regen":0.4}
+		"mother_sap_01": return {"night_regen":0.8, "plant_heal_amount":10.0, "plant_heal_interval":5.0}
 		"mother_sap_02": return {"day_start_heal":40.0}
-		"mother_sap_03": return {"low_health_regen":0.6, "low_health_threshold":0.50}
+		"mother_sap_03": return {"low_health_regen":0.6, "low_health_threshold":0.50, "plant_heal_amount":15.0}
 		"mother_sap_04": return {"nearby_kill_heal":1.0, "nearby_kill_radius":180.0, "nearby_kill_cap":12}
 		"mother_sap_05": return {"overheal_shield_cap":30.0}
-		"mother_sap_06": return {"out_of_combat_delay":6.0, "out_of_combat_regen":2.0}
+		"mother_sap_06": return {"out_of_combat_delay":6.0, "out_of_combat_regen":2.0, "plant_heal_interval":3.0}
 		"mother_counterroot_01": return {"melee_reflect_damage":6.0}
 		"mother_counterroot_02": return {"root_whip_interval":3.0, "root_whip_radius":160.0, "root_whip_damage":14.0, "root_whip_targets":1}
 		"mother_counterroot_03": return {"root_whip_damage":22.0}
@@ -63,7 +63,7 @@ func get_upgrade_effects(id: String) -> Dictionary:
 		"mother_charge_04": return {"pulse_strong_energy":2, "pulse_strong_energy_cap":4}
 		"mother_charge_05": return {"pulse_third_energy":6}
 		"mother_charge_06": return {"pulse_overflow_shield_ratio":0.50, "pulse_overflow_shield_each_cap":10.0, "pulse_overflow_shield_cap":40.0}
-		"mother_quelling_01": return {"pulse_slow_ratio":0.15, "pulse_slow_duration":2.0}
+		"mother_quelling_01": return {"pulse_slow_ratio":0.15, "pulse_slow_duration":2.0, "pulse_stun_normal":0.7, "pulse_stun_elite":0.3}
 		"mother_quelling_02": return {"pulse_dispel":true}
 		"mother_quelling_03": return {"pulse_push_normal":30.0}
 		"mother_quelling_04": return {"pulse_attack_slow":0.20, "pulse_attack_slow_duration":3.0}
@@ -93,7 +93,7 @@ func get_effect_value(key: String, default_value: Variant = 0.0) -> Variant:
 	return result
 
 func get_mother_attack_damage() -> float: return 18.0 + float(get_effect_value("attack_damage_add", 0.0))
-func get_mother_attack_range() -> float: return 230.0 + float(get_effect_value("attack_range_add", 0.0))
+func get_mother_attack_range() -> float: return 280.0 + float(get_effect_value("attack_range_add", 0.0))
 func get_mother_attack_interval() -> float: return 1.5 * float(get_effect_value("attack_interval_multiplier", 1.0))
 func get_sunburst_cost(base: int) -> int: return maxi(10, base + int(get_effect_value("sunburst_cost_add", 0)))
 func get_sunburst_damage(base: float) -> float: return base + float(get_effect_value("sunburst_damage_add", 0.0))

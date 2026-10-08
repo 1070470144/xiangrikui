@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "fps": 24.0,
+  "frame_paths": [
+    "res://assets/effects/sun_arrow/impact/frame-000.png",
+    "res://assets/effects/sun_arrow/impact/frame-001.png",
+    "res://assets/effects/sun_arrow/impact/frame-002.png",
+    "res://assets/effects/sun_arrow/impact/frame-003.png",
+    "res://assets/effects/sun_arrow/impact/frame-004.png",
+    "res://assets/effects/sun_arrow/impact/frame-005.png"
+  ],
+  "source": "art_source\\generated\\sun_arrow_attack\\impact_v2\\clip.mp4",
+  "source_fps": 24,
+  "duration": 0.25
+}
