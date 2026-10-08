@@ -1,0 +1,17 @@
+{
+  "anchor": [
+    51.11765218173639,
+    158.99845838956364
+  ],
+  "reach": 621.4559478182637,
+  "reach_vector": [
+    617.287503750467,
+    -21.33460499973313
+  ],
+  "duration": 0.72,
+  "columns": 8,
+  "rows": 6,
+  "source": "art_source\\generated\\plant_attack_fx_video_v2\\vine-reframed\\clip.mp4",
+  "pipeline": "SpriteGen video-frames -> video-loop (attack)",
+  "loop": false
+}

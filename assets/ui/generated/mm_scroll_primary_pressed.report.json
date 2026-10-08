@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "末日温室厚涂绘本风，冷蓝夜景、深墨绿旧园艺记录册、氧化金色和暖色向日葵光, 古籍卷册风主按钮边框四态，深墨青底与暗金细线，像章节牌签；所有装饰只在边缘，中央 70% 区域完全纯净留空，不包含文字或图标, visual state: pressed",
+  "out": "D:\\MyData\\GodotData\\MyGame\\assets\\ui\\generated\\mm_scroll_primary_pressed.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\assets\\ui\\generated\\mm_scroll_primary_pressed.png.raw.png",
+  "raw_bytes": 2192772,
+  "elapsed_seconds": 68.531,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "auto",
+    "size": "1024x1024",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 96,
+      "output_tokens": 1650,
+      "total_tokens": 1746,
+      "input_tokens_details": {
+        "text_tokens": 96,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1650,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

@@ -1,0 +1,7 @@
+{
+  "frames": 64,
+  "fps": 12.0,
+  "loop": true,
+  "source": "art_source/generated/mother_video_ark/common.mp4",
+  "pipeline": "sprite-gen video-frames -> video-loop"
+}

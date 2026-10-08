@@ -1,0 +1,2073 @@
+{
+  "enemy_id": "erosion_bug",
+  "runtime": {
+    "scale": 0.32,
+    "ground_offset": -0.9600000000000009
+  },
+  "states": {
+    "walk": {
+      "frames": 121,
+      "fps": 24.0,
+      "loop": true,
+      "durations_ms": [
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664
+      ],
+      "width": 228,
+      "height": 192,
+      "ground_y": 152,
+      "body_height": 123,
+      "source": "art_source/generated/monster_video_batch/erosion_bug/walk-smoke.mp4",
+      "pipeline_metadata": "art_source/generated/monster_video_batch/erosion_bug/walk-smoke-frames/frames.report.json",
+      "source_cycle": {
+        "kind": "periodic",
+        "start": 15,
+        "length": 41,
+        "ratio": 1.1180122265985382,
+        "review_recommended": true
+      },
+      "frame_variant": "spritegen-video-smoke-keyed-magenta",
+      "regions": [
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            228,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            456,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            684,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            912,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1140,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1368,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1596,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            228,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            456,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            684,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            912,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1140,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1368,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1596,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            228,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            456,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            684,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            912,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1140,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1368,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1596,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            228,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            456,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            684,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            912,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1140,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1368,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1596,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            228,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            456,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            684,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            912,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1140,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1368,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1596,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            960,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            228,
+            960,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            456,
+            960,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            684,
+            960,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            912,
+            960,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1140,
+            960,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1368,
+            960,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1596,
+            960,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            1152,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            228,
+            1152,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            456,
+            1152,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            684,
+            1152,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            912,
+            1152,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1140,
+            1152,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1368,
+            1152,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1596,
+            1152,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            1344,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            228,
+            1344,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            456,
+            1344,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            684,
+            1344,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            912,
+            1344,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1140,
+            1344,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1368,
+            1344,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1596,
+            1344,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            1536,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            228,
+            1536,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            456,
+            1536,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            684,
+            1536,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            912,
+            1536,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1140,
+            1536,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1368,
+            1536,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1596,
+            1536,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            1728,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            228,
+            1728,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            456,
+            1728,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            684,
+            1728,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            912,
+            1728,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1140,
+            1728,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1368,
+            1728,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1596,
+            1728,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            0,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            228,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            456,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            684,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            912,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1140,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1368,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1596,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            0,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            228,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            456,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            684,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            912,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1140,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1368,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1596,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            0,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            228,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            456,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            684,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            912,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1140,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1368,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1596,
+            384,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            0,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            228,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            456,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            684,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            912,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1140,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1368,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1596,
+            576,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            0,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            228,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            456,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            684,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            912,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1140,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1368,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1596,
+            768,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            0,
+            960,
+            228,
+            192
+          ]
+        }
+      ]
+    },
+    "attack": {
+      "frames": 51,
+      "fps": 24.0,
+      "loop": false,
+      "durations_ms": [
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664
+      ],
+      "width": 290,
+      "height": 192,
+      "ground_y": 178,
+      "body_height": 123,
+      "source": "art_source/generated/monster_video_batch/erosion_bug/attack.mp4",
+      "pipeline_metadata": "art_source/generated/monster_video_batch/erosion_bug/attack-loop/attack.strip.json",
+      "source_cycle": {
+        "kind": "one-shot",
+        "start": 15,
+        "length": 51,
+        "ratio": 1.032028493006421,
+        "review_recommended": null
+      },
+      "regions": [
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            0,
+            0,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            290,
+            0,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            580,
+            0,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            870,
+            0,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1160,
+            0,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1450,
+            0,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1740,
+            0,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            0,
+            192,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            290,
+            192,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            580,
+            192,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            870,
+            192,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1160,
+            192,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1450,
+            192,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1740,
+            192,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            0,
+            384,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            290,
+            384,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            580,
+            384,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            870,
+            384,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1160,
+            384,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1450,
+            384,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1740,
+            384,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            0,
+            576,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            290,
+            576,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            580,
+            576,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            870,
+            576,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1160,
+            576,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1450,
+            576,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1740,
+            576,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            0,
+            768,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            290,
+            768,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            580,
+            768,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            870,
+            768,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1160,
+            768,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1450,
+            768,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1740,
+            768,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            0,
+            960,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            290,
+            960,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            580,
+            960,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            870,
+            960,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1160,
+            960,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1450,
+            960,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1740,
+            960,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            0,
+            1152,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            290,
+            1152,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            580,
+            1152,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            870,
+            1152,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1160,
+            1152,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1450,
+            1152,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            1740,
+            1152,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            0,
+            1344,
+            290,
+            192
+          ]
+        },
+        {
+          "page": "attack-atlas-00.png",
+          "region": [
+            290,
+            1344,
+            290,
+            192
+          ]
+        }
+      ]
+    },
+    "spawn": {
+      "frames": 12,
+      "fps": 24.0,
+      "loop": false,
+      "durations_ms": [
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664
+      ],
+      "width": 228,
+      "height": 192,
+      "ground_y": 178,
+      "body_height": 123,
+      "source": "art_source/generated/monster_video_batch/erosion_bug/walk.mp4",
+      "pipeline_metadata": "art_source/generated/monster_video_batch/erosion_bug/walk-loop/walk.strip.json",
+      "source_cycle": {
+        "kind": "periodic",
+        "start": 15,
+        "length": 41,
+        "ratio": 1.1180122265985382,
+        "review_recommended": true
+      },
+      "baked_effect": "spawn",
+      "regions": [
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            0,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            228,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            456,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            684,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            912,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            1140,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            1368,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            1596,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            0,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            228,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            456,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "spawn-atlas-00.png",
+          "region": [
+            684,
+            192,
+            228,
+            192
+          ]
+        }
+      ]
+    },
+    "death": {
+      "frames": 16,
+      "fps": 24.0,
+      "loop": false,
+      "durations_ms": [
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664,
+        41.666666666666664
+      ],
+      "width": 228,
+      "height": 192,
+      "ground_y": 178,
+      "body_height": 123,
+      "source": "art_source/generated/monster_video_batch/erosion_bug/walk.mp4",
+      "pipeline_metadata": "art_source/generated/monster_video_batch/erosion_bug/walk-loop/walk.strip.json",
+      "source_cycle": {
+        "kind": "periodic",
+        "start": 15,
+        "length": 41,
+        "ratio": 1.1180122265985382,
+        "review_recommended": true
+      },
+      "baked_effect": "death",
+      "regions": [
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            0,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            228,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            456,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            684,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            912,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            1140,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            1368,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            1596,
+            0,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            0,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            228,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            456,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            684,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            912,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            1140,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            1368,
+            192,
+            228,
+            192
+          ]
+        },
+        {
+          "page": "death-atlas-00.png",
+          "region": [
+            1596,
+            192,
+            228,
+            192
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "frames": 47,
+  "w": 677,
+  "h": 192,
+  "kind": "pinned",
+  "loop": true,
+  "body_h": 170,
+  "body_src_h": 307,
+  "body_ref": "tallest-grounded",
+  "scale": 0.5533,
+  "delay_ms": 85.11,
+  "cycle_frames": 96,
+  "cycle_seconds": 4.0,
+  "subsampled": true,
+  "cell_cap": 47,
+  "top_margin_px": 140,
+  "body_height_target": null,
+  "foot_anchor": "none",
+  "drift_px": 0,
+  "foot_sway_px": 0,
+  "foot_x": null
+}

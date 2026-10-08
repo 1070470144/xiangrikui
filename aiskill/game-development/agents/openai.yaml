@@ -1,0 +1,7 @@
+interface:
+  display_name: "Godot 游戏原型开发"
+  short_description: "研究同类游戏结构并开发无正式界面的可玩 Godot 原型"
+  default_prompt: "Use $game-development to research comparable games and build a playable Godot prototype without production UI."
+
+policy:
+  allow_implicit_invocation: true

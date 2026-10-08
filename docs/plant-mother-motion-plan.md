@@ -1,0 +1,28 @@
+# Plant and Mother Motion Plan — 2026-10-02
+
+Planning only: no image or video generation was called. This is a motion execution contract, not an mm-art schema manifest and not a generated-asset acceptance claim. Exact jobs are stored in art_source/manifests/plant_mother_motion_plan.json.
+
+## Scope and exact batch
+15 implemented defense flowers: thorn, prism, lantern, frost, honeydew, storm, gale, sunwell, ember, slumber, spear bamboo, burst, stone, cleanse, drum. Each requires idle (3s pinned loop) plus attack/action (2s pinned one-shot), totaling30 video calls/75 seconds. Support plants animate their own buff/heal/pulse activation rather than inventing damage attacks.
+
+Existing thorn/prism powered stills are reusable. All 13 other unique plant illustrations are needed, yielding13 image calls. Mother content has3 path forms plus9 branches ×6 ranks =54 upgrade forms, totaling57 new mother image calls. Each form has idle3s and a one-shot2s transition from its declared predecessor, totaling114 video calls/285 seconds. Full minimum batch: **70 image calls +144 video calls =214 calls, 360 generated video seconds**. No retries included or authorized. Optional mother action/attack per form adds57 video calls/114s; not included in minimum batch. Mother damaged/critical states remain native tint/effect derivations unless separately authorized; no hidden extra image calls.
+
+Each branch-rank form is distinct. This plan does not try to enumerate every combination of simultaneously active mother upgrades. Runtime form selection should retain the current chosen path, use the last acquired upgrade ID as the visible form, and keep all mechanical effects active. A different combined-form policy requires an explicit scope decision.
+
+## Provider and tool inspection
+Read installed sprite-gen SKILL.md, docs/user-workflow.md, docs/video.md and docs/video-pipeline.md. Canonical video route: video-canvas → video → video-frames → video-loop, or video-set for known built-in states. Use custom botanical motion paragraphs with direct canonical calls so fixed roots are protected; video-set built-in idle template mentions feet and hands and is unsuitable unchanged for plants.
+
+Read-only workflow with existing Thorn powered still and motion-method grok-video returned blocked: Grok login unavailable; subscription/quota unknown. No credential printed or changed. Default video provider is https://api.x.ai/v1/videos/generations, grok-imagine-video-1.5; no documented CLI custom-video-endpoint flag was found. The existing authorized image endpoint/model gpt-image-2 cannot be assumed to generate videos. Need user-authorized video endpoint/model and credential route, or a valid Grok login with quota/billing confirmation. XAI API credit cannot silently substitute for subscription and requires explicit API billing authorization. Preserve all credentials in process environment; never save video keys in manifests or reports.
+
+ffmpeg, ffprobe and img2webp were not found on PATH, in D:/mm, installed sprite-gen tree, or bundled runtime dependencies. The video pipeline requires them; install/resolve tools before paid submission. No install performed during this read-only planning assignment.
+
+Existing monster pipeline (docs/monster-animations.md, art_source/generate_monster_animations.py) is component-row image generation: 8-frame walk/attack from GPT, then canonical extraction/export. Its stable-root, single-action recovery and SpriteFrames manifest consumer are reusable patterns, but its image rows are not video output and must not be presented as video-derived motion.
+
+## Motion and QA contract
+Use the original approved botanical storybook images as identity/style authority, not external games. Magenta chroma avoids removing green petals/stems/leaves. Canvas full rooted subject plus action headroom/lead, no cropping. Camera locked and root contact locked. Idle limited to slow breathing/petal/leaf sway with exact first-last pose; attack/action is one windup, effect emission pose and recovery; effects and gameplay projectiles remain game-owned. Transition uses canonical first-last video with target form last frame; then extract as one-shot, never loop a transform back to its old form.
+
+Canonical extraction observes actual clip fps, keys frames with engine alpha logic and rejects edge contact/background residual. Native 12fps delivery with durations and256px cell follows extracted motion, not arbitrary screenshots. Root anchor consistency, silhouette continuity, alpha integrity and same identity require preview review. No state is accepted based solely on a raw MP4 or returned URL.
+
+Runtime API proposal: PlantAnimationLibrary.get_frames(plant_id:String)->SpriteFrames and MotherAnimationLibrary.get_frames(form_id:String)->SpriteFrames; null on incomplete/missing manifest allows existing still fallback. Per-animation manifest defines frame paths, fps, loop, durations, anchor, source clip/report. Consumer integration remains owned by plant_slots/game owner. Keep mechanics/event timing unchanged; action animation never changes damage or support pulse timing. Load cached frames once, reset action phase once per activation, and continue idle phase without per-frame restart.
+
+Before paid work: complete all fifteen plant behaviors and mother-form selection UI, native temporary frames, exact mm-art image manifest70-job validate/plan, confirm intended video route and credentials, resolve extraction binaries, dry-run video pipeline locally against a known fixture, then request reviewable214-call batch. Missing credentials do not justify bypassing the requested video path with image rows or shader-only sway.

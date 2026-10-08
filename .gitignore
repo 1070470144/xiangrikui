@@ -1,0 +1,28 @@
+# Godot generated files
+.godot/
+
+# Local logs and captures
+*.log
+preview/
+preview_*/
+menu_baseline*.png
+menu_baseline*.png.import
+menu_baseline*.wav
+menu_baseline*.wav.import
+
+# Local asset-generation tool checkout
+sprite-gen/
+aiskill/mm-tools/config.json
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local generation intermediates and test artifacts (runtime assets live in assets/)
+/art_source/generated/
+/tmp/
+/output/imagegen/previews/
+*.raw.png
+*.raw.png.import

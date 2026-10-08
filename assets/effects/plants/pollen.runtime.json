@@ -1,0 +1,17 @@
+{
+  "anchor": [
+    97.5,
+    96.0
+  ],
+  "reach": 95.8,
+  "reach_vector": [
+    95.8,
+    0.0
+  ],
+  "duration": 0.64,
+  "columns": 8,
+  "rows": 8,
+  "source": "art_source\\generated\\plant_attack_fx_video_v2\\pollen-reframed\\clip.mp4",
+  "pipeline": "SpriteGen video-frames -> video-loop (attack)",
+  "loop": false
+}

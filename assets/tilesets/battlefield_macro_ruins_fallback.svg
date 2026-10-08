@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="640" viewBox="0 0 640 160">
+<defs><filter id="soft"><feGaussianBlur stdDeviation="2"/></filter></defs>
+<rect width="640" height="160" fill="none"/>
+<path d="M30 10l95 35 22 48 102 12 70 42M350 4l-20 42 50 28 12 58M535 0l-36 42 20 35-70 55" fill="none" stroke="#1b2626" stroke-width="5" opacity=".22" filter="url(#soft)"/>
+<path d="M30 10l95 35 22 48 102 12 70 42M350 4l-20 42 50 28 12 58M535 0l-36 42 20 35-70 55" fill="none" stroke="#8a6a42" stroke-width="1.4" opacity=".32"/>
+<circle cx="105" cy="107" r="27" fill="#6d7b53" opacity=".09"/><circle cx="454" cy="58" r="34" fill="#6d7b53" opacity=".08"/>
+</svg>

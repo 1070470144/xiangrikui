@@ -1,0 +1,72 @@
+{
+  "species": "ember_flower",
+  "engine": "sprite-gen-video",
+  "model": "doubao-seedance-2-0-mini-260615",
+  "canvas": [
+    160,
+    160
+  ],
+  "states": {
+    "idle": {
+      "frames": 48,
+      "fps": 12.000480019200769,
+      "loop": true,
+      "source": "art_source\\generated\\plant_video_ark\\ember_flower\\idle.mp4",
+      "report": "art_source\\generated\\plant_video_ark\\ember_flower\\idle-loop\\idle.loop.report.json",
+      "draw_offset": [
+        0.0,
+        0
+      ],
+      "canvas": [
+        160,
+        160
+      ]
+    },
+    "attack": {
+      "frames": 64,
+      "fps": 16.0,
+      "loop": false,
+      "source": "art_source\\generated\\plant_attack_video_v5\\ember_flower\\attack.mp4",
+      "report": "art_source\\generated\\plant_attack_video_v5\\ember_flower\\attack-loop\\attack.loop.report.json",
+      "draw_offset": [
+        -4.8971,
+        -0.3828
+      ],
+      "canvas": [
+        160,
+        160
+      ],
+      "display_scale": 1.024
+    },
+    "death": {
+      "frames": 32,
+      "fps": 12.000480019200769,
+      "loop": false,
+      "source": "art_source\\generated\\plant_video_ark\\ember_flower\\death.mp4",
+      "report": "art_source\\generated\\plant_video_ark\\ember_flower\\death-loop\\death.loop.report.json",
+      "draw_offset": [
+        -0.78,
+        0
+      ],
+      "canvas": [
+        160,
+        160
+      ]
+    },
+    "revive": {
+      "frames": 64,
+      "fps": 15.835312747426762,
+      "loop": false,
+      "source": "art_source\\generated\\plant_actions_video_v3\\ember_flower\\revive.mp4",
+      "report": "art_source\\generated\\plant_actions_video_v3\\ember_flower\\revive-loop\\revive.loop.report.json",
+      "draw_offset": [
+        0.89,
+        0
+      ],
+      "canvas": [
+        160,
+        160
+      ]
+    }
+  }
+}

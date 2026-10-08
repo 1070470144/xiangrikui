@@ -1,0 +1,20 @@
+# Battle flow V7 UI stages (2026-10-02)
+
+## Stage 1: scope and layout
+Day exposes only the deployment fan and the daily carried-plant entry. Night exposes only tactical cards; there is no day tactical tab or mulligan. Light sprout and repair are permanent utilities. Five existing ContentData flowers (thorn, prism, lantern, frost, honeydew) can be carried; at least one is required. The carried selection changes future deployment access and leaves already planted entities intact. Confirm applies; Cancel and Esc discard the draft. This daily entry is available after every dawn.
+
+Layout research inherits the V5 verified Hearthstone/Slay the Spire fan/card hierarchy and adds the Plants vs Zombies carried-plant-before-deployment structure. EA source https://www.ea.com/games/plants-vs-zombies/plants-vs-zombies returned HTTP 200 (tmp/battle-flow-v7-research/pvz-source.json). These sources are layout-only and never art authority.
+
+Project evidence: output/imagegen/previews/battle-ui-v6-night.png and battle-ui-v5-final-1280x720-night.png; runtime resources assets/ui/generated/deck_builder/faces_v5/card_face_common_v5.png, assets/plants/ART_PLANT_ThornFlower_Powered.png, assets/plants/ART_PLANT_PrismFlower_Powered.png, assets/ui/generated/battle_ui_v5/primary_action_normal.png, assets/ui/generated/battle_ui_v5/tactical_bezel.png. Anchor: existing green/gold collectible frames, navy native modal and ivory readable labels, no added decoration/noise. Respect existing muted palette, no flashing, modal cards do not lift or move on hover. Five plant choices are genuine implemented content, with lantern/frost/honeydew using their existing prism illustration until distinct game artwork exists.
+
+## Stage 2: function and manifest
+Implemented scripts/hud.gd and scripts/plant_loadout_overlay.gd. Optional plants toggle, selected count and disabled empty confirmation, explicit confirm/cancel, Esc dismissal. Hand fan supports accumulated tactical cards by reducing horizontal spacing and clamping rotation at 0.22 radians. Existing face assets and hover/drag functionality remain in use. New native elements are included in art_source/manifests/battle_ui_v5.json; validate passed. No paid generation or asset overwrite.
+
+## Stage 3: binding
+No generated resources required. Native palette panel and project card-frame/illustration resources load in actual Godot. Capture script tests/battle_flow_v7_capture.gd prints FLOW_UI_CAPTURE_PASS. Screenshots: output/imagegen/previews/battle-flow-v7-day.png, battle-flow-v7-loadout.png, battle-flow-v7-night-12.png. Cards and actions remain legible at actual 1152x648, 1280x720 and 1920x1080; all three actual Godot captures passed. Native project window enforces 16:9, so the 1152-wide output is 648 pixels high. Existing mono editor SDK and certificate messages are environment warnings; runtime GDScript loaded and capture completed.
+
+## Stage 4: acceptance
+Godot screenshot review confirms day deployment only, centered selection modal, five choices and readable buttons; night accumulated 12-card fan is contained away from the right primary action. Initial modal hover incorrectly moved candidate cards because hand hover lifting assumes fan placement. Fixed by disconnecting hand movement callbacks only for modal candidates: stable click targets while native Button hover highlighting remains. Independent real-input tests are tracked by tests/test_day_night_flow_independent.gd; final result supplied by review agent.
+
+Final modal selection-state review: output/imagegen/previews/battle-flow-v7-loadout-selection-1280x720.png demonstrates a darkened uncarried flower plus explicit 未携带 label, while carried flowers remain bright with 已携带. Native UI captures were re-run after this feedback at 1152x648, 1280x720, 1920x1080, all FLOW_UI_CAPTURE_PASS.
+Independent final result: tests/test_day_night_flow_independent.gd passed all 117 real-input checks. Evidence: docs/mm-tools-battle-flow-v7-independent-review.md. Modal confirm/cancel/empty-selection and nighttime deploy/repair guards all passed.

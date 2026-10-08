@@ -1,0 +1,76 @@
+{
+  "species": "lantern_flower",
+  "engine": "sprite-gen-video",
+  "model": "doubao-seedance-2-0-mini-260615",
+  "canvas": [
+    160,
+    160
+  ],
+  "states": {
+    "idle": {
+      "frames": 48,
+      "fps": 12.000480019200769,
+      "loop": true,
+      "source": "art_source\\generated\\plant_video_ark\\lantern_flower\\idle.mp4",
+      "report": "art_source\\generated\\plant_video_ark\\lantern_flower\\idle-loop\\idle.loop.report.json",
+      "draw_offset": [
+        0.0,
+        0
+      ],
+      "canvas": [
+        160,
+        160
+      ]
+    },
+    "attack": {
+      "frames": 64,
+      "fps": 16.0,
+      "loop": false,
+      "canvas": [
+        320,
+        320
+      ],
+      "root_offset": [
+        0,
+        59
+      ],
+      "source": "art_source\\generated\\plant_attack_video_v4\\lantern_flower\\attack.mp4",
+      "report": "art_source\\generated\\plant_attack_video_v4\\lantern_flower\\attack-loop\\attack.loop.report.json",
+      "draw_offset": [
+        0.8795,
+        0.5426
+      ],
+      "display_scale": 1.007812
+    },
+    "death": {
+      "frames": 32,
+      "fps": 12.000480019200769,
+      "loop": false,
+      "source": "art_source\\generated\\plant_video_ark\\lantern_flower\\death.mp4",
+      "report": "art_source\\generated\\plant_video_ark\\lantern_flower\\death-loop\\death.loop.report.json",
+      "draw_offset": [
+        -1.01,
+        0
+      ],
+      "canvas": [
+        160,
+        160
+      ]
+    },
+    "revive": {
+      "frames": 64,
+      "fps": 15.835312747426762,
+      "loop": false,
+      "source": "art_source\\generated\\plant_actions_video_v3\\lantern_flower\\revive.mp4",
+      "report": "art_source\\generated\\plant_actions_video_v3\\lantern_flower\\revive-loop\\revive.loop.report.json",
+      "draw_offset": [
+        1.52,
+        0
+      ],
+      "canvas": [
+        160,
+        160
+      ]
+    }
+  }
+}

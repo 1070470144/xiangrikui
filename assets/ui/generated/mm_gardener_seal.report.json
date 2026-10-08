@@ -1,0 +1,47 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "末日温室厚涂绘本风，冷蓝夜景、深墨绿旧园艺记录册、氧化金色和暖色向日葵光, 小型朱砂方印风格园丁印章，深红朱砂底、旧金细边，中央留出单字空间，不包含文字或复杂图案",
+  "out": "D:\\MyData\\GodotData\\MyGame\\assets\\ui\\generated\\mm_gardener_seal.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\assets\\ui\\generated\\mm_gardener_seal.png.raw.png",
+  "raw_bytes": 2659882,
+  "elapsed_seconds": 67.453,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "auto",
+    "size": "1024x1024",
+    "background": "opaque",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 1650,
+      "total_tokens": 1725,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "video_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

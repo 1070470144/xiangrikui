@@ -1,0 +1,63 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "末日温室厚涂绘本风，冷蓝夜景、深墨绿旧园艺记录册、氧化金色和暖色向日葵光, 一条极细的暗金古籍章节分隔线，两端只有克制的东方植物笔锋，中间保持干净直线，不包含文字",
+  "out": "D:\\MyData\\GodotData\\MyGame\\assets\\ui\\generated\\mm_scroll_chapter_rule.png",
+  "raw": "D:\\MyData\\GodotData\\MyGame\\assets\\ui\\generated\\mm_scroll_chapter_rule.png.raw.png",
+  "raw_bytes": 2497469,
+  "elapsed_seconds": 49.766,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": true,
+  "alpha": {
+    "strategy": "chroma",
+    "strategy_source": "explicit",
+    "out": "D:\\MyData\\GodotData\\MyGame\\assets\\ui\\generated\\mm_scroll_chapter_rule.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 1564683,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 343563,
+    "alpha_zero_pct": 99.5,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "chroma": {
+    "out": "D:\\MyData\\GodotData\\MyGame\\assets\\ui\\generated\\mm_scroll_chapter_rule.png",
+    "mode": "RGBA",
+    "method": "ycbcr",
+    "size": "1254x1254",
+    "key": "magenta",
+    "keyed_pixels": 1564683,
+    "fringe_pixels": 0,
+    "cleaned_transparent_rgb_pixels": 343563,
+    "alpha_zero_pct": 99.5,
+    "stale_transparent_rgb_pixels": 0
+  },
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "auto",
+    "size": "1024x1024",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 71,
+      "output_tokens": 1650,
+      "total_tokens": 1721,
+      "input_tokens_details": {
+        "text_tokens": 71,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 1650,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}
