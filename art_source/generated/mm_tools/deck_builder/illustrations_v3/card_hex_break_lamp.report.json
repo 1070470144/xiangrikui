@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Create one finished collectible strategy card ILLUSTRATION, landscape 3:2, for The Last Sunflower, a post-apocalyptic botanical greenhouse game. Painterly premium fantasy botanical artwork, finely drawn organic forms, rich deep forest-green and dark petrol-blue shadows, aged golden amber highlights, soft upper-left illumination, subtly textured oil-paint and engraved botanical detail. One clearly readable main subject, large in the center, strong silhouette visible at 138x72 pixels. Art fills the canvas edge to edge, quiet dark foliage in background. No UI, frame, border, text, typography, letters, numbers, watermark or collage. A living brass-and-leaf garden lantern releasing a radiant warm halo that breaks smoky violet curse tendrils into drifting harmless particles; prominent luminous lantern surrounded by freed healthy leaves.",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\illustrations_v3\\card_hex_break_lamp.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\deck_builder\\illustrations_v3\\card_hex_break_lamp.png.raw.png",
+  "raw_bytes": 2784128,
+  "elapsed_seconds": 43.312,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "high",
+    "size": "1536x1024",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 162,
+      "output_tokens": 6240,
+      "total_tokens": 6402,
+      "input_tokens_details": {
+        "text_tokens": 162,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 6240,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

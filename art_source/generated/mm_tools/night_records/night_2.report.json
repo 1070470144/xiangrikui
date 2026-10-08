@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Premium painterly botanical dark fantasy game illustration for The Last Sunflower. Post-apocalyptic greenhouse, forest green and petrol blue shadows, restrained amber sunlight, fine organic engraved details, one clearly readable focal subject in center, landscape composition. Edge-to-edge finished artwork. No text, lettering, numbers, logos, watermark, UI or frame. Attacks from all directions: a radiant sunflower garden at the center, multiple dark beast silhouettes approaching along branching root paths from all edges, tense encirclement but central warm light remains strong.",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\night_records\\night_2.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\night_records\\night_2.png.raw.png",
+  "raw_bytes": 3043779,
+  "elapsed_seconds": 67.922,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "high",
+    "size": "1536x1024",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 105,
+      "output_tokens": 6240,
+      "total_tokens": 6345,
+      "input_tokens_details": {
+        "text_tokens": 105,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 6240,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

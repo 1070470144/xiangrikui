@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-request",
+  "engine": "component-row",
+  "character": {
+    "id": "erosion_bug",
+    "description": "Corrupted armored garden insect, purple segmented shell, cyan eyes and mandibles; preserve the reference anatomy and leg count.",
+    "base_image": "base-source.png"
+  },
+  "cell": {
+    "shape": "square",
+    "width": 192,
+    "height": 192,
+    "safe_margin_x": 14,
+    "safe_margin_y": 14,
+    "size": 192,
+    "safe_margin": 14
+  },
+  "chroma_key": {
+    "name": "green",
+    "hex": "#00FF00",
+    "rgb": [
+      0,
+      255,
+      0
+    ],
+    "selection": "manual"
+  },
+  "states": {
+    "walk": {
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "action": "Eight-frame slow insect crawl. STRICT: shell, head, mandibles and thorax remain at identical positions, orientation, dimensions and height in all eight frames, as if traced over a locked layer. Only the existing SIX short jointed legs move. Keep original thick tapered insect legs: NO HANDS, NO FINGERS, NO TALONS, NO BIRD FEET. Never expose extra long spindly legs below the shell. Each leg is a single sturdy bent taper with one pointed tip, same length in every frame. Near-side front and rear legs alternate with near-side middle leg; far-side opposite. Frame phases 0,45,90,135,180,225,270,315 degrees of one cycle. First half: near front/rear tips smoothly sweep backward on ground as middle tip swings forward slightly lifted. Second half reverses which group is planted. Lift no more than one tenth leg length; sweep no more than one fifth body length. No frame with all legs lifted. Last to first is a gradual continuation. Rigid heavy shell absolutely no vertical bounce. Preserve exactly the reference carapace artwork and closed mandibles. No reinterpretation of claw anatomy."
+    },
+    "attack": {
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "action": "Eight readable attack phases facing RIGHT: neutral, crouch anticipation, coil, launch, jaws opening, full bite strike, recoil, recovery to neutral. Each neighboring frame is a small pose change. All limbs and tail intact, stable scale. No effects, no extra creatures."
+    }
+  },
+  "style": "High definition painterly dark fantasy storybook, 3/4 elevated side view facing RIGHT, same colors and proportions as reference. Not pixel art.",
+  "layout": "taxonomy/v1",
+  "fit": {
+    "resample": "lanczos",
+    "align_x": "alpha-centroid",
+    "align_y": "bottom",
+    "ground_frames": true,
+    "pixel_unfake": false
+  },
+  "chroma": {
+    "mode": "rgb",
+    "unmix_reach": 4,
+    "spill_max_fraction": 0.005
+  }
+}

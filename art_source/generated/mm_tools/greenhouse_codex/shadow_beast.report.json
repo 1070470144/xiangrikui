@@ -1,0 +1,47 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Premium painterly fantasy botanical bestiary illustration for The Last Sunflower. Dark emerald and petrol blue greenhouse background, warm amber rim light, tactile organic details. One prominent centered complete subject filling 70 percent of canvas, landscape 3:2. Quiet environment, no UI, frame, text, letters, numbers, watermark. A threatening charcoal-black wolf-like shadow beast, flowing smoky mane, glowing amber eyes, sharp claws, prowling low through blue-green moonlit greenhouse roots, complete beast silhouette.",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\greenhouse_codex\\shadow_beast.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\greenhouse_codex\\shadow_beast.png.raw.png",
+  "raw_bytes": 2814402,
+  "elapsed_seconds": 61.625,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "high",
+    "size": "1536x1024",
+    "background": "opaque",
+    "usage": {
+      "prompt_tokens": 100,
+      "completion_tokens": 1584,
+      "total_tokens": 1684,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "video_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

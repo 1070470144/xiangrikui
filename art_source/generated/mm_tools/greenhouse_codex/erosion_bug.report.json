@@ -1,0 +1,39 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Premium painterly fantasy botanical bestiary illustration for The Last Sunflower. Dark emerald and petrol blue greenhouse background, warm amber rim light, tactile organic details. One prominent centered complete subject filling 70 percent of canvas, landscape 3:2. Quiet environment, no UI, frame, text, letters, numbers, watermark. A sinister large beetle-like erosion insect with dark chitin shell, articulated legs, glowing sickly amber mandibles biting an exposed luminous plant root, complete insect silhouette on dark moss.",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\greenhouse_codex\\erosion_bug.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\greenhouse_codex\\erosion_bug.png.raw.png",
+  "raw_bytes": 2367717,
+  "elapsed_seconds": 48.093,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "high",
+    "size": "1536x1024",
+    "background": "opaque",
+    "usage": {
+      "input_tokens": 102,
+      "output_tokens": 6240,
+      "total_tokens": 6342,
+      "input_tokens_details": {
+        "text_tokens": 102,
+        "image_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "text_tokens": 0,
+        "image_tokens": 6240,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

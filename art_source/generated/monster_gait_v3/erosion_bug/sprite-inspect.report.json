@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "engine": "component-row",
+  "kind": "sprite-gen-inspect-report",
+  "run_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_gait_v3\\erosion_bug",
+  "states": [
+    "walk",
+    "attack"
+  ],
+  "thresholds": {
+    "histogram_min": 0.0,
+    "dhash_min": 0.55,
+    "motion_min": 0.01
+  },
+  "rows": [
+    {
+      "state": "walk",
+      "source": "frames",
+      "expected_frames": 8,
+      "found_frames": 8,
+      "natural_pose_count": 8,
+      "frame_files": [
+        "frames/walk/frame-0.png",
+        "frames/walk/frame-1.png",
+        "frames/walk/frame-2.png",
+        "frames/walk/frame-3.png",
+        "frames/walk/frame-4.png",
+        "frames/walk/frame-5.png",
+        "frames/walk/frame-6.png",
+        "frames/walk/frame-7.png"
+      ],
+      "metrics": {
+        "histogram_intersection": {
+          "min": 0.9702632804504391,
+          "mean": 0.9810314613846719
+        },
+        "dhash_similarity": {
+          "min": 0.84375,
+          "mean": 0.9107142857142857
+        },
+        "motion_presence": 0.026996755733543418,
+        "centroid_sigma": {
+          "x": 0.3662909005547421,
+          "y": 1.1309931213049087
+        }
+      },
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "state": "attack",
+      "source": "frames",
+      "expected_frames": 8,
+      "found_frames": 8,
+      "natural_pose_count": 8,
+      "frame_files": [
+        "frames/attack/frame-0.png",
+        "frames/attack/frame-1.png",
+        "frames/attack/frame-2.png",
+        "frames/attack/frame-3.png",
+        "frames/attack/frame-4.png",
+        "frames/attack/frame-5.png",
+        "frames/attack/frame-6.png",
+        "frames/attack/frame-7.png"
+      ],
+      "metrics": {
+        "histogram_intersection": {
+          "min": 0.9414517015172211,
+          "mean": 0.9676149782303345
+        },
+        "dhash_similarity": {
+          "min": 0.71875,
+          "mean": 0.8599330357142857
+        },
+        "motion_presence": 0.07389384464723389,
+        "centroid_sigma": {
+          "x": 0.24780678419484503,
+          "y": 12.320155307500634
+        }
+      },
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

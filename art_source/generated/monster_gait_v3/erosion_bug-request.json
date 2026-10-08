@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-request",
+  "engine": "component-row",
+  "character": {
+    "id": "erosion_bug",
+    "description": "Corrupted armored garden insect, purple segmented shell, cyan eyes and mandibles; preserve the reference anatomy and leg count.",
+    "base_image": "base-source.png"
+  },
+  "cell": {
+    "shape": "square",
+    "width": 192,
+    "height": 192,
+    "safe_margin_x": 14,
+    "safe_margin_y": 14,
+    "size": 192,
+    "safe_margin": 14
+  },
+  "chroma_key": {
+    "name": "green",
+    "hex": "#00FF00",
+    "rgb": [
+      0,
+      255,
+      0
+    ],
+    "selection": "manual"
+  },
+  "states": {
+    "walk": {
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "action": "An anatomically correct SIX-legged insect alternating-tripod crawl, never a quadruped gait. Three pairs attached under fixed thorax: front, middle, rear. Exactly six legs total, three on each side; claws and joints retain lengths and attachment points. Group A = near front + near rear + far middle, Group B = far front + far rear + near middle. Eight chronological phases of ONE stride: 1 group A reaches forward and plants, group B starts low forward swing; 2 A grounded moves gently back and B swings forward; 3 A remains grounded and B approaches forward landing; 4 B lands forward as A reaches rear limit; 5 B grounded and A lifts for recovery, opposite contact to frame 1; 6 B moves gently backward and A swings forward low; 7 B stays planted and A extends toward landing; 8 A almost lands matching phase 1. Each leg moves as a jointed limb with two rigid segments, not a changing tentacle. Keep shell absolutely stable, mandibles closed and unmoving, no body stretching or floating. Only legs move. Three legs support the body throughout. Foot tips follow low elliptical paths; no legs disappearing or extra claws. Frame 8 to 1 must be a small smooth step."
+    },
+    "attack": {
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "action": "Eight readable attack phases facing RIGHT: neutral, crouch anticipation, coil, launch, jaws opening, full bite strike, recoil, recovery to neutral. Each neighboring frame is a small pose change. All limbs and tail intact, stable scale. No effects, no extra creatures."
+    }
+  },
+  "style": "High definition painterly dark fantasy storybook, 3/4 elevated side view facing RIGHT, same colors and proportions as reference. Not pixel art.",
+  "layout": "taxonomy/v1",
+  "fit": {
+    "resample": "lanczos",
+    "align_x": "alpha-centroid",
+    "align_y": "bottom",
+    "ground_frames": true,
+    "pixel_unfake": false
+  },
+  "chroma": {
+    "mode": "rgb",
+    "unmix_reach": 4,
+    "spill_max_fraction": 0.005
+  }
+}

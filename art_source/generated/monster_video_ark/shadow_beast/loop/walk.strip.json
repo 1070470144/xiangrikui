@@ -1,0 +1,194 @@
+{
+  "frames": 15,
+  "w": 252,
+  "h": 140,
+  "kind": "periodic",
+  "loop": true,
+  "body_h": 123,
+  "body_src_h": 342,
+  "body_ref": "first-frame",
+  "scale": 0.3596,
+  "delay_ms": 41.67,
+  "cycle_frames": 15,
+  "cycle_seconds": 0.625,
+  "subsampled": false,
+  "cell_cap": 64,
+  "top_margin_px": 239,
+  "body_height_target": 123,
+  "foot_anchor": "motion-auto",
+  "drift_px": 0,
+  "foot_sway_px": 0,
+  "foot_x": null,
+  "motion_anchor": {
+    "method": "masked-ncc-boundary-velocity-v1",
+    "regions": [
+      [
+        781,
+        311,
+        865,
+        381
+      ],
+      [
+        781,
+        367,
+        865,
+        438
+      ]
+    ],
+    "region_weights": [
+      0.7,
+      0.3
+    ],
+    "search_radius_xy": [
+      14,
+      28
+    ],
+    "coarse_dx_px": 0,
+    "boundary_measurements": [
+      {
+        "k": 0,
+        "dx": 0,
+        "dy": 0,
+        "cost": 1.7881393432617187e-08,
+        "region_costs": [
+          0.0,
+          5.960464477539063e-08
+        ]
+      },
+      {
+        "k": 1,
+        "dx": -2,
+        "dy": 4,
+        "cost": 0.09758793115615844,
+        "region_costs": [
+          0.08736109733581543,
+          0.12145054340362549
+        ]
+      },
+      {
+        "k": 2,
+        "dx": -4,
+        "dy": 5,
+        "cost": 0.18139504194259642,
+        "region_costs": [
+          0.15173542499542236,
+          0.25060081481933594
+        ]
+      },
+      {
+        "k": 12,
+        "dx": 8,
+        "dy": -21,
+        "cost": 0.21076312065124514,
+        "region_costs": [
+          0.18086957931518555,
+          0.2805147171020508
+        ]
+      },
+      {
+        "k": 13,
+        "dx": 8,
+        "dy": -17,
+        "cost": 0.213277393579483,
+        "region_costs": [
+          0.1723995804786682,
+          0.3086589574813843
+        ]
+      },
+      {
+        "k": 14,
+        "dx": 6,
+        "dy": -13,
+        "cost": 0.18911863565444947,
+        "region_costs": [
+          0.17273259162902832,
+          0.22735273838043213
+        ]
+      }
+    ],
+    "raw_start_velocity_xy": [
+      2.0,
+      -2.5
+    ],
+    "raw_end_velocity_xy": [
+      1.0,
+      -4.0
+    ],
+    "endpoint_float_xy": [
+      4.2,
+      -9.1
+    ],
+    "endpoint_xy": [
+      4,
+      -9
+    ],
+    "shifts_xy": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        -2
+      ],
+      [
+        1,
+        -3
+      ],
+      [
+        1,
+        -3
+      ],
+      [
+        2,
+        -4
+      ],
+      [
+        2,
+        -4
+      ],
+      [
+        2,
+        -5
+      ],
+      [
+        3,
+        -6
+      ],
+      [
+        3,
+        -6
+      ],
+      [
+        3,
+        -7
+      ],
+      [
+        3,
+        -8
+      ],
+      [
+        4,
+        -8
+      ],
+      [
+        4,
+        -9
+      ]
+    ],
+    "padding_ltrb": [
+      0,
+      9,
+      4,
+      0
+    ]
+  }
+}

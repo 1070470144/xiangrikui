@@ -1,0 +1,47 @@
+{
+  "kind": "sprite-gen-image-report",
+  "provider": "openai",
+  "prompt": "Premium painterly botanical dark fantasy game illustration for The Last Sunflower. Post-apocalyptic greenhouse, forest green and petrol blue shadows, restrained amber sunlight, fine organic engraved details, one clearly readable focal subject in center, landscape composition. Edge-to-edge finished artwork. No text, lettering, numbers, logos, watermark, UI or frame. Sun devourer: a colossal black shadow creature with a gaping maw and thorned silhouette eclipsing a radiant sunflower sun disk, tiny garden in foreground resisting with amber roots; grand final-night confrontation.",
+  "out": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\night_records\\night_7.png",
+  "raw": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\mm_tools\\night_records\\night_7.png.raw.png",
+  "raw_bytes": 2644375,
+  "elapsed_seconds": 61.296,
+  "model": "gpt-image-2",
+  "session_id": null,
+  "refs": [],
+  "transparent": false,
+  "alpha": null,
+  "chroma": null,
+  "extra": {
+    "auth_source": "OPENAI_API_KEY",
+    "transport": "openai-api",
+    "endpoint": "/images/generations",
+    "quality": "high",
+    "size": "1536x1024",
+    "background": "opaque",
+    "usage": {
+      "prompt_tokens": 108,
+      "completion_tokens": 1584,
+      "total_tokens": 1692,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0
+      },
+      "completion_tokens_details": {
+        "text_tokens": 0,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "video_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "input_tokens_details": null,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  },
+  "provider_resolved_from": "explicit"
+}

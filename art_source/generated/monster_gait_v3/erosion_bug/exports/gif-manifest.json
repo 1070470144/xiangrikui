@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-gif-run",
+  "run_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_gait_v3\\erosion_bug",
+  "exports": [
+    {
+      "state": "walk",
+      "output": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_gait_v3\\erosion_bug\\exports\\walk.gif",
+      "frames": 8,
+      "fps": 12.0,
+      "loop": true,
+      "gif_report": {
+        "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_gait_v3\\erosion_bug\\exports\\walk.gif",
+        "frames": 8,
+        "delay_ticks": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "loop": 0,
+        "transparent": true,
+        "disposal": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "state": "attack",
+      "output": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_gait_v3\\erosion_bug\\exports\\attack.gif",
+      "frames": 8,
+      "fps": 12.0,
+      "loop": false,
+      "gif_report": {
+        "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_gait_v3\\erosion_bug\\exports\\attack.gif",
+        "frames": 8,
+        "delay_ticks": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "loop": 0,
+        "transparent": true,
+        "disposal": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  ]
+}

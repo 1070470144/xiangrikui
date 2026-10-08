@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-request",
+  "engine": "component-row",
+  "character": {
+    "id": "erosion_bug",
+    "description": "Corrupted armored garden insect, purple segmented shell, cyan eyes and mandibles; preserve the reference anatomy and leg count.",
+    "base_image": "base-source.png"
+  },
+  "cell": {
+    "shape": "square",
+    "width": 192,
+    "height": 192,
+    "safe_margin_x": 14,
+    "safe_margin_y": 14,
+    "size": 192,
+    "safe_margin": 14
+  },
+  "chroma_key": {
+    "name": "green",
+    "hex": "#00FF00",
+    "rgb": [
+      0,
+      255,
+      0
+    ],
+    "selection": "manual"
+  },
+  "states": {
+    "walk": {
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "action": "Eight evenly spaced phases of a continuous forward creeping gait, in place facing RIGHT. Use a smooth quadruped walk cycle: two contact poses, two passing poses, two compression poses and two opposite contact poses. Every frame must have a distinct leg placement, with paws moving gradually between neighboring frames; stable head, torso scale and ground line; frame 8 flows into frame 1. No ghost trails."
+    },
+    "attack": {
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "action": "Eight readable attack phases facing RIGHT: neutral, crouch anticipation, coil, launch, jaws opening, full bite strike, recoil, recovery to neutral. Each neighboring frame is a small pose change. All limbs and tail intact, stable scale. No effects, no extra creatures."
+    }
+  },
+  "style": "High definition painterly dark fantasy storybook, 3/4 elevated side view facing RIGHT, same colors and proportions as reference. Not pixel art.",
+  "layout": "taxonomy/v1",
+  "fit": {
+    "resample": "lanczos",
+    "align_x": "bbox-center",
+    "align_y": "bottom",
+    "ground_frames": true,
+    "pixel_unfake": false
+  },
+  "chroma": {
+    "mode": "rgb",
+    "unmix_reach": 4,
+    "spill_max_fraction": 0.005
+  }
+}

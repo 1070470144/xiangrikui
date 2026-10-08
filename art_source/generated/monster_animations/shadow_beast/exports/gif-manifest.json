@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-gif-run",
+  "run_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_animations\\shadow_beast",
+  "exports": [
+    {
+      "state": "walk",
+      "output": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_animations\\shadow_beast\\exports\\walk.gif",
+      "frames": 8,
+      "fps": 12.0,
+      "loop": true,
+      "gif_report": {
+        "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_animations\\shadow_beast\\exports\\walk.gif",
+        "frames": 8,
+        "delay_ticks": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "loop": 0,
+        "transparent": true,
+        "disposal": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "state": "attack",
+      "output": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_animations\\shadow_beast\\exports\\attack.gif",
+      "frames": 8,
+      "fps": 12.0,
+      "loop": false,
+      "gif_report": {
+        "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_animations\\shadow_beast\\exports\\attack.gif",
+        "frames": 8,
+        "delay_ticks": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "loop": 0,
+        "transparent": true,
+        "disposal": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  ]
+}
