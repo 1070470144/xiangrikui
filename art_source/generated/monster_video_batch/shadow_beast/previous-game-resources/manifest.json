@@ -1,0 +1,88 @@
+{
+  "characterId": "shadow_beast",
+  "engine": "sprite-gen-video-walk/component-row-attack",
+  "game_input": "per-state-png-frames",
+  "degraded_static_fallback": false,
+  "curation_applied": false,
+  "frame_variant": "pixel",
+  "base_image": "base-source.png",
+  "cell": {
+    "shape": "square",
+    "width": 192,
+    "height": 192,
+    "safe_margin_x": 14,
+    "safe_margin_y": 14,
+    "size": 192,
+    "safe_margin": 14
+  },
+  "chroma_key": {
+    "name": "green",
+    "hex": "#00FF00",
+    "rgb": [
+      0,
+      255,
+      0
+    ],
+    "selection": "manual"
+  },
+  "animation": {
+    "cellWidth": 192,
+    "cellHeight": 192,
+    "rows": {
+      "walk": {
+        "frames": 15,
+        "fps": 24,
+        "loop": true,
+        "durations_ms": [
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664,
+          41.666666666666664
+        ],
+        "frame_variant": "video-alpha",
+        "width": 252,
+        "height": 192,
+        "ground_y": 178,
+        "body_height": 123,
+        "source": "art_source/generated/monster_video_ark/shadow_beast/walk.mp4",
+        "pipeline_metadata": "art_source/generated/monster_video_ark/shadow_beast/loop/walk.strip.json",
+        "source_cycle": {
+          "kind": "periodic",
+          "start": 46,
+          "length": 15,
+          "ratio": 1.5168221744357644,
+          "review_recommended": true
+        }
+      },
+      "attack": {
+        "row": 1,
+        "frames": 8,
+        "fps": 12,
+        "durations_ms": [
+          83,
+          83,
+          83,
+          83,
+          83,
+          83,
+          83,
+          83
+        ],
+        "loop": false,
+        "frame_variant": "pixel"
+      }
+    }
+  },
+  "legacy_component_sheet": "sprite-sheet-alpha.png"
+}

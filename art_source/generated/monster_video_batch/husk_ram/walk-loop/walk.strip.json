@@ -1,0 +1,222 @@
+{
+  "frames": 37,
+  "w": 220,
+  "h": 132,
+  "kind": "periodic",
+  "loop": true,
+  "body_h": 123,
+  "body_src_h": 468,
+  "body_ref": "first-frame",
+  "scale": 0.2628,
+  "delay_ms": 41.67,
+  "cycle_frames": 37,
+  "cycle_seconds": 1.5417,
+  "subsampled": false,
+  "cell_cap": 64,
+  "top_margin_px": 184,
+  "body_height_target": 123,
+  "foot_anchor": "motion-auto",
+  "drift_px": 0,
+  "foot_sway_px": 0,
+  "foot_x": null,
+  "motion_anchor": {
+    "method": "uncorrected-after-uncertain-fine-match-v1",
+    "applied": false,
+    "reason": "fine-match-at-search-boundary",
+    "registration_error": "motion anchor match reached search boundary; inspect the cut and regions",
+    "rejected_measurement": {
+      "dx": -14,
+      "dy": 6,
+      "cost": 0.5370045527815819,
+      "region_costs": [
+        0.41333717107772827,
+        0.8255617767572403
+      ],
+      "center_xy": [
+        0,
+        0
+      ],
+      "search_radius_xy": [
+        14,
+        28
+      ],
+      "k": 36
+    },
+    "requires_rendered_seam_gate": true,
+    "regions": [
+      [
+        176,
+        311,
+        295,
+        402
+      ],
+      [
+        809,
+        388,
+        928,
+        480
+      ]
+    ],
+    "coarse_dx_px": 0,
+    "endpoint_xy": [
+      0,
+      0
+    ],
+    "shifts_xy": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "padding_ltrb": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

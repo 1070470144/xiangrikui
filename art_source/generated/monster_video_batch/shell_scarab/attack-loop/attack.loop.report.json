@@ -1,0 +1,1301 @@
+{
+  "kind": "sprite-gen-video-loop-report",
+  "frames_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_video_batch\\shell_scarab\\attack-frames\\keyed",
+  "out_dir": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_video_batch\\shell_scarab\\attack-loop",
+  "state": "attack",
+  "fps": 24.0,
+  "frames_total": 97,
+  "window": [
+    11,
+    60
+  ],
+  "profile": "swing and return to ready; retain at least half a second of repeat context",
+  "cycle_mode": "one-shot",
+  "seam_max": 2.0,
+  "anchor": "none",
+  "seam_measurement": "source-frames",
+  "cycle": {
+    "excursion_over_step": 9.062255545145037,
+    "kind": "one-shot",
+    "start": 22,
+    "length": 56,
+    "seam": 0.007110098376870155,
+    "inner_mean_adjacent": 0.004021713510155678,
+    "ratio": 1.7679276156582642,
+    "period_global": null,
+    "periodicity": null,
+    "rest_frame": 22,
+    "return_pair": [
+      22,
+      77
+    ],
+    "return_distance_over_departure": 0.19508693027371138,
+    "excursion": [
+      52,
+      68
+    ],
+    "excursion_peak": 57,
+    "excursion_contrast": 5.28,
+    "excursion_moved": 0.862,
+    "excursion_rule": "contrast",
+    "departure": 0.036445795558393,
+    "candidates": [
+      {
+        "excursion_over_step": 9.42606983652908,
+        "kind": "one-shot",
+        "start": 14,
+        "length": 60,
+        "seam": 0.007640437688678503,
+        "inner_mean_adjacent": 0.0038005290552973747,
+        "ratio": 2.0103616042689803,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 14,
+        "return_pair": [
+          14,
+          73
+        ],
+        "return_distance_over_departure": 0.21327675681737224,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.77,
+        "excursion_moved": 0.858,
+        "excursion_rule": "contrast",
+        "departure": 0.03582405229099095
+      },
+      {
+        "excursion_over_step": 9.269234944643372,
+        "kind": "one-shot",
+        "start": 15,
+        "length": 59,
+        "seam": 0.007635980378836393,
+        "inner_mean_adjacent": 0.003862612182274461,
+        "ratio": 1.9768954320285974,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 15,
+        "return_pair": [
+          15,
+          73
+        ],
+        "return_distance_over_departure": 0.21327492979029858,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.77,
+        "excursion_moved": 0.859,
+        "excursion_rule": "contrast",
+        "departure": 0.035803459817543626
+      },
+      {
+        "excursion_over_step": 9.419982981454105,
+        "kind": "one-shot",
+        "start": 15,
+        "length": 60,
+        "seam": 0.007748176343739033,
+        "inner_mean_adjacent": 0.0038372455164790154,
+        "ratio": 2.0192026573396364,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 15,
+        "return_pair": [
+          15,
+          74
+        ],
+        "return_distance_over_departure": 0.2143531109679292,
+        "excursion": [
+          54,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.47,
+        "excursion_moved": 0.868,
+        "excursion_rule": "contrast",
+        "departure": 0.03614678746089339
+      },
+      {
+        "excursion_over_step": 9.129053732024014,
+        "kind": "one-shot",
+        "start": 16,
+        "length": 58,
+        "seam": 0.007597715128213167,
+        "inner_mean_adjacent": 0.0039267209358513355,
+        "ratio": 1.9348752438313876,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 16,
+        "return_pair": [
+          16,
+          73
+        ],
+        "return_distance_over_departure": 0.21194696631524854,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.79,
+        "excursion_moved": 0.859,
+        "excursion_rule": "contrast",
+        "departure": 0.03584724641405046
+      },
+      {
+        "excursion_over_step": 9.278388440439405,
+        "kind": "one-shot",
+        "start": 16,
+        "length": 59,
+        "seam": 0.0077231223694980145,
+        "inner_mean_adjacent": 0.003899811767041683,
+        "ratio": 1.9803833699790634,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 16,
+        "return_pair": [
+          16,
+          74
+        ],
+        "return_distance_over_departure": 0.21344044633307857,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.48,
+        "excursion_moved": 0.867,
+        "excursion_rule": "contrast",
+        "departure": 0.03618396841920912
+      },
+      {
+        "excursion_over_step": 9.450444860933523,
+        "kind": "one-shot",
+        "start": 16,
+        "length": 60,
+        "seam": 0.007620136719197035,
+        "inner_mean_adjacent": 0.0038468842394649982,
+        "ratio": 1.9808593773169525,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 16,
+        "return_pair": [
+          16,
+          75
+        ],
+        "return_distance_over_departure": 0.20960488172419026,
+        "excursion": [
+          54,
+          64
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.4,
+        "excursion_moved": 0.871,
+        "excursion_rule": "contrast",
+        "departure": 0.036354767391458154
+      },
+      {
+        "excursion_over_step": 8.974189784229344,
+        "kind": "one-shot",
+        "start": 17,
+        "length": 57,
+        "seam": 0.00760133471339941,
+        "inner_mean_adjacent": 0.003993016667664051,
+        "ratio": 1.903657145975866,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 17,
+        "return_pair": [
+          17,
+          73
+        ],
+        "return_distance_over_departure": 0.21212579539171647,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.78,
+        "excursion_moved": 0.858,
+        "excursion_rule": "contrast",
+        "departure": 0.03583408938720822
+      },
+      {
+        "excursion_over_step": 9.121608985299941,
+        "kind": "one-shot",
+        "start": 17,
+        "length": 58,
+        "seam": 0.007743636146187782,
+        "inner_mean_adjacent": 0.003964472096413374,
+        "ratio": 1.9532578254727502,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 17,
+        "return_pair": [
+          17,
+          74
+        ],
+        "return_distance_over_departure": 0.21413522862255452,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.49,
+        "excursion_moved": 0.867,
+        "excursion_rule": "contrast",
+        "departure": 0.036162364296615124
+      },
+      {
+        "excursion_over_step": 9.29397799449118,
+        "kind": "one-shot",
+        "start": 17,
+        "length": 59,
+        "seam": 0.007637036964297295,
+        "inner_mean_adjacent": 0.003909517545253038,
+        "ratio": 1.9534474205315269,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 17,
+        "return_pair": [
+          17,
+          75
+        ],
+        "return_distance_over_departure": 0.2101842097850236,
+        "excursion": [
+          54,
+          64
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.41,
+        "excursion_moved": 0.87,
+        "excursion_rule": "contrast",
+        "departure": 0.03633497003465891
+      },
+      {
+        "excursion_over_step": 9.446554022062598,
+        "kind": "one-shot",
+        "start": 17,
+        "length": 60,
+        "seam": 0.0075543648563325405,
+        "inner_mean_adjacent": 0.003852861700579524,
+        "ratio": 1.9607152925308113,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 17,
+        "return_pair": [
+          17,
+          76
+        ],
+        "return_distance_over_departure": 0.20755878682867054,
+        "excursion": [
+          54,
+          64
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.36,
+        "excursion_moved": 0.872,
+        "excursion_rule": "contrast",
+        "departure": 0.036396266194060445
+      },
+      {
+        "excursion_over_step": 8.832515870106757,
+        "kind": "one-shot",
+        "start": 18,
+        "length": 56,
+        "seam": 0.007560557685792446,
+        "inner_mean_adjacent": 0.004061451647430658,
+        "ratio": 1.8615407352135733,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 18,
+        "return_pair": [
+          18,
+          73
+        ],
+        "return_distance_over_departure": 0.2107599649510817,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.8,
+        "excursion_moved": 0.858,
+        "excursion_rule": "contrast",
+        "departure": 0.035872836131602526
+      },
+      {
+        "excursion_over_step": 8.978155760931013,
+        "kind": "one-shot",
+        "start": 18,
+        "length": 57,
+        "seam": 0.007720050401985645,
+        "inner_mean_adjacent": 0.0040311748161911964,
+        "ratio": 1.9150869793535363,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 18,
+        "return_pair": [
+          18,
+          74
+        ],
+        "return_distance_over_departure": 0.2133051631479989,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.51,
+        "excursion_moved": 0.867,
+        "excursion_rule": "contrast",
+        "departure": 0.03619251539930701
+      },
+      {
+        "excursion_over_step": 9.150649310475254,
+        "kind": "one-shot",
+        "start": 18,
+        "length": 58,
+        "seam": 0.007612757384777069,
+        "inner_mean_adjacent": 0.003974085673689842,
+        "ratio": 1.9155997152192263,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 18,
+        "return_pair": [
+          18,
+          75
+        ],
+        "return_distance_over_departure": 0.20934030473950446,
+        "excursion": [
+          54,
+          64
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.42,
+        "excursion_moved": 0.87,
+        "excursion_rule": "contrast",
+        "departure": 0.03636546432971954
+      },
+      {
+        "excursion_over_step": 9.302862325256903,
+        "kind": "one-shot",
+        "start": 18,
+        "length": 59,
+        "seam": 0.007535872515290976,
+        "inner_mean_adjacent": 0.003915340173989534,
+        "ratio": 1.924704414025998,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 18,
+        "return_pair": [
+          18,
+          76
+        ],
+        "return_distance_over_departure": 0.20689378674351674,
+        "excursion": [
+          54,
+          64
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.37,
+        "excursion_moved": 0.872,
+        "excursion_rule": "contrast",
+        "departure": 0.03642387059517205
+      },
+      {
+        "excursion_over_step": 9.581119257946344,
+        "kind": "one-shot",
+        "start": 18,
+        "length": 60,
+        "seam": 0.0061554573476314545,
+        "inner_mean_adjacent": 0.003881351323798299,
+        "ratio": 1.5859057410983632,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 18,
+        "return_pair": [
+          18,
+          77
+        ],
+        "return_distance_over_departure": 0.16552405813997695,
+        "excursion": [
+          54,
+          61
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.11,
+        "excursion_moved": 0.888,
+        "excursion_rule": "contrast",
+        "departure": 0.037187689915299416
+      },
+      {
+        "excursion_over_step": 8.681269865633823,
+        "kind": "one-shot",
+        "start": 19,
+        "length": 55,
+        "seam": 0.007508416194468737,
+        "inner_mean_adjacent": 0.0041319821029901505,
+        "ratio": 1.8171463494566436,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 19,
+        "return_pair": [
+          19,
+          73
+        ],
+        "return_distance_over_departure": 0.20931803498588428,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.84,
+        "excursion_moved": 0.859,
+        "excursion_rule": "contrast",
+        "departure": 0.035870851716026664
+      },
+      {
+        "excursion_over_step": 8.822428476184093,
+        "kind": "one-shot",
+        "start": 19,
+        "length": 56,
+        "seam": 0.007707300130277872,
+        "inner_mean_adjacent": 0.004099872894585133,
+        "ratio": 1.879887579065491,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 19,
+        "return_pair": [
+          19,
+          74
+        ],
+        "return_distance_over_departure": 0.21308051225807004,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.53,
+        "excursion_moved": 0.867,
+        "excursion_rule": "contrast",
+        "departure": 0.03617083537392318
+      },
+      {
+        "excursion_over_step": 8.994565280652079,
+        "kind": "one-shot",
+        "start": 19,
+        "length": 57,
+        "seam": 0.007601812481880188,
+        "inner_mean_adjacent": 0.004040537867695093,
+        "ratio": 1.8813862735103155,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 19,
+        "return_pair": [
+          19,
+          75
+        ],
+        "return_distance_over_departure": 0.20916922772880478,
+        "excursion": [
+          54,
+          64
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.44,
+        "excursion_moved": 0.87,
+        "excursion_rule": "contrast",
+        "departure": 0.03634288161993027
+      },
+      {
+        "excursion_over_step": 9.148394311521164,
+        "kind": "one-shot",
+        "start": 19,
+        "length": 58,
+        "seam": 0.0075136879459023476,
+        "inner_mean_adjacent": 0.003979595378041267,
+        "ratio": 1.8880532396237075,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 19,
+        "return_pair": [
+          19,
+          76
+        ],
+        "return_distance_over_departure": 0.20638083310925504,
+        "excursion": [
+          54,
+          64
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.39,
+        "excursion_moved": 0.873,
+        "excursion_rule": "contrast",
+        "departure": 0.036406907718628645
+      },
+      {
+        "excursion_over_step": 9.424031367181657,
+        "kind": "one-shot",
+        "start": 19,
+        "length": 59,
+        "seam": 0.00613960437476635,
+        "inner_mean_adjacent": 0.003943913150578737,
+        "ratio": 1.5567291013660918,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 19,
+        "return_pair": [
+          19,
+          77
+        ],
+        "return_distance_over_departure": 0.1651871731653251,
+        "excursion": [
+          54,
+          61
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.12,
+        "excursion_moved": 0.889,
+        "excursion_rule": "contrast",
+        "departure": 0.03716756124049425
+      },
+      {
+        "excursion_over_step": 9.658689254853405,
+        "kind": "one-shot",
+        "start": 19,
+        "length": 60,
+        "seam": 0.005104731768369675,
+        "inner_mean_adjacent": 0.003899252275004983,
+        "ratio": 1.309156578837452,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 19,
+        "return_pair": [
+          19,
+          78
+        ],
+        "return_distance_over_departure": 0.13554184675520153,
+        "excursion": [
+          51,
+          69
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 2.98,
+        "excursion_moved": 0.901,
+        "excursion_rule": "moved",
+        "departure": 0.03766166605055332
+      },
+      {
+        "excursion_over_step": 8.552288464487711,
+        "kind": "one-shot",
+        "start": 20,
+        "length": 54,
+        "seam": 0.007498975843191147,
+        "inner_mean_adjacent": 0.004187160637229681,
+        "ratio": 1.7909453428929436,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 20,
+        "return_pair": [
+          20,
+          73
+        ],
+        "return_distance_over_departure": 0.2094112412519311,
+        "excursion": [
+          53,
+          66
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 4.16,
+        "excursion_moved": 0.854,
+        "excursion_rule": "contrast",
+        "departure": 0.03580980561673641
+      },
+      {
+        "excursion_over_step": 8.680198954350574,
+        "kind": "one-shot",
+        "start": 20,
+        "length": 55,
+        "seam": 0.007812160067260265,
+        "inner_mean_adjacent": 0.004153434652835131,
+        "ratio": 1.8808915320065749,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 20,
+        "return_pair": [
+          20,
+          74
+        ],
+        "return_distance_over_departure": 0.21668760611343585,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.75,
+        "excursion_moved": 0.86,
+        "excursion_rule": "contrast",
+        "departure": 0.03605263913050294
+      },
+      {
+        "excursion_over_step": 8.852272189324871,
+        "kind": "one-shot",
+        "start": 20,
+        "length": 56,
+        "seam": 0.007708215620368719,
+        "inner_mean_adjacent": 0.004092046990990639,
+        "ratio": 1.8837065256923275,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 20,
+        "return_pair": [
+          20,
+          75
+        ],
+        "return_distance_over_departure": 0.21279356140493805,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.62,
+        "excursion_moved": 0.864,
+        "excursion_rule": "contrast",
+        "departure": 0.036223913775756955
+      },
+      {
+        "excursion_over_step": 9.006373997838061,
+        "kind": "one-shot",
+        "start": 20,
+        "length": 57,
+        "seam": 0.007620869670063257,
+        "inner_mean_adjacent": 0.004029096569865942,
+        "ratio": 1.8914586776252975,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 20,
+        "return_pair": [
+          20,
+          76
+        ],
+        "return_distance_over_departure": 0.21001333922834356,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.59,
+        "excursion_moved": 0.866,
+        "excursion_rule": "contrast",
+        "departure": 0.036287550581619143
+      },
+      {
+        "excursion_over_step": 9.278848134669344,
+        "kind": "one-shot",
+        "start": 20,
+        "length": 58,
+        "seam": 0.006262363400310278,
+        "inner_mean_adjacent": 0.003991919569671154,
+        "ratio": 1.5687599138742563,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 20,
+        "return_pair": [
+          20,
+          77
+        ],
+        "return_distance_over_departure": 0.16906838985894876,
+        "excursion": [
+          54,
+          64
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.32,
+        "excursion_moved": 0.882,
+        "excursion_rule": "contrast",
+        "departure": 0.03704041545279324
+      },
+      {
+        "excursion_over_step": 9.513969798812568,
+        "kind": "one-shot",
+        "start": 20,
+        "length": 59,
+        "seam": 0.0052187275141477585,
+        "inner_mean_adjacent": 0.0039456612430512905,
+        "ratio": 1.3226496631809097,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 20,
+        "return_pair": [
+          20,
+          78
+        ],
+        "return_distance_over_departure": 0.13902184799304163,
+        "excursion": [
+          54,
+          62
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.17,
+        "excursion_moved": 0.894,
+        "excursion_rule": "contrast",
+        "departure": 0.03753890190273523
+      },
+      {
+        "excursion_over_step": 9.750546765415741,
+        "kind": "one-shot",
+        "start": 20,
+        "length": 60,
+        "seam": 0.0040372745133936405,
+        "inner_mean_adjacent": 0.003902757540345192,
+        "ratio": 1.0344671611438487,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 20,
+        "return_pair": [
+          20,
+          79
+        ],
+        "return_distance_over_departure": 0.10609324646418855,
+        "excursion": [
+          56,
+          59
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.02,
+        "excursion_moved": 0.907,
+        "excursion_rule": "contrast",
+        "departure": 0.03805401991121471
+      },
+      {
+        "excursion_over_step": 8.391084079354448,
+        "kind": "one-shot",
+        "start": 21,
+        "length": 53,
+        "seam": 0.008033452555537224,
+        "inner_mean_adjacent": 0.004221782553941011,
+        "ratio": 1.9028579641170857,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 21,
+        "return_pair": [
+          21,
+          73
+        ],
+        "return_distance_over_departure": 0.22677140952489167,
+        "excursion": [
+          52,
+          67
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 4.5,
+        "excursion_moved": 0.843,
+        "excursion_rule": "contrast",
+        "departure": 0.03542533237487078
+      },
+      {
+        "excursion_over_step": 8.526524260778595,
+        "kind": "one-shot",
+        "start": 21,
+        "length": 54,
+        "seam": 0.00828582514077425,
+        "inner_mean_adjacent": 0.004186767153441906,
+        "ratio": 1.9790508612265536,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 21,
+        "return_pair": [
+          21,
+          74
+        ],
+        "return_distance_over_departure": 0.23210522842584835,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.88,
+        "excursion_moved": 0.85,
+        "excursion_rule": "contrast",
+        "departure": 0.03569857170805335
+      },
+      {
+        "excursion_over_step": 8.702324915924343,
+        "kind": "one-shot",
+        "start": 21,
+        "length": 55,
+        "seam": 0.008151326328516006,
+        "inner_mean_adjacent": 0.0041236248798668385,
+        "ratio": 1.9767380802055963,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 21,
+        "return_pair": [
+          21,
+          75
+        ],
+        "return_distance_over_departure": 0.22715057174989783,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.81,
+        "excursion_moved": 0.854,
+        "excursion_rule": "contrast",
+        "departure": 0.035885123535990715
+      },
+      {
+        "excursion_over_step": 8.85835770653087,
+        "kind": "one-shot",
+        "start": 21,
+        "length": 56,
+        "seam": 0.008050129748880863,
+        "inner_mean_adjacent": 0.004058956168591976,
+        "ratio": 1.9833004877392892,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 21,
+        "return_pair": [
+          21,
+          76
+        ],
+        "return_distance_over_departure": 0.22389031392095296,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.75,
+        "excursion_moved": 0.856,
+        "excursion_rule": "contrast",
+        "departure": 0.035955685656517744
+      },
+      {
+        "excursion_over_step": 9.13191322951439,
+        "kind": "one-shot",
+        "start": 21,
+        "length": 57,
+        "seam": 0.006677513476461172,
+        "inner_mean_adjacent": 0.00402058195322752,
+        "ratio": 1.6608325745233974,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 21,
+        "return_pair": [
+          21,
+          77
+        ],
+        "return_distance_over_departure": 0.1818712610141299,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.68,
+        "excursion_moved": 0.872,
+        "excursion_rule": "contrast",
+        "departure": 0.0367156055290252
+      },
+      {
+        "excursion_over_step": 9.363951381931399,
+        "kind": "one-shot",
+        "start": 21,
+        "length": 58,
+        "seam": 0.005655934102833271,
+        "inner_mean_adjacent": 0.003973009064793587,
+        "ratio": 1.423589528892031,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 21,
+        "return_pair": [
+          21,
+          78
+        ],
+        "return_distance_over_departure": 0.15202871852143288,
+        "excursion": [
+          54,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.47,
+        "excursion_moved": 0.884,
+        "excursion_rule": "contrast",
+        "departure": 0.03720306372269988
+      },
+      {
+        "excursion_over_step": 9.590701623138193,
+        "kind": "one-shot",
+        "start": 21,
+        "length": 59,
+        "seam": 0.00454914104193449,
+        "inner_mean_adjacent": 0.003928894177079201,
+        "ratio": 1.1578680506270063,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 21,
+        "return_pair": [
+          21,
+          79
+        ],
+        "return_distance_over_departure": 0.12072819029564782,
+        "excursion": [
+          54,
+          64
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.3,
+        "excursion_moved": 0.896,
+        "excursion_rule": "contrast",
+        "departure": 0.03768085176125169
+      },
+      {
+        "excursion_over_step": 9.789652031134084,
+        "kind": "one-shot",
+        "start": 21,
+        "length": 60,
+        "seam": 0.003926183562725782,
+        "inner_mean_adjacent": 0.0038769703824073076,
+        "ratio": 1.0126937209894076,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 21,
+        "return_pair": [
+          21,
+          80
+        ],
+        "return_distance_over_departure": 0.1034453234669355,
+        "excursion": [
+          54,
+          62
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.23,
+        "excursion_moved": 0.902,
+        "excursion_rule": "contrast",
+        "departure": 0.03795419097878039
+      },
+      {
+        "excursion_over_step": 8.623371804966625,
+        "kind": "one-shot",
+        "start": 22,
+        "length": 54,
+        "seam": 0.008641652762889862,
+        "inner_mean_adjacent": 0.004126743413507938,
+        "ratio": 2.0940610784289166,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 22,
+        "return_pair": [
+          22,
+          75
+        ],
+        "return_distance_over_departure": 0.24283553183023415,
+        "excursion": [
+          52,
+          68
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 5.02,
+        "excursion_moved": 0.843,
+        "excursion_rule": "contrast",
+        "departure": 0.03558644279837608
+      },
+      {
+        "excursion_over_step": 8.786810728048785,
+        "kind": "one-shot",
+        "start": 22,
+        "length": 55,
+        "seam": 0.008491173386573792,
+        "inner_mean_adjacent": 0.004060818813741207,
+        "ratio": 2.0910003070910044,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 22,
+        "return_pair": [
+          22,
+          76
+        ],
+        "return_distance_over_departure": 0.23797033665653292,
+        "excursion": [
+          52,
+          68
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 5.09,
+        "excursion_moved": 0.846,
+        "excursion_rule": "contrast",
+        "departure": 0.035681646317243576
+      },
+      {
+        "excursion_over_step": 9.062255545145037,
+        "kind": "one-shot",
+        "start": 22,
+        "length": 56,
+        "seam": 0.007110098376870155,
+        "inner_mean_adjacent": 0.004021713510155678,
+        "ratio": 1.7679276156582642,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 22,
+        "return_pair": [
+          22,
+          77
+        ],
+        "return_distance_over_departure": 0.19508693027371138,
+        "excursion": [
+          52,
+          68
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 5.28,
+        "excursion_moved": 0.862,
+        "excursion_rule": "contrast",
+        "departure": 0.036445795558393
+      },
+      {
+        "excursion_over_step": 9.280496776279682,
+        "kind": "one-shot",
+        "start": 22,
+        "length": 57,
+        "seam": 0.0062071820721030235,
+        "inner_mean_adjacent": 0.003973270300775766,
+        "ratio": 1.5622350361844484,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 22,
+        "return_pair": [
+          22,
+          78
+        ],
+        "return_distance_over_departure": 0.16833528138034753,
+        "excursion": [
+          52,
+          67
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 4.82,
+        "excursion_moved": 0.872,
+        "excursion_rule": "contrast",
+        "departure": 0.0368739222176373
+      },
+      {
+        "excursion_over_step": 9.427083465453629,
+        "kind": "one-shot",
+        "start": 22,
+        "length": 58,
+        "seam": 0.0057375370524823666,
+        "inner_mean_adjacent": 0.003928376827389002,
+        "ratio": 1.4605363244380565,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 22,
+        "return_pair": [
+          22,
+          79
+        ],
+        "return_distance_over_departure": 0.15492981787955093,
+        "excursion": [
+          52,
+          66
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 4.36,
+        "excursion_moved": 0.876,
+        "excursion_rule": "contrast",
+        "departure": 0.037033136235550046
+      },
+      {
+        "excursion_over_step": 9.540668755247687,
+        "kind": "one-shot",
+        "start": 22,
+        "length": 59,
+        "seam": 0.005776535253971815,
+        "inner_mean_adjacent": 0.0038755666464567184,
+        "ratio": 1.4905008172812817,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 22,
+        "return_pair": [
+          22,
+          80
+        ],
+        "return_distance_over_departure": 0.15622603147829198,
+        "excursion": [
+          53,
+          66
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 4.1,
+        "excursion_moved": 0.875,
+        "excursion_rule": "contrast",
+        "departure": 0.03697549761272967
+      },
+      {
+        "excursion_over_step": 9.544699112906855,
+        "kind": "one-shot",
+        "start": 22,
+        "length": 60,
+        "seam": 0.006354082375764847,
+        "inner_mean_adjacent": 0.0038386513479053974,
+        "ratio": 1.6552903089862594,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 22,
+        "return_pair": [
+          22,
+          81
+        ],
+        "return_distance_over_departure": 0.17342509066083467,
+        "excursion": [
+          53,
+          65
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 3.57,
+        "excursion_moved": 0.865,
+        "excursion_rule": "contrast",
+        "departure": 0.03663877211511135
+      },
+      {
+        "excursion_over_step": 8.901747084650983,
+        "kind": "one-shot",
+        "start": 23,
+        "length": 55,
+        "seam": 0.008268000558018684,
+        "inner_mean_adjacent": 0.004021578002721071,
+        "ratio": 2.0559095341242686,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 23,
+        "return_pair": [
+          23,
+          77
+        ],
+        "return_distance_over_departure": 0.23095573425908855,
+        "excursion": [
+          51,
+          69
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 6.95,
+        "excursion_moved": 0.845,
+        "excursion_rule": "contrast",
+        "departure": 0.03579907026141882
+      },
+      {
+        "excursion_over_step": 9.029200767423829,
+        "kind": "one-shot",
+        "start": 23,
+        "length": 56,
+        "seam": 0.008086849935352802,
+        "inner_mean_adjacent": 0.003972257487475872,
+        "ratio": 2.0358322593260447,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 23,
+        "return_pair": [
+          23,
+          78
+        ],
+        "return_distance_over_departure": 0.2254720336567396,
+        "excursion": [
+          51,
+          69
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 6.72,
+        "excursion_moved": 0.847,
+        "excursion_rule": "contrast",
+        "departure": 0.035866310354322195
+      },
+      {
+        "excursion_over_step": 9.063672319673937,
+        "kind": "one-shot",
+        "start": 23,
+        "length": 57,
+        "seam": 0.008489779196679592,
+        "inner_mean_adjacent": 0.003926580306142569,
+        "ratio": 2.162130539746903,
+        "period_global": null,
+        "periodicity": null,
+        "rest_frame": 23,
+        "return_pair": [
+          23,
+          79
+        ],
+        "return_distance_over_departure": 0.23854906306064305,
+        "excursion": [
+          51,
+          69
+        ],
+        "excursion_peak": 57,
+        "excursion_contrast": 6.24,
+        "excursion_moved": 0.841,
+        "excursion_rule": "contrast",
+        "departure": 0.03558923723176122
+      }
+    ]
+  },
+  "periodic_attempt": null,
+  "cycle_seconds": 2.3333,
+  "n_out": 56,
+  "gif_fps": 24.0,
+  "delay_ms": 42,
+  "status": "passed",
+  "resampled_seam": 0.007110098376870155,
+  "resampled_inner_mean_adjacent": 0.004021713510155678,
+  "resampled_seam_ratio": 1.7679,
+  "scrubbed_rgb_pixels": 0,
+  "specks_dropped": 4908,
+  "strip": {
+    "path": "D:\\mm\\data\\xiangrikui\\art_source\\generated\\monster_video_batch\\shell_scarab\\attack-loop\\attack.strip.png",
+    "frames": 56,
+    "w": 250,
+    "h": 137,
+    "kind": "one-shot",
+    "loop": false,
+    "body_h": 123,
+    "body_src_h": 344,
+    "body_ref": "first-frame",
+    "scale": 0.3576,
+    "delay_ms": 41.67,
+    "cycle_frames": 56,
+    "cycle_seconds": 2.3333,
+    "subsampled": false,
+    "cell_cap": 64,
+    "top_margin_px": 308,
+    "body_height_target": 123,
+    "foot_anchor": "none",
+    "drift_px": 0,
+    "foot_sway_px": 0,
+    "foot_x": null
+  },
+  "gif": {
+    "file": "attack.gif",
+    "format": "GIF",
+    "n_frames": 56,
+    "loop": 0,
+    "size": [
+      250,
+      137
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 936720
+  },
+  "webp": {
+    "file": "attack.webp",
+    "format": "WEBP",
+    "n_frames": 56,
+    "loop": 0,
+    "size": [
+      250,
+      137
+    ],
+    "corners_transparent": true,
+    "stale_rgb_under_alpha0": 0,
+    "bytes": 1699708
+  }
+}
