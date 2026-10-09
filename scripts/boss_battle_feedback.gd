@@ -11,6 +11,21 @@ var panel: PanelContainer
 var health_bar: ProgressBar
 var status: Label
 var title: Label
+const VideoEffect = preload("res://scripts/root_boss_video_effect.gd")
+var video_effects: Array[Node] = []
+var enraged_owners: Dictionary = {}
+
+func _video(kind: String, point: Vector2, radius: float, duration: float, owner: Node, follow: Node2D = null) -> void:
+	if not is_instance_valid(owner) or not ("enemy_id" in owner) or owner.enemy_id != "root_crown_colossus": return
+	if not FileAccess.file_exists("res://assets/effects/root_boss/atlas_manifest.json"): return
+	if DisplayServer.get_name() == "headless": return
+	var effect := VideoEffect.new()
+	add_child(effect)
+	if effect.configure(kind, point, radius, duration, owner.get_instance_id(), follow): video_effects.append(effect)
+	else: effect.queue_free()
+
+func _core_video(duration: float, owner: Node) -> void:
+	_video("exposed_fx", owner.global_position + Vector2(0, -105), 65, duration, owner, owner)
 
 func configure(value: Node) -> void:
 	game = value
@@ -62,6 +77,7 @@ func register(boss: Node) -> void:
 	boss.boss_special_finished.connect(_finished.bind(boss))
 	boss.boss_summon_requested.connect(_summon.bind(boss))
 	boss.boss_cleanup_requested.connect(clear_owner.bind(boss))
+	boss.boss_core_exposed.connect(_core_video.bind(boss))
 	boss.tree_exiting.connect(clear_owner.bind(boss), CONNECT_ONE_SHOT)
 
 func _warning(kind: String, center: Vector2, radius: float, duration: float, owner: Node) -> void:
@@ -70,6 +86,7 @@ func _warning(kind: String, center: Vector2, radius: float, duration: float, own
 
 func _zone(kind: String, center: Vector2, radius: float, duration: float, owner: Node) -> void:
 	zones.append({"kind":kind, "center":center, "radius":radius, "time":duration, "owner":owner.get_instance_id()})
+	_video("root_lock", center, radius, duration, owner)
 	update_roots()
 
 func _finished(kind: String, owner: Node) -> void:
@@ -77,11 +94,16 @@ func _finished(kind: String, owner: Node) -> void:
 	if kind == "slam" and warnings.has(id):
 		var warning: Dictionary = warnings[id]
 		impacts.append({"center":warning.center, "radius":warning.radius, "time":0.5, "owner":id})
+		_video("impact", warning.center, warning.radius, 0.5, owner)
 	warnings.erase(id)
+	if kind == "interrupted":
+		for effect in video_effects:
+			if is_instance_valid(effect) and effect.effect_owner == id: effect.queue_free()
 	queue_redraw()
 
 func _summon(_kind: String, center: Vector2, count: int, owner: Node) -> void:
 	if not is_instance_valid(owner) or owner.health <= 0.0 or game.phase != game.Phase.NIGHT: return
+	_video("summon_fx", center, 100, 1.0, owner)
 	for i in range(count):
 		var guard: Node = game._spawn_enemy(game.EnemyScript.Kind.HUSK_RAM, 0, {"spawn_position":center + Vector2(-60 if i % 2 == 0 else 60, 25)})
 		if guard != null:
@@ -98,6 +120,9 @@ func _clear_guards(id: int) -> void:
 
 func clear_owner(owner: Node) -> void:
 	var id := owner.get_instance_id()
+	enraged_owners.erase(id)
+	for effect in video_effects:
+		if is_instance_valid(effect) and effect.effect_owner == id: effect.queue_free()
 	_clear_guards(id)
 	warnings.erase(id)
 	zones = zones.filter(func(zone: Dictionary) -> bool: return int(zone.owner) != id)
@@ -107,6 +132,10 @@ func clear_owner(owner: Node) -> void:
 	queue_redraw()
 
 func clear_all() -> void:
+	for effect in video_effects:
+		if is_instance_valid(effect): effect.queue_free()
+	video_effects.clear()
+	enraged_owners.clear()
 	for id in guards.keys(): _clear_guards(id)
 	warnings.clear()
 	zones.clear()
@@ -139,6 +168,12 @@ func _process(delta: float) -> void:
 	for impact in impacts: impact.time -= delta
 	impacts = impacts.filter(func(impact: Dictionary) -> bool: return float(impact.time) > 0.0)
 	bosses = bosses.filter(func(boss: Node) -> bool: return is_instance_valid(boss) and boss.health > 0.0)
+	for index in range(video_effects.size() - 1, -1, -1):
+		if not is_instance_valid(video_effects[index]) or video_effects[index].is_queued_for_deletion(): video_effects.remove_at(index)
+	for owner in bosses:
+		if owner.boss_enraged and not enraged_owners.has(owner.get_instance_id()):
+			enraged_owners[owner.get_instance_id()] = true
+			_video("enraged_fx", owner.global_position + Vector2(0, -100), 115, 1.5, owner, owner)
 	panel.visible = not bosses.is_empty()
 	if panel.visible:
 		var boss: Node = bosses[0]

@@ -40,7 +40,14 @@ func run() -> void:
 	game.world_camera.force_update_scroll()
 	game._spawn_enemy(game.EnemyScript.Kind.ROOT_COLOSSUS, 0, {"spawn_position":center + Vector2(370, -10)})
 	boss = game.get_active_enemies().back()
-	game.hud.show_message("第五关机制验证 · 当前为占位造型，写实素材接口待恢复")
+	boss.set_process(false)
+	for plant in game.plants: plant.set_process(false)
+	game.mother_flower.set_process(false)
+	for i in range(1800):
+		if boss.animation_frames != null: break
+		await process_frame
+	assert(boss.animation_frames != null, "Root boss generated frames must load before capture")
+	game.hud.show_message("第五关 · 根冠巨像")
 	for i in range(90): await process_frame
 	game.hud.update_battle_state(game.get_hud_battle_state())
 	if "--fight" in OS.get_cmdline_user_args():
@@ -53,6 +60,14 @@ func run() -> void:
 
 func scenes() -> void:
 	boss.set_process(false)
+	boss._spawn_pose = 0.0
+	boss._attack_pose = 0.0
+	boss.ability_windup = 0.0
+	boss.boss_recovery = 0.0
+	boss.boss_skill = ""
+	boss._moving = false
+	boss._animation_clock = 0.0
+	boss._update_art_texture()
 	game.mother_flower.set_process(false)
 	for plant in game.plants: plant.set_process(false)
 	game.boss_feedback.set_process(false)
@@ -67,9 +82,12 @@ func scenes() -> void:
 		if i == 18: await view("slam")
 		await process_frame
 	boss.advance_boss(0.01)
+	boss._update_art_texture()
 	game.boss_feedback._process(0)
 	await view("impact")
 	boss.expose_core(3)
+	boss.boss_recovery = 0.0
+	boss._update_art_texture()
 	boss.boss_state = "exposed"
 	boss.queue_redraw()
 	game.boss_feedback._process(0)
@@ -77,12 +95,16 @@ func scenes() -> void:
 	boss.core_exposed_time = 0
 	boss.health = boss.max_health * 0.24
 	boss.boss_enraged = true
+	boss._update_art_texture()
 	boss.queue_redraw()
 	game.boss_feedback._process(0)
 	await view("enraged")
 	for i in range(60): await process_frame
 
 func fight() -> void:
+	boss.set_process(true)
+	game.mother_flower.set_process(true)
+	for plant in game.plants: plant.set_process(true)
 	for plant in game.plants: plant.combat_active = true
 	var elapsed := 0.0
 	var events: Array[Dictionary] = []
@@ -93,7 +115,7 @@ func fight() -> void:
 		if int(elapsed * 30) % 30 == 0:
 			game._rebuild_network()
 			game.hud.update_battle_state(game.get_hud_battle_state())
-	var result := {"duration_seconds":elapsed, "result":"boss_defeated" if not is_instance_valid(boss) or boss.health <= 0 else ("mother_defeated" if game.mother_flower.health <= 0 else "timeout"), "generated_art":false, "events":events}
+	var result := {"duration_seconds":elapsed, "result":"boss_defeated" if not is_instance_valid(boss) or boss.health <= 0 else ("mother_defeated" if game.mother_flower.health <= 0 else "timeout"), "generated_art":FileAccess.file_exists("res://assets/enemies/animations/root_crown_colossus/atlas_manifest.json"), "events":events}
 	var file := FileAccess.open(OUT + "/fight-result.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(result, "\t"))
 	print("BOSS FIGHT: ", result.result, " at ", elapsed, "s")

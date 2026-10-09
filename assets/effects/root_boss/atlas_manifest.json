@@ -1,0 +1,5509 @@
+{
+  "enemy_id": "root_crown_colossus",
+  "runtime": {
+    "scale": 0.9,
+    "ground_offset": 8.0
+  },
+  "states": {
+    "impact": {
+      "fps": 24.0,
+      "loop": false,
+      "frames": 121,
+      "ground_y": 150.0,
+      "width": 400,
+      "height": 300,
+      "regions": [
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-00.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-01.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-02.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-03.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "impact-atlas-04.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        }
+      ],
+      "source_video": "impact-v5/clip.mp4"
+    },
+    "root_lock": {
+      "fps": 24.0,
+      "loop": false,
+      "frames": 121,
+      "ground_y": 150.0,
+      "width": 400,
+      "height": 300,
+      "regions": [
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-00.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-01.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-02.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-03.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "root_lock-atlas-04.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        }
+      ],
+      "source_video": "root_lock/clip.mp4"
+    },
+    "summon_fx": {
+      "fps": 24.0,
+      "loop": false,
+      "frames": 121,
+      "ground_y": 150.0,
+      "width": 400,
+      "height": 300,
+      "regions": [
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-00.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-01.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-02.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-03.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "summon_fx-atlas-04.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        }
+      ],
+      "source_video": "summon_fx-v4/clip.mp4"
+    },
+    "exposed_fx": {
+      "fps": 24.0,
+      "loop": false,
+      "frames": 121,
+      "ground_y": 150.0,
+      "width": 400,
+      "height": 300,
+      "regions": [
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-00.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-01.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-02.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-03.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "exposed_fx-atlas-04.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        }
+      ],
+      "source_video": "exposed_fx-v4/clip.mp4"
+    },
+    "enraged_fx": {
+      "fps": 24.0,
+      "loop": false,
+      "frames": 121,
+      "ground_y": 150.0,
+      "width": 400,
+      "height": 300,
+      "regions": [
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-00.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-01.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-02.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            400,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            800,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1200,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1600,
+            0,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            0,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            400,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            800,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1200,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1600,
+            300,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            0,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            400,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            800,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1200,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1600,
+            600,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            0,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            400,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            800,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1200,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1600,
+            900,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            0,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            400,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            800,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1200,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1600,
+            1200,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            0,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            400,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            800,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1200,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-03.png",
+          "region": [
+            1600,
+            1500,
+            400,
+            300
+          ]
+        },
+        {
+          "page": "enraged_fx-atlas-04.png",
+          "region": [
+            0,
+            0,
+            400,
+            300
+          ]
+        }
+      ],
+      "source_video": "enraged_fx-v4/clip.mp4"
+    }
+  }
+}

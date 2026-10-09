@@ -769,6 +769,7 @@ func _temporary_supply_nodes() -> Array[Node]:
 	return result
 
 func _parent_can_supply_plant(parent: Node) -> bool:
+	if not is_instance_valid(parent) or parent.is_queued_for_deletion() or parent.health <= 0.0: return false
 	if parent == mother_flower:
 		return mother_plant_load < MOTHER_PLANT_CAPACITY
 	return is_instance_valid(parent) and parent.is_connected_to_light and parent.load < parent.capacity
@@ -877,16 +878,40 @@ func _place_plant_at(point: Vector2, kind: int) -> void:
 	hud.show_message("植物已扎根")
 
 func _rebuild_network() -> void:
-	for node in light_nodes: if is_instance_valid(node): node.set_load(0)
-	for object in _temporary_supply_nodes(): object.set_load(0)
+	var supplies: Array[Node] = []
+	var old_parents: Dictionary = {}
+	for source in light_nodes + _temporary_supply_nodes():
+		if not is_instance_valid(source) or old_parents.has(source): continue
+		old_parents[source] = source.parent_source
+		source.set_load(0)
+		source.set_parent_source(null)
+		if source.health > 0.0 and not source.is_queued_for_deletion(): supplies.append(source)
 	mother_plant_load = 0
-	for node in light_nodes:
-		if not is_instance_valid(node) or node.health <= 0.0: continue
-		var parent := find_best_parent_excluding(node.global_position, 0, node)
-		node.set_parent_source(parent)
-	for object in _temporary_supply_nodes():
-		var parent := find_best_parent_excluding(object.global_position, 0, object, false)
-		object.set_parent_source(parent)
+	# Validate old edges outward from the mother before considering any new edge.
+	var pending := supplies.duplicate()
+	var progress := true
+	while progress:
+		progress = false
+		for source in pending.duplicate():
+			var parent: Node = old_parents.get(source)
+			if _supply_parent_valid(parent, source.global_position, supplies):
+				source.set_parent_source(parent)
+				pending.erase(source)
+				progress = true
+	# Reconnect broken roots; then retain downstream old edges where possible.
+	while not pending.is_empty():
+		var connected := false
+		for source in pending:
+			var parent: Node = old_parents.get(source)
+			if not _supply_parent_valid(parent, source.global_position, supplies):
+				parent = find_best_parent_excluding(source.global_position, 0, source)
+			if parent != null:
+				source.set_parent_source(parent)
+				pending.erase(source)
+				connected = true
+				break
+		if not connected: break
+	var unconnected: Array[Node] = []
 	for plant in plants:
 		if not is_instance_valid(plant): continue
 		if plant.health <= 0.0 or plant.is_queued_for_deletion():
@@ -897,21 +922,37 @@ func _rebuild_network() -> void:
 			if lantern != plant and is_instance_valid(lantern) and lantern.kind == PlantScript.Kind.LANTERN and lantern.health > 0.0 and lantern.global_position.distance_to(plant.global_position) <= lantern.attack_range:
 				lantern_support = true; break
 		plant.set_lantern_supported(lantern_support)
+		var parent: Node = plant.power_source
+		if _supply_parent_valid(parent, plant.global_position, supplies) and _parent_can_supply_plant(parent):
+			_count_plant_connection(parent)
+		else:
+			plant.set_power_source(null)
+			unconnected.append(plant)
+	for plant in unconnected:
 		var parent := find_best_parent(plant.global_position, 1)
 		plant.set_power_source(parent)
-		if parent == mother_flower: mother_plant_load += 1
-		elif parent in light_nodes or parent in _temporary_supply_nodes(): parent.set_load(parent.load + 1)
+		if parent != null: _count_plant_connection(parent)
+
+func _supply_parent_valid(parent: Node, point: Vector2, supplies: Array[Node]) -> bool:
+	if not is_instance_valid(parent) or parent.is_queued_for_deletion() or parent.health <= 0.0: return false
+	if parent == mother_flower: return point.distance_to(parent.global_position) <= Balance.MOTHER_SUPPLY_RADIUS
+	return parent in supplies and parent.is_connected_to_light and point.distance_to(parent.global_position) <= parent.supply_radius
+
+func _count_plant_connection(parent: Node) -> void:
+	if parent == mother_flower: mother_plant_load += 1
+	else: parent.set_load(parent.load + 1)
 
 func find_best_parent_excluding(point: Vector2, _load_cost: int, excluded: Node, allow_temporary: bool = true) -> Node:
-	var best: Node = mother_flower if point.distance_to(BattlefieldScript.CENTER) <= Balance.MOTHER_SUPPLY_RADIUS else null
-	var best_distance := point.distance_to(BattlefieldScript.CENTER) if best != null else INF
+	if is_instance_valid(mother_flower) and mother_flower.health > 0.0 and point.distance_to(mother_flower.global_position) <= Balance.MOTHER_SUPPLY_RADIUS: return mother_flower
+	var best: Node = null
+	var best_distance := INF
 	for node in light_nodes:
-		if node == excluded or not is_instance_valid(node) or not node.is_connected_to_light: continue
+		if node == excluded or not is_instance_valid(node) or node.health <= 0.0 or node.is_queued_for_deletion() or not node.is_connected_to_light: continue
 		var distance := point.distance_to(node.global_position)
 		if distance <= node.supply_radius and distance < best_distance: best = node; best_distance = distance
 	if allow_temporary:
 		for object in _temporary_supply_nodes():
-			if object == excluded or not object.is_connected_to_light: continue
+			if object == excluded or object.health <= 0.0 or object.is_queued_for_deletion() or not object.is_connected_to_light: continue
 			var distance := point.distance_to(object.global_position)
 			if distance <= object.supply_radius and distance < best_distance: best = object; best_distance = distance
 	return best
