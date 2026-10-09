@@ -33,7 +33,7 @@ func test_consumable_deck_flow() -> void:
 
 func test_play_validation() -> void:
 	var deck := CombatDeck.new(); deck.start_run(_deck(), 2)
-	expect(CombatDeck.validate_card_play("card_sun_pierce", "night", 4, {"type":"enemy"}), "matching target and energy must validate")
+	expect(CombatDeck.validate_card_play("card_sun_pierce", "night", 4, {"type":"ground"}), "matching target and energy must validate")
 	expect(not CombatDeck.validate_card_play("card_sun_pierce", "day", 4, {"type":"enemy"}), "night card must fail during day")
 	expect(not CombatDeck.validate_card_play("card_sun_pierce", "night", 3, {"type":"enemy"}), "insufficient energy must fail")
-	expect(not CombatDeck.validate_card_play("card_sun_pierce", "night", 4, {"type":"ground"}), "wrong target must fail")
+	expect(not CombatDeck.validate_card_play("card_sun_pierce", "night", 4, {"type":"enemy"}), "wrong target must fail")

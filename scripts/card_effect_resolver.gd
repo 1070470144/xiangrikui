@@ -29,7 +29,7 @@ func get_target_preview(game: Node, card_id: String, target: Variant) -> Diction
 		valid = valid and point != Vector2.INF
 		if not valid: point = target.global_position
 	if global_target: point = game.mother_flower.global_position
-	return {"valid":valid, "radius":radius, "point":point, "global":global_target, "name":str(card.get("name", ""))}
+	return {"valid":valid, "radius":radius, "point":point, "global":global_target, "name":str(card.get("name", "")), "shape":"rectangle" if card_id == "card_sun_pierce" else "circle", "rect_size":Vector2(float(card.get("rect_width", 0.0)), float(card.get("rect_height", 0.0)))}
 
 const SUPPORTED_CARD_IDS := [
 	"card_sun_pierce", "card_root_snare", "card_emergency_dew", "card_root_wall", "card_sun_mine", "card_lure_bud", "card_emergency_light", "card_focus_mark",
@@ -59,7 +59,7 @@ func resolve(game: Node, card_id: String, target: Variant) -> Dictionary:
 func _apply(game: Node, card: Dictionary, target: Variant) -> Dictionary:
 	var id := str(card["id"]); var affected := 0; var created: Array = []
 	match id:
-		"card_sun_pierce": target.take_damage(float(card["damage"])); affected = 1
+		"card_sun_pierce": created.append(_spawn_zone(game, id, target, card, {"periodic_damage":float(card.damage),"hits":8})); affected = 1
 		"card_focus_mark": target.card_damage_multiplier = 1.12 if target.get_rank() == "boss" else 1.25; target.card_power_time = float(card["duration"]); affected = 1
 		"card_emergency_dew": affected = _heal_plants(game, _target_position(target), float(card.get("radius", 140.0)), float(card["heal"]))
 		"card_emergency_light": target.set_powered(true); target.card_power_time = float(card["duration"]); target.restore_power_on_card_expiry = true; affected = 1

@@ -4,6 +4,7 @@ extends Node2D
 var ghost: Sprite2D
 var label: Label
 var effect_radius := 0.0
+var rect_size := Vector2.ZERO
 var inner_radius := 0.0
 var valid := false
 var has_parent := false
@@ -26,10 +27,11 @@ func _ready() -> void:
 	add_child(label)
 	visible = false
 
-func show_target(point: Vector2, allowed: bool, radius: float, caption: String, texture: Texture2D = null, sprite_scale := 0.58, sprite_offset := -18.0, parent: Node = null, global_effect := false, trigger_radius := 0.0) -> void:
+func show_target(point: Vector2, allowed: bool, radius: float, caption: String, texture: Texture2D = null, sprite_scale := 0.58, sprite_offset := -18.0, parent: Node = null, global_effect := false, trigger_radius := 0.0, rectangle_size := Vector2.ZERO) -> void:
 	global_position = point
 	valid = allowed
 	effect_radius = radius
+	rect_size = rectangle_size
 	inner_radius = trigger_radius
 	global_target = global_effect
 	has_parent = is_instance_valid(parent)
@@ -59,11 +61,16 @@ func clear() -> void:
 	visible = false
 	ghost.texture = null
 	effect_radius = 0.0
+	rect_size = Vector2.ZERO
 	inner_radius = 0.0
 	has_parent = false
 
 func _draw() -> void:
 	var color := Color("96c3ae") if valid else Color("de777b")
+	if rect_size != Vector2.ZERO:
+		var rect := Rect2(-rect_size * 0.5, rect_size)
+		draw_rect(rect, Color(color, 0.12))
+		draw_rect(rect, Color(color, 0.85), false, 2.0)
 	if has_parent:
 		draw_line(to_local(parent_point), Vector2.ZERO, Color(color,0.55), 2.0)
 	if effect_radius > 0:

@@ -6,12 +6,12 @@ static func describe(id: String) -> String:
 	var c := Content.get_card(id)
 	var duration := int(c.get("duration", 0))
 	match id:
-		"card_sun_pierce": return "对敌人造成%d伤害。" % int(c.damage)
+		"card_sun_pierce": return "矩形光带持续4秒，每0.5秒造成12伤害。"
 		"card_root_snare": return "区域敌人减速30%%，持续%d秒。" % duration
 		"card_emergency_dew": return "范围内植物恢复%d生命。" % int(c.heal)
 		"card_root_wall": return "建立%d生命根墙，吸引敌人%d秒。" % [int(c.health),duration]
 		"card_sun_mine": return "埋下地雷，触发时造成%d伤害。" % int(c.damage)
-		"card_lure_bud": return "召唤%d生命花苞，吸引敌人%d秒。" % [int(c.health),duration]
+		"card_lure_bud": return "生成花苞，吸引所有怪物12秒。"
 		"card_emergency_light": return "植物获得供光，持续%d秒。" % duration
 		"card_focus_mark": return "敌人受伤提高25%%，持续%d秒。首领提高12%%。" % duration
 		"card_transplant_shovel": return "先选植物，再选供光空地。移植保留生命。"

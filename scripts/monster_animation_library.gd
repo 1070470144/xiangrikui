@@ -25,10 +25,11 @@ static func request_species(enemy_id: String) -> void:
 	var records: Array = []
 	var states: Dictionary = manifest.get("states", {})
 	var sample := enemy_id == "root_crown_colossus" and bool(manifest.get("review_sample", false))
-	for required in (["idle", "slam"] if sample else ["walk", "attack", "spawn", "death"]):
+	var idle_only: bool = enemy_id == "sun_devourer" and manifest.get("visual_profile", "") == "idle_only"
+	for required in (["idle"] if idle_only else ["idle", "slam"] if sample else ["walk", "attack", "spawn", "death"]):
 		if not states.has(required): _failed[enemy_id] = true; return
 	for state in states:
-		if state not in ["idle", "walk", "attack", "spawn", "death", "slam", "summon", "exposed", "enraged"]: continue
+		if state not in ["idle", "walk", "attack", "spawn", "death", "slam", "summon", "exposed", "enraged", "laser_charge", "laser"]: continue
 		var spec: Dictionary = manifest.states[state]
 		if spec.get("regions", []).is_empty() or float(spec.get("fps", 0)) <= 0.0: _failed[enemy_id] = true; return
 		frames.set_meta(state + "_layout", spec)

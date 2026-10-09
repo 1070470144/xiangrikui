@@ -100,6 +100,7 @@ var mother_same_target_hits := 0
 var mother_pulse_count := 0
 var selected_combat_card := ""
 var _seen_enemy_alerts: Dictionary = {}
+var _sun_boss_spawned := false
 static var PLANT_DEPLOY_IDS := PlantRoster.deploy_map()
 var carried_plant_ids: Array[String] = ["deploy_thorn", "deploy_prism", "deploy_lantern", "deploy_frost", "deploy_honeydew"]
 var planting_timings: Array[Dictionary] = []
@@ -222,6 +223,7 @@ func reset_model() -> void:
 	_hud_refresh_clock = 0.0; _radar_refresh_clock = 0.0; _network_refresh_clock = 0.0
 	spawn_clock = 0.0
 	_seen_enemy_alerts.clear()
+	_sun_boss_spawned = false
 	_energy_regen_buffer = 0.0
 	weather = "clear"
 	terrain_shift = 0
@@ -963,7 +965,7 @@ func _network_lines() -> Array[Dictionary]:
 		if is_instance_valid(node) and is_instance_valid(node.parent_source):
 			lines.append({"from": node.parent_source.global_position, "to": node.global_position, "connected": node.is_connected_to_light, "overloaded": node.load >= node.capacity})
 	for plant in plants:
-		if is_instance_valid(plant) and is_instance_valid(plant.power_source): lines.append({"from": plant.power_source.global_position, "to": plant.global_position, "connected": plant.has_combat_power()})
+		if is_instance_valid(plant) and plant.health > 0.0 and not plant.is_queued_for_deletion() and is_instance_valid(plant.power_source): lines.append({"from": plant.power_source.global_position, "to": plant.global_position, "connected": plant.has_combat_power()})
 	for object in _temporary_supply_nodes():
 		lines.append({"from":object.parent_source.global_position if is_instance_valid(object.parent_source) else BattlefieldScript.CENTER, "to": object.global_position, "connected": object.is_connected_to_light, "overloaded": object.load >= object.capacity})
 	return lines
@@ -1040,6 +1042,7 @@ func _register_enemy(enemy: Node2D) -> void:
 	enemy.tree_exiting.connect(unregister_enemy.bind(enemy), CONNECT_ONE_SHOT)
 
 func _spawn_enemy(kind: int, direction: int, entry: Dictionary = {}) -> Node:
+	if kind == EnemyScript.Kind.SUN_DEVOURER and _sun_boss_spawned: return null
 	# Legacy callers may still supply a compass sector; it no longer selects a fixed entrance.
 	var spawn_point: Vector2
 	if entry.has("spawn_position"):
@@ -1048,6 +1051,7 @@ func _spawn_enemy(kind: int, direction: int, entry: Dictionary = {}) -> Node:
 		wave_director.prepare(battlefield.terrain_map, BattlefieldSpec.CENTER)
 		spawn_point = wave_director.sample(float(direction - 2) * PI / 4.0, [])
 	if not spawn_point.is_finite(): return null
+	if kind == EnemyScript.Kind.SUN_DEVOURER: _sun_boss_spawned = true
 	var enemy: Node2D = EnemyScript.new()
 	enemy.configure(kind, spawn_point)
 	enemy.max_health *= float(entry.get("health_multiplier", 1.0))
@@ -1065,6 +1069,7 @@ func _spawn_enemy(kind: int, direction: int, entry: Dictionary = {}) -> Node:
 			add_child(boss_feedback)
 			boss_feedback.configure(self)
 		boss_feedback.register(enemy)
+		enemy.boss_laser_requested.connect(_on_boss_laser_requested.bind(enemy))
 		enemy.area_damage_requested.connect(_on_boss_area_damage_requested.bind(enemy))
 	else:
 		enemy.area_damage_requested.connect(_on_enemy_area_damage_requested)
@@ -1104,6 +1109,20 @@ func _on_boss_area_damage_requested(center: Vector2, radius: float, damage: floa
 	_on_enemy_area_damage_requested(center, radius, damage)
 	if is_instance_valid(mother_flower) and mother_flower.health > 0.0 and mother_flower.global_position.distance_to(center) <= radius:
 		mother_flower.take_enemy_damage(damage * get_weather_enemy_attack_multiplier(), "boss", false, owner)
+
+func _on_boss_laser_requested(origin: Vector2, start_angle: float, end_angle: float, reach: float, width: float, owner: Node) -> void:
+	if phase != Phase.NIGHT or not is_instance_valid(owner) or owner.health <= 0.0: return
+	for plant in plants:
+		if not is_instance_valid(plant) or plant == mother_flower or plant.health <= 0.0: continue
+		var offset: Vector2 = plant.global_position - origin
+		var distance := offset.length()
+		if distance > reach + width * 0.5: continue
+		var angle := start_angle + wrapf(offset.angle() - start_angle, -PI, PI)
+		var inside := angle >= start_angle and angle <= end_angle and distance <= reach
+		var start_point := origin + Vector2.from_angle(start_angle) * reach
+		var end_point := origin + Vector2.from_angle(end_angle) * reach
+		if inside or offset.length() <= width * 0.5 or plant.global_position.distance_to(Geometry2D.get_closest_point_to_segment(plant.global_position, origin, start_point)) <= width * 0.5 or plant.global_position.distance_to(Geometry2D.get_closest_point_to_segment(plant.global_position, origin, end_point)) <= width * 0.5:
+			plant.kill_by_boss_laser()
 
 func _on_enemy_dark_sun_requested(stored_light_loss: float) -> void:
 	for plant in plants:
@@ -1434,7 +1453,7 @@ func _update_drag_world_preview() -> void:
 		parent = find_best_parent_excluding(point, 0, null, false)
 	elif id == "card_phantom_bloom" and target is Node and "art_sprite" in target and is_instance_valid(target.art_sprite):
 		texture = target.art_sprite.texture
-	drag_world_preview.show_target(point, bool(preview["valid"]), float(preview["radius"]), str(preview["name"]), texture, sprite_scale, sprite_offset, parent, bool(preview["global"]), preload("res://scripts/temporary_battle_object.gd").MINE_TRIGGER_RADIUS if id == "card_sun_mine" else 0.0)
+	drag_world_preview.show_target(point, bool(preview["valid"]), float(preview["radius"]), str(preview["name"]), texture, sprite_scale, sprite_offset, parent, bool(preview["global"]), preload("res://scripts/temporary_battle_object.gd").MINE_TRIGGER_RADIUS if id == "card_sun_mine" else 0.0, preview.get("rect_size", Vector2.ZERO))
 
 func _clear_dynamic_actors() -> void:
 	if is_instance_valid(boss_feedback): boss_feedback.clear_all()

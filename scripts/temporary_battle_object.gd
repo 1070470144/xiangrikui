@@ -23,6 +23,9 @@ var tick_interval := 0.5
 var start_delay := 0.0
 var control_applied := {}
 var _tick := 0.0
+var rect_size := Vector2.ZERO
+var _rect_elapsed := 0.0
+var _rect_ticks := 0
 var is_connected_to_light := true
 var load := 0
 var parent_source: Node = null
@@ -34,15 +37,53 @@ func configure(new_id: String, position_value: Vector2, values: Dictionary) -> v
 	slow_ratio = float(values.get("slow_ratio", 0.0)); trigger_damage = float(values.get("trigger_damage", 0.0)); periodic_damage = float(values.get("periodic_damage", 0.0)); hits_left = int(values.get("hits", 0))
 	periodic_heal = float(values.get("periodic_heal", 0.0)); cleanse_corrosion = bool(values.get("cleanse_corrosion", false)); hit_counts.clear()
 	control_applied.clear()
+	rect_size = Vector2(float(values.get("rect_width", 0.0)), float(values.get("rect_height", 0.0)))
+	_rect_elapsed = 0.0; _rect_ticks = 0
 	add_to_group("temporary_battle_objects")
+	if object_id == "card_lure_bud":
+		remaining_time = 12.0
+		var sprite := Sprite2D.new()
+		sprite.texture = load("res://assets/nodes/ART_NODE_LightBud_Healthy.png")
+		sprite.scale = Vector2.ONE * 0.18
+		sprite.position.y = -20.0
+		add_child(sprite)
+		for enemy in get_tree().get_nodes_in_group("enemies"):
+			if is_instance_valid(enemy) and enemy.health > 0.0 and not enemy.friendly: enemy.target = self
 
 func _process(delta: float) -> void:
+	if object_id == "card_sun_pierce":
+		advance_rect_damage(delta)
+		return
 	_apply_area_effects(delta)
 	if remaining_time <= 0.0: return
 	remaining_time -= delta
 	if remaining_time <= 0.0: queue_free()
 
+func advance_rect_damage(delta: float) -> void:
+	if delta <= 0.0 or remaining_time <= 0.0: return
+	_rect_elapsed += minf(delta, remaining_time)
+	remaining_time = maxf(0.0, remaining_time - delta)
+	while _rect_ticks < 8 and _rect_elapsed + 0.00001 >= float(_rect_ticks + 1) * tick_interval:
+		_rect_ticks += 1
+		for enemy in _nearby_enemies(rect_size.length() * 0.5):
+			if not is_instance_valid(enemy) or enemy.is_queued_for_deletion() or enemy.health <= 0.0: continue
+			if "friendly" in enemy and enemy.friendly: continue
+			var offset: Vector2 = enemy.global_position - global_position
+			if absf(offset.x) <= rect_size.x * 0.5 and absf(offset.y) <= rect_size.y * 0.5:
+				enemy.take_area_damage(periodic_damage)
+	queue_redraw()
+	if remaining_time <= 0.0: queue_free()
+
+func _draw() -> void:
+	if object_id != "card_sun_pierce": return
+	var rect := Rect2(-rect_size * 0.5, rect_size)
+	draw_rect(rect, Color(1.0, 0.72, 0.12, 0.18))
+	draw_rect(rect, Color(1.0, 0.86, 0.35, 0.8), false, 2.0)
+	for y in [-32.0, -16.0, 0.0, 16.0, 32.0]:
+		draw_line(Vector2(-rect_size.x * 0.5, y), Vector2(rect_size.x * 0.5, y), Color(1.0, 0.9, 0.55, 0.45), 3.0)
+
 func take_damage(amount: float) -> void:
+	if object_id == "card_lure_bud": return
 	if amount <= 0.0: return
 	health = maxf(0.0, health - amount)
 	if health <= 0.0: queue_free()

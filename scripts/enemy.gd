@@ -15,6 +15,12 @@ signal dark_sun_requested(stored_light_loss: float)
 signal boss_warning_requested(kind: String, center: Vector2, radius: float, duration: float)
 signal boss_zone_requested(kind: String, center: Vector2, radius: float, duration: float)
 signal boss_summon_requested(kind: String, center: Vector2, count: int)
+signal boss_laser_requested(origin: Vector2, start_angle: float, end_angle: float, reach: float, width: float)
+var summon_cooldown := 20.0
+var laser_cooldown := 35.0
+var laser_remaining := 0.0
+var laser_angle := 0.0
+var laser_reach := 0.0
 signal boss_shield_changed(active: bool)
 signal boss_core_exposed(duration: float)
 signal boss_special_finished(kind: String)
@@ -146,6 +152,7 @@ func configure_by_id(new_id: String, spawn_position: Vector2) -> void:
 	boss_skill = ""; boss_skill_timer = 0.0; boss_shield = 0.0; core_exposed_time = 0.0; boss_enraged = false
 	boss_state = "idle"; boss_recovery = 0.0; boss_pending_summons = 0; boss_shield_delay = 0.0
 	boss_light_progress = 0.0; boss_light_cooldown = 0.0; boss_animation_elapsed = 0.0
+	summon_cooldown = 20.0; laser_cooldown = 35.0; laser_remaining = 0.0; laser_angle = 0.0; laser_reach = 0.0
 	if enemy_id == "root_crown_colossus": special_cooldown = 7.0
 	_decision_interval = 0.15 + fmod(float(get_instance_id() % 11), 11.0) * 0.01
 	_decision_clock = fmod(float(get_instance_id() % 17), 17.0) * 0.01
@@ -208,6 +215,9 @@ func get_effective_move_speed(reuse_this_frame := false) -> float:
 func _retarget() -> void:
 	if friendly:
 		target = _nearest_hostile_enemy(); return
+	if is_inside_tree():
+		var lure := _nearest_taunt_object()
+		if lure != null and lure.object_id == "card_lure_bud": target = lure; return
 	if enemy_id == "shadow_beast":
 		_retarget_shadow_beast()
 		return
@@ -287,12 +297,16 @@ func _process(delta: float) -> void:
 	_decision_clock -= delta
 	if _decision_clock <= 0.0:
 		_decision_clock = _decision_interval
+		if not friendly:
+			var lure := _nearest_taunt_object()
+			if lure != null and lure.object_id == "card_lure_bud": target = lure
+			elif is_instance_valid(target) and "object_id" in target and target.object_id == "card_lure_bud": _retarget()
 		if rank != "boss": _process_special(_decision_interval)
 		if not is_instance_valid(target) or ("health" in target and target.health <= 0.0):
 			_retarget()
 	if rank == "boss":
 		advance_special(delta)
-		if ability_windup > 0.0 or boss_recovery > 0.0:
+		if ability_windup > 0.0 or boss_recovery > 0.0 or laser_remaining > 0.0:
 			_animate_art(delta)
 			return
 	if not is_instance_valid(target):
@@ -454,6 +468,9 @@ func remove_positive_buffs() -> void: move_buff_ratio = 0.0; attack_buff_ratio =
 func interrupt_ability() -> bool:
 	var interrupted := charge_time > 0.0 or ability_windup > 0.0
 	if not interrupted: return false
+	if enemy_id == "sun_devourer":
+		if boss_skill == "laser": laser_cooldown = 35.0
+		if boss_skill == "summon": summon_cooldown = 20.0
 	charge_time = 0.0; ability_windup = 0.0; ability_target = null; boss_skill = ""; boss_skill_timer = 0.0
 	special_cooldown = maxf(special_cooldown, 2.0)
 	if interrupted and rank == "boss":
@@ -494,9 +511,11 @@ func _nearest_hostile_enemy() -> Node2D:
 	return nearest
 
 func _nearest_taunt_object() -> Node2D:
+	if not is_inside_tree(): return null
 	var nearest: Node2D = null; var best := INF
 	for object in get_tree().get_nodes_in_group("temporary_battle_objects"):
-		if not is_instance_valid(object) or not object.taunt: continue
+		if not is_instance_valid(object) or object.is_queued_for_deletion() or object.health <= 0.0 or not object.taunt: continue
+		if object.object_id == "card_lure_bud" and object.remaining_time > 0.0: return object
 		if rank == "boss": continue
 		if object.object_id in ["card_root_wall", "card_path_beacon"] and rank != "normal": continue
 		var distance := global_position.distance_to(object.global_position)
@@ -583,6 +602,12 @@ func start_boss_skill(skill: String, center: Vector2, duration: float) -> void:
 
 func advance_boss(delta: float) -> void:
 	if health <= 0.0: return
+	if enemy_id == "sun_devourer":
+		summon_cooldown = maxf(0.0, summon_cooldown - delta)
+		laser_cooldown = maxf(0.0, laser_cooldown - delta)
+	if laser_remaining > 0.0:
+		_advance_laser(delta)
+		return
 	if ability_windup > 0.0:
 		boss_animation_elapsed += minf(delta, ability_windup)
 		var overshoot := maxf(0.0, delta - ability_windup)
@@ -590,6 +615,10 @@ func advance_boss(delta: float) -> void:
 		if ability_windup <= 0.0:
 			boss_state = "execute"
 			match boss_skill:
+				"laser":
+					laser_remaining = 3.0
+					_advance_laser(overshoot)
+					return
 				"slam":
 					area_damage_requested.emit(boss_cast_position, 112.0, 22.0)
 					boss_zone_requested.emit("root_lock", boss_cast_position, 125.0, 3.5)
@@ -601,7 +630,8 @@ func advance_boss(delta: float) -> void:
 					else:
 						core_exposed_time = 2.0; boss_core_exposed.emit(2.0)
 				"summon":
-					boss_summon_requested.emit("root_guard", boss_cast_position, 2)
+					boss_summon_requested.emit("root_crown_colossus" if enemy_id == "sun_devourer" else "root_guard", boss_cast_position, 1 if enemy_id == "sun_devourer" else 2)
+					if enemy_id == "sun_devourer": summon_cooldown = 20.0
 					if enemy_id == "sun_devourer": core_exposed_time = 3.0; boss_core_exposed.emit(3.0)
 			boss_special_finished.emit(boss_skill); ability_target = null
 			boss_recovery = 0.65
@@ -623,6 +653,13 @@ func advance_boss(delta: float) -> void:
 	if boss_pending_summons > 0:
 		boss_pending_summons -= 1; start_boss_skill("summon", global_position, 1.0)
 		return
+	if enemy_id == "sun_devourer":
+		if summon_cooldown <= 0.0:
+			start_boss_skill("summon", global_position, 1.0)
+			return
+		if laser_cooldown <= 0.0 and _prepare_laser():
+			start_boss_skill("laser", global_position, 3.0)
+			return
 	boss_state = "exposed" if core_exposed_time > 0.0 else ("enraged" if boss_enraged else "idle")
 	special_cooldown -= delta
 	if special_cooldown > 0.0: return
@@ -649,11 +686,48 @@ func _process_boss_thresholds(before: float, after: float) -> void:
 	if rank != "boss": return
 	for threshold in thresholds:
 		if before > max_health * threshold and after <= max_health * threshold and not _boss_thresholds.has(threshold):
-			_boss_thresholds.append(threshold); boss_pending_summons += 1
+			_boss_thresholds.append(threshold)
+			if enemy_id == "root_crown_colossus": boss_pending_summons += 1
 			if enemy_id == "sun_devourer" and threshold == 0.65: dark_sun_requested.emit(2.0)
 			if threshold == (0.25 if enemy_id == "root_crown_colossus" else 0.30):
 				boss_enraged = true
 				if enemy_id == "sun_devourer": move_speed *= 1.25; attack_interval *= 0.85
+
+func _prepare_laser() -> bool:
+	if not is_inside_tree(): return false
+	var angles: Array[float] = []
+	for plant in get_tree().get_nodes_in_group("plants"):
+		if plant.health > 0.0: angles.append((plant.global_position - global_position).angle())
+	if angles.is_empty(): return false
+	var preferred := (mother_flower.global_position - global_position).angle() if is_instance_valid(mother_flower) else 0.0
+	var candidates: Array[float] = [preferred]
+	for angle in angles:
+		candidates.append(angle - PI / 4.0)
+		candidates.append(angle + PI / 4.0)
+	var best_count := -1
+	var best_distance := INF
+	for candidate in candidates:
+		var count := 0
+		for angle in angles:
+			if absf(wrapf(angle - candidate, -PI, PI)) <= PI / 4.0 + 0.0001: count += 1
+		var distance := absf(wrapf(candidate - preferred, -PI, PI))
+		if count > best_count or (count == best_count and distance < best_distance):
+			best_count = count; best_distance = distance; laser_angle = candidate - PI / 4.0
+	laser_reach = 0.0
+	var rect := preload("res://scripts/battlefield_spec.gd").WORLD_RECT
+	for corner in [rect.position, rect.end, Vector2(rect.position.x, rect.end.y), Vector2(rect.end.x, rect.position.y)]:
+		laser_reach = maxf(laser_reach, global_position.distance_to(corner))
+	return true
+
+func _advance_laser(delta: float) -> void:
+	var previous := laser_angle + ((3.0 - laser_remaining) / 3.0) * (PI / 2.0)
+	laser_remaining = maxf(0.0, laser_remaining - delta)
+	var current := laser_angle + ((3.0 - laser_remaining) / 3.0) * (PI / 2.0)
+	boss_laser_requested.emit(boss_cast_position, previous, current, laser_reach, 24.0)
+	queue_redraw()
+	if laser_remaining <= 0.0:
+		laser_cooldown = 35.0; boss_recovery = 0.65
+		boss_special_finished.emit("laser")
 
 func _draw() -> void:
 	var flash := Color.WHITE if _hit_flash > 0.0 else Color("4c8490")
@@ -682,7 +756,9 @@ func _update_art_texture() -> void:
 		elif _spawn_pose > 0.0: state = "spawn"
 		elif _attack_pose > 0.0: state = "attack"
 		elif rank == "boss":
-			if (ability_windup > 0.0 or boss_recovery > 0.0) and animation_frames.has_animation(boss_skill): state = boss_skill
+			if laser_remaining > 0.0 and animation_frames.has_animation("laser"): state = "laser"
+			elif boss_skill == "laser" and ability_windup > 0.0 and animation_frames.has_animation("laser_charge"): state = "laser_charge"
+			elif (ability_windup > 0.0 or boss_recovery > 0.0) and animation_frames.has_animation(boss_skill): state = boss_skill
 			elif core_exposed_time > 0.0 and animation_frames.has_animation("exposed"): state = "exposed"
 			elif boss_enraged and animation_frames.has_animation("enraged"): state = "enraged"
 			elif not _moving and animation_frames.has_animation("idle"): state = "idle"
@@ -696,8 +772,10 @@ func _update_art_texture() -> void:
 			var source_impact := float(_layouts.get(state, {}).get("impact_time", 1.2))
 			var source_time := boss_animation_elapsed * source_impact / 1.2 if ability_windup > 0.0 else source_impact + maxf(0.0, boss_animation_elapsed - 1.2)
 			index = mini(frame_count - 1, int(source_time * animation_frames.get_animation_speed(state)))
-		elif state == "summon":
+		elif state in ["summon", "laser_charge"]:
 			index = mini(frame_count - 1, int(boss_animation_elapsed * animation_frames.get_animation_speed(state)))
+		elif state == "laser":
+			index = mini(frame_count - 1, int((3.0 - laser_remaining) * animation_frames.get_animation_speed(state)))
 		elif state in ["attack", "spawn", "death"]:
 			var duration := _art_attack_duration()
 			if state != "attack": duration = _animation_duration(state)

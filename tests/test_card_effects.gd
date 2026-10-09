@@ -16,6 +16,7 @@ class FakeEnemy extends Node2D:
 	func convert_to_friendly(_duration: float) -> bool: friendly = true; return true
 
 class FakeGame extends Node:
+	var battlefield := FakeField.new()
 	var phase := 1
 	var light_energy := 100
 	var combat_deck := CombatDeck.new()
@@ -23,6 +24,9 @@ class FakeGame extends Node:
 	func spend_energy(cost: int) -> bool:
 		if light_energy < cost: return false
 		light_energy -= cost; return true
+
+class FakeField extends RefCounted:
+	func is_inside_plantable_area(_point: Vector2) -> bool: return true
 
 class HealingNode extends Node2D:
 	var health := 20.0
@@ -56,9 +60,9 @@ func test_damage_card_consumes_once() -> void:
 	var game := FakeGame.new(); game.combat_deck.start_run(["card_sun_pierce","card_sun_pierce","card_sun_pierce","card_sun_pierce","card_sun_pierce","card_sun_pierce","card_sun_pierce","card_sun_pierce","card_sun_pierce","card_sun_pierce","card_sun_pierce","card_sun_pierce"], 7)
 	game.combat_deck.begin_next_night()
 	var enemy := FakeEnemy.new(); enemy.add_to_group("enemies")
-	var resolver := Resolver.new(); var result := resolver.resolve(game, "card_sun_pierce", enemy)
+	var resolver := Resolver.new(); var result := resolver.resolve(game, "card_sun_pierce", Vector2.ZERO)
 	expect(result.get("ok", false), "damage card must resolve")
-	expect(enemy.health == 58.0 and game.light_energy == 96, "sun pierce must deal 42 and spend four energy")
+	expect(enemy.health == 100.0 and game.light_energy == 96 and result.get("created", []).size() == 1, "sun pierce creates a delayed zone and spends four energy")
 	expect(game.combat_deck.remaining_count() == 11, "successful play must permanently consume card")
 	enemy.free(); game.free()
 

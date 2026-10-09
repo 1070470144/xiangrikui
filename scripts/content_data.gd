@@ -60,7 +60,7 @@ const _UPGRADE_DEFS := {
 static var MOTHER_UPGRADES: Array = _build_upgrades()
 
 const COMBAT_CARDS := [
-	{"id":"card_sun_pierce","name":"日光穿刺","rarity":"common","energy_cost":4,"phase":"night","target_type":"enemy","unlock_cost":0,"copies_allowed":2,"damage":42.0},
+	{"id":"card_sun_pierce","name":"日光穿刺","rarity":"common","energy_cost":4,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"damage":12.0,"duration":4.0,"tick_interval":0.5,"rect_width":320.0,"rect_height":100.0},
 	{"id":"card_root_snare","name":"缠根地带","rarity":"common","energy_cost":5,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"duration":6.0},
 	{"id":"card_emergency_dew","name":"甘露急救","rarity":"common","energy_cost":5,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"radius":140.0,"heal":45.0},
 	{"id":"card_root_wall","name":"根墙","rarity":"common","energy_cost":7,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"health":120.0,"duration":18.0},
@@ -108,7 +108,23 @@ static func _path_for_branch(branch: String) -> String:
 	return "dawn_pulse"
 
 static func get_flower(id: String) -> Dictionary:
-	return _find(FLOWERS, id)
+	var values := _find(FLOWERS, id)
+	if values.is_empty() or id == "light_sprout": return values
+	# Campaign tuning is shared by combat, deployment previews and the codex.
+	values.health = roundf(float(values.get("health", 100.0)) * 1.5)
+	if values.has("damage"): values.damage = roundf(float(values.damage) * 1.6)
+	if values.has("interval"): values.interval = float(values.interval) * 0.8
+	if values.has("heal"): values.heal = roundf(float(values.heal) * 1.5)
+	if values.has("burn"): values.burn = float(values.burn) * 1.5
+	match id:
+		"thorn_flower": values.range = 150.0; values.max_targets = 16
+		"prism_flower": values.range = 280.0
+		"storm_flower": values.max_targets = 8; values.chain_range = 135.0
+		"spear_bamboo": values.max_targets = 10; values.width = 32.0
+		"burst_flower": values.max_targets = 20; values.radius = 110.0
+		"honeydew_flower", "cleanse_flower": values.range = 200.0
+		"sunwell_flower": values.energy = 4
+	return values
 
 static func get_enemy(id: String) -> Dictionary:
 	return _find(ENEMIES, id)

@@ -14,6 +14,7 @@ var title: Label
 const VideoEffect = preload("res://scripts/root_boss_video_effect.gd")
 var video_effects: Array[Node] = []
 var enraged_owners: Dictionary = {}
+var lasers: Dictionary = {}
 
 func _video(kind: String, point: Vector2, radius: float, duration: float, owner: Node, follow: Node2D = null) -> void:
 	if not is_instance_valid(owner) or not ("enemy_id" in owner) or owner.enemy_id != "root_crown_colossus": return
@@ -76,12 +77,17 @@ func register(boss: Node) -> void:
 	boss.boss_zone_requested.connect(_zone.bind(boss))
 	boss.boss_special_finished.connect(_finished.bind(boss))
 	boss.boss_summon_requested.connect(_summon.bind(boss))
+	boss.boss_laser_requested.connect(_laser.bind(boss))
 	boss.boss_cleanup_requested.connect(clear_owner.bind(boss))
 	boss.boss_core_exposed.connect(_core_video.bind(boss))
 	boss.tree_exiting.connect(clear_owner.bind(boss), CONNECT_ONE_SHOT)
 
 func _warning(kind: String, center: Vector2, radius: float, duration: float, owner: Node) -> void:
 	warnings[owner.get_instance_id()] = {"kind":kind, "center":center, "radius":radius, "time":duration, "duration":duration}
+	queue_redraw()
+
+func _laser(origin: Vector2, start_angle: float, end_angle: float, reach: float, width: float, owner: Node) -> void:
+	lasers[owner.get_instance_id()] = {"origin": origin, "start": start_angle, "end": end_angle, "reach": reach, "width": width}
 	queue_redraw()
 
 func _zone(kind: String, center: Vector2, radius: float, duration: float, owner: Node) -> void:
@@ -99,17 +105,35 @@ func _finished(kind: String, owner: Node) -> void:
 	if kind == "interrupted":
 		for effect in video_effects:
 			if is_instance_valid(effect) and effect.effect_owner == id: effect.queue_free()
+	if kind == "laser": lasers.erase(id)
 	queue_redraw()
 
-func _summon(_kind: String, center: Vector2, count: int, owner: Node) -> void:
+func _summon(kind: String, center: Vector2, count: int, owner: Node) -> void:
 	if not is_instance_valid(owner) or owner.health <= 0.0 or game.phase != game.Phase.NIGHT: return
 	_video("summon_fx", center, 100, 1.0, owner)
 	for i in range(count):
-		var guard: Node = game._spawn_enemy(game.EnemyScript.Kind.HUSK_RAM, 0, {"spawn_position":center + Vector2(-60 if i % 2 == 0 else 60, 25)})
+		var point := center + Vector2(-60 if i % 2 == 0 else 60, 25)
+		if kind == "root_crown_colossus":
+			point = _summon_position(center)
+			if not point.is_finite(): continue
+		var guard: Node = game._spawn_enemy(game.EnemyScript.Kind.ROOT_COLOSSUS if kind == "root_crown_colossus" else game.EnemyScript.Kind.HUSK_RAM, 0, {"spawn_position":point})
 		if guard != null:
 			var id := owner.get_instance_id()
 			if not guards.has(id): guards[id] = []
 			guards[id].append(guard)
+
+func _summon_position(center: Vector2) -> Vector2:
+	for radius in [100.0, 150.0, 200.0, 250.0, 300.0]:
+		for index in 32:
+			var point: Vector2 = center + Vector2.from_angle(TAU * index / 32.0) * float(radius)
+			if not game.battlefield.is_position_clear(point, 45.0, game._occupied_positions()): continue
+			var blocked := false
+			for enemy in game.active_enemies:
+				if is_instance_valid(enemy) and enemy.health > 0.0 and point.distance_to(enemy.global_position) < 90.0:
+					blocked = true; break
+			if is_instance_valid(game.mother_flower) and point.distance_to(game.mother_flower.global_position) < 90.0: blocked = true
+			if not blocked: return point
+	return Vector2.INF
 
 func _clear_guards(id: int) -> void:
 	for guard in guards.get(id, []):
@@ -127,6 +151,7 @@ func clear_owner(owner: Node) -> void:
 	warnings.erase(id)
 	zones = zones.filter(func(zone: Dictionary) -> bool: return int(zone.owner) != id)
 	impacts = impacts.filter(func(impact: Dictionary) -> bool: return int(impact.owner) != id)
+	lasers.erase(id)
 	bosses.erase(owner)
 	update_roots()
 	queue_redraw()
@@ -140,6 +165,7 @@ func clear_all() -> void:
 	warnings.clear()
 	zones.clear()
 	impacts.clear()
+	lasers.clear()
 	update_roots()
 	if panel != null: panel.hide()
 	queue_redraw()
@@ -177,6 +203,8 @@ func _process(delta: float) -> void:
 	panel.visible = not bosses.is_empty()
 	if panel.visible:
 		var boss: Node = bosses[0]
+		for candidate in bosses:
+			if candidate.enemy_id == "sun_devourer": boss = candidate; break
 		title.text = ("根冠巨像" if boss.enemy_id == "root_crown_colossus" else "太阳吞噬者") + (" · 狂暴" if boss.boss_enraged else "")
 		health_bar.max_value = boss.max_health
 		health_bar.value = boss.health
@@ -193,6 +221,14 @@ func _process(delta: float) -> void:
 	queue_redraw()
 
 func _draw() -> void:
+	for boss in bosses:
+		if not is_instance_valid(boss) or boss.health <= 0.0 or boss.boss_skill != "laser" or boss.ability_windup <= 0.0: continue
+		var origin := to_local(boss.boss_cast_position)
+		var polygon := PackedVector2Array([origin])
+		for index in 33:
+			polygon.append(origin + Vector2.from_angle(boss.laser_angle + PI * 0.5 * index / 32.0) * boss.laser_reach)
+		draw_colored_polygon(polygon, Color(1.0, 0.12, 0.05, 0.12))
+		draw_line(origin, origin + Vector2.from_angle(boss.laser_angle) * boss.laser_reach, Color("ffb15c"), 3.0)
 	for zone in zones:
 		var point: Vector2 = to_local(zone.center)
 		draw_circle(point, float(zone.radius), Color(0.34, 0.2, 0.1, 0.16))
@@ -211,3 +247,10 @@ func _draw() -> void:
 	for impact in impacts:
 		var t := 1.0 - float(impact.time) / 0.5
 		draw_arc(to_local(impact.center), float(impact.radius) * (0.4 + 0.6 * t), 0, TAU, 80, Color(1, 0.72, 0.4, 1 - t), 8 * (1 - t) + 1)
+	for laser in lasers.values():
+		var origin: Vector2 = to_local(laser.origin)
+		var ray_start := Vector2.from_angle(float(laser.start))
+		var ray_end := Vector2.from_angle(float(laser.end))
+		var polygon := PackedVector2Array([origin, origin + ray_start * float(laser.reach), origin + ray_end * float(laser.reach)])
+		draw_colored_polygon(polygon, Color(1.0, 0.12, 0.05, 0.20))
+		draw_line(origin, origin + ray_end * float(laser.reach), Color("ffb15c"), float(laser.width))

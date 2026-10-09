@@ -20,12 +20,12 @@ static func effect(value: Variant) -> String: return str(EFFECTS.get(str(value),
 
 static func description(card: Dictionary) -> String:
 	match str(card.get("id", "")):
-		"card_sun_pierce": return "以凝聚的日光穿刺一名敌人，立即造成 %s 点伤害。" % _number(card.get("damage", 0))
+		"card_sun_pierce": return "生成320×100的横向矩形光带，持续4秒，每0.5秒对范围内敌人造成12点伤害。"
 		"card_root_snare": return "在选定地面生成缠根区域，持续 %s 秒。区域内普通及精英敌人减速 30%%，首领减速 10%%；作用半径为 70。" % _number(card.get("duration", 0))
 		"card_emergency_dew": return "立即为选定位置 %s 半径内的植物恢复 %s 点生命。" % [_number(card.get("radius", 140)), _number(card.get("heal", 0))]
 		"card_root_wall": return "在选定位置召唤根墙，拥有 %s 点生命，持续 %s 秒。吸引附近普通敌人的攻击；精英和首领不受其嘲讽影响。" % [_number(card.get("health", 0)), _number(card.get("duration", 0))]
 		"card_sun_mine": return "在地面埋下太阳地雷。敌人进入 45 半径内时引爆，对 65 半径内的敌人造成 %s 点伤害，随后消失。未触发时最多存在 %s 秒。" % [_number(card.get("damage", 0)), _number(card.get("duration", 0))]
-		"card_lure_bud": return "召唤诱光花苞吸引附近敌人的攻击。花苞拥有 %s 点生命，持续 %s 秒，吸引范围为 160。" % [_number(card.get("health", 0)), _number(card.get("duration", 0))]
+		"card_lure_bud": return "在落点生成诱光花苞，吸引所有怪物持续12秒。"
 		"card_emergency_light": return "为一株植物临时供光，使其恢复供能状态，持续 %s 秒。效果结束后按光脉连接情况恢复供能状态。" % _number(card.get("duration", 0))
 		"card_focus_mark": return "标记一名敌人，持续 %s 秒。普通及精英目标受到的伤害提高 25%%；首领受到的伤害提高 12%%。" % _number(card.get("duration", 0))
 		"card_transplant_shovel": return "白昼时将一株植物迁移到新的可种植位置。目的地必须空闲，并能接入满足其负载需求的光脉网络；迁移后重新计算光脉连接。"

@@ -107,7 +107,7 @@ func build(night: int, seed_value: int) -> Array[Dictionary]:
 	var bosses: Array[int] = []
 	var weight := 0.0
 	for kind in config.counts:
-		for i in int(config.counts[kind]):
+		for i in (mini(1, int(config.counts[kind])) if kind == 3 and night == 7 else int(config.counts[kind])):
 			weight += float(Balance.ENEMIES[kind].reward)
 			if kind in [2, 3]: bosses.append(kind)
 			elif kind in [0, 1]: normals.append(kind)

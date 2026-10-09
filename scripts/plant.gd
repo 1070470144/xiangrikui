@@ -131,6 +131,13 @@ func take_environment_damage(amount: float) -> void:
 func take_damage(amount: float) -> void:
 	if amount <= 0.0 or health <= 0.0 or dying: return
 	if kind == Kind.STONE: amount *= 1.0 - float(ContentData.get_flower(get_flower_id()).get("damage_reduction", 0.4))
+	_apply_health_loss(amount)
+
+func kill_by_boss_laser() -> void:
+	if health <= 0.0 or dying: return
+	_apply_health_loss(health)
+
+func _apply_health_loss(amount: float) -> void:
 	var before := health; health = maxf(0.0, health - amount); environmental_health = health; _show_float(before - health, false)
 	if health <= 0.0:
 		death_order = Time.get_ticks_msec()
