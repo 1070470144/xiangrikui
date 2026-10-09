@@ -24,6 +24,12 @@ class FakeGame extends Node:
 		if light_energy < cost: return false
 		light_energy -= cost; return true
 
+class HealingNode extends Node2D:
+	var health := 20.0
+	func heal(amount: float) -> bool:
+		health += amount
+		return true
+
 func expect(condition: bool, message: String) -> void:
 	if not condition: failures.append(message)
 
@@ -36,6 +42,7 @@ func run() -> Array[String]:
 	test_phantom_position_is_legal()
 	test_same_named_zones_refresh_instead_of_stack()
 	test_ground_target_validation_precedes_payment()
+	test_emergency_dew_heals_plants_only_in_radius()
 	return failures
 
 func test_every_card_has_a_runtime_handler() -> void:
@@ -114,3 +121,29 @@ func test_ground_target_validation_precedes_payment() -> void:
 	var before: int = game.light_energy; var result: Dictionary = game.play_combat_card("card_root_wall", Vector2(-100, -100))
 	expect(not result.get("ok", false) and game.light_energy == before and game.combat_deck.hand.has("card_root_wall"), "invalid ground targets must not spend energy or consume cards")
 	game.battlefield.free(); game.free()
+
+func test_emergency_dew_heals_plants_only_in_radius() -> void:
+	var game_script := ResourceLoader.load("res://scripts/game.gd") as Script
+	var game: Node = game_script.new()
+	var inside: Node = Plant.new(); inside.configure(Plant.Kind.THORN, 0); inside.global_position = Vector2(100, 100); inside.health = 20.0; game.plants.append(inside); game.add_child(inside)
+	var outside: Node = Plant.new(); outside.configure(Plant.Kind.THORN, 0); outside.global_position = Vector2(300, 100); outside.health = 20.0; game.plants.append(outside); game.add_child(outside)
+	var second: Node = Plant.new(); second.configure(Plant.Kind.THORN, 0); second.global_position = Vector2(240, 100); second.health = second.max_health - 10.0; game.plants.append(second); game.add_child(second)
+	var node := HealingNode.new(); node.global_position = Vector2(100, 100); node.add_to_group("light_nodes"); game.add_child(node)
+	var resolver := Resolver.new()
+	var affected: int = resolver._heal_plants(game, Vector2(100, 100), 140.0, 45.0)
+	expect(affected == 2 and inside.health == minf(inside.max_health, 65.0) and second.health == second.max_health, "emergency dew must heal multiple plants including the radius boundary and cap health")
+	expect(outside.health == 20.0, "emergency dew must not heal plants outside range")
+	expect(node.health == 20.0, "emergency dew must not heal light nodes")
+	game.battlefield = load("res://scripts/battlefield.gd").new()
+	game.phase = game.Phase.NIGHT; game.light_energy = 100
+	game.combat_deck.hand.assign(["card_emergency_dew"])
+	var point := Vector2(700, 950)
+	inside.global_position = point; inside.health = inside.max_health - 10.0
+	var preview: Dictionary = resolver.get_target_preview(game, "card_emergency_dew", point)
+	expect(preview.get("valid", false) and preview.get("radius", 0.0) == 140.0, "dew preview must use the ground point and radius 140")
+	var result: Dictionary = resolver.resolve(game, "card_emergency_dew", point)
+	expect(result.get("ok", false) and game.light_energy == 95 and game.combat_deck.consumed.count("card_emergency_dew") == 1, "successful dew must spend five energy and consume once")
+	game.combat_deck.hand.assign(["card_emergency_dew"])
+	result = resolver.resolve(game, "card_emergency_dew", point)
+	expect(not result.get("ok", false) and game.light_energy == 95 and game.combat_deck.hand.has("card_emergency_dew"), "full-health area must not spend energy or consume dew")
+	game.battlefield.free(); inside.free(); second.free(); outside.free(); node.free(); game.free()

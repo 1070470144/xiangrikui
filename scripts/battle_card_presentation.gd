@@ -8,7 +8,7 @@ static func describe(id: String) -> String:
 	match id:
 		"card_sun_pierce": return "对敌人造成%d伤害。" % int(c.damage)
 		"card_root_snare": return "区域敌人减速30%%，持续%d秒。" % duration
-		"card_emergency_dew": return "为植物或光脉恢复%d生命。" % int(c.heal)
+		"card_emergency_dew": return "范围内植物恢复%d生命。" % int(c.heal)
 		"card_root_wall": return "建立%d生命根墙，吸引敌人%d秒。" % [int(c.health),duration]
 		"card_sun_mine": return "埋下地雷，触发时造成%d伤害。" % int(c.damage)
 		"card_lure_bud": return "召唤%d生命花苞，吸引敌人%d秒。" % [int(c.health),duration]

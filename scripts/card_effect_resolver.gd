@@ -13,12 +13,11 @@ func get_target_preview(game: Node, card_id: String, target: Variant) -> Diction
 	if card.is_empty(): return {}
 	var valid: bool = game.combat_deck.get_hand().has(card_id) and game.combat_deck.validate_card_play(card_id, _phase_name(game.phase), game.light_energy, _target_context(target)) and _validate_runtime_target(game, card, target)
 	if target is Node and "health" in target: valid = valid and target.health > 0.0
-	if card_id == "card_emergency_dew" and target is Node and "health" in target: valid = valid and target.health < target.max_health
 	if card_id == "card_shadow_redemption" and target is Node: valid = valid and target.get_rank() != "boss"
 	var radius := 0.0
 	match card_id:
 		"card_root_snare", "card_hex_break_lamp", "card_sun_arrow_rain", "card_root_prison", "card_golden_domain": radius = maxf(float(card.get("radius", 0.0)), TemporaryObject.MIN_EFFECT_RADIUS)
-		"card_local_repair_rain", "card_golden_rain": radius = float(card.get("radius", 0.0))
+		"card_emergency_dew", "card_local_repair_rain", "card_golden_rain": radius = float(card.get("radius", 0.0))
 		"card_root_wall", "card_lure_bud": radius = ROOT_TAUNT_RADIUS
 		"card_path_beacon": radius = BEACON_TAUNT_RADIUS
 		"card_sun_mine": radius = TemporaryObject.MINE_DAMAGE_RADIUS
@@ -62,7 +61,7 @@ func _apply(game: Node, card: Dictionary, target: Variant) -> Dictionary:
 	match id:
 		"card_sun_pierce": target.take_damage(float(card["damage"])); affected = 1
 		"card_focus_mark": target.card_damage_multiplier = 1.12 if target.get_rank() == "boss" else 1.25; target.card_power_time = float(card["duration"]); affected = 1
-		"card_emergency_dew": target.heal(float(card["heal"])); affected = 1
+		"card_emergency_dew": affected = _heal_plants(game, _target_position(target), float(card.get("radius", 140.0)), float(card["heal"]))
 		"card_emergency_light": target.set_powered(true); target.card_power_time = float(card["duration"]); target.restore_power_on_card_expiry = true; affected = 1
 		"card_transplant_shovel": affected = _transplant(game, target)
 		"card_frenzy_growth": target.card_interval_multiplier = float(card["interval_multiplier"]); target.card_power_time = float(card["duration"]); target.card_expiry_damage = 15.0; affected = 1
@@ -74,7 +73,7 @@ func _apply(game: Node, card: Dictionary, target: Variant) -> Dictionary:
 		"card_sun_arrow_rain": created.append(_spawn_zone(game, id, target, card, {"periodic_damage":18.0,"hits":6})); affected = 1
 		"card_root_prison": created.append(_spawn_zone(game, id, target, card, {"ranked_prison":true})); affected = 1
 		"card_temporary_sprout":
-			var sprout := _spawn_zone(game, id, target, card, {"health":80.0,"supply_radius":170.0,"capacity":3})
+			var sprout := _spawn_zone(game, id, target, card, {"health":80.0,"supply_radius":170.0,"capacity":4})
 			if sprout != null: created.append(sprout); affected = 1
 		"card_node_overload": target.apply_overload(float(card["duration"])); affected = 1
 		"card_path_beacon": created.append(_spawn_zone(game, id, target, card, {"health":120.0,"taunt":true,"radius":BEACON_TAUNT_RADIUS})); affected = 1
@@ -100,7 +99,7 @@ func _spawn_zone(game: Node, id: String, target: Variant, card: Dictionary, extr
 				child.global_position = _target_position(target); child.remaining_time = float(values.get("duration", child.remaining_time)); return child
 	var object := TemporaryObject.new(); game.add_child(object); object.configure(id, _target_position(target), values)
 	if id == "card_temporary_sprout":
-		var parent: Node = game.find_best_parent(object.global_position, 1, false)
+		var parent: Node = game.find_best_parent_excluding(object.global_position, 0, object, false)
 		if parent == null: object.free(); return null
 		object.set_parent_source(parent)
 	return object
@@ -162,6 +161,13 @@ func _heal_area(game: Node, center: Vector2, radius: float, amount: float) -> in
 			if is_instance_valid(unit) and unit.global_position.distance_to(center) <= radius and unit.has_method("heal") and unit.heal(amount): count += 1
 	return count
 
+func _heal_plants(game: Node, center: Vector2, radius: float, amount: float) -> int:
+	var count := 0
+	for plant in game.plants:
+		if is_instance_valid(plant) and plant.health > 0.0 and plant.health < plant.max_health and plant.global_position.distance_to(center) <= radius and plant.has_method("heal") and plant.heal(amount):
+			count += 1
+	return count
+
 func _target_context(target: Variant) -> Dictionary:
 	if target is Dictionary: return {"type":"plant" if target.has("plant") else "ground"}
 	if target is Node:
@@ -176,8 +182,15 @@ func _validate_runtime_target(game: Node, card: Dictionary, target: Variant) -> 
 		if not is_instance_valid(game.battlefield): return false
 		var point := _target_position(target)
 		if not game.battlefield.is_inside_plantable_area(point): return false
-		if str(card["id"]) == "card_temporary_sprout" and game.find_best_parent(point, 1, false) == null: return false
+		if str(card["id"]) == "card_temporary_sprout" and game.find_best_parent_excluding(point, 0, null, false) == null: return false
+		if str(card["id"]) == "card_emergency_dew" and not _has_wounded_plant_in_radius(game, point, float(card.get("radius", 140.0))): return false
 	return true
+
+func _has_wounded_plant_in_radius(game: Node, center: Vector2, radius: float) -> bool:
+	for plant in game.plants:
+		if is_instance_valid(plant) and plant.health > 0.0 and plant.health < plant.max_health and plant.global_position.distance_to(center) <= radius:
+			return true
+	return false
 
 func _target_position(target: Variant) -> Vector2:
 	if target is Dictionary: return target.get("position", Vector2.ZERO)

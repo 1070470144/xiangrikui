@@ -208,6 +208,9 @@ func get_effective_move_speed(reuse_this_frame := false) -> float:
 func _retarget() -> void:
 	if friendly:
 		target = _nearest_hostile_enemy(); return
+	if enemy_id == "shadow_beast":
+		_retarget_shadow_beast()
+		return
 	if rank != "boss" and is_inside_tree():
 		var taunt_target := _nearest_taunt_object()
 		if taunt_target != null: target = taunt_target; return
@@ -225,6 +228,20 @@ func _retarget() -> void:
 			target = nearest
 			return
 	target = mother_flower
+
+func _retarget_shadow_beast() -> void:
+	var candidates: Array[Node2D] = []
+	if is_instance_valid(mother_flower) and mother_flower.health > 0.0:
+		candidates.append(mother_flower)
+	if is_inside_tree():
+		for plant in get_tree().get_nodes_in_group("plants"):
+			if not is_instance_valid(plant) or plant.health <= 0.0:
+				continue
+			candidates.append(plant)
+	if candidates.is_empty():
+		target = mother_flower
+		return
+	target = candidates[randi() % candidates.size()]
 
 func _process(delta: float) -> void:
 	_speed_frame = -1

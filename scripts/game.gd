@@ -72,6 +72,8 @@ var _energy_regen_buffer := 0.0
 var battlefield: Node2D
 var mother_flower: Node2D
 var light_nodes: Array[Node] = []
+const MOTHER_PLANT_CAPACITY := 8
+var mother_plant_load := 0
 var plants: Array[Node] = []
 var hud: CanvasLayer
 var night_fog: Node2D
@@ -766,27 +768,32 @@ func _temporary_supply_nodes() -> Array[Node]:
 			result.append(object)
 	return result
 
-func find_best_parent(point: Vector2, load_cost: int, allow_temporary: bool = true) -> Node:
+func _parent_can_supply_plant(parent: Node) -> bool:
+	if parent == mother_flower:
+		return mother_plant_load < MOTHER_PLANT_CAPACITY
+	return is_instance_valid(parent) and parent.is_connected_to_light and parent.load < parent.capacity
+
+func find_best_parent(point: Vector2, _load_cost: int, allow_temporary: bool = true) -> Node:
 	var best: Node = null
 	var best_distance := INF
 	var mother_distance := point.distance_to(mother_flower.global_position if mother_flower != null else BattlefieldScript.CENTER)
-	if mother_distance <= Balance.MOTHER_SUPPLY_RADIUS:
+	if mother_distance <= Balance.MOTHER_SUPPLY_RADIUS and _parent_can_supply_plant(mother_flower):
 		best = mother_flower; best_distance = mother_distance
 	for node in light_nodes:
-		if not is_instance_valid(node) or not node.is_connected_to_light or not node.can_accept(load_cost): continue
+		if not is_instance_valid(node) or not node.is_connected_to_light or not _parent_can_supply_plant(node): continue
 		var distance := point.distance_to(node.global_position)
 		if distance <= node.supply_radius and distance < best_distance:
 			best = node; best_distance = distance
 	if allow_temporary:
 		for object in _temporary_supply_nodes():
-			if not object.is_connected_to_light or not object.can_accept(load_cost): continue
+			if not _parent_can_supply_plant(object): continue
 			var distance := point.distance_to(object.global_position)
 			if distance <= object.supply_radius and distance < best_distance:
 				best = object; best_distance = distance
 	return best
 
 func can_place_light_node(point: Vector2) -> bool:
-	return battlefield.is_position_clear(point, BattlefieldSpec.scale_distance(25.0), _occupied_positions()) and find_best_parent(point, 1, false) != null
+	return battlefield.is_position_clear(point, BattlefieldSpec.scale_distance(25.0), _occupied_positions()) and find_best_parent_excluding(point, 0, null, false) != null
 
 func can_place_plant(point: Vector2, kind: int) -> bool:
 	return battlefield.is_position_clear(point, BattlefieldSpec.scale_distance(24.0), _occupied_positions()) and find_best_parent(point, get_plant_seed_cost(kind)) != null
@@ -843,7 +850,7 @@ func _place_light_node(point: Vector2) -> void:
 	node.node_index = light_nodes.size(); node.network_id = node.node_index + 1; node.position = point
 	add_child(node); light_nodes.append(node)
 	_attach_health_bar(node, Color("d66b72"))
-	node.set_parent_source(find_best_parent(point, 1, false))
+	node.set_parent_source(find_best_parent_excluding(point, 0, null, false))
 	node.destroyed.connect(_rebuild_network)
 	_rebuild_network()
 	hud.show_message("光脉芽已接入网络")
@@ -872,37 +879,39 @@ func _place_plant_at(point: Vector2, kind: int) -> void:
 func _rebuild_network() -> void:
 	for node in light_nodes: if is_instance_valid(node): node.set_load(0)
 	for object in _temporary_supply_nodes(): object.set_load(0)
+	mother_plant_load = 0
 	for node in light_nodes:
 		if not is_instance_valid(node) or node.health <= 0.0: continue
-		var parent := find_best_parent_excluding(node.global_position, 1, node)
+		var parent := find_best_parent_excluding(node.global_position, 0, node)
 		node.set_parent_source(parent)
-		if parent in light_nodes: parent.set_load(parent.load + 1)
 	for object in _temporary_supply_nodes():
-		var parent := find_best_parent_excluding(object.global_position, 1, object, false)
+		var parent := find_best_parent_excluding(object.global_position, 0, object, false)
 		object.set_parent_source(parent)
-		if parent in light_nodes: parent.set_load(parent.load + 1)
 	for plant in plants:
 		if not is_instance_valid(plant): continue
+		if plant.health <= 0.0 or plant.is_queued_for_deletion():
+			plant.set_power_source(null)
+			continue
 		var lantern_support := false
 		for lantern in plants:
 			if lantern != plant and is_instance_valid(lantern) and lantern.kind == PlantScript.Kind.LANTERN and lantern.health > 0.0 and lantern.global_position.distance_to(plant.global_position) <= lantern.attack_range:
 				lantern_support = true; break
 		plant.set_lantern_supported(lantern_support)
-		var cost := int(ContentData.get_flower(plant.get_flower_id()).get("seed_cost", 2))
-		var parent := find_best_parent(plant.global_position, cost)
+		var parent := find_best_parent(plant.global_position, 1)
 		plant.set_power_source(parent)
-		if parent in light_nodes or parent in _temporary_supply_nodes(): parent.set_load(parent.load + cost)
+		if parent == mother_flower: mother_plant_load += 1
+		elif parent in light_nodes or parent in _temporary_supply_nodes(): parent.set_load(parent.load + 1)
 
-func find_best_parent_excluding(point: Vector2, load_cost: int, excluded: Node, allow_temporary: bool = true) -> Node:
+func find_best_parent_excluding(point: Vector2, _load_cost: int, excluded: Node, allow_temporary: bool = true) -> Node:
 	var best: Node = mother_flower if point.distance_to(BattlefieldScript.CENTER) <= Balance.MOTHER_SUPPLY_RADIUS else null
 	var best_distance := point.distance_to(BattlefieldScript.CENTER) if best != null else INF
 	for node in light_nodes:
-		if node == excluded or not is_instance_valid(node) or not node.is_connected_to_light or not node.can_accept(load_cost): continue
+		if node == excluded or not is_instance_valid(node) or not node.is_connected_to_light: continue
 		var distance := point.distance_to(node.global_position)
 		if distance <= node.supply_radius and distance < best_distance: best = node; best_distance = distance
 	if allow_temporary:
 		for object in _temporary_supply_nodes():
-			if object == excluded or not object.is_connected_to_light or not object.can_accept(load_cost): continue
+			if object == excluded or not object.is_connected_to_light: continue
 			var distance := point.distance_to(object.global_position)
 			if distance <= object.supply_radius and distance < best_distance: best = object; best_distance = distance
 	return best
@@ -1330,7 +1339,7 @@ func _update_pointer_preview() -> void:
 	var point := get_global_mouse_position()
 	battlefield.set_aim_preview(point, aiming_sunburst)
 	if selected_plant == Selection.LIGHT_SPROUT:
-		var parent := find_best_parent(point, 1)
+		var parent := find_best_parent_excluding(point, 0, null, false)
 		battlefield.set_placement_preview(point, BattlefieldSpec.scale_distance(25.0), can_place_light_node(point), BattlefieldSpec.scale_distance(190.0), parent.global_position if parent != null else Vector2.ZERO, parent != null)
 	elif PlantRoster.kind_for_selection(selected_plant) >= 0 and phase == Phase.DAY:
 		var cost := get_plant_seed_cost(selected_plant); var parent := find_best_parent(point, cost)
@@ -1360,7 +1369,7 @@ func _update_drag_world_preview() -> void:
 			"deploy_light":
 				caption = "种植光脉芽"; texture = ArtLibrary.load_texture(ArtLibrary.NODE_HEALTHY)
 				sprite_scale = 0.72; sprite_offset = -8.0; radius = Balance.LIGHT_NODE_SUPPLY_RADIUS
-				parent = find_best_parent(point, 1, false)
+				parent = find_best_parent_excluding(point, 0, null, false)
 				valid = phase == Phase.DAY and can_place_light_node(point) and light_energy >= get_light_sprout_cost(false)
 			"deploy_thorn", "deploy_prism", "deploy_lantern", "deploy_frost", "deploy_honeydew", "deploy_storm", "deploy_gale", "deploy_sunwell", "deploy_ember", "deploy_slumber", "deploy_spear", "deploy_burst", "deploy_stone", "deploy_cleanse", "deploy_drum":
 				var kind: int = PLANT_DEPLOY_IDS[id]
@@ -1381,7 +1390,7 @@ func _update_drag_world_preview() -> void:
 	if target != null: point = preview["point"]
 	if id == "card_temporary_sprout":
 		texture = ArtLibrary.load_texture(ArtLibrary.NODE_HEALTHY); sprite_scale = 0.72; sprite_offset = -8.0
-		parent = find_best_parent(point, 1, false)
+		parent = find_best_parent_excluding(point, 0, null, false)
 	elif id == "card_phantom_bloom" and target is Node and "art_sprite" in target and is_instance_valid(target.art_sprite):
 		texture = target.art_sprite.texture
 	drag_world_preview.show_target(point, bool(preview["valid"]), float(preview["radius"]), str(preview["name"]), texture, sprite_scale, sprite_offset, parent, bool(preview["global"]), preload("res://scripts/temporary_battle_object.gd").MINE_TRIGGER_RADIUS if id == "card_sun_mine" else 0.0)
@@ -1395,3 +1404,4 @@ func _clear_dynamic_actors() -> void:
 	for plant in plants: if is_instance_valid(plant): plant.queue_free()
 	for node in light_nodes: if is_instance_valid(node): node.queue_free()
 	plants.clear(); light_nodes.clear()
+	mother_plant_load = 0

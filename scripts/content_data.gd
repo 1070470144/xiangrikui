@@ -62,7 +62,7 @@ static var MOTHER_UPGRADES: Array = _build_upgrades()
 const COMBAT_CARDS := [
 	{"id":"card_sun_pierce","name":"日光穿刺","rarity":"common","energy_cost":4,"phase":"night","target_type":"enemy","unlock_cost":0,"copies_allowed":2,"damage":42.0},
 	{"id":"card_root_snare","name":"缠根地带","rarity":"common","energy_cost":5,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"duration":6.0},
-	{"id":"card_emergency_dew","name":"甘露急救","rarity":"common","energy_cost":5,"phase":"night","target_type":"plant_or_node","unlock_cost":0,"copies_allowed":2,"heal":45.0},
+	{"id":"card_emergency_dew","name":"甘露急救","rarity":"common","energy_cost":5,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"radius":140.0,"heal":45.0},
 	{"id":"card_root_wall","name":"根墙","rarity":"common","energy_cost":7,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"health":120.0,"duration":18.0},
 	{"id":"card_sun_mine","name":"太阳地雷","rarity":"common","energy_cost":7,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"damage":65.0,"duration":999.0},
 	{"id":"card_lure_bud","name":"诱光花苞","rarity":"common","energy_cost":5,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"health":75.0,"duration":12.0},
@@ -75,7 +75,7 @@ const COMBAT_CARDS := [
 	{"id":"card_sun_arrow_rain","name":"日矢雨","rarity":"rare","energy_cost":13,"phase":"night","target_type":"ground","unlock_cost":12,"copies_allowed":1,"damage":18.0,"hits":6,"duration":3.0},
 	{"id":"card_root_prison","name":"根牢","rarity":"rare","energy_cost":11,"phase":"night","target_type":"ground","unlock_cost":14,"copies_allowed":1,"radius":90.0,"duration":3.0},
 	{"id":"card_golden_rain","name":"黄金甘霖","rarity":"rare","energy_cost":12,"phase":"night","target_type":"ground","unlock_cost":14,"copies_allowed":1,"radius":140.0,"heal":50.0,"duration":5.0},
-	{"id":"card_temporary_sprout","name":"临时光芽","rarity":"rare","energy_cost":12,"phase":"night","target_type":"ground","unlock_cost":16,"copies_allowed":1,"health":80.0,"supply_radius":170.0,"capacity":3,"duration":25.0},
+	{"id":"card_temporary_sprout","name":"临时光芽","rarity":"rare","energy_cost":12,"phase":"night","target_type":"ground","unlock_cost":16,"copies_allowed":1,"health":80.0,"supply_radius":170.0,"capacity":4,"duration":25.0},
 	{"id":"card_node_overload","name":"光脉过载","rarity":"rare","energy_cost":9,"phase":"night","target_type":"node","unlock_cost":16,"copies_allowed":1,"duration":10.0},
 	{"id":"card_path_beacon","name":"引路灯标","rarity":"rare","energy_cost":10,"phase":"night","target_type":"ground","unlock_cost":18,"copies_allowed":1,"health":120.0,"duration":10.0},
 	{"id":"card_phantom_bloom","name":"幻影开花","rarity":"rare","energy_cost":14,"phase":"night","target_type":"plant","unlock_cost":20,"copies_allowed":1,"duration":20.0},

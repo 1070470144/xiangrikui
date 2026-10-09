@@ -22,7 +22,7 @@ static func description(card: Dictionary) -> String:
 	match str(card.get("id", "")):
 		"card_sun_pierce": return "以凝聚的日光穿刺一名敌人，立即造成 %s 点伤害。" % _number(card.get("damage", 0))
 		"card_root_snare": return "在选定地面生成缠根区域，持续 %s 秒。区域内普通及精英敌人减速 30%%，首领减速 10%%；作用半径为 70。" % _number(card.get("duration", 0))
-		"card_emergency_dew": return "为一株植物或一个光脉节点立即恢复 %s 点生命，治疗不超过目标的最大生命值。" % _number(card.get("heal", 0))
+		"card_emergency_dew": return "立即为选定位置 %s 半径内的植物恢复 %s 点生命。" % [_number(card.get("radius", 140)), _number(card.get("heal", 0))]
 		"card_root_wall": return "在选定位置召唤根墙，拥有 %s 点生命，持续 %s 秒。吸引附近普通敌人的攻击；精英和首领不受其嘲讽影响。" % [_number(card.get("health", 0)), _number(card.get("duration", 0))]
 		"card_sun_mine": return "在地面埋下太阳地雷。敌人进入 45 半径内时引爆，对 65 半径内的敌人造成 %s 点伤害，随后消失。未触发时最多存在 %s 秒。" % [_number(card.get("damage", 0)), _number(card.get("duration", 0))]
 		"card_lure_bud": return "召唤诱光花苞吸引附近敌人的攻击。花苞拥有 %s 点生命，持续 %s 秒，吸引范围为 160。" % [_number(card.get("health", 0)), _number(card.get("duration", 0))]

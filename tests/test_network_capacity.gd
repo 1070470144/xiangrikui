@@ -1,0 +1,53 @@
+extends SceneTree
+
+const Game = preload("res://scripts/game.gd")
+const Mother = preload("res://scripts/mother_flower.gd")
+const Plant = preload("res://scripts/plant.gd")
+const LightNode = preload("res://scripts/light_node.gd")
+const Spec = preload("res://scripts/battlefield_spec.gd")
+
+func _initialize() -> void:
+	var game := Game.new()
+	var mother := Mother.new()
+	game.add_child(mother)
+	mother.position = Spec.CENTER
+	game.mother_flower = mother
+	for i in 9:
+		var plant := Plant.new()
+		plant.configure(Plant.Kind.PRISM if i % 2 else Plant.Kind.THORN, 0)
+		game.add_child(plant)
+		plant.position = Spec.CENTER + Vector2(30, 0)
+		game.plants.append(plant)
+	game._rebuild_network()
+	assert(game.mother_plant_load == 8)
+	assert(game.plants[8].power_source == null)
+	assert(game.find_best_parent(Spec.CENTER, 2) == null)
+	assert(game.find_best_parent_excluding(Spec.CENTER, 0, null, false) == mother)
+	game.plants[0].health = 0
+	game._rebuild_network()
+	assert(game.plants[8].power_source == mother)
+	var node := LightNode.new()
+	game.add_child(node)
+	node.position = Spec.CENTER + Vector2(200, 0)
+	game.light_nodes.append(node)
+	for i in 5:
+		var plant := Plant.new()
+		plant.configure(Plant.Kind.PRISM, 0)
+		game.add_child(plant)
+		plant.position = node.position + Vector2(100, 0)
+		game.plants.append(plant)
+	game._rebuild_network()
+	assert(node.load == 4)
+	assert(game.plants[-1].power_source == null)
+	var relay := LightNode.new()
+	game.add_child(relay)
+	relay.position = node.position + Vector2(170, 0)
+	game.light_nodes.append(relay)
+	game._rebuild_network()
+	assert(relay.parent_source == node)
+	assert(game.plants[-1].power_source == relay)
+	assert(relay.load <= 4 and node.load <= 4)
+	assert(preload("res://scripts/content_data.gd").get_card("card_temporary_sprout").capacity == 4)
+	game.free()
+	print("NETWORK_CAPACITY_PASS")
+	quit()

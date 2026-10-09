@@ -108,7 +108,7 @@ func test_temporary_sprout_extends_light_network() -> void:
 	if game_script == null or temporary_script == null: failures.append("temporary network scripts must compile"); return
 	var game: Node = game_script.new()
 	var mother := Node2D.new(); mother.global_position = Vector2.ZERO; game.add_child(mother); game.mother_flower = mother
-	var sprout: Node = temporary_script.new(); game.add_child(sprout); sprout.configure("card_temporary_sprout", Vector2(300, 0), {"health":80.0,"supply_radius":170.0,"capacity":3}); sprout.set_parent_source(mother)
+	var sprout: Node = temporary_script.new(); game.add_child(sprout); sprout.configure("card_temporary_sprout", Vector2(300, 0), {"health":80.0,"supply_radius":170.0,"capacity":4}); sprout.set_parent_source(mother)
 	var parent: Node = game.find_best_parent(Vector2(410, 0), 2)
 	expect(parent == sprout, "temporary sprout must act as a real light-network parent")
 	expect(game.find_best_parent(Vector2(410, 0), 1, false) == null, "permanent light nodes must not chain from temporary sprouts")
