@@ -24,6 +24,9 @@ var power_state_time := 0.0
 var power_source: Node = null
 var max_health := 100.0
 var health := 100.0
+var shield := 0.0
+var shield_time := 0.0
+var support_pulse := 0.0
 var environmental_health := 100.0
 var attack_range := 112.0
 var attack_damage := 14.0
@@ -47,6 +50,7 @@ var lantern_supported := false
 var combat_active := false
 var inspiration_time := 0.0
 var inspiration_multiplier := 1.0
+var inspiration_damage_multiplier := 1.0
 var dying := false
 var reviving := false
 var _death_emitted := false
@@ -131,7 +135,18 @@ func take_environment_damage(amount: float) -> void:
 func take_damage(amount: float) -> void:
 	if amount <= 0.0 or health <= 0.0 or dying: return
 	if kind == Kind.STONE: amount *= 1.0 - float(ContentData.get_flower(get_flower_id()).get("damage_reduction", 0.4))
+	var absorbed := minf(shield, amount)
+	shield -= absorbed; amount -= absorbed
+	queue_redraw()
+	if amount <= 0.0: return
 	_apply_health_loss(amount)
+
+func grant_shield(amount: float, duration: float) -> bool:
+	if health <= 0.0 or dying or reviving or amount <= 0.0: return false
+	shield = maxf(shield, amount)
+	shield_time = maxf(shield_time, duration)
+	queue_redraw()
+	return true
 
 func kill_by_boss_laser() -> void:
 	if health <= 0.0 or dying: return
@@ -140,6 +155,7 @@ func kill_by_boss_laser() -> void:
 func _apply_health_loss(amount: float) -> void:
 	var before := health; health = maxf(0.0, health - amount); environmental_health = health; _show_float(before - health, false)
 	if health <= 0.0:
+		shield = 0.0; shield_time = 0.0
 		death_order = Time.get_ticks_msec()
 		reviving = false
 		dying = true
@@ -166,6 +182,7 @@ func _show_float(amount: float, healing: bool) -> void:
 
 func revive(ratio: float = 0.5) -> bool:
 	if health > 0.0: return false
+	shield = 0.0; shield_time = 0.0
 	dying = false
 	_death_emitted = false
 	health = max_health * clampf(ratio, 0.01, 1.0); environmental_health = health; visible = true; set_process(true); set_powered(power_source != null)
@@ -203,6 +220,11 @@ func can_attack() -> bool:
 	return health > 0.0 and not reviving and has_combat_power() and is_inside_tree()
 
 func _process(delta: float) -> void:
+	var had_support_visual := shield > 0.0 or support_pulse > 0.0
+	shield_time = maxf(0.0, shield_time - delta)
+	if shield_time <= 0.0: shield = 0.0
+	support_pulse = maxf(0.0, support_pulse - delta)
+	if had_support_visual or shield > 0.0 or support_pulse > 0.0: queue_redraw()
 	if dying: return
 	_static_refresh_clock -= delta
 	if art_sprite != null and art_sprite.visible and _static_refresh_clock <= 0.0:
@@ -215,7 +237,7 @@ func _process(delta: float) -> void:
 	_update_animation_power()
 	if reviving: return
 	inspiration_time = maxf(0.0, inspiration_time - delta)
-	if inspiration_time <= 0.0: inspiration_multiplier = 1.0
+	if inspiration_time <= 0.0: inspiration_multiplier = 1.0; inspiration_damage_multiplier = 1.0
 	if temporary_lifetime > 0.0:
 		temporary_lifetime = maxf(0.0, temporary_lifetime - delta)
 		if temporary_lifetime <= 0.0: queue_free(); return
@@ -236,11 +258,8 @@ func _process(delta: float) -> void:
 		queue_redraw()
 		return
 	if kind == Kind.LANTERN:
-		for ally in get_tree().get_nodes_in_group("plants"):
-			if ally != self and is_instance_valid(ally) and ally.health > 0.0 and global_position.distance_to(ally.global_position) <= attack_range:
-				_reset_attack_cooldown()
-				_animate_art(true)
-				break
+		_activate_area_support()
+		_reset_attack_cooldown(); _animate_art(true)
 		return
 	if kind in [Kind.SUNWELL, Kind.CLEANSE, Kind.DRUM]:
 		if _activate_support():
@@ -249,23 +268,34 @@ func _process(delta: float) -> void:
 			_animate_art(true)
 		return
 	if kind == Kind.HONEYDEW:
-		var healing_target := _find_healing_target()
-		if healing_target != null:
-			healing_target.heal(float(ContentData.get_flower("honeydew_flower").get("heal", 8.0)) * (Balance.LOW_LIGHT_DAMAGE_MULTIPLIER if power_state == PowerState.LOW_LIGHT else 1.0))
-			_cooldown = attack_interval * get_effective_interval_multiplier() * (Balance.LOW_LIGHT_INTERVAL_MULTIPLIER if power_state == PowerState.LOW_LIGHT else 1.0)
-			_trigger_attack_fx(healing_target.global_position - global_position, "pollen")
-			_animate_art(true)
+		_activate_area_support()
+		_reset_attack_cooldown(); _animate_art(true)
 		return
+	if kind == Kind.FROST: _activate_area_support()
 	var target := _find_nearest_enemy()
 	if target == null:
+		if kind == Kind.FROST: _reset_attack_cooldown()
 		return
 	if kind == Kind.THORN:
 		_attack_thorn()
+	elif kind in [Kind.PRISM, Kind.FROST, Kind.STONE]:
+		var candidates := _nearby_enemies(global_position, attack_range)
+		for index in int(ContentData.get_flower(get_flower_id()).get("max_targets", 3)):
+			var victim := select_target(candidates)
+			if victim == null: break
+			projectile_requested.emit(global_position, victim, get_effective_attack_damage())
+			candidates.erase(victim)
 	elif kind == Kind.FROST:
-		status_projectile_requested.emit(global_position, target, attack_damage, {"type":"slow", "ratio":0.25, "duration":2.5, "source":"frost_bell"})
+		projectile_requested.emit(global_position, target, attack_damage * (Balance.LOW_LIGHT_DAMAGE_MULTIPLIER if power_state == PowerState.LOW_LIGHT else 1.0))
 		_trigger_attack_fx(target.global_position - global_position, "frost")
 	elif kind in [Kind.STORM, Kind.GALE, Kind.EMBER, Kind.SLUMBER, Kind.SPEAR, Kind.BURST]:
-		_attack_special(target)
+		if kind in [Kind.GALE, Kind.EMBER, Kind.SLUMBER]:
+			var candidates := _nearby_enemies(global_position, attack_range)
+			for index in int(ContentData.get_flower(get_flower_id()).get("max_targets", 2)):
+				var victim := select_target(candidates)
+				if victim == null: break
+				_attack_special(victim); candidates.erase(victim)
+		else: _attack_special(target)
 		if kind in [Kind.STORM, Kind.EMBER]:
 			_trigger_attack_fx(target.global_position - global_position, "frost" if kind == Kind.STORM else "pollen")
 	else:
@@ -286,14 +316,40 @@ func get_effective_interval_multiplier() -> float:
 		weather_multiplier = float(scene.get_weather_plant_interval_multiplier())
 	return card_interval_multiplier * boss_root_interval_multiplier * overload_multiplier * inspiration_multiplier * weather_multiplier
 
+func get_effective_attack_damage() -> float:
+	return attack_damage * inspiration_damage_multiplier * (Balance.LOW_LIGHT_DAMAGE_MULTIPLIER if power_state == PowerState.LOW_LIGHT else 1.0)
+
 func _reset_attack_cooldown() -> void:
 	_cooldown = attack_interval * get_effective_interval_multiplier() * (Balance.LOW_LIGHT_INTERVAL_MULTIPLIER if power_state == PowerState.LOW_LIGHT else 1.0)
+
+func _activate_area_support() -> void:
+	if not can_attack(): return
+	var values := ContentData.get_flower(get_flower_id())
+	var strength := Balance.LOW_LIGHT_DAMAGE_MULTIPLIER if power_state == PowerState.LOW_LIGHT else 1.0
+	if kind == Kind.FROST:
+		for enemy in _nearby_enemies(global_position, attack_range):
+			if is_instance_valid(enemy) and enemy.health > 0.0 and enemy.friendly_time <= 0.0 and global_position.distance_to(enemy.global_position) <= attack_range:
+				enemy.apply_slow("frost_bell", float(values.slow) * strength, float(values.slow_duration))
+	else:
+		for ally in get_tree().get_nodes_in_group("plants"):
+			if not is_instance_valid(ally) or ally.health <= 0.0 or global_position.distance_to(ally.global_position) > attack_range: continue
+			if kind == Kind.LANTERN: ally.grant_shield(float(values.shield) * strength, float(values.shield_duration))
+			elif kind == Kind.HONEYDEW: ally.heal(float(values.heal) * strength)
+	support_pulse = 0.5
+	queue_redraw()
 
 func _activate_support() -> bool:
 	var values := ContentData.get_flower(get_flower_id())
 	if kind == Kind.SUNWELL:
 		if not combat_active: return false
 		energy_generated.emit(1 if power_state == PowerState.LOW_LIGHT else int(values.get("energy", 2)))
+		return true
+	if kind == Kind.CLEANSE:
+		if not combat_active: return false
+		for ally in get_tree().get_nodes_in_group("plants"):
+			if is_instance_valid(ally) and ally.health > 0.0:
+				ally.heal(ally.max_health * 0.5)
+		queue_free()
 		return true
 	var applied := false
 	for candidate in get_tree().get_nodes_in_group("plants"):
@@ -305,12 +361,13 @@ func _activate_support() -> bool:
 		elif kind == Kind.DRUM:
 			candidate.inspiration_time = maxf(candidate.inspiration_time, 2.5)
 			candidate.inspiration_multiplier = minf(candidate.inspiration_multiplier, float(values.get("interval_multiplier", 0.85)))
+			candidate.inspiration_damage_multiplier = maxf(candidate.inspiration_damage_multiplier, float(values.get("damage_multiplier", 1.25)))
 			applied = true
 	return applied
 
 func _attack_special(target: Node2D) -> void:
 	var values := ContentData.get_flower(get_flower_id())
-	var damage := attack_damage * (Balance.LOW_LIGHT_DAMAGE_MULTIPLIER if power_state == PowerState.LOW_LIGHT else 1.0)
+	var damage := get_effective_attack_damage()
 	if kind == Kind.STORM:
 		var visited: Array[Node] = []; var current: Node2D = target
 		for hop in range(int(values.get("max_targets", 3))):
@@ -379,7 +436,7 @@ func _attack_thorn() -> void:
 	var max_targets := int(ContentData.get_flower("thorn_flower").get("max_targets", 10))
 	for candidate in _nearby_enemies(global_position, attack_range):
 		if is_instance_valid(candidate) and candidate.health > 0.0 and candidate.friendly_time <= 0.0 and global_position.distance_to(candidate.global_position) <= attack_range:
-			candidate.take_damage(attack_damage)
+			candidate.take_damage(get_effective_attack_damage())
 			hits += 1
 			if hits >= max_targets: break
 
@@ -397,9 +454,14 @@ func get_flower_id() -> String:
 	return preload("res://scripts/plant_roster.gd").FLOWER_IDS[int(kind)]
 
 func get_stored_duration() -> float:
-	return float(ContentData.get_flower("lantern_flower").get("stored_duration", 8.0)) if kind == Kind.LANTERN else Balance.STORED_LIGHT_DURATION
+	return Balance.STORED_LIGHT_DURATION
 
 func _draw() -> void:
+	if shield > 0.0:
+		draw_arc(Vector2(0, -15), 34.0, 0, TAU, 48, Color(0.4, 0.85, 1.0, 0.8), 2.5)
+	if support_pulse > 0.0:
+		var tint := Color(0.4, 0.85, 1.0, support_pulse) if kind != Kind.HONEYDEW else Color(0.4, 1.0, 0.6, support_pulse)
+		draw_arc(Vector2.ZERO, attack_range * (1.0 - support_pulse), 0, TAU, 64, tint, 2.0)
 	var dim := 1.0 if powered else 0.38
 	if material == null: draw_circle(Vector2(0, 10), 23.0, Color(0.02, 0.03, 0.05, 0.58))
 	if (animation_sprite != null and animation_sprite.visible) or (art_sprite != null and art_sprite.texture != null):

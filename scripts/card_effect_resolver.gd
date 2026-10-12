@@ -18,7 +18,7 @@ func get_target_preview(game: Node, card_id: String, target: Variant) -> Diction
 	match card_id:
 		"card_root_snare", "card_hex_break_lamp", "card_sun_arrow_rain", "card_root_prison", "card_golden_domain": radius = maxf(float(card.get("radius", 0.0)), TemporaryObject.MIN_EFFECT_RADIUS)
 		"card_emergency_dew", "card_local_repair_rain", "card_golden_rain": radius = float(card.get("radius", 0.0))
-		"card_root_wall", "card_lure_bud": radius = ROOT_TAUNT_RADIUS
+		"card_lure_bud": radius = ROOT_TAUNT_RADIUS
 		"card_path_beacon": radius = BEACON_TAUNT_RADIUS
 		"card_sun_mine": radius = TemporaryObject.MINE_DAMAGE_RADIUS
 		"card_temporary_sprout": radius = float(card.get("supply_radius", 170.0))
@@ -29,7 +29,7 @@ func get_target_preview(game: Node, card_id: String, target: Variant) -> Diction
 		valid = valid and point != Vector2.INF
 		if not valid: point = target.global_position
 	if global_target: point = game.mother_flower.global_position
-	return {"valid":valid, "radius":radius, "point":point, "global":global_target, "name":str(card.get("name", "")), "shape":"rectangle" if card_id == "card_sun_pierce" else "circle", "rect_size":Vector2(float(card.get("rect_width", 0.0)), float(card.get("rect_height", 0.0)))}
+	return {"valid":valid, "radius":radius, "point":point, "global":global_target, "name":str(card.get("name", "")), "shape":"rectangle" if card_id in ["card_sun_pierce", "card_root_wall"] else "circle", "rect_size":Vector2(320,50) if card_id == "card_root_wall" else Vector2(float(card.get("rect_width", 0.0)), float(card.get("rect_height", 0.0)))}
 
 const SUPPORTED_CARD_IDS := [
 	"card_sun_pierce", "card_root_snare", "card_emergency_dew", "card_root_wall", "card_sun_mine", "card_lure_bud", "card_emergency_light", "card_focus_mark",

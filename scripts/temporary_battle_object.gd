@@ -24,6 +24,7 @@ var start_delay := 0.0
 var control_applied := {}
 var _tick := 0.0
 var rect_size := Vector2.ZERO
+var buried_time := 0.0
 var _rect_elapsed := 0.0
 var _rect_ticks := 0
 var is_connected_to_light := true
@@ -40,6 +41,9 @@ func configure(new_id: String, position_value: Vector2, values: Dictionary) -> v
 	rect_size = Vector2(float(values.get("rect_width", 0.0)), float(values.get("rect_height", 0.0)))
 	_rect_elapsed = 0.0; _rect_ticks = 0
 	add_to_group("temporary_battle_objects")
+	if object_id == "card_root_wall":
+		rect_size = Vector2(320, 50); remaining_time = 5.0; taunt = false
+		add_to_group("root_walls")
 	if object_id == "card_lure_bud":
 		remaining_time = 12.0
 		var sprite := Sprite2D.new()
@@ -51,6 +55,8 @@ func configure(new_id: String, position_value: Vector2, values: Dictionary) -> v
 			if is_instance_valid(enemy) and enemy.health > 0.0 and not enemy.friendly: enemy.target = self
 
 func _process(delta: float) -> void:
+	buried_time += maxf(0.0, delta)
+	if object_id == "card_sun_mine": queue_redraw()
 	if object_id == "card_sun_pierce":
 		advance_rect_damage(delta)
 		return
@@ -75,6 +81,14 @@ func advance_rect_damage(delta: float) -> void:
 	if remaining_time <= 0.0: queue_free()
 
 func _draw() -> void:
+	if object_id == "card_sun_mine":
+		draw_circle(Vector2.ZERO, 14.0, Color("f6c359"))
+		draw_string(ThemeDB.fallback_font, Vector2(-20,-22), str(int(minf(265.0, trigger_damage + buried_time * 10.0))), HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color.WHITE)
+		return
+	if object_id == "card_root_wall":
+		draw_rect(Rect2(-rect_size * 0.5, rect_size), Color("654635"))
+		draw_rect(Rect2(-rect_size * 0.5, rect_size), Color("b18f53"), false, 4.0)
+		return
 	if object_id != "card_sun_pierce": return
 	var rect := Rect2(-rect_size * 0.5, rect_size)
 	draw_rect(rect, Color(1.0, 0.72, 0.12, 0.18))
@@ -83,7 +97,7 @@ func _draw() -> void:
 		draw_line(Vector2(-rect_size.x * 0.5, y), Vector2(rect_size.x * 0.5, y), Color(1.0, 0.9, 0.55, 0.45), 3.0)
 
 func take_damage(amount: float) -> void:
-	if object_id == "card_lure_bud": return
+	if object_id in ["card_lure_bud", "card_root_wall"]: return
 	if amount <= 0.0: return
 	health = maxf(0.0, health - amount)
 	if health <= 0.0: queue_free()
@@ -108,7 +122,7 @@ func _apply_area_effects(delta: float) -> void:
 		for enemy in _nearby_enemies(MINE_TRIGGER_RADIUS):
 			if is_instance_valid(enemy) and enemy.global_position.distance_to(global_position) <= MINE_TRIGGER_RADIUS:
 				for victim in _nearby_enemies(MINE_DAMAGE_RADIUS):
-					if is_instance_valid(victim) and victim.global_position.distance_to(global_position) <= MINE_DAMAGE_RADIUS: victim.take_damage(trigger_damage)
+					if is_instance_valid(victim) and victim.health > 0.0 and victim.friendly_time <= 0.0 and victim.global_position.distance_to(global_position) <= MINE_DAMAGE_RADIUS: victim.take_area_damage(minf(265.0, trigger_damage + buried_time * 10.0))
 				queue_free(); return
 	if object_id == "card_golden_domain":
 		for plant in get_tree().get_nodes_in_group("plants"):
@@ -117,7 +131,7 @@ func _apply_area_effects(delta: float) -> void:
 	_tick = maxf(0.01, tick_interval)
 	for enemy in _nearby_enemies(maxf(radius, MIN_EFFECT_RADIUS)):
 		if not is_instance_valid(enemy) or enemy.global_position.distance_to(global_position) > maxf(radius, MIN_EFFECT_RADIUS): continue
-		if object_id == "card_root_snare": enemy.apply_slow(object_id, get_slow_for_rank(enemy.get_rank()), 0.7)
+		if object_id == "card_root_snare" and enemy.health > 0.0 and enemy.friendly_time <= 0.0: enemy.root_lock_time = maxf(enemy.root_lock_time, minf(remaining_time, 0.6))
 		elif slow_ratio > 0.0: enemy.apply_slow(object_id, slow_ratio, 0.7)
 		if object_id == "card_golden_domain": enemy.apply_slow(object_id, 0.15, 0.7)
 		if object_id == "card_root_prison":
@@ -142,3 +156,19 @@ func _apply_area_effects(delta: float) -> void:
 func _nearby_enemies(search_radius: float) -> Array:
 	var host := get_parent()
 	return host.query_enemies_in_radius(global_position, search_radius) if host != null and host.has_method("query_enemies_in_radius") else get_tree().get_nodes_in_group("enemies")
+
+func clip_movement(start: Vector2, finish: Vector2) -> Vector2:
+	if is_queued_for_deletion() or remaining_time <= 0.0: return finish
+	var rect := Rect2(global_position - rect_size * 0.5, rect_size).grow(14.0)
+	if rect.has_point(start): return finish
+	var entry := 0.0; var exit := 1.0
+	var motion := finish - start
+	for axis in [0, 1]:
+		if absf(motion[axis]) < 0.00001:
+			if start[axis] < rect.position[axis] or start[axis] > rect.end[axis]: return finish
+		else:
+			var a: float = (rect.position[axis] - start[axis]) / motion[axis]
+			var b: float = (rect.end[axis] - start[axis]) / motion[axis]
+			entry = maxf(entry, minf(a, b)); exit = minf(exit, maxf(a, b))
+			if entry > exit: return finish
+	return start + motion * maxf(0.0, entry - 0.001) if entry <= 1.0 and exit >= 0.0 else finish

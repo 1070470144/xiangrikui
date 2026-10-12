@@ -5472,6 +5472,979 @@
           ]
         }
       ]
+    },
+    "walk": {
+      "fps": 24.0,
+      "loop": true,
+      "frames": 107,
+      "ground_y": 420,
+      "width": 640,
+      "height": 480,
+      "regions": [
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            640,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1280,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            640,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1280,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            640,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1280,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            0,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            640,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-00.png",
+          "region": [
+            1280,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            640,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1280,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            0,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            640,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1280,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            0,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            640,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1280,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            0,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            640,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-01.png",
+          "region": [
+            1280,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            640,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            1280,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            0,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            640,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            1280,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            0,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            640,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            1280,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            0,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            640,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-02.png",
+          "region": [
+            1280,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            640,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            1280,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            0,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            640,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            1280,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            0,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            640,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            1280,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            0,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            640,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-03.png",
+          "region": [
+            1280,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            640,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            1280,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            0,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            640,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            1280,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            0,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            640,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            1280,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            0,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            640,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-04.png",
+          "region": [
+            1280,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            640,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            1280,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            0,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            640,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            1280,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            0,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            640,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            1280,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            0,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            640,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-05.png",
+          "region": [
+            1280,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            640,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            1280,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            0,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            640,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            1280,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            0,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            640,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            1280,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            0,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            640,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-06.png",
+          "region": [
+            1280,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            640,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            1280,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            0,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            640,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            1280,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            0,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            640,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            1280,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            0,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            640,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-07.png",
+          "region": [
+            1280,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            640,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            1280,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            0,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            640,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            1280,
+            480,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            0,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            640,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            1280,
+            960,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            0,
+            1440,
+            640,
+            480
+          ]
+        },
+        {
+          "page": "walk-atlas-08.png",
+          "region": [
+            640,
+            1440,
+            640,
+            480
+          ]
+        }
+      ]
     }
   }
 }

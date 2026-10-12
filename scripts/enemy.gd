@@ -21,6 +21,8 @@ var laser_cooldown := 35.0
 var laser_remaining := 0.0
 var laser_angle := 0.0
 var laser_reach := 0.0
+var laser_hit_plants: Dictionary = {}
+var laser_hit_count := 0
 signal boss_shield_changed(active: bool)
 signal boss_core_exposed(duration: float)
 signal boss_special_finished(kind: String)
@@ -74,6 +76,7 @@ var burn_dps := 0.0
 var burn_time := 0.0
 var burn_tick := 0.0
 var stun_time := 0.0
+var root_lock_time := 0.0
 var mother_damage_multiplier := 1.0
 var mother_mark_time := 0.0
 var ability_windup := 0.0
@@ -148,11 +151,13 @@ func configure_by_id(new_id: String, spawn_position: Vector2) -> void:
 	_death_emitted = false
 	_boss_thresholds.clear(); move_buff_ratio = 0.0; attack_buff_ratio = 0.0; buff_time = 0.0; charge_time = 0.0; charge_cooldown = 0.0; support_cooldown = 5.0; special_cooldown = 8.0
 	burn_dps = 0.0; burn_time = 0.0; burn_tick = 0.0; stun_time = 0.0; mother_damage_multiplier = 1.0; mother_mark_time = 0.0
+	root_lock_time = 0.0
 	ability_windup = 0.0; ability_target = null
 	boss_skill = ""; boss_skill_timer = 0.0; boss_shield = 0.0; core_exposed_time = 0.0; boss_enraged = false
 	boss_state = "idle"; boss_recovery = 0.0; boss_pending_summons = 0; boss_shield_delay = 0.0
 	boss_light_progress = 0.0; boss_light_cooldown = 0.0; boss_animation_elapsed = 0.0
 	summon_cooldown = 20.0; laser_cooldown = 35.0; laser_remaining = 0.0; laser_angle = 0.0; laser_reach = 0.0
+	laser_hit_plants.clear(); laser_hit_count = 0
 	if enemy_id == "root_crown_colossus": special_cooldown = 7.0
 	_decision_interval = 0.15 + fmod(float(get_instance_id() % 11), 11.0) * 0.01
 	_decision_clock = fmod(float(get_instance_id() % 17), 17.0) * 0.01
@@ -317,7 +322,12 @@ func _process(delta: float) -> void:
 		_moving = true
 		var effective_speed := get_effective_move_speed()
 		if enemy_id == "husk_ram" and can_start_charge(distance): charge_time = 1.2; charge_cooldown = 6.0
-		global_position = global_position.move_toward(target.global_position, effective_speed * delta)
+		if root_lock_time <= 0.0:
+			var next_position := global_position.move_toward(target.global_position, effective_speed * delta)
+			for wall in get_tree().get_nodes_in_group("root_walls"):
+				next_position = wall.clip_movement(global_position, next_position)
+			global_position = next_position
+		else: _moving = false
 		_sync_index()
 	elif _attack_cooldown <= 0.0:
 		_attack_pose = _art_attack_duration() if animation_frames != null else 0.18
@@ -334,7 +344,11 @@ func _process(delta: float) -> void:
 			target.take_damage(impact_damage)
 		if enemy_id == "spore_moth" and target.has_method("apply_corrosion"): target.apply_corrosion(2.0, 4.0)
 		if charged_impact: charge_time = 0.0; apply_stun(0.8)
-		_attack_cooldown = attack_interval * (1.0 - attack_buff_ratio) * (1.0 + attack_slow_ratio)
+		var weather_interval := 1.0
+		var weather_host := get_parent()
+		if not friendly and weather_host != null and weather_host.has_method("get_weather_enemy_attack_interval_multiplier"):
+			weather_interval = float(weather_host.get_weather_enemy_attack_interval_multiplier())
+		_attack_cooldown = attack_interval * (1.0 - attack_buff_ratio) * (1.0 + attack_slow_ratio) * weather_interval
 	if art_sprite == null or art_sprite.texture == null: queue_redraw()
 	_animate_art(delta)
 
@@ -372,6 +386,7 @@ func _start_death() -> void:
 	if host != null and host.has_method("unregister_enemy"): host.unregister_enemy(self)
 	if rank == "boss":
 		ability_windup = 0.0; boss_shield = 0.0; core_exposed_time = 0.0; boss_pending_summons = 0
+		laser_remaining = 0.0; laser_hit_plants.clear(); laser_hit_count = 0
 		boss_skill = ""; boss_recovery = 0.0; boss_skill_timer = 0.0; boss_light_progress = 0.0; boss_light_cooldown = 0.0
 		boss_cleanup_requested.emit()
 	if enemy_id == "split_shade": split_requested.emit(global_position, 2)
@@ -432,6 +447,7 @@ func apply_mother_mark(multiplier: float, duration: float) -> void:
 func is_controlled() -> bool: return stun_time > 0.0
 
 func push_from(origin: Vector2, distance: float) -> void:
+	if root_lock_time > 0.0: return
 	var direction := origin.direction_to(global_position)
 	if direction == Vector2.ZERO: direction = Vector2.RIGHT
 	global_position += direction * maxf(0.0, distance)
@@ -439,6 +455,7 @@ func push_from(origin: Vector2, distance: float) -> void:
 	_speed_frame = -1
 
 func advance_statuses(delta: float) -> void:
+	root_lock_time = maxf(0.0, root_lock_time - delta)
 	if delta <= 0.0: return
 	stun_time = maxf(0.0, stun_time - delta)
 	if mother_mark_time > 0.0:
@@ -469,7 +486,7 @@ func interrupt_ability() -> bool:
 	var interrupted := charge_time > 0.0 or ability_windup > 0.0
 	if not interrupted: return false
 	if enemy_id == "sun_devourer":
-		if boss_skill == "laser": laser_cooldown = 35.0
+		if boss_skill == "laser": laser_cooldown = 35.0; laser_hit_plants.clear(); laser_hit_count = 0
 		if boss_skill == "summon": summon_cooldown = 20.0
 	charge_time = 0.0; ability_windup = 0.0; ability_target = null; boss_skill = ""; boss_skill_timer = 0.0
 	special_cooldown = maxf(special_cooldown, 2.0)
@@ -616,6 +633,7 @@ func advance_boss(delta: float) -> void:
 			boss_state = "execute"
 			match boss_skill:
 				"laser":
+					laser_hit_plants.clear(); laser_hit_count = 0
 					laser_remaining = 3.0
 					_advance_laser(overshoot)
 					return
@@ -727,6 +745,7 @@ func _advance_laser(delta: float) -> void:
 	queue_redraw()
 	if laser_remaining <= 0.0:
 		laser_cooldown = 35.0; boss_recovery = 0.65
+		laser_hit_plants.clear(); laser_hit_count = 0
 		boss_special_finished.emit("laser")
 
 func _draw() -> void:

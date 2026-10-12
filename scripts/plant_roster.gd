@@ -6,7 +6,7 @@ const DEFAULT_IDS := ["deploy_thorn", "deploy_prism", "deploy_lantern", "deploy_
 const FLOWER_IDS := ["thorn_flower", "prism_flower", "lantern_flower", "frost_bell", "honeydew_flower", "storm_flower", "gale_flower", "sunwell_flower", "ember_flower", "slumber_flower", "spear_bamboo", "burst_flower", "stone_flower", "cleanse_flower", "drum_flower"]
 const DEPLOY_IDS := ["deploy_thorn", "deploy_prism", "deploy_lantern", "deploy_frost", "deploy_honeydew", "deploy_storm", "deploy_gale", "deploy_sunwell", "deploy_ember", "deploy_slumber", "deploy_spear", "deploy_burst", "deploy_stone", "deploy_cleanse", "deploy_drum"]
 const SELECTIONS := [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-const DESCRIPTIONS := ["消耗1种子。攻击周围最多5个敌人。", "远距离重击，优先精英和首领。", "延长附近植物储光至8秒。", "攻击并减速敌人。", "治疗附近受损植物与光脉。", "雷电连续跳跃，最多命中3个敌人。", "攻击并击退普通与精英敌人。", "夜晚每8秒产出2点光能。", "点燃敌人，持续造成灼烧伤害。", "眠孢使敌人短暂眩晕，首领效果减弱。", "长矛贯穿直线上的最多4个敌人。", "爆果伤害目标周围最多8个敌人。", "高生命值，受到伤害减少40%。", "净化附近植物腐蚀并恢复少量生命。", "鼓舞附近植物，攻击间隔缩短15%。"]
+const DESCRIPTIONS := ["消耗1种子。攻击周围最多5个敌人。", "射程420，每轮攻击4个目标，每目标85伤害。", "半径200，每4秒补至40护盾，持续6秒。", "半径220内敌人减速35%，持续3秒。", "半径220内所有植物每2秒恢复25生命。", "命中首个敌人后，再传导6个不同敌人。", "攻击并击退普通与精英敌人。", "夜晚每1秒产出1点光能。", "点燃敌人，持续造成灼烧伤害。", "眠孢使敌人短暂眩晕，首领效果减弱。", "长矛贯穿直线上的最多4个敌人。", "爆果伤害目标周围最多8个敌人。", "高生命值，受到伤害减少40%。", "一次恢复全场植物50%最大生命，然后消失。", "鼓舞附近植物，攻击间隔缩短22%，伤害提高25%。"]
 
 static func deploy_map() -> Dictionary:
 	var result := {}

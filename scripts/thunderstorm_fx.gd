@@ -1,4 +1,5 @@
 extends Node2D
+signal thunder_struck
 
 ## Fourth-night weather layer. Clouds are deliberately procedural so a missing
 ## video asset can never leave a black fullscreen quad in the battlefield.
@@ -129,6 +130,7 @@ func _process(delta: float) -> void:
 		lightning_playing = true
 		lightning_phase = 0.0
 		trigger_count += 1
+		thunder_struck.emit()
 	queue_redraw()
 
 func _draw() -> void:

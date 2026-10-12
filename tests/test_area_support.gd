@@ -1,0 +1,27 @@
+extends SceneTree
+func _initialize() -> void: call_deferred("run")
+func run() -> void:
+	var host := Node2D.new()
+	root.add_child(host)
+	var p = load("res://scripts/plant.gd")
+	var lantern = p.new(); host.add_child(lantern); lantern.configure(p.Kind.LANTERN, 0); lantern.set_powered(true)
+	var ally = p.new(); host.add_child(ally); ally.configure(p.Kind.STONE, 0); ally.position = Vector2(200, 0)
+	lantern._activate_area_support()
+	assert(ally.shield == 40.0 and lantern.shield == 40.0)
+	var hp: float = ally.health
+	ally.take_damage(100.0)
+	assert(ally.shield == 0.0 and ally.health == hp - 10.0)
+	ally.grant_shield(40, 6); ally.grant_shield(40, 6); assert(ally.shield == 40)
+	ally.set_powered(false); ally._process(6.0); assert(ally.shield == 0)
+	var honey = p.new(); host.add_child(honey); honey.configure(p.Kind.HONEYDEW, 0); honey.set_powered(true)
+	honey.health -= 40; ally.health -= 40
+	honey._activate_area_support()
+	assert(honey.health == honey.max_health - 15 and ally.health == hp - 25)
+	var enemy = load("res://scripts/enemy.gd").new(); host.add_child(enemy); enemy.configure(enemy.Kind.SHADOW_BEAST, Vector2.ZERO); enemy.position = Vector2(220,0)
+	var frost = p.new(); host.add_child(frost); frost.configure(p.Kind.FROST,0); frost.set_powered(true); frost._activate_area_support()
+	assert(is_equal_approx(enemy.slow_ratio, 0.35))
+	var prism = p.new(); prism.configure(p.Kind.PRISM,0); assert(prism.attack_range == 420 and prism.attack_damage == 85); prism.free()
+	ally.grant_shield(40,6); ally.kill_by_boss_laser(); assert(ally.health == 0 and ally.shield == 0)
+	host.queue_free()
+	print("AREA_SUPPORT_PASS")
+	quit()

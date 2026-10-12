@@ -12,9 +12,21 @@ func _initialize() -> void:
 		plant.position = Vector2.from_angle(angle) * 200.0
 		game.plants.append(plant)
 	game._on_boss_laser_requested(Vector2.ZERO, 0.0, PI / 2.0, 1000.0, 24.0, boss)
-	assert(game.plants[0].health == 0.0 and game.plants[1].health == 0.0)
+	assert(game.plants[0].health == 0.0 and game.plants[1].health == game.plants[1].max_health - 50.0)
 	assert(game.plants[2].health > 0.0)
 	assert(game.plants[0].revive())
+	var revived_health: float = game.plants[0].health
+	game._on_boss_laser_requested(Vector2.ZERO, 0.0, PI / 2.0, 1000.0, 24.0, boss)
+	assert(game.plants[0].health == revived_health)
+	for angle in [PI / 3.0, PI * 0.45]:
+		var plant := preload("res://scripts/plant.gd").new()
+		plant.configure(plant.Kind.STONE, 0)
+		game.add_child(plant)
+		plant.position = Vector2.from_angle(angle) * 200.0
+		game.plants.append(plant)
+	game._on_boss_laser_requested(Vector2.ZERO, PI / 4.0, PI / 2.0, 1000.0, 24.0, boss)
+	assert(game.plants[3].health == game.plants[3].max_health - 25.0)
+	assert(game.plants[4].health == game.plants[4].max_health - 12.5)
 	boss.summon_cooldown = 0.0
 	boss.advance_boss(0.01)
 	assert(boss.boss_skill == "summon")

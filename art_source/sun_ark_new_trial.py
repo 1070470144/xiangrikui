@@ -16,7 +16,10 @@ if __name__ == '__main__':
     import shutil
     if not (pipeline.OUT / 'original.png').exists():
         shutil.copy2(pipeline.OUT.parent / 'original.png', pipeline.OUT / 'original.png')
+    pipeline.MOTIONS = {'walk': 'Preserve exact black solar halo and charcoal root armor. Exactly three complete heavy walking IN PLACE cycles, two alternating root feet with clear grounded weight transfer. Fixed center and feet baseline, no sliding, no camera motion or zoom, entire crown and feet inside generous margins, pure green background, no floor or shadow. First and last poses match.'}
+    walk = pipeline.MOTIONS['walk']
     pipeline.MOTIONS = {
+        'walk': walk,
         'attack': 'Preserve the exact attached BLACK SOLAR HALO crown and charcoal root armor. One slow right arm strike, windup, single impact, recover. Two planted root feet, full body visible, exact pure green background, no floor or shadows, no zoom.',
         'summon': 'Preserve the exact attached design. Raise both root arms and open a solar portal gesture, pulse chest once, recover. Full body visible, exact pure green background, no floor or shadows, no zoom.',
         'laser_charge': 'Preserve the exact attached design. Brace in place and charge the gold-red chest core for three seconds, arms locked, full body visible, exact pure green background, no floor or shadows, no zoom.',

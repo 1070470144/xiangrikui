@@ -63,7 +63,7 @@ const COMBAT_CARDS := [
 	{"id":"card_sun_pierce","name":"日光穿刺","rarity":"common","energy_cost":4,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"damage":12.0,"duration":4.0,"tick_interval":0.5,"rect_width":320.0,"rect_height":100.0},
 	{"id":"card_root_snare","name":"缠根地带","rarity":"common","energy_cost":5,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"duration":6.0},
 	{"id":"card_emergency_dew","name":"甘露急救","rarity":"common","energy_cost":5,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"radius":140.0,"heal":45.0},
-	{"id":"card_root_wall","name":"根墙","rarity":"common","energy_cost":7,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"health":120.0,"duration":18.0},
+	{"id":"card_root_wall","name":"根墙","rarity":"common","energy_cost":7,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"health":120.0,"duration":5.0},
 	{"id":"card_sun_mine","name":"太阳地雷","rarity":"common","energy_cost":7,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"damage":65.0,"duration":999.0},
 	{"id":"card_lure_bud","name":"诱光花苞","rarity":"common","energy_cost":5,"phase":"night","target_type":"ground","unlock_cost":0,"copies_allowed":2,"health":75.0,"duration":12.0},
 	{"id":"card_emergency_light","name":"紧急供光","rarity":"common","energy_cost":5,"phase":"night","target_type":"plant","unlock_cost":0,"copies_allowed":2,"duration":10.0},
@@ -118,12 +118,18 @@ static func get_flower(id: String) -> Dictionary:
 	if values.has("burn"): values.burn = float(values.burn) * 1.5
 	match id:
 		"thorn_flower": values.range = 150.0; values.max_targets = 16
-		"prism_flower": values.range = 280.0
-		"storm_flower": values.max_targets = 8; values.chain_range = 135.0
+		"prism_flower": values.range = 420.0; values.damage = 85.0; values.max_targets = 3
+		"lantern_flower": values.range = 200.0; values.interval = 4.0; values.shield = 40.0; values.shield_duration = 6.0; values.erase("stored_duration")
+		"frost_bell": values.range = 220.0; values.slow = 0.35; values.slow_duration = 3.0
+		"honeydew_flower": values.range = 220.0; values.heal = 25.0; values.interval = 2.0
+		"storm_flower": values.max_targets = 6; values.chain_range = 135.0
 		"spear_bamboo": values.max_targets = 10; values.width = 32.0
 		"burst_flower": values.max_targets = 20; values.radius = 110.0
-		"honeydew_flower", "cleanse_flower": values.range = 200.0
-		"sunwell_flower": values.energy = 4
+		"cleanse_flower": values.range = 200.0
+		"sunwell_flower": values.energy = 1; values.interval = 1.0
+	if values.has("damage"):
+		values.max_targets = int(values.get("max_targets", 1)) + 1
+	if id == "drum_flower": values.damage_multiplier = 1.25
 	return values
 
 static func get_enemy(id: String) -> Dictionary:

@@ -87,6 +87,7 @@ var boss_active := false
 var boss_feedback: Node2D
 var environmental_tick := 0.0
 var thunderstorm_terrain_tick := 0.0
+var thunder_empower_time := 0.0
 var weather_seal_time := 0.0
 var progression := Progression.new()
 var mother_evolution := MotherEvolution.new()
@@ -171,7 +172,22 @@ func is_weather_active() -> bool:
 	return phase == Phase.NIGHT and weather_seal_time <= 0.0 and weather != "clear"
 
 func get_weather_enemy_attack_multiplier() -> float:
+	if is_weather_active() and weather == "thunderstorm" and thunder_empower_time > 0.0: return 1.30
 	return 1.10 if is_weather_active() and weather in ["acid_rain", "thunderstorm"] else 1.0
+
+func get_weather_enemy_attack_interval_multiplier() -> float:
+	return 0.8 if is_weather_active() and weather == "thunderstorm" and thunder_empower_time > 0.0 else 1.0
+
+func _on_thunder_struck() -> void:
+	if not is_weather_active() or weather != "thunderstorm": return
+	thunder_empower_time = 5.0
+	var candidates: Array = []
+	for plant in plants:
+		if is_instance_valid(plant) and plant != mother_flower and plant.health > 0.0 and not plant.is_queued_for_deletion(): candidates.append(plant)
+	candidates.shuffle()
+	for index in mini(randi_range(1, 2), candidates.size()): candidates[index].kill_by_boss_laser()
+	_rebuild_network()
+	if is_instance_valid(hud): hud.show_message("雷击摧毁植物！敌人攻击强化5秒")
 
 func get_weather_enemy_speed_multiplier() -> float:
 	return 1.10 if is_weather_active() and weather == "thunderstorm" else 1.0
@@ -531,6 +547,7 @@ func _build_world() -> void:
 	acid_rain_fx.z_index = 16
 	add_child(acid_rain_fx)
 	thunderstorm_fx = ThunderstormFXScript.new()
+	thunderstorm_fx.thunder_struck.connect(_on_thunder_struck)
 	thunderstorm_fx.name = "ThunderstormFX"
 	thunderstorm_fx.z_index = 15
 	add_child(thunderstorm_fx)
@@ -586,6 +603,7 @@ func _build_world() -> void:
 	hud.add_child(menu_button)
 
 func _process(delta: float) -> void:
+	thunder_empower_time = maxf(0.0, thunder_empower_time - delta) if phase == Phase.NIGHT and weather == "thunderstorm" and weather_seal_time <= 0.0 else 0.0
 	if is_instance_valid(spawn_forecast): spawn_forecast.visible = phase == Phase.DAY
 	_hud_refresh_clock += delta
 	_radar_refresh_clock += delta
@@ -919,11 +937,7 @@ func _rebuild_network() -> void:
 		if plant.health <= 0.0 or plant.is_queued_for_deletion():
 			plant.set_power_source(null)
 			continue
-		var lantern_support := false
-		for lantern in plants:
-			if lantern != plant and is_instance_valid(lantern) and lantern.kind == PlantScript.Kind.LANTERN and lantern.health > 0.0 and lantern.global_position.distance_to(plant.global_position) <= lantern.attack_range:
-				lantern_support = true; break
-		plant.set_lantern_supported(lantern_support)
+		plant.set_lantern_supported(false)
 		var parent: Node = plant.power_source
 		if _supply_parent_valid(parent, plant.global_position, supplies) and _parent_can_supply_plant(parent):
 			_count_plant_connection(parent)
@@ -1112,8 +1126,10 @@ func _on_boss_area_damage_requested(center: Vector2, radius: float, damage: floa
 
 func _on_boss_laser_requested(origin: Vector2, start_angle: float, end_angle: float, reach: float, width: float, owner: Node) -> void:
 	if phase != Phase.NIGHT or not is_instance_valid(owner) or owner.health <= 0.0: return
+	var hits: Array[Dictionary] = []
 	for plant in plants:
 		if not is_instance_valid(plant) or plant == mother_flower or plant.health <= 0.0: continue
+		if owner.laser_hit_plants.has(plant.get_instance_id()): continue
 		var offset: Vector2 = plant.global_position - origin
 		var distance := offset.length()
 		if distance > reach + width * 0.5: continue
@@ -1122,7 +1138,18 @@ func _on_boss_laser_requested(origin: Vector2, start_angle: float, end_angle: fl
 		var start_point := origin + Vector2.from_angle(start_angle) * reach
 		var end_point := origin + Vector2.from_angle(end_angle) * reach
 		if inside or offset.length() <= width * 0.5 or plant.global_position.distance_to(Geometry2D.get_closest_point_to_segment(plant.global_position, origin, start_point)) <= width * 0.5 or plant.global_position.distance_to(Geometry2D.get_closest_point_to_segment(plant.global_position, origin, end_point)) <= width * 0.5:
-			plant.kill_by_boss_laser()
+			var contact := angle - asin(minf(1.0, width * 0.5 / maxf(distance, 0.001)))
+			hits.append({"plant":plant,"angle":maxf(start_angle, contact),"distance":distance,"id":plant.get_instance_id()})
+	hits.sort_custom(func(a: Dictionary, b: Dictionary):
+		if not is_equal_approx(a.angle, b.angle): return a.angle < b.angle
+		if not is_equal_approx(a.distance, b.distance): return a.distance < b.distance
+		return a.id < b.id
+	)
+	for hit in hits:
+		owner.laser_hit_plants[hit.id] = true
+		owner.laser_hit_count += 1
+		if owner.laser_hit_count == 1: hit.plant.kill_by_boss_laser()
+		else: hit.plant.take_damage(100.0 if owner.laser_hit_count == 2 else 50.0 if owner.laser_hit_count == 3 else 25.0)
 
 func _on_enemy_dark_sun_requested(stored_light_loss: float) -> void:
 	for plant in plants:

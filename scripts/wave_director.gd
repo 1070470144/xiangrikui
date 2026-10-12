@@ -143,7 +143,7 @@ func build(night: int, seed_value: int) -> Array[Dictionary]:
 		batch += 1
 	for i in bosses.size():
 		var progress := 0.68 + 0.22 * float(i + 1) / maxf(float(bosses.size()), 1.0)
-		queue.append(_entry(bosses[i], float(config.duration) * progress, sample_outer_ring(rng.randf_range(0.0, TAU), [], 2), batch, config, weight))
+		queue.append(_entry(bosses[i], 0.0 if night == 7 and bosses[i] == 3 else float(config.duration) * progress, sample_outer_ring(rng.randf_range(0.0, TAU), [], 2), batch, config, weight))
 		batch += 1
 	queue.sort_custom(func(a: Dictionary, b: Dictionary): return a.time < b.time)
 	return queue
